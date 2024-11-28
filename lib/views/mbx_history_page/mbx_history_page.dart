@@ -1,7 +1,7 @@
 import '../../models/mbx_receipt_model.dart';
 import '../../widgets/all_widgets.dart';
-import 'mbx_history_widget.dart';
 import 'mbx_history_controller.dart';
+import 'mbx_history_widget.dart';
 
 class MbxHistoryPage extends StatelessWidget {
   MbxHistoryPage({Key? key}) : super(key: key);
@@ -47,7 +47,7 @@ class MbxHistoryPage extends StatelessWidget {
                           onClicked: () {
                             Get.toNamed('/receipt', arguments: {
                               'receipt': MbxReceiptModel(),
-                              'backToHome': false
+                              'backToHome': false,
                             });
                           },
                           child: MbxHistoryWidget(history));

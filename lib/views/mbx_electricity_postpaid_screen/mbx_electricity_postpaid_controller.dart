@@ -127,7 +127,7 @@ class MbxElectricityPostpaidController extends GetxController {
       if (resp.status == 200) {
         Get.back();
         Get.offNamed('/receipt',
-            arguments: {'receipt': paymentVM.receipt, 'backToHome': true});
+            arguments: {'receipt': paymentVM.receipt, 'backToHome': true, 'askFeedback': true});
       } else {
         // payment request failed
       }

@@ -12,6 +12,7 @@ export 'package:path_provider/path_provider.dart';
 class MbxReceiptController extends GetxController {
   var receipt = MbxReceiptModel();
   var backToHome = false;
+  var askFeedback = false;
   var loading = false;
   ScreenshotController screenshotController = ScreenshotController();
 
@@ -20,6 +21,7 @@ class MbxReceiptController extends GetxController {
     super.onReady();
     receipt = Get.arguments['receipt'] as MbxReceiptModel;
     backToHome = Get.arguments['backToHome'] as bool;
+    askFeedback = (Get.arguments['askFeedback'] ?? false) as bool;
     update();
     if (receipt.transaction_id.isEmpty) {
       loading = true;
@@ -32,9 +34,11 @@ class MbxReceiptController extends GetxController {
       });
     }
 
-    Future.delayed(const Duration(milliseconds: 1500), () {
-      AppxFeedbackSheet.show(feature: 'feature-id');
-    });
+    if (askFeedback) {
+      Future.delayed(const Duration(milliseconds: 1500), () {
+        AppxFeedbackSheet.show(feature: 'feature-id');
+      });
+    }
   }
 
   btnBackClicked() async {

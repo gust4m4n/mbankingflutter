@@ -101,7 +101,7 @@ class MbxQRISAmountController extends GetxController {
             if (resp.status == 200) {
               Get.toNamed('/receipt', arguments: {
                 'receipt': qrisPaymentVM.receipt,
-                'backToHome': true
+                'backToHome': true, 'askFeedback': true
               });
             }
           });
