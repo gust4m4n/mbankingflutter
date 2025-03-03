@@ -31,7 +31,7 @@ class MbxScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopScope(
         canPop: false,
-        onPopInvokedWithResult: (didPop, result) {
+        onPopInvoked: (didPop) {
           if (didPop == false) {
             if (backAction != null) {
               backAction!();

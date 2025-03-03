@@ -123,6 +123,5 @@ app.*.symbols
 .flutter-plugins-dependencies
 .DS_Store
 
-
-
-
+# FVM Version Cache
+.fvm/
