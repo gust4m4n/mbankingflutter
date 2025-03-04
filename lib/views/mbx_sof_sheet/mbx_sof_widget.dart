@@ -76,8 +76,8 @@ class MbxSofWidget extends StatelessWidget {
                 ContainerX(width: 8.0),
                 ButtonX(
                   faIcon: account.visible
-                      ? FontAwesomeIcons.eyeSlash
-                      : FontAwesomeIcons.eye,
+                      ? FontAwesomeIcons.eye
+                      : FontAwesomeIcons.eyeSlash,
                   iconWidth: 20.0,
                   iconHeight: 16.0,
                   title: '',
