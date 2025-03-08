@@ -6,7 +6,7 @@ import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_qris_inquiry_model.dart';
-import '../../pin-sheet/mbx_pin_sheet.dart';
+import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_receipt_vm.dart';
 import '../../widgets/all_widgets.dart';
 

@@ -1,4 +1,4 @@
-import '../widgets/all_widgets.dart';
+import '../../widgets/all_widgets.dart';
 import 'mbx_pin_button.dart';
 import 'mbx_pin_controller.dart';
 import 'mbx_pin_dot.dart';

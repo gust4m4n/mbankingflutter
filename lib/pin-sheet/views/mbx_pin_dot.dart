@@ -1,11 +1,11 @@
-import '../widgets/all_widgets.dart';
+import '../../widgets/all_widgets.dart';
 
-class MbxOtpDot extends StatelessWidget {
+class MbxPinDot extends StatelessWidget {
   final bool on;
   final String number;
   final bool secure;
 
-  MbxOtpDot({Key? key, this.on = false, this.number = '', this.secure = true})
+  MbxPinDot({Key? key, this.on = false, this.number = '', this.secure = true})
       : super(key: key);
 
   @override

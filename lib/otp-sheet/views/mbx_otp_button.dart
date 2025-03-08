@@ -1,12 +1,12 @@
-import '../widgets/all_widgets.dart';
+import '../../widgets/all_widgets.dart';
 
-class MbxPinButton extends StatelessWidget {
+class MbxOtpButton extends StatelessWidget {
   final String title;
   final IconData? faIcon;
 
   final GestureTapCallback? clicked;
 
-  MbxPinButton({
+  MbxOtpButton({
     Key? key,
     this.title = '',
     this.faIcon = null,
@@ -20,12 +20,12 @@ class MbxPinButton extends StatelessWidget {
             ? ButtonX(
                 height: 48.0,
                 cornerRadius: 8.0,
-                backgroundColor: ColorX.theme.withOpacity(1.0),
+                backgroundColor: ColorX.theme.withOpacity(0.1),
                 highlightColor: ColorX.theme.withOpacity(0.2),
-                titleColor: ColorX.white,
+                titleColor: ColorX.black,
                 title: title,
                 faIcon: faIcon,
-                faColor: ColorX.white,
+                faColor: ColorX.black,
                 fontSize: 24.0,
                 fontWeight: FontWeight.w400,
                 clicked: clicked)

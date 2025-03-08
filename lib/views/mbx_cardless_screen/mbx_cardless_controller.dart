@@ -6,7 +6,7 @@ import 'package:mbankingflutter/viewmodels/mbx_cardless_payment_vm.dart';
 import 'package:mbankingflutter/views/mbx_inquiry_sheet/mbx_inquiry_sheet.dart';
 import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 
-import '../../pin-sheet/mbx_pin_sheet.dart';
+import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_cardless_denoms_vm.dart';
 import '../../viewmodels/mbx_cardless_inquiry_vm.dart';
 import '../../widgets/all_widgets.dart';

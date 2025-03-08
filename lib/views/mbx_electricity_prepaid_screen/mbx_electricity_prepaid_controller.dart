@@ -6,7 +6,7 @@ import 'package:mbankingflutter/viewmodels/mbx_electricity_prepaid_payment_vm.da
 import 'package:mbankingflutter/views/mbx_inquiry_sheet/mbx_inquiry_sheet.dart';
 import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 
-import '../../pin-sheet/mbx_pin_sheet.dart';
+import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_electricity_prepaid_denoms_vm.dart';
 import '../../widgets/all_widgets.dart';
 

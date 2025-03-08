@@ -9,7 +9,7 @@ import 'package:mbankingflutter/views/mbx_transfer_p2bank_picker/mbx_transfer_p2
 import 'package:mbankingflutter/views/mbx_transfer_p2bank_service_picker/mbx_transfer_p2bank_service_picker.dart';
 
 import '../../models/mbx_transfer_p2bank_dest_model.dart';
-import '../../pin-sheet/mbx_pin_sheet.dart';
+import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_transfer_p2bank_inquiry_vm.dart';
 import '../../viewmodels/mbx_transfer_p2bank_payment_vm.dart';
 import '../../viewmodels/mbx_transfer_p2bank_service_list_vm.dart';

@@ -3,7 +3,7 @@ import 'package:mbankingflutter/models/mbx_pdam_area_model.dart';
 
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_inquiry_model.dart';
-import '../../pin-sheet/mbx_pin_sheet.dart';
+import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_pdam_area_list_vm.dart';
 import '../../viewmodels/mbx_pdam_inquiry_vm.dart';
 import '../../viewmodels/mbx_pdam_payment_vm.dart';

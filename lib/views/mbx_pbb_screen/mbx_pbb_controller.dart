@@ -4,7 +4,7 @@ import 'package:mbankingflutter/viewmodels/mbx_pbb_payment_vm.dart';
 
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_inquiry_model.dart';
-import '../../pin-sheet/mbx_pin_sheet.dart';
+import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../widgets/all_widgets.dart';
 import '../mbx_inquiry_sheet/mbx_inquiry_sheet.dart';
 import '../mbx_sof_sheet/mbx_sof_sheet.dart';
