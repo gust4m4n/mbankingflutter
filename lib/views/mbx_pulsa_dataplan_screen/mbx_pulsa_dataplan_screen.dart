@@ -54,7 +54,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
                               height: 40.0,
                               borderWidth: 0.5,
                               borderColor: ColorX.gray,
-                              onClicked: () {
+                              clicked: () {
                                 controller.btnSofClicked();
                               })
                         ])),
@@ -116,7 +116,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
                       denom: denom,
                       selected: denom.name == controller.selectedDenom.name &&
                           denom.price == controller.selectedDenom.price,
-                      onClicked: () {
+                      clicked: () {
                         controller.selectDenom(controller.denomsVM.list[index]);
                       },
                     );
@@ -128,7 +128,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
                   disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
                   title: 'Lanjut',
                   enabled: controller.readyToSubmit(),
-                  onClicked: () {
+                  clicked: () {
                     controller.btnNextClicked();
                   },
                 ),

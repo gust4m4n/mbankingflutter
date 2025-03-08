@@ -57,7 +57,7 @@ class MbxQRISScreen extends StatelessWidget {
                           iconWidth: 18.0,
                           iconHeight: 18.0,
                           faColor: ColorX.white,
-                          onClicked: () {
+                          clicked: () {
                             controller.btnBackClicked();
                           },
                         ),
@@ -72,7 +72,7 @@ class MbxQRISScreen extends StatelessWidget {
                           iconWidth: 18.0,
                           iconHeight: 18.0,
                           faColor: ColorX.white,
-                          onClicked: () {
+                          clicked: () {
                             controller.btnImageClicked();
                           },
                         ),
@@ -91,7 +91,7 @@ class MbxQRISScreen extends StatelessWidget {
                           faColor: controller.flashlight
                               ? ColorX.theme
                               : ColorX.white,
-                          onClicked: () {
+                          clicked: () {
                             controller.btnFlashlightClicked();
                           },
                         ),

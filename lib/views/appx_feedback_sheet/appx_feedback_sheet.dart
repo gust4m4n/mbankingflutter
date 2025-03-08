@@ -49,7 +49,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                             title: 'Sangat Puas',
                             faIcon: FontAwesomeIcons.faceGrinBeam,
                             faColor: ColorX.green.darken(0.1),
-                            onClicked: () {
+                            clicked: () {
                               controller.btnRatingClicked(
                                   AppxFeedbackScore.verySatisfied);
                             })),
@@ -58,7 +58,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           title: 'Puas',
                           faIcon: FontAwesomeIcons.faceSmile,
                           faColor: ColorX.green.lighten(0.1),
-                          onClicked: () {
+                          clicked: () {
                             controller
                                 .btnRatingClicked(AppxFeedbackScore.satisfied);
                           }),
@@ -68,7 +68,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           title: 'Biasa Saja',
                           faIcon: FontAwesomeIcons.faceMeh,
                           faColor: ColorX.yellow,
-                          onClicked: () {
+                          clicked: () {
                             controller
                                 .btnRatingClicked(AppxFeedbackScore.normal);
                           }),
@@ -78,7 +78,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           title: 'Buruk',
                           faIcon: FontAwesomeIcons.faceFrown,
                           faColor: ColorX.red,
-                          onClicked: () {
+                          clicked: () {
                             controller.btnRatingClicked(AppxFeedbackScore.bad);
                           }),
                     ),
@@ -87,7 +87,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           title: 'Buruk Sekali',
                           faIcon: FontAwesomeIcons.faceTired,
                           faColor: ColorX.red,
-                          onClicked: () {
+                          clicked: () {
                             controller
                                 .btnRatingClicked(AppxFeedbackScore.veryBad);
                           }),

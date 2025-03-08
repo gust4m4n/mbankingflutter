@@ -1,6 +1,7 @@
 import 'package:mbankingflutter/views/mbx_avatar_sheet/mbx_avatar_sheet.dart';
 import 'package:mbankingflutter/views/mbx_help_sheet/mbx_help_sheet.dart';
 
+import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/mbx_change_pin_vm.dart';
 import '../../viewmodels/mbx_logout_vm.dart';
@@ -8,7 +9,6 @@ import '../../viewmodels/mbx_preferences_vm+users.dart';
 import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_set_biometric_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../mbx_pin_sheet/mbx_pin_sheet.dart';
 
 class MbxProfileController extends GetxController {
   var biometricEnabled = false;
@@ -45,7 +45,7 @@ class MbxProfileController extends GetxController {
         });
       },
       optionTitle: 'Lupa PIN',
-      onOption: () {
+      optionClicked: () {
         pinSheet.clear('');
         ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
       },
@@ -73,7 +73,7 @@ class MbxProfileController extends GetxController {
             });
           },
           optionTitle: 'Lupa PIN',
-          onOption: () {},
+          optionClicked: () {},
         )
         .then((value) async {});
   }
@@ -95,7 +95,7 @@ class MbxProfileController extends GetxController {
             });
           },
           optionTitle: '',
-          onOption: () {},
+          optionClicked: () {},
         )
         .then((value) async {});
   }
@@ -118,7 +118,7 @@ class MbxProfileController extends GetxController {
             });
           },
           optionTitle: '',
-          onOption: () {},
+          optionClicked: () {},
         )
         .then((value) async {});
   }

@@ -5,16 +5,16 @@ import '../../widgets/all_widgets.dart';
 // ignore: must_be_immutable
 class MbxCardlessDenomWidget extends StatelessWidget {
   final int nominal;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
-  MbxCardlessDenomWidget({required this.nominal, this.onClicked = null});
+  MbxCardlessDenomWidget({required this.nominal, this.clicked = null});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
         highlightColor: ColorX.theme.withOpacity(0.1),
         cornerRadius: 8.0,
-        onClicked: onClicked,
+        clicked: clicked,
         child: ContainerX(
             backgroundColor: ColorX.theme.withOpacity(0.1),
             cornerRadius: 8.0,

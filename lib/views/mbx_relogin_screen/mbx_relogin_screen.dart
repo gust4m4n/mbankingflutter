@@ -22,7 +22,7 @@ class MbxReloginScreen extends StatelessWidget {
                       children: [
                         Spacer(),
                         MbxThemeButton(
-                          onClicked: () {
+                          clicked: () {
                             controller.btnThemeClicked();
                           },
                         ),
@@ -93,7 +93,7 @@ class MbxReloginScreen extends StatelessWidget {
                                       ButtonX(
                                         backgroundColor: ColorX.theme,
                                         title: 'Masuk',
-                                        onClicked: () {
+                                        clicked: () {
                                           controller.btnLoginClicked();
                                         },
                                       ),
@@ -112,7 +112,7 @@ class MbxReloginScreen extends StatelessWidget {
                                                   titleColor: ColorX.black,
                                                   highlightColor: ColorX.theme
                                                       .withOpacity(0.2),
-                                                  onClicked: () {
+                                                  clicked: () {
                                                     controller.btnQRISClicked();
                                                   }),
                                               MbxLauncherWidget(
@@ -123,7 +123,7 @@ class MbxReloginScreen extends StatelessWidget {
                                                 titleColor: ColorX.black,
                                                 highlightColor: ColorX.theme
                                                     .withOpacity(0.2),
-                                                onClicked: () {
+                                                clicked: () {
                                                   controller
                                                       .btnCardlessClicked();
                                                 },
@@ -136,7 +136,7 @@ class MbxReloginScreen extends StatelessWidget {
                                                 titleColor: ColorX.black,
                                                 highlightColor: ColorX.theme
                                                     .withOpacity(0.2),
-                                                onClicked: () {
+                                                clicked: () {
                                                   controller.btnHelpClicked();
                                                 },
                                               ),
@@ -151,7 +151,7 @@ class MbxReloginScreen extends StatelessWidget {
                                 highlightColor: ColorX.theme.withOpacity(0.1),
                                 title: 'Ganti Akun',
                                 titleColor: ColorX.black,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnSwitchAccountClicked();
                                 },
                               ),

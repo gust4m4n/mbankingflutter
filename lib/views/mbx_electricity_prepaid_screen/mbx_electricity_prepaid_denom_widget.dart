@@ -6,17 +6,17 @@ import '../../widgets/all_widgets.dart';
 class MbxElectricityPrepaidDenomWidget extends StatelessWidget {
   final int nominal;
   final bool selected;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
   MbxElectricityPrepaidDenomWidget(
-      {required this.nominal, required this.selected, this.onClicked = null});
+      {required this.nominal, required this.selected, this.clicked = null});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
         highlightColor: ColorX.theme.withOpacity(0.1),
         cornerRadius: 8.0,
-        onClicked: onClicked,
+        clicked: clicked,
         child: ContainerX(
             backgroundColor: selected
                 ? ColorX.theme.withOpacity(0.2)

@@ -46,7 +46,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                       faIcon: FontAwesomeIcons.qrcode,
                       faColor: ColorX.white,
                       title: '',
-                      onClicked: () {
+                      clicked: () {
                         controller.btnQRISClicked();
                       },
                     ))),
@@ -73,7 +73,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                                 title: 'Beranda',
                                 faIcon: FontAwesomeIcons.house,
                                 selected: controller.tabBarIndex == 0,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnHomeClicked();
                                 })),
                         Expanded(
@@ -81,7 +81,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                                 title: 'Riwayat',
                                 faIcon: FontAwesomeIcons.clockRotateLeft,
                                 selected: controller.tabBarIndex == 1,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnHistoryClicked();
                                 })),
                         Expanded(
@@ -93,7 +93,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                                 title: 'Notifikasi',
                                 faIcon: FontAwesomeIcons.bell,
                                 selected: controller.tabBarIndex == 3,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnNotificationsClicked();
                                 })),
                         Expanded(
@@ -101,7 +101,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                                 title: 'Akun',
                                 faIcon: FontAwesomeIcons.user,
                                 selected: controller.tabBarIndex == 4,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnAccountClicked();
                                 })),
                       ],

@@ -1,16 +1,16 @@
-import '../../widgets/all_widgets.dart';
+import '../widgets/all_widgets.dart';
 
-class MbxPinButton extends StatelessWidget {
+class MbxOtpButton extends StatelessWidget {
   final String title;
   final IconData? faIcon;
 
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
-  MbxPinButton({
+  MbxOtpButton({
     Key? key,
     this.title = '',
     this.faIcon = null,
-    this.onClicked,
+    this.clicked,
   }) : super(key: key);
 
   @override
@@ -28,7 +28,7 @@ class MbxPinButton extends StatelessWidget {
                 faColor: ColorX.black,
                 fontSize: 24.0,
                 fontWeight: FontWeight.w400,
-                onClicked: onClicked)
+                clicked: clicked)
             : ContainerX(height: 48.0));
   }
 }

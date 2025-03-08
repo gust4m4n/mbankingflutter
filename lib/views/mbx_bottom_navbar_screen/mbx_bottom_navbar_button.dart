@@ -8,13 +8,13 @@ class MbxButtonNavBarButton extends StatelessWidget {
   final String title;
   final IconData faIcon;
   final bool selected;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
   MbxButtonNavBarButton({
     required this.title,
     required this.faIcon,
     required this.selected,
-    required this.onClicked,
+    required this.clicked,
   });
 
   @override
@@ -25,8 +25,8 @@ class MbxButtonNavBarButton extends StatelessWidget {
           : ColorX.transparent, // ColorX.theme.withOpacity(0.1),
       child: InkWellX(
           highlightColor: ColorX.theme.withOpacity(0.2),
-          onClicked: () {
-            onClicked!();
+          clicked: () {
+            clicked!();
           },
           child: ContainerX(
               //width: double.infinity,

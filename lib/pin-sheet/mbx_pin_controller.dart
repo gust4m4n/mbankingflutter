@@ -1,15 +1,15 @@
-import '../../viewmodels/mbx_biometric_vm.dart';
-import '../../viewmodels/mbx_preferences_vm+users.dart';
-import '../../widgets/all_widgets.dart';
+import '../viewmodels/mbx_biometric_vm.dart';
+import '../viewmodels/mbx_preferences_vm+users.dart';
+import '../widgets/all_widgets.dart';
 import 'mbx_pin_sheet.dart';
 
-class MbxPinSheetController extends GetxController {
+class MbxPinController extends GetxController {
   final MbxPinSheet widget;
   String code = '';
   String error = '';
   bool biometricEnabled = false;
 
-  MbxPinSheetController({required this.widget});
+  MbxPinController({required this.widget});
 
   @override
   void onReady() {

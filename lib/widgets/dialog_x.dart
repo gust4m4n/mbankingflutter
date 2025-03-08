@@ -53,7 +53,7 @@ class DialogX {
               child: ButtonX(
                 title: leftBtnTitle,
                 backgroundColor: ColorX.green,
-                onClicked: onLeftBtnClicked,
+                clicked: onLeftBtnClicked,
               ),
             ),
             Visibility(
@@ -65,7 +65,7 @@ class DialogX {
                 child: ButtonX(
                   title: rightBtnTitle,
                   backgroundColor: ColorX.red,
-                  onClicked: onRightBtnClicked,
+                  clicked: onRightBtnClicked,
                 ),
               ),
             )

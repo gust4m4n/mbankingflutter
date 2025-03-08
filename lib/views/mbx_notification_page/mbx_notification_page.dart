@@ -45,7 +45,7 @@ class MbxNotificationPage extends StatelessWidget {
                               backgroundColor: ColorX.white,
                               highlightColor: ColorX.theme.withOpacity(0.1),
                               cornerRadius: 16.0,
-                              onClicked: () {
+                              clicked: () {
                                 Get.toNamed('/receipt', arguments: {
                                   'receipt': MbxReceiptModel(),
                                   'backToHome': false

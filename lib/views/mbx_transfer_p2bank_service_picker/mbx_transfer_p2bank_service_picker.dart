@@ -38,7 +38,7 @@ class MbxTransferP2BankServicePicker
                         service: controller.list[index],
                         borders: true,
                         onEyeClicked: () {},
-                        onClicked: () {
+                        clicked: () {
                           Get.back(result: controller.list[index]);
                         },
                       );
@@ -49,7 +49,7 @@ class MbxTransferP2BankServicePicker
                     child: ButtonX(
                         title: 'Batal',
                         backgroundColor: ColorX.theme,
-                        onClicked: () {
+                        clicked: () {
                           Get.back();
                         })),
                 ContainerX(height: 16.0),

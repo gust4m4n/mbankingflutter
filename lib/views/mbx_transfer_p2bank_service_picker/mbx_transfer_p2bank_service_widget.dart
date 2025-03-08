@@ -9,22 +9,22 @@ class MbxTransferP2BankServiceWidget extends StatelessWidget {
   final MbxTransferP2BankServiceModel service;
   final bool borders;
   final GestureTapCallback? onEyeClicked;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
   MbxTransferP2BankServiceWidget(
       {required this.service,
       required bool this.borders,
       required this.onEyeClicked,
-      this.onClicked});
+      this.clicked});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
-        highlightColor: onClicked != null
+        highlightColor: clicked != null
             ? ColorX.theme.withOpacity(0.1)
             : ColorX.transparent,
-        cornerRadius: onClicked != null ? 12.0 : 0.0,
-        onClicked: onClicked,
+        cornerRadius: clicked != null ? 12.0 : 0.0,
+        clicked: clicked,
         child: ContainerX(
             backgroundColor: ColorX.transparent,
             borderWidth: 1.0,

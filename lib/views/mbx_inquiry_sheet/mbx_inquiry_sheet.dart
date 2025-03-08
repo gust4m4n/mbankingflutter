@@ -51,7 +51,7 @@ class MbxInquirySheet extends GetWidget<MbxInquiryController> {
                   child: ButtonX(
                 backgroundColor: ColorX.theme,
                 title: confirmBtnTitle,
-                onClicked: () {
+                clicked: () {
                   controller.btnNextClicked();
                 },
               )),
@@ -62,7 +62,7 @@ class MbxInquirySheet extends GetWidget<MbxInquiryController> {
                 highlightColor: ColorX.theme.withOpacity(0.3),
                 title: 'Batal',
                 titleColor: ColorX.black,
-                onClicked: () {
+                clicked: () {
                   controller.btnCloseClicked();
                 },
               ))

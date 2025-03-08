@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../widgets/all_widgets.dart';
 
 class MbxPinDot extends StatelessWidget {
   final bool on;

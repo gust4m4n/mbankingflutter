@@ -61,7 +61,7 @@ class MbxTransferP2PPicker extends GetWidget<MbxTransferP2PPickerController> {
                         itemBuilder: (BuildContext context, int index) {
                           return InkWellX(
                               highlightColor: ColorX.theme.withOpacity(0.1),
-                              onClicked: () {
+                              clicked: () {
                                 Get.back(
                                     result:
                                         controller.destListVM.filtered[index]);
@@ -80,7 +80,7 @@ class MbxTransferP2PPicker extends GetWidget<MbxTransferP2PPickerController> {
               child: ButtonX(
                 backgroundColor: ColorX.theme,
                 title: 'Batal',
-                onClicked: () {
+                clicked: () {
                   controller.btnCloseClicked();
                 },
               ),

@@ -47,7 +47,7 @@ class MbxTransferScreen extends StatelessWidget {
                                   ),
                                 ],
                               )),
-                          onClicked: () {
+                          clicked: () {
                             controller.btnP2PClicked();
                           },
                         ),
@@ -82,7 +82,7 @@ class MbxTransferScreen extends StatelessWidget {
                                   ),
                                 ],
                               )),
-                          onClicked: () {
+                          clicked: () {
                             controller.btnP2BankClicked();
                           },
                         ),
@@ -179,7 +179,7 @@ class MbxTransferScreen extends StatelessWidget {
                                                 return InkWellX(
                                                     highlightColor: ColorX.theme
                                                         .withOpacity(0.1),
-                                                    onClicked: () {
+                                                    clicked: () {
                                                       controller
                                                           .openHistory(history);
                                                     },

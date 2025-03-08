@@ -54,7 +54,7 @@ class MbxCardlessScreen extends StatelessWidget {
                               height: 40.0,
                               borderWidth: 0.5,
                               borderColor: ColorX.gray,
-                              onClicked: () {
+                              clicked: () {
                                 controller.btnSofClicked();
                               })
                         ])),
@@ -103,7 +103,7 @@ class MbxCardlessScreen extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return MbxCardlessDenomWidget(
                       nominal: controller.denomsVM.list[index].nominal,
-                      onClicked: () {
+                      clicked: () {
                         controller.amountChanged(
                             '${controller.denomsVM.list[index].nominal}');
                       },
@@ -116,7 +116,7 @@ class MbxCardlessScreen extends StatelessWidget {
                   disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
                   title: 'Lanjut',
                   enabled: controller.readyToSubmit(),
-                  onClicked: () {
+                  clicked: () {
                     controller.btnNextClicked();
                   },
                 ),

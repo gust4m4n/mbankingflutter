@@ -13,7 +13,7 @@ class MbxThemeWidget extends StatelessWidget {
             child: InkWellX(
                 cornerRadius: 29.0,
                 highlightColor: ColorX.highlight,
-                onClicked: () {
+                clicked: () {
                   final hex = '#${color.value.toRadixString(16)}';
                   Get.back(result: hex);
                 },

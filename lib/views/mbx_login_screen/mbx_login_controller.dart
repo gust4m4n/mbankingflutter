@@ -1,3 +1,6 @@
+import 'package:mbankingflutter/otp-sheet/mbx_otp_sheet.dart';
+
+import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/mbx_login_otp_vm.dart';
 import '../../viewmodels/mbx_login_phone_vm.dart';
@@ -6,7 +9,6 @@ import '../../viewmodels/mbx_onboarding_list_vm.dart';
 import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_theme_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../mbx_pin_sheet/mbx_pin_sheet.dart';
 import 'mbx_login_screen.dart';
 
 class MbLoginController extends GetxController {
@@ -87,7 +89,7 @@ class MbLoginController extends GetxController {
   }
 
   askOtp(String phone) {
-    final pinSheet = MbxPinSheet();
+    final pinSheet = MbxOtpSheet();
     pinSheet
         .show(
       title: 'OTP',
@@ -110,7 +112,7 @@ class MbLoginController extends GetxController {
         } else {}
       },
       optionTitle: 'Kirim Ulang',
-      onOption: () {
+      optionClicked: () {
         pinSheet.clear('');
         ToastX.showSuccess(msg: 'OTP telah dikirim ulang ke ponsel anda.');
       },
@@ -144,7 +146,7 @@ class MbLoginController extends GetxController {
         }
       },
       optionTitle: 'Lupa PIN',
-      onOption: () {
+      optionClicked: () {
         pinSheet.clear('');
         ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
       },

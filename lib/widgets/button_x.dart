@@ -21,7 +21,7 @@ class ButtonX extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final bool enabled;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
   const ButtonX({
     Key? key,
@@ -45,7 +45,7 @@ class ButtonX extends StatelessWidget {
     this.fontSize = 16.0,
     this.fontWeight = FontWeight.w700,
     this.enabled = true,
-    this.onClicked,
+    this.clicked,
   }) : super(key: key);
 
   @override
@@ -59,7 +59,7 @@ class ButtonX extends StatelessWidget {
         child: InkWellX(
             highlightColor:
                 enabled == true ? highlightColor : ColorX.transparent,
-            onClicked: enabled == true ? onClicked : null,
+            clicked: enabled == true ? clicked : null,
             child: Container(
               width: width,
               height: height,

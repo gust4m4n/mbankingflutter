@@ -53,7 +53,7 @@ class MbxPDAMScreen extends StatelessWidget {
                               height: 40.0,
                               borderWidth: 0.5,
                               borderColor: ColorX.gray,
-                              onClicked: () {
+                              clicked: () {
                                 controller.btnSofClicked();
                               })
                         ])),
@@ -107,7 +107,7 @@ class MbxPDAMScreen extends StatelessWidget {
                                 height: 40.0,
                                 borderWidth: 0.5,
                                 borderColor: ColorX.gray,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnAreaClicked();
                                 })
                           ])),
@@ -149,7 +149,7 @@ class MbxPDAMScreen extends StatelessWidget {
                   title: 'Lanjut',
                   disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
                   enabled: controller.readyToSubmit(),
-                  onClicked: () {
+                  clicked: () {
                     controller.btnNextClicked();
                   },
                 ),

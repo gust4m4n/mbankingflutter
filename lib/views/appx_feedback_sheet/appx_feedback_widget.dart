@@ -5,17 +5,17 @@ class AppxFeedbackWidget extends StatelessWidget {
   final String title;
   final IconData faIcon;
   final Color faColor;
-  final GestureTapCallback onClicked;
+  final GestureTapCallback clicked;
   AppxFeedbackWidget(
       {required this.title,
       required this.faIcon,
       required this.faColor,
-      required this.onClicked});
+      required this.clicked});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
-        onClicked: onClicked,
+        clicked: clicked,
         cornerRadius: 8.0,
         child: Padding(
             padding: EdgeInsets.only(top: 8.0, bottom: 8.0),

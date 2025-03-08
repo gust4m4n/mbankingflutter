@@ -12,7 +12,7 @@ class MbxPromoWidget extends StatelessWidget {
         padding: EdgeInsets.only(left: 12.0),
         child: InkWellX(
           cornerRadius: 12.0,
-          onClicked: () {},
+          clicked: () {},
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             ImageX(

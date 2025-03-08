@@ -115,7 +115,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
                             height: 40.0,
                             borderWidth: 0.5,
                             borderColor: ColorX.gray,
-                            onClicked: () {
+                            clicked: () {
                               controller.btnSofClicked();
                             })
                       ])),
@@ -127,7 +127,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
                 backgroundColor: ColorX.theme,
                 disabledBackgroundColor: ColorX.theme.withOpacity(0.2),
                 enabled: controller.amount > 0,
-                onClicked: () {
+                clicked: () {
                   controller.btnNextClicked();
                 },
               )

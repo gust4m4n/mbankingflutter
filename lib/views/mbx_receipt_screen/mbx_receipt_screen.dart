@@ -157,7 +157,7 @@ class MbxReceiptScreen extends StatelessWidget {
                                           width: 42.0,
                                           height: 42.0,
                                           cornerRadius: 8.0,
-                                          onClicked: controller.btnShareClicked,
+                                          clicked: controller.btnShareClicked,
                                         ),
                                         ContainerX(width: 8.0),
                                         ButtonX(
@@ -171,7 +171,7 @@ class MbxReceiptScreen extends StatelessWidget {
                                           width: 42.0,
                                           height: 42.0,
                                           cornerRadius: 8.0,
-                                          onClicked:
+                                          clicked:
                                               controller.btnDownloadClicked,
                                         ),
                                         ContainerX(width: 8.0),
@@ -182,8 +182,7 @@ class MbxReceiptScreen extends StatelessWidget {
                                             titleColor: ColorX.white,
                                             height: 42.0,
                                             cornerRadius: 8.0,
-                                            onClicked:
-                                                controller.btnBackClicked,
+                                            clicked: controller.btnBackClicked,
                                           ),
                                         ),
                                       ],

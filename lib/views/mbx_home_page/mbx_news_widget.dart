@@ -13,7 +13,7 @@ class MbxNewsWidget extends StatelessWidget {
         child: InkWellX(
           highlightColor: ColorX.theme.withOpacity(0.1),
           cornerRadius: 12.0,
-          onClicked: () {
+          clicked: () {
             Get.toNamed('/news', arguments: news);
           },
           child:

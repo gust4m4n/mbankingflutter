@@ -3,7 +3,7 @@ import '../../widgets/all_widgets.dart';
 class MbaxProfileMenuButton extends StatelessWidget {
   final String title;
   final IconData? faIcon;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
   final bool toggle;
   final void Function(bool)? onToggleChanged;
   final bool toggleValue;
@@ -12,7 +12,7 @@ class MbaxProfileMenuButton extends StatelessWidget {
       {Key? key,
       this.title = '',
       this.faIcon = null,
-      this.onClicked,
+      this.clicked,
       this.toggle = false,
       this.onToggleChanged = null,
       this.toggleValue = false})
@@ -24,8 +24,8 @@ class MbaxProfileMenuButton extends StatelessWidget {
       padding: EdgeInsets.only(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0),
       child: InkWellX(
           highlightColor: ColorX.theme.withOpacity(0.1),
-          onClicked: () {
-            onClicked!();
+          clicked: () {
+            clicked!();
           },
           child: ContainerX(
               padding: EdgeInsets.only(

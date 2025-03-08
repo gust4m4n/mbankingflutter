@@ -63,7 +63,7 @@ class MbxReceiptWidget extends StatelessWidget {
                                 height: 26.0,
                                 borderWidth: 0.5,
                                 borderColor: ColorX.gray,
-                                onClicked: () {
+                                clicked: () {
                                   Clipboard.setData(
                                       ClipboardData(text: row.value));
                                   ToastX.showSuccess(

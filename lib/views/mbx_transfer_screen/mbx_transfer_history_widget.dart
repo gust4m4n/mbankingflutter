@@ -72,7 +72,7 @@ class MbxTransferHistoryWidget extends StatelessWidget {
                     width: 100.0,
                     height: 32.0,
                     cornerRadius: 8.0,
-                    onClicked: onTransferClicked,
+                    clicked: onTransferClicked,
                   ),
                   SizedBox(height: 8.0),
                 ],

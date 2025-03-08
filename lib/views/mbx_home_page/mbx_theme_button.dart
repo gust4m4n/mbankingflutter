@@ -2,14 +2,14 @@ import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxThemeButton extends StatelessWidget {
-  final GestureTapCallback? onClicked;
-  MbxThemeButton({required this.onClicked});
+  final GestureTapCallback? clicked;
+  MbxThemeButton({required this.clicked});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
       cornerRadius: 8.0,
-      onClicked: onClicked,
+      clicked: clicked,
       child: ContainerX(
         width: 42.0,
         height: 42.0,

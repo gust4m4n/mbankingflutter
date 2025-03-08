@@ -68,7 +68,7 @@ class MbxCardlessPaymentScreen extends StatelessWidget {
                 ButtonX(
                   backgroundColor: ColorX.theme,
                   title: 'Selesai',
-                  onClicked: () {
+                  clicked: () {
                     controller.btnBackClicked();
                   },
                 ),

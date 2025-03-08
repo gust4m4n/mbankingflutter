@@ -37,7 +37,7 @@ class MbxSofSheet extends GetWidget<MbxSofSheetController> {
                         onEyeClicked: () {
                           controller.btnEyeClicked(index);
                         },
-                        onClicked: () {
+                        clicked: () {
                           Get.back(result: controller.accounts[index]);
                         },
                       );
@@ -48,7 +48,7 @@ class MbxSofSheet extends GetWidget<MbxSofSheetController> {
                     child: ButtonX(
                         title: 'Batal',
                         backgroundColor: ColorX.theme,
-                        onClicked: () {
+                        clicked: () {
                           Get.back();
                         })),
                 ContainerX(height: 16.0),

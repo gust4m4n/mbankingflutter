@@ -67,7 +67,7 @@ class MbxStringPicker extends GetWidget<MbxStringPickerController> {
               child: ButtonX(
                 backgroundColor: ColorX.theme,
                 title: 'Kembali',
-                onClicked: () {
+                clicked: () {
                   controller.btnCloseClicked();
                 },
               ),

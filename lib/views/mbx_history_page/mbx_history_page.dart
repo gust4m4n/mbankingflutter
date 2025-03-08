@@ -44,7 +44,7 @@ class MbxHistoryPage extends StatelessWidget {
                       final history = controller.historyListVM.list[index];
                       return InkWellX(
                           highlightColor: ColorX.theme.withOpacity(0.1),
-                          onClicked: () {
+                          clicked: () {
                             Get.toNamed('/receipt', arguments: {
                               'receipt': MbxReceiptModel(),
                               'backToHome': false,

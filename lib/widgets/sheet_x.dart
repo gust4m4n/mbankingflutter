@@ -42,7 +42,7 @@ class SheetX {
                                     children: [
                                       InkWellX(
                                         cornerRadius: 20.0,
-                                        onClicked: () {
+                                        clicked: () {
                                           Get.back();
                                         },
                                         child: ContainerX(
@@ -74,7 +74,7 @@ class SheetX {
                                       onAddClicked != null
                                           ? InkWellX(
                                               cornerRadius: 20.0,
-                                              onClicked: (() {
+                                              clicked: (() {
                                                 onAddClicked();
                                               }),
                                               child: ContainerX(
@@ -171,7 +171,7 @@ class SheetX {
                       borderWidth: 1.0,
                       borderColor: ColorX.theme,
                       backgroundColor: ColorX.theme,
-                      onClicked: onLeftBtnClicked,
+                      clicked: onLeftBtnClicked,
                     ),
                   ),
                 ),
@@ -187,7 +187,7 @@ class SheetX {
                       titleColor: ColorX.black,
                       backgroundColor: ColorX.theme.withOpacity(0.2),
                       highlightColor: ColorX.theme.withOpacity(0.3),
-                      onClicked: onRightBtnClicked ?? () => {},
+                      clicked: onRightBtnClicked ?? () => {},
                     ),
                   ),
                 )

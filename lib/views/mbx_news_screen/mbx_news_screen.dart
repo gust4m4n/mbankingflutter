@@ -34,7 +34,7 @@ class MbxNewsScreen extends StatelessWidget {
                         iconWidth: 18.0,
                         iconHeight: 18.0,
                         faColor: ColorX.white,
-                        onClicked: () {
+                        clicked: () {
                           controller.btnBackClicked();
                         },
                       ),

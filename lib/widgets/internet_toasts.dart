@@ -28,7 +28,7 @@ class InternetOfflineToast extends StatelessWidget {
               borderColor: ColorX.white,
               width: 50.0,
               height: 32.0,
-              onClicked: () async {
+              clicked: () async {
                 await ToastX.dismissCustom();
               },
             )
@@ -67,7 +67,7 @@ class InternetOnlineToast extends StatelessWidget {
               borderColor: ColorX.white,
               width: 50.0,
               height: 32.0,
-              onClicked: () async {
+              clicked: () async {
                 await ToastX.dismissCustom();
               },
             )

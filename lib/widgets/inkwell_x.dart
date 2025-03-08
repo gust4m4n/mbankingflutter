@@ -4,7 +4,7 @@ class InkWellX extends StatelessWidget {
   final Color? backgroundColor;
   final Color? highlightColor;
   final double cornerRadius;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
   final Widget? child;
 
   const InkWellX({
@@ -12,7 +12,7 @@ class InkWellX extends StatelessWidget {
     this.backgroundColor = ColorX.transparent,
     this.highlightColor,
     this.cornerRadius = 0.0,
-    this.onClicked,
+    this.clicked,
     this.child,
   }) : super(key: key);
 
@@ -30,8 +30,8 @@ class InkWellX extends StatelessWidget {
                 borderRadius: BorderRadius.circular(cornerRadius)),
             highlightColor: highlightColor,
             onTap: () {
-              if (onClicked != null) {
-                onClicked!();
+              if (clicked != null) {
+                clicked!();
               }
             },
             child: child));

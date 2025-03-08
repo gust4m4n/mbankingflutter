@@ -26,7 +26,7 @@ class MbxLoginScreen extends StatelessWidget {
                   children: [
                     Spacer(),
                     MbxThemeButton(
-                      onClicked: () {
+                      clicked: () {
                         controller.btnThemeClicked();
                       },
                     ),

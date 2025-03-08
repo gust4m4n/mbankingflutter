@@ -41,7 +41,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                             title: 'Prabayar',
                             titleColor: ColorX.white,
                             highlightColor: ColorX.theme.lighten(0.1),
-                            onClicked: () {
+                            clicked: () {
                               controller.btnPrepaidClicked();
                             }),
                         MbxLauncherWidget(
@@ -50,7 +50,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                           title: 'Pascabayar',
                           titleColor: ColorX.white,
                           highlightColor: ColorX.theme.lighten(0.1),
-                          onClicked: () {
+                          clicked: () {
                             controller.btnPostpaidClicked();
                           },
                         ),
@@ -60,7 +60,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                           title: 'Non-Tagihan Listrik',
                           titleColor: ColorX.white,
                           highlightColor: ColorX.theme.lighten(0.1),
-                          onClicked: () {
+                          clicked: () {
                             controller.btnNonTagLisClicked();
                           },
                         ),
@@ -74,7 +74,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                     backgroundColor: ColorX.transparent,
                     borderWidth: 1.0,
                     borderColor: ColorX.gray,
-                    onClicked: () {
+                    clicked: () {
                       controller.btnCloseClicked();
                     },
                   ),

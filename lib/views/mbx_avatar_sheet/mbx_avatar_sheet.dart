@@ -42,7 +42,7 @@ class MbxAvatarSheet extends GetWidget<MbxAvatarSheetController> {
                               backgroundColor: ColorX.white,
                               borderWidth: 1.0,
                               borderColor: ColorX.lightGray,
-                              onClicked: () {
+                              clicked: () {
                                 controller.btnCameraClicked();
                               })),
                       ContainerX(width: 8.0),
@@ -53,7 +53,7 @@ class MbxAvatarSheet extends GetWidget<MbxAvatarSheetController> {
                               backgroundColor: ColorX.white,
                               borderWidth: 1.0,
                               borderColor: ColorX.lightGray,
-                              onClicked: () {
+                              clicked: () {
                                 controller.btnGalleryClicked();
                               })),
                       SizedBox(

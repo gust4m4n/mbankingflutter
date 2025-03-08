@@ -4,18 +4,18 @@ import '../../widgets/all_widgets.dart';
 class MbxHelpWidget extends StatelessWidget {
   final IconData faIcon;
   final String title;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
-  MbxHelpWidget({required this.faIcon, required this.title, this.onClicked});
+  MbxHelpWidget({required this.faIcon, required this.title, this.clicked});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
-        highlightColor: onClicked != null
+        highlightColor: clicked != null
             ? ColorX.theme.withOpacity(0.1)
             : ColorX.transparent,
-        cornerRadius: onClicked != null ? 12.0 : 0.0,
-        onClicked: onClicked,
+        cornerRadius: clicked != null ? 12.0 : 0.0,
+        clicked: clicked,
         child: ContainerX(
             backgroundColor: ColorX.transparent,
             borderWidth: 1.0,

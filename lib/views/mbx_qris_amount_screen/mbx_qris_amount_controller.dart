@@ -6,9 +6,9 @@ import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_qris_inquiry_model.dart';
+import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_receipt_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../mbx_pin_sheet/mbx_pin_sheet.dart';
 
 class MbxQRISAmountController extends GetxController {
   final MbxQRISInquiryModel inquiry;
@@ -101,13 +101,14 @@ class MbxQRISAmountController extends GetxController {
             if (resp.status == 200) {
               Get.toNamed('/receipt', arguments: {
                 'receipt': qrisPaymentVM.receipt,
-                'backToHome': true, 'askFeedback': true
+                'backToHome': true,
+                'askFeedback': true
               });
             }
           });
         },
         optionTitle: 'Lupa PIN',
-        onOption: () {
+        optionClicked: () {
           pinSheet.clear('');
           ToastX.showSuccess(
               msg: 'PIN akan direset, silahkan hubungi CS kami.');

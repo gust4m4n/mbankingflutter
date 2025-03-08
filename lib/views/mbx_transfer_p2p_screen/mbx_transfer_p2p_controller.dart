@@ -3,12 +3,12 @@ import 'package:intl/intl.dart';
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_inquiry_model.dart';
 import '../../models/mbx_transfer_p2p_dest_model.dart';
+import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_transfer_p2p_inquiry_vm.dart';
 import '../../viewmodels/mbx_transfer_p2p_payment_vm.dart';
 import '../../widgets/all_widgets.dart';
 import '../mbx_inquiry_sheet/mbx_inquiry_sheet.dart';
-import '../mbx_pin_sheet/mbx_pin_sheet.dart';
 import '../mbx_sof_sheet/mbx_sof_sheet.dart';
 import '../mbx_transfer_p2p_picker/mbx_transfer_p2p_picker.dart';
 
@@ -171,7 +171,7 @@ class MbxTransfeP2PController extends GetxController {
         payment(transaction_id: code, pin: code, biometric: biometric);
       },
       optionTitle: 'Lupa PIN',
-      onOption: () {
+      optionClicked: () {
         pinSheet.clear('');
         ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
       },
@@ -189,8 +189,11 @@ class MbxTransfeP2PController extends GetxController {
         .then((resp) {
       if (resp.status == 200) {
         Get.back();
-        Get.offNamed('/receipt',
-            arguments: {'receipt': paymentVM.receipt, 'backToHome': true, 'askFeedback': true});
+        Get.offNamed('/receipt', arguments: {
+          'receipt': paymentVM.receipt,
+          'backToHome': true,
+          'askFeedback': true
+        });
       } else {
         // payment request failed
       }

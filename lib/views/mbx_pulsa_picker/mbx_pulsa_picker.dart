@@ -41,7 +41,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                             title: 'Prabayar',
                             titleColor: ColorX.white,
                             highlightColor: ColorX.theme.lighten(0.1),
-                            onClicked: () {
+                            clicked: () {
                               controller.btnPrepaidClicked();
                             }),
                         MbxLauncherWidget(
@@ -50,7 +50,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                           title: 'Pascabayar',
                           titleColor: ColorX.white,
                           highlightColor: ColorX.theme.lighten(0.1),
-                          onClicked: () {
+                          clicked: () {
                             controller.btnPascabayarClicked();
                           },
                         ),
@@ -60,7 +60,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                           title: 'Paket Data',
                           titleColor: ColorX.white,
                           highlightColor: ColorX.theme.lighten(0.1),
-                          onClicked: () {
+                          clicked: () {
                             controller.btnDataPlanClicked();
                           },
                         ),
@@ -74,7 +74,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                     backgroundColor: ColorX.transparent,
                     borderWidth: 1.0,
                     borderColor: ColorX.gray,
-                    onClicked: () {
+                    clicked: () {
                       controller.btnCloseClicked();
                     },
                   ),

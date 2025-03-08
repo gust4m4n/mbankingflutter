@@ -30,7 +30,7 @@ class NavigationBarX extends StatelessWidget {
                 children: [
                   leftBtn != null
                       ? InkWellX(
-                          onClicked: () =>
+                          clicked: () =>
                               leftAction != null ? leftAction!() : null,
                           child: ContainerX(
                               width: 60.0,
@@ -50,7 +50,7 @@ class NavigationBarX extends StatelessWidget {
                   ),
                   rightBtn != null
                       ? InkWellX(
-                          onClicked: () =>
+                          clicked: () =>
                               rightAction != null ? rightAction!() : null,
                           child: ContainerX(
                               width: 60.0,

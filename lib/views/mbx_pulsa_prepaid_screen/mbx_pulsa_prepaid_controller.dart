@@ -5,11 +5,11 @@ import 'package:mbankingflutter/viewmodels/mbx_pulsa_prepaid_denoms_vm.dart';
 import 'package:mbankingflutter/views/mbx_inquiry_sheet/mbx_inquiry_sheet.dart';
 import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 
+import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_pulsa_prepaid_inquiry_vm .dart';
 import '../../viewmodels/mbx_pulsa_prepaid_payment_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../mbx_pin_sheet/mbx_pin_sheet.dart';
 
 class MbxPulsaPrepaidController extends GetxController {
   var sof = MbxAccountModel();
@@ -129,7 +129,7 @@ class MbxPulsaPrepaidController extends GetxController {
         payment(transaction_id: code, pin: code, biometric: biometric);
       },
       optionTitle: 'Lupa PIN',
-      onOption: () {
+      optionClicked: () {
         pinSheet.clear('');
         ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
       },
@@ -147,8 +147,11 @@ class MbxPulsaPrepaidController extends GetxController {
         .then((resp) {
       if (resp.status == 200) {
         Get.back();
-        Get.offNamed('/receipt',
-            arguments: {'receipt': paymentVM.receipt, 'backToHome': true, 'askFeedback': true});
+        Get.offNamed('/receipt', arguments: {
+          'receipt': paymentVM.receipt,
+          'backToHome': true,
+          'askFeedback': true
+        });
       } else {
         // payment request failed
       }

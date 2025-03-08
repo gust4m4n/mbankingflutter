@@ -1,19 +1,19 @@
-import '../../widgets/all_widgets.dart';
-import 'mbx_pin_button.dart';
-import 'mbx_pin_dot.dart';
-import 'mbx_pin_sheet_controller.dart';
+import '../widgets/all_widgets.dart';
+import 'mbx_otp_button.dart';
+import 'mbx_otp_controller.dart';
+import 'mbx_otp_dot.dart';
 
 // ignore: must_be_immutable
-class MbxPinSheet extends GetWidget<MbxPinSheetController> {
+class MbxOtpSheet extends GetWidget<MbxOtpController> {
   String title = '';
   String message = '';
   bool secure = true;
   bool biometric = false;
   void Function(String code, bool biometric)? onSubmit = null;
   String optionTitle = 'Lupa PIN';
-  void Function()? onOption = null;
+  void Function()? optionClicked = null;
 
-  MbxPinSheet();
+  MbxOtpSheet();
 
   Future<T?> show<T>({
     required String title,
@@ -22,29 +22,29 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
     required bool biometric,
     required void Function(String code, bool biometric) onSubmit,
     required String optionTitle,
-    required void Function()? onOption,
+    required void Function()? optionClicked,
   }) async {
     FocusManager.instance.primaryFocus?.unfocus();
-    await Get.delete<MbxPinSheetController>();
+    await Get.delete<MbxOtpController>();
     this.title = title;
     this.message = message;
     this.secure = secure;
     this.biometric = biometric;
     this.onSubmit = onSubmit;
     this.optionTitle = optionTitle;
-    this.onOption = onOption;
+    this.optionClicked = optionClicked;
     return SheetX.showCustom(widget: this, title: title, autoClose: false);
   }
 
   clear(String error) {
-    final controller = Get.find<MbxPinSheetController>();
+    final controller = Get.find<MbxOtpController>();
     controller.clear(error);
   }
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxPinSheetController>(
-        init: MbxPinSheetController(widget: this),
+    return GetBuilder<MbxOtpController>(
+        init: MbxOtpController(widget: this),
         builder: (controller) => ContainerX(
             backgroundColor: ColorX.white,
             child: Wrap(alignment: WrapAlignment.center, children: [
@@ -69,7 +69,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      MbxPinDot(
+                      MbxOtpDot(
                         on: controller.code.length >= 1,
                         number: controller.code.length >= 1
                             ? controller.code[0]
@@ -77,7 +77,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                         secure: secure,
                       ),
                       ContainerX(width: 8.0),
-                      MbxPinDot(
+                      MbxOtpDot(
                         on: controller.code.length >= 2,
                         number: controller.code.length >= 2
                             ? controller.code[1]
@@ -85,7 +85,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                         secure: secure,
                       ),
                       ContainerX(width: 8.0),
-                      MbxPinDot(
+                      MbxOtpDot(
                         on: controller.code.length >= 3,
                         number: controller.code.length >= 3
                             ? controller.code[2]
@@ -93,7 +93,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                         secure: secure,
                       ),
                       ContainerX(width: 8.0),
-                      MbxPinDot(
+                      MbxOtpDot(
                         on: controller.code.length >= 4,
                         number: controller.code.length >= 4
                             ? controller.code[3]
@@ -101,7 +101,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                         secure: secure,
                       ),
                       ContainerX(width: 8.0),
-                      MbxPinDot(
+                      MbxOtpDot(
                         on: controller.code.length >= 5,
                         number: controller.code.length >= 5
                             ? controller.code[4]
@@ -109,7 +109,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                         secure: secure,
                       ),
                       ContainerX(width: 8.0),
-                      MbxPinDot(
+                      MbxOtpDot(
                         on: controller.code.length >= 6,
                         number: controller.code.length >= 6
                             ? controller.code[5]
@@ -131,23 +131,23 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                   children: [
                     Row(
                       children: [
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '1',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('1');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '2',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('2');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '3',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('3');
                           },
                         ),
@@ -156,23 +156,23 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                     ContainerX(height: 4.0),
                     Row(
                       children: [
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '4',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('4');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '5',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('5');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '6',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('6');
                           },
                         ),
@@ -181,23 +181,23 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                     ContainerX(height: 4.0),
                     Row(
                       children: [
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '7',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('7');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '8',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('8');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '9',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('9');
                           },
                         ),
@@ -207,27 +207,27 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                     Row(
                       children: [
                         controller.biometricEnabled == true
-                            ? MbxPinButton(
+                            ? MbxOtpButton(
                                 faIcon: FontAwesomeIcons.fingerprint,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnBiometricClicked();
                                 },
                               )
-                            : MbxPinButton(
+                            : MbxOtpButton(
                                 title: '',
-                                onClicked: () {},
+                                clicked: () {},
                               ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           title: '0',
-                          onClicked: () {
+                          clicked: () {
                             controller.btnKeypadClicked('0');
                           },
                         ),
                         ContainerX(width: 4.0),
-                        MbxPinButton(
+                        MbxOtpButton(
                           faIcon: FontAwesomeIcons.deleteLeft,
-                          onClicked: () {
+                          clicked: () {
                             controller.btnBackspaceClicked();
                           },
                         ),
@@ -248,7 +248,7 @@ class MbxPinSheet extends GetWidget<MbxPinSheetController> {
                               width: 120.0,
                               height: 32.0,
                               cornerRadius: 8.0,
-                              onClicked: onOption,
+                              clicked: optionClicked,
                             ),
                             ContainerX(height: 16.0)
                           ],

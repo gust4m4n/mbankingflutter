@@ -69,7 +69,7 @@ class MbxTransferP2BankPickerWidget extends StatelessWidget {
                 width: 40.0,
                 height: 40.0,
                 backgroundColor: ColorX.transparent,
-                onClicked: onDeleteClicked)
+                clicked: onDeleteClicked)
           ],
         ));
   }

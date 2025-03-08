@@ -31,7 +31,7 @@ class MbxHelpSheet extends GetWidget<MbxHelpSheetController> {
                     MbxHelpWidget(
                       faIcon: FontAwesomeIcons.headset,
                       title: 'Call Center',
-                      onClicked: () {
+                      clicked: () {
                         Get.back();
                         //
                       },
@@ -40,7 +40,7 @@ class MbxHelpSheet extends GetWidget<MbxHelpSheetController> {
                     MbxHelpWidget(
                       faIcon: FontAwesomeIcons.commentSms,
                       title: 'SMS',
-                      onClicked: () {
+                      clicked: () {
                         Get.back();
                         //
                       },
@@ -49,7 +49,7 @@ class MbxHelpSheet extends GetWidget<MbxHelpSheetController> {
                     MbxHelpWidget(
                       faIcon: FontAwesomeIcons.whatsapp,
                       title: 'WhatsApp',
-                      onClicked: () {
+                      clicked: () {
                         Get.back();
                         //
                       },
@@ -62,7 +62,7 @@ class MbxHelpSheet extends GetWidget<MbxHelpSheetController> {
                     child: ButtonX(
                         title: 'Tutup',
                         backgroundColor: ColorX.theme,
-                        onClicked: () {
+                        clicked: () {
                           Get.back();
                         })),
                 ContainerX(height: 16.0),

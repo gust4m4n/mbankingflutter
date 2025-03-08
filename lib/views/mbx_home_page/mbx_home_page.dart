@@ -76,7 +76,7 @@ class MbxHomePage extends StatelessWidget {
                           Row(
                             children: [
                               MbxThemeButton(
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnThemeClicked();
                                 },
                               ),
@@ -87,7 +87,7 @@ class MbxHomePage extends StatelessWidget {
                                 title: '',
                                 width: 42.0,
                                 height: 42.0,
-                                onClicked: () {
+                                clicked: () {
                                   controller.btnLockClicked();
                                 },
                               )
@@ -156,7 +156,7 @@ class MbxHomePage extends StatelessWidget {
                                                   controller
                                                       .btnEyeClicked(index);
                                                 },
-                                                onClicked: () {},
+                                                clicked: () {},
                                               ));
                                         })),
                                 SizedBox(height: 12.0),
@@ -183,7 +183,7 @@ class MbxHomePage extends StatelessWidget {
                                             titleColor: ColorX.white,
                                             highlightColor:
                                                 ColorX.theme.lighten(0.1),
-                                            onClicked: () {
+                                            clicked: () {
                                               controller.btnTransferClicked();
                                             }),
                                         MbxLauncherWidget(
@@ -193,7 +193,7 @@ class MbxHomePage extends StatelessWidget {
                                           titleColor: ColorX.white,
                                           highlightColor:
                                               ColorX.theme.lighten(0.1),
-                                          onClicked: () {
+                                          clicked: () {
                                             controller.btnCardlessClicked();
                                           },
                                         ),
@@ -204,7 +204,7 @@ class MbxHomePage extends StatelessWidget {
                                           titleColor: ColorX.white,
                                           highlightColor:
                                               ColorX.theme.lighten(0.1),
-                                          onClicked: () {
+                                          clicked: () {
                                             controller.btnQRISClicked();
                                           },
                                         ),
@@ -216,7 +216,7 @@ class MbxHomePage extends StatelessWidget {
                                           titleColor: ColorX.white,
                                           highlightColor:
                                               ColorX.theme.lighten(0.1),
-                                          onClicked: () {
+                                          clicked: () {
                                             controller.btnElectricityClicked();
                                           },
                                         ),
@@ -227,7 +227,7 @@ class MbxHomePage extends StatelessWidget {
                                           titleColor: ColorX.white,
                                           highlightColor:
                                               ColorX.theme.lighten(0.1),
-                                          onClicked: () {
+                                          clicked: () {
                                             controller.btnPulsaClicked();
                                           },
                                         ),
@@ -238,7 +238,7 @@ class MbxHomePage extends StatelessWidget {
                                           titleColor: ColorX.white,
                                           highlightColor:
                                               ColorX.theme.lighten(0.1),
-                                          onClicked: () {
+                                          clicked: () {
                                             controller.btnPBBClicked();
                                           },
                                         ),
@@ -249,7 +249,7 @@ class MbxHomePage extends StatelessWidget {
                                             titleColor: ColorX.white,
                                             highlightColor:
                                                 ColorX.theme.lighten(0.1),
-                                            onClicked: () {
+                                            clicked: () {
                                               controller.btnPDAMClicked();
                                             }),
                                         MbxLauncherWidget(

@@ -7,7 +7,7 @@ class MbxLauncherWidget extends StatelessWidget {
   final String title;
   final Color titleColor;
   final Color highlightColor;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
   MbxLauncherWidget(
       {required this.color,
@@ -15,14 +15,14 @@ class MbxLauncherWidget extends StatelessWidget {
       required this.title,
       required this.titleColor,
       required this.highlightColor,
-      this.onClicked = null});
+      this.clicked = null});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
         highlightColor: highlightColor,
         cornerRadius: 12.0,
-        onClicked: onClicked,
+        clicked: clicked,
         child: ContainerX(
             child: Padding(
                 padding: EdgeInsets.all(8.0),

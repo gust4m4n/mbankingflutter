@@ -7,17 +7,17 @@ import '../../widgets/all_widgets.dart';
 class MbxPulsaPrepaidDenomWidget extends StatelessWidget {
   final MbxPulsaPrepaidDenomModel denom;
   final bool selected;
-  final GestureTapCallback? onClicked;
+  final GestureTapCallback? clicked;
 
   MbxPulsaPrepaidDenomWidget(
-      {required this.denom, required this.selected, this.onClicked = null});
+      {required this.denom, required this.selected, this.clicked = null});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
         highlightColor: ColorX.theme.withOpacity(0.1),
         cornerRadius: 8.0,
-        onClicked: onClicked,
+        clicked: clicked,
         child: ContainerX(
             backgroundColor: selected
                 ? ColorX.theme.withOpacity(0.2)

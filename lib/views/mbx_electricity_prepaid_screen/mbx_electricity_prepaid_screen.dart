@@ -54,7 +54,7 @@ class MbxElectricityPrepaidScreen extends StatelessWidget {
                               height: 40.0,
                               borderWidth: 0.5,
                               borderColor: ColorX.gray,
-                              onClicked: () {
+                              clicked: () {
                                 controller.btnSofClicked();
                               })
                         ])),
@@ -105,7 +105,7 @@ class MbxElectricityPrepaidScreen extends StatelessWidget {
                       nominal: controller.denomsVM.list[index].nominal,
                       selected: controller.denomsVM.list[index].nominal ==
                           controller.denom,
-                      onClicked: () {
+                      clicked: () {
                         controller.selectDenom(
                             controller.denomsVM.list[index].nominal);
                       },
@@ -118,7 +118,7 @@ class MbxElectricityPrepaidScreen extends StatelessWidget {
                   disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
                   title: 'Lanjut',
                   enabled: controller.readyToSubmit(),
-                  onClicked: () {
+                  clicked: () {
                     controller.btnNextClicked();
                   },
                 ),
