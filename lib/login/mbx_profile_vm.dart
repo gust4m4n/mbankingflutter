@@ -1,12 +1,13 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
+import 'package:mbankingflutter/viewmodels/mbx_preferences_vm+users.dart';
+
+import '../login/mbx_login_screen.dart';
 import '../models/mbx_profile_model.dart';
 import '../utils/all_utils.dart';
-import '../views/mbx_login_screen/mbx_login_screen.dart';
 import '../widgets/all_widgets.dart';
-import 'mbx_apis.dart';
-import 'mbx_preferences_vm+users.dart';
 
 class MbxProfileVM {
   static var profile = MbxProfileModel();

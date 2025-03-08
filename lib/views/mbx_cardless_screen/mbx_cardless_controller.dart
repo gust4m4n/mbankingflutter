@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+import 'package:mbankingflutter/login/mbx_profile_vm.dart';
 import 'package:mbankingflutter/models/mbx_account_model.dart';
 import 'package:mbankingflutter/models/mbx_inquiry_model.dart';
 import 'package:mbankingflutter/viewmodels/mbx_cardless_payment_vm.dart';
@@ -8,7 +9,6 @@ import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_cardless_denoms_vm.dart';
 import '../../viewmodels/mbx_cardless_inquiry_vm.dart';
-import '../../viewmodels/mbx_profile_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxCardlessController extends GetxController {

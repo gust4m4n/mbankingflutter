@@ -1,5 +1,6 @@
+import 'package:mbankingflutter/login/mbx_profile_vm.dart';
+
 import '../../../utils/all_utils.dart';
-import '../../viewmodels/mbx_profile_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxBottomNavBarController extends SuperController {

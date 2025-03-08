@@ -1,14 +1,14 @@
+import 'package:mbankingflutter/login/mbx_onboarding_list_vm.dart';
+import 'package:mbankingflutter/login/mbx_profile_vm.dart';
 import 'package:mbankingflutter/otp-sheet/mbx_otp_sheet.dart';
 
-import '../../pin-sheet/mbx_pin_sheet.dart';
-import '../../utils/all_utils.dart';
-import '../../viewmodels/mbx_login_otp_vm.dart';
-import '../../viewmodels/mbx_login_phone_vm.dart';
-import '../../viewmodels/mbx_login_pin_vm.dart';
-import '../../viewmodels/mbx_onboarding_list_vm.dart';
-import '../../viewmodels/mbx_profile_vm.dart';
-import '../../viewmodels/mbx_theme_vm.dart';
-import '../../widgets/all_widgets.dart';
+import '../pin-sheet/mbx_pin_sheet.dart';
+import '../utils/all_utils.dart';
+import '../viewmodels/mbx_theme_vm.dart';
+import '../widgets/all_widgets.dart';
+import 'mbx_login_otp_vm.dart';
+import 'mbx_login_phone_vm.dart';
+import 'mbx_login_pin_vm.dart';
 import 'mbx_login_screen.dart';
 
 class MbLoginController extends GetxController {

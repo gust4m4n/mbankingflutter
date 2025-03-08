@@ -1,20 +1,18 @@
 import 'dart:async';
 
 import '../utils/all_utils.dart';
-import 'mbx_apis.dart';
+import '../viewmodels/mbx_apis.dart';
 
-class MbxLoginOtpVM {
-  static Future<ApiXResponse> request(
-      {required String phone, required String otp}) {
+class MbxLoginPhoneVM {
+  static Future<ApiXResponse> request({required String phone}) {
     final params = {
       'phone': phone,
-      'otp': otp,
     };
     return MbxApi.post(
-            endpoint: '/login/otp',
+            endpoint: '/login/phone',
             params: params,
             headers: {},
-            contractFile: 'assets/contracts/MbxLoginOtpContract.json',
+            contractFile: 'assets/contracts/MbxLoginPhoneContract.json',
             contract: true)
         .then((resp) async {
       return resp;

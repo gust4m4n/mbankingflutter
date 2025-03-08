@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:mbankingflutter/views/mbx_login_screen/mbx_onboarding_widget.dart';
+import 'package:mbankingflutter/login/mbx_onboarding_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../widgets/all_widgets.dart';
-import '../mbx_home_page/mbx_theme_button.dart';
+import '../widgets/all_widgets.dart';
+import '../views/mbx_home_page/mbx_theme_button.dart';
 import 'mbx_login_controller.dart';
 
 class MbxLoginScreen extends StatelessWidget {

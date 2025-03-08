@@ -1,7 +1,8 @@
+import 'package:mbankingflutter/login/mbx_profile_vm.dart';
+
 import '../../pin-sheet/mbx_pin_sheet.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/mbx_logout_vm.dart';
-import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_relogin_vm.dart';
 import '../../viewmodels/mbx_theme_vm.dart';
 import '../../widgets/all_widgets.dart';

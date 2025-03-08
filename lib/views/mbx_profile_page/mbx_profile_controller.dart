@@ -1,3 +1,4 @@
+import 'package:mbankingflutter/login/mbx_profile_vm.dart';
 import 'package:mbankingflutter/views/mbx_avatar_sheet/mbx_avatar_sheet.dart';
 import 'package:mbankingflutter/views/mbx_help_sheet/mbx_help_sheet.dart';
 
@@ -6,7 +7,6 @@ import '../../utils/all_utils.dart';
 import '../../viewmodels/mbx_change_pin_vm.dart';
 import '../../viewmodels/mbx_logout_vm.dart';
 import '../../viewmodels/mbx_preferences_vm+users.dart';
-import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_set_biometric_vm.dart';
 import '../../widgets/all_widgets.dart';
 

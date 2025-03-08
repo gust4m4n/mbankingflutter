@@ -1,10 +1,10 @@
 import 'package:intl/intl.dart';
+import 'package:mbankingflutter/login/mbx_profile_vm.dart';
 
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_inquiry_model.dart';
 import '../../models/mbx_transfer_p2p_dest_model.dart';
 import '../../pin-sheet/mbx_pin_sheet.dart';
-import '../../viewmodels/mbx_profile_vm.dart';
 import '../../viewmodels/mbx_transfer_p2p_inquiry_vm.dart';
 import '../../viewmodels/mbx_transfer_p2p_payment_vm.dart';
 import '../../widgets/all_widgets.dart';

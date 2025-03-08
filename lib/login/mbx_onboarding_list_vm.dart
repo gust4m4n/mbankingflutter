@@ -1,8 +1,9 @@
 import 'dart:async';
 
-import '../models/mbx_onboarding_model.dart';
+import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
+
+import 'mbx_onboarding_model.dart';
 import '../utils/all_utils.dart';
-import 'mbx_apis.dart';
 
 class MbxOnboardingListVM {
   var loading = false;

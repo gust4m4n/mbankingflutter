@@ -1,5 +1,5 @@
-import '../../models/mbx_onboarding_model.dart';
-import '../../widgets/all_widgets.dart';
+import 'mbx_onboarding_model.dart';
+import '../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxOnboardingWidget extends StatelessWidget {
