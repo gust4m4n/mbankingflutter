@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxThemeWidget extends StatelessWidget {

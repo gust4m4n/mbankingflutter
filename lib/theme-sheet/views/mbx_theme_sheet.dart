@@ -1,10 +1,11 @@
-import '../../viewmodels/mbx_theme_vm.dart';
-import '../../widgets/all_widgets.dart';
-import 'mbx_theme_sheet_controller.dart';
+import 'package:mbankingflutter/theme-sheet/viewmodels/mbx_theme_vm.dart';
+
+import '../../../widgets/all_widgets.dart';
+import 'mbx_theme_controller.dart';
 import 'mbx_theme_widget.dart';
 
 // ignore: must_be_immutable
-class MbxThemeSheet extends GetWidget<MbxThemeSheetController> {
+class MbxThemeSheet extends GetWidget<MbxThemeController> {
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showCustom(widget: this, title: 'Pilih Theme');
@@ -12,8 +13,8 @@ class MbxThemeSheet extends GetWidget<MbxThemeSheetController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxThemeSheetController>(
-        init: MbxThemeSheetController(),
+    return GetBuilder<MbxThemeController>(
+        init: MbxThemeController(),
         builder: (controller) => ContainerX(
                 child: Wrap(children: [
               GridView.builder(
