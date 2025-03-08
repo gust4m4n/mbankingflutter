@@ -13,7 +13,7 @@ class MbxReloginVM {
             endpoint: '/relogin',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxReloginContract.json',
+            contractFile: 'assets/contracts/MbxReloginContract.json',
             contract: true)
         .then((resp) async {
       if (resp.status == 200) {

@@ -35,7 +35,7 @@
 	  "email": "juleha@example.com",
 	  "name": "Juleha",
 	  "phone": "+62123456789",
-	  "photo": "lib/images/mbx_user.png"
+	  "photo": "assets/images/mbx_user.png"
 	},
 	"status": 200
   }

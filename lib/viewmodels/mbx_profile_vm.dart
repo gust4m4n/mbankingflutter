@@ -16,7 +16,7 @@ class MbxProfileVM {
             endpoint: '/profile',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxProfileContract.json',
+            contractFile: 'assets/contracts/MbxProfileContract.json',
             contract: true)
         .then((resp) async {
       if (resp.status == 200) {

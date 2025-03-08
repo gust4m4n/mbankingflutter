@@ -13,7 +13,7 @@ class MbxReceiptVM {
             endpoint: '/receipt',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxReceiptContract.json',
+            contractFile: 'assets/contracts/MbxReceiptContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

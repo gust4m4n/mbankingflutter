@@ -12,7 +12,7 @@ class MbxPrivacyPolicyVM {
             endpoint: '/privacy-policy',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPrivacyPolicyContract.json',
+            contractFile: 'assets/contracts/MbxPrivacyPolicyContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

@@ -17,7 +17,7 @@ class MbxLoginPinVM {
             endpoint: '/login/pin',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxLoginPinContract.json',
+            contractFile: 'assets/contracts/MbxLoginPinContract.json',
             contract: true)
         .then((resp) async {
       if (resp.status == 200) {

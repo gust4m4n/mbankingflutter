@@ -10,7 +10,7 @@ class MbxPulsaPrepaidDenomsVM {
             endpoint: '/pulsa/prepaid/denoms',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaPrepaidDenomsContract.json',
+            contractFile: 'assets/contracts/MbxPulsaPrepaidDenomsContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

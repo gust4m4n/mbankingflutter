@@ -12,7 +12,8 @@ class MbxPulsaPostpaidInquiryVM {
             endpoint: '/pulsa/postpaid/inquiry',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaPostpaidInquiryContract.json',
+            contractFile:
+                'assets/contracts/MbxPulsaPostpaidInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

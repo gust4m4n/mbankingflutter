@@ -13,7 +13,8 @@ class MbxForeignExchangeListVM {
             endpoint: '/foreign-exchange/list',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxForeignExchangeListContract.json',
+            contractFile:
+                'assets/contracts/MbxForeignExchangeListContract.json',
             contract: true)
         .then((resp) {
       loading = false;

@@ -10,7 +10,7 @@ class MbxPDAMAreaListVM {
             endpoint: '/pdam/area/list',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPDAMAreaListContract.json',
+            contractFile: 'assets/contracts/MbxPDAMAreaListContract.json',
             contract: true)
         .then((resp) {
       list = [];

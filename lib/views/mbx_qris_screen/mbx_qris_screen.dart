@@ -18,7 +18,6 @@ class MbxQRISScreen extends StatelessWidget {
               ContainerX(backgroundColor: Colors.black),
               if (MbxDeviceInfoVM.simulator == false)
                 MobileScanner(
-                  
                   controller: controller.scannerController,
                   onDetect: (cap) {
                     final List<Barcode> barcodes = cap.barcodes;
@@ -99,7 +98,7 @@ class MbxQRISScreen extends StatelessWidget {
                         ContainerX(width: 8.0),
                         Expanded(
                           child: ImageX(
-                            url: 'lib/images/mbx_qris.png',
+                            url: 'assets/images/mbx_qris.png',
                             fit: BoxFit.contain,
                           ),
                         ),

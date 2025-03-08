@@ -14,7 +14,7 @@ class MbxElectricityNonTagLisPaymentVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxElectricityNonTagLisPaymentContract.json',
+                'assets/contracts/MbxElectricityNonTagLisPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

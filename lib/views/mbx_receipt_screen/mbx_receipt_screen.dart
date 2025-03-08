@@ -39,7 +39,7 @@ class MbxReceiptScreen extends StatelessWidget {
                                             decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      'lib/images/mbx_sticker.png'),
+                                                      'assets/images/mbx_sticker.png'),
                                                   repeat: ImageRepeat.repeat,
                                                 ),
                                                 border: Border.all(
@@ -54,7 +54,7 @@ class MbxReceiptScreen extends StatelessWidget {
                                                   children: [
                                                     ImageX(
                                                       url:
-                                                          'lib/images/mbx_logo.png',
+                                                          'assets/images/mbx_logo.png',
                                                       width: 34.0,
                                                       height: 34.0,
                                                     ),

@@ -13,7 +13,7 @@ class MbxPDAMPaymentVM {
             endpoint: '/pdam/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPDAMPaymentContract.json',
+            contractFile: 'assets/contracts/MbxPDAMPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

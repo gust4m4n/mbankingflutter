@@ -16,7 +16,7 @@ class MbxNotificationVM {
             endpoint: '/notification',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxNotificationListContract.json',
+            contractFile: 'assets/contracts/MbxNotificationListContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

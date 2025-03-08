@@ -13,7 +13,7 @@ class MbxQRISInquiryVM {
             endpoint: '/qris/inquiry',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxQRISInquiryContract.json',
+            contractFile: 'assets/contracts/MbxQRISInquiryContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

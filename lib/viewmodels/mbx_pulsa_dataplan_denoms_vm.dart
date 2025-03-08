@@ -10,7 +10,8 @@ class MbxPulsaDataPlanDenomsVM {
             endpoint: '/pulsa/dataplan/denoms',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaDataPlanDenomsContract.json',
+            contractFile:
+                'assets/contracts/MbxPulsaDataPlanDenomsContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

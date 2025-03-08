@@ -13,7 +13,8 @@ class MbxPulsaDataPlanPaymentVM {
             endpoint: '/pulsa/dataplan/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaDataPlanPaymentContract.json',
+            contractFile:
+                'assets/contracts/MbxPulsaDataPlanPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

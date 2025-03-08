@@ -13,7 +13,7 @@ class MbxPBBPaymentVM {
             endpoint: '/pbb/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPBBPaymentContract.json',
+            contractFile: 'assets/contracts/MbxPBBPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

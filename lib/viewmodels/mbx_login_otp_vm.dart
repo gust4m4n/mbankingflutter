@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import '../utils/all_utils.dart';
 import 'mbx_apis.dart';
 
@@ -13,7 +14,7 @@ class MbxLoginOtpVM {
             endpoint: '/login/otp',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxLoginOtpContract.json',
+            contractFile: 'assets/contracts/MbxLoginOtpContract.json',
             contract: true)
         .then((resp) async {
       return resp;

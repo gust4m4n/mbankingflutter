@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import '../utils/all_utils.dart';
 import 'mbx_apis.dart';
 
@@ -8,7 +9,7 @@ class MbxLogoutVM {
             endpoint: '/logout',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxLogoutContract.json',
+            contractFile: 'assets/contracts/MbxLogoutContract.json',
             contract: true)
         .then((resp) async {
       return resp;

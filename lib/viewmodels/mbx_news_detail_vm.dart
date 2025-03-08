@@ -12,7 +12,7 @@ class MbxNewsDetailVM {
             endpoint: '/news/detail',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxNewsDetailContract.json',
+            contractFile: 'assets/contracts/MbxNewsDetailContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

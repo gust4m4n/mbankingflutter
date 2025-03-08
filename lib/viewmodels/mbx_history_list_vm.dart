@@ -16,7 +16,7 @@ class MbxHistoryListVM {
             endpoint: '/history',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxHistoryListContract.json',
+            contractFile: 'assets/contracts/MbxHistoryListContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

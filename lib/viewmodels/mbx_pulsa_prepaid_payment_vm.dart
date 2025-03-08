@@ -13,7 +13,8 @@ class MbxPulsaPrepaidPaymentVM {
             endpoint: '/pulsa/prepaid/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaPrepaidPaymentContract.json',
+            contractFile:
+                'assets/contracts/MbxPulsaPrepaidPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

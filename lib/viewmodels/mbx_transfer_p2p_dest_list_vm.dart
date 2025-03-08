@@ -17,7 +17,8 @@ class MbxTransferP2PDestListVM {
             endpoint: '/transfer/p2p/dest',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxTransferP2PDestListContract.json',
+            contractFile:
+                'assets/contracts/MbxTransferP2PDestListContract.json',
             contract: true)
         .then((resp) {
       loading = false;

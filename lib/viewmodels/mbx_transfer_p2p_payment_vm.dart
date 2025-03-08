@@ -13,7 +13,7 @@ class MbxTransferP2PPaymentVM {
             endpoint: '/transfer/p2p/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxTransferP2PPaymentContract.json',
+            contractFile: 'assets/contracts/MbxTransferP2PPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

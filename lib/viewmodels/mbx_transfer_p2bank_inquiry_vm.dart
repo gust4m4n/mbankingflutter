@@ -13,7 +13,8 @@ class MbxTransferP2BankInquiryVM {
             endpoint: '/transfer/p2bank/inquiry',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxTransferP2BankInquiryContract.json',
+            contractFile:
+                'assets/contracts/MbxTransferP2BankInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

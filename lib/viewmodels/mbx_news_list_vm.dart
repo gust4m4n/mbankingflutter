@@ -10,7 +10,7 @@ class MbxNewsListVM {
             endpoint: '/news/list',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxNewsListContract.json',
+            contractFile: 'assets/contracts/MbxNewsListContract.json',
             contract: true)
         .then((resp) async {
       if (resp.status == 200) {

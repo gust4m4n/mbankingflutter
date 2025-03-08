@@ -13,7 +13,7 @@ class MbxCardlessInquiryVM {
             endpoint: '/cardless/inquiry',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxCardlessInquiryContract.json',
+            contractFile: 'assets/contracts/MbxCardlessInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

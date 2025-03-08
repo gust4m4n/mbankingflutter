@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import '../models/mbx_onboarding_model.dart';
 import '../utils/all_utils.dart';
 import 'mbx_apis.dart';
@@ -18,7 +19,7 @@ class MbxOnboardingListVM {
             endpoint: '/movies',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxOnboardingListContract.json',
+            contractFile: 'assets/contracts/MbxOnboardingListContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

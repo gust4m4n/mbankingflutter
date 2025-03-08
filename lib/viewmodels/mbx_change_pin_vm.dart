@@ -11,7 +11,7 @@ class MbxChangePinVM {
             endpoint: '/pin/change',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxChangePinContract.json',
+            contractFile: 'assets/contracts/MbxChangePinContract.json',
             contract: true)
         .then((resp) async {
       return resp;

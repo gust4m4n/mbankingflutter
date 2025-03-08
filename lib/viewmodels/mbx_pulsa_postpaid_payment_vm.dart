@@ -13,7 +13,8 @@ class MbxPulsaPostpaidPaymentVM {
             endpoint: '/pulsa/postpaid/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaPostpaidPaymentContract.json',
+            contractFile:
+                'assets/contracts/MbxPulsaPostpaidPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

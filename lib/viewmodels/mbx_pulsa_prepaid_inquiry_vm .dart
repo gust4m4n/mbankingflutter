@@ -13,7 +13,7 @@ class MbxPulsaPrepaidInquiryVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxPulsaPrepaidInquiryContract.json',
+                'assets/contracts/MbxPulsaPrepaidInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

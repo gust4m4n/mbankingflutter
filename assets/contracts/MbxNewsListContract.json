@@ -4,22 +4,22 @@
 	"data": [
 	  {
 		"news_id": 1,
-		"image": "lib/images/mbx_news_01.png",
+		"image": "assets/images/mbx_news_01.png",
 		"title": "Informasi Perubahan Biaya Admin PDAM Kota Jakarta"
 	  },
 	  {
 		"news_id": 2,
-		"image": "lib/images/mbx_news_02.png",
+		"image": "assets/images/mbx_news_02.png",
 		"title": "Informasi Limit Harian Transaksi QRIS"
 	  },
 	  {
 		"news_id": 3,
-		"image": "lib/images/mbx_news_03.png",
+		"image": "assets/images/mbx_news_03.png",
 		"title": "BI Beri Kabar Baik Efek Pemilu 1 Putaran: 4 Sektor Banjir Investasi"
 	  },
 	  {
 		"news_id": 4,
-		"image": "lib/images/mbx_news_04.png",
+		"image": "assets/images/mbx_news_04.png",
 		"title": "Mau Tukar Uang Baru Lebaran 2024 ? Cek Jadwalnya"
 	  }
 	]

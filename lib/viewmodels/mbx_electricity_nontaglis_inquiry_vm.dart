@@ -13,7 +13,7 @@ class MbxElectricityNonTagLisInquiryVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxElectricityNonTagLisInquiryContract.json',
+                'assets/contracts/MbxElectricityNonTagLisInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

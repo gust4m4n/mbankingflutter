@@ -47,7 +47,7 @@ class MbxNewsController extends GetxController {
         String htmlPage = '''<html>
               <head><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'>
               <style>
-              ${await addFont(fontFamily: 'Roboto', fontPath: 'lib/fonts/Roboto-Regular.ttf', fontMime: 'font/ttf')}
+              ${await addFont(fontFamily: 'Roboto', fontPath: 'assets/fonts/Roboto-Regular.ttf', fontMime: 'font/ttf')}
               </style>              
               </head>
               <body style='margin:16pt;padding:0pt;'>

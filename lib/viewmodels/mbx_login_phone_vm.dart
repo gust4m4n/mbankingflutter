@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import '../utils/all_utils.dart';
 import 'mbx_apis.dart';
 
@@ -11,7 +12,7 @@ class MbxLoginPhoneVM {
             endpoint: '/login/phone',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxLoginPhoneContract.json',
+            contractFile: 'assets/contracts/MbxLoginPhoneContract.json',
             contract: true)
         .then((resp) async {
       return resp;

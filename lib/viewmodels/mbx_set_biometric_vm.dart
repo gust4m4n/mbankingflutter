@@ -11,7 +11,7 @@ class MbxSetBiometricVM {
             endpoint: '/biometric/set',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxSetBiometricContract.json',
+            contractFile: 'assets/contracts/MbxSetBiometricContract.json',
             contract: true)
         .then((resp) async {
       return resp;

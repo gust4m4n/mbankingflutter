@@ -11,7 +11,7 @@ class MbxElectricityPrepaidDenomsVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxElectricityPrepaidDenomsContract.json',
+                'assets/contracts/MbxElectricityPrepaidDenomsContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

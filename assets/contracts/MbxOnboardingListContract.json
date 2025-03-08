@@ -4,25 +4,25 @@
 	"data": [
 	  {
 		"onboarding_id": 1,
-		"image": "lib/images/mbx_onboarding_01.png",
+		"image": "assets/images/mbx_onboarding_01.png",
 		"title": "Semua Ada Di sini",
 		"description": "Fitur lengkap yang memudahkan hidup Anda. Mulai dari belanja, transfer, hingga pembayaran tagihan."
 	  },
 	  {
 		"onboarding_id": 2,
-		"image": "lib/images/mbx_onboarding_02.png",
+		"image": "assets/images/mbx_onboarding_02.png",
 		"title": "Belanja dan Transfer",
 		"description": "Belanja online dan transfer uang dengan mudah dan cepat. Tidak perlu antri lagi."
 	  },
 	  {
 		"onboarding_id": 3,
-		"image": "lib/images/mbx_onboarding_03.png",
+		"image": "assets/images/mbx_onboarding_03.png",
 		"title": "Fitur Notifikasi",
 		"description": "Dapatkan notifikasi terbaru tentang promo dan informasi penting lainnya. Jadi, Anda tidak akan ketinggalan informasi penting."
 	  },
 	  {
 		"onboarding_id": 4,
-		"image": "lib/images/mbx_onboarding_04.png",
+		"image": "assets/images/mbx_onboarding_04.png",
 		"title": "Keamanan Data Terjamin",
 		"description": "Tidak perlu kuatir dengan keamanan data Anda. Aplikasi ini dilengkapi dengan teknologi keamanan tinggi."
 	  }

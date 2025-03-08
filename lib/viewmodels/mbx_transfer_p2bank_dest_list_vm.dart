@@ -18,7 +18,7 @@ class MbxTransferP2BankDestListVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxTransferP2BankDestListContract.json',
+                'assets/contracts/MbxTransferP2BankDestListContract.json',
             contract: true)
         .then((resp) {
       loading = false;

@@ -13,7 +13,7 @@ class MbxElectricityPrepaidInquiryVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxElectricityPrepaidInquiryContract.json',
+                'assets/contracts/MbxElectricityPrepaidInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

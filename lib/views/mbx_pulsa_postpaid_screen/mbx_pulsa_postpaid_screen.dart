@@ -82,7 +82,7 @@ class MbxPulsaPostpaidScreen extends StatelessWidget {
                         rightIcon:
                             controller.customerIdController.text.isNotEmpty
                                 ? ImageX(
-                                    url: 'lib/images/mbx_operator_im3.png',
+                                    url: 'assets/images/mbx_operator_im3.png',
                                     width: 32.0,
                                     height: 32.0,
                                     padding: EdgeInsets.all(4.0),

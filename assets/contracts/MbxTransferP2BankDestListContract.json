@@ -5,67 +5,67 @@
 	  {
 		"account": "000000000000",
 		"bank": "Bank Mandiri",
-		"bank_icon": "lib/images/mbx_bank_mandiri.png",
+		"bank_icon": "assets/images/mbx_bank_mandiri.png",
 		"name": "AGNES"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Central Asia (BCA)",
-		"bank_icon": "lib/images/mbx_bank_bca.png",
+		"bank_icon": "assets/images/mbx_bank_bca.png",
 		"name": "ANGELINA"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Rakyat Indonesia (BRI)",
-		"bank_icon": "lib/images/mbx_bank_bri.png",
+		"bank_icon": "assets/images/mbx_bank_bri.png",
 		"name": "BRIAN"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank CIMB Niaga",
-		"bank_icon": "lib/images/mbx_bank_cimb_niaga.png",
+		"bank_icon": "assets/images/mbx_bank_cimb_niaga.png",
 		"name": "CAROLINE"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Negara Indonesia (BNI)",
-		"bank_icon": "lib/images/mbx_bank_bni.png",
+		"bank_icon": "assets/images/mbx_bank_bni.png",
 		"name": "HARRY"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Tabungan Negara (BTN)",
-		"bank_icon": "lib/images/mbx_bank_btn.png",
+		"bank_icon": "assets/images/mbx_bank_btn.png",
 		"name": "LAURA"		
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Syariah Indonesia (BSI)",
-		"bank_icon": "lib/images/mbx_bank_bsi.png",
+		"bank_icon": "assets/images/mbx_bank_bsi.png",
 		"name": "MIRANDA"
 	  },
 	  {
 		"name": "ROBERT",
 		"bank": "Bank Panin",
-		"bank_icon": "lib/images/mbx_bank_panin.png",
+		"bank_icon": "assets/images/mbx_bank_panin.png",
 		"account": "000000000000"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Nobu",
-		"bank_icon": "lib/images/mbx_bank_nobu.png",
+		"bank_icon": "assets/images/mbx_bank_nobu.png",
 		"name": "SUZZANE"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank MNC",
-		"bank_icon": "lib/images/mbx_bank_mnc.png",
+		"bank_icon": "assets/images/mbx_bank_mnc.png",
 		"name": "THOMAS"
 	  },
 	  {
 		"account": "000000000000",
 		"bank": "Bank Mega",
-		"bank_icon": "lib/images/mbx_bank_mega.png",
+		"bank_icon": "assets/images/mbx_bank_mega.png",
 		"name": "ZACK"
 	  }
 	]

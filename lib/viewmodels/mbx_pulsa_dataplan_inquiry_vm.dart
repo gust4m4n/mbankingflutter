@@ -12,7 +12,8 @@ class MbxPulsaDataPlanInquiryVM {
             endpoint: '/pulsa/dataplan/inquiry',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPulsaDataPlanInquiryContract.json',
+            contractFile:
+                'assets/contracts/MbxPulsaDataPlanInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

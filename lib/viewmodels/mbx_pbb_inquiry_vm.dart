@@ -12,7 +12,7 @@ class MbxPBBInquiryVM {
             endpoint: '/pbb/inquiry',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPBBInquiryContract.json',
+            contractFile: 'assets/contracts/MbxPBBInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

@@ -13,7 +13,7 @@ class MbxQRISPaymentVM {
             endpoint: '/qris/payment',
             params: params,
             headers: {},
-            contractFile: 'lib/contracts/MbxQRISPaymentContract.json',
+            contractFile: 'assets/contracts/MbxQRISPaymentContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

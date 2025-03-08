@@ -129,7 +129,7 @@
 				35B5C45B2B4FC73F00340BD3 /* Roboto-Black.ttf */,
 			);
 			name = fonts;
-			path = ../../lib/fonts;
+			path = ../../assets/fonts;
 			sourceTree = "<group>";
 		};
 		9740EEB11CF90186004384FC /* Flutter */ = {

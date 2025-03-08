@@ -12,7 +12,7 @@ class MbxPDAMInquiryVM {
             endpoint: '/pdam/inquiry',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxPDAMInquiryContract.json',
+            contractFile: 'assets/contracts/MbxPDAMInquiryContract.json',
             contract: true)
         .then((resp) {
       loading = false;

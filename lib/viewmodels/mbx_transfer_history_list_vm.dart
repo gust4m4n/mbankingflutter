@@ -13,7 +13,8 @@ class MbxTransferHistoryListVM {
             endpoint: '/transfer/history',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxTransferHistoryListContract.json',
+            contractFile:
+                'assets/contracts/MbxTransferHistoryListContract.json',
             contract: true)
         .then((resp) {
       loading = false;

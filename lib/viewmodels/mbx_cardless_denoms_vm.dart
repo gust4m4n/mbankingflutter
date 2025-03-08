@@ -10,7 +10,7 @@ class MbxCardlessDenomsVM {
             endpoint: '/cardless/denoms',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxCardlessDenomsContract.json',
+            contractFile: 'assets/contracts/MbxCardlessDenomsContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

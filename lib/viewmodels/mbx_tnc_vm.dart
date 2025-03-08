@@ -12,7 +12,7 @@ class MbxTncVM {
             endpoint: '/tnc',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxTncContract.json',
+            contractFile: 'assets/contracts/MbxTncContract.json',
             contract: true)
         .then((resp) async {
       loading = false;

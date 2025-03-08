@@ -13,7 +13,7 @@ class MbxCardlessPaymentVM {
             endpoint: '/cardless/payment',
             params: {},
             headers: {},
-            contractFile: 'lib/contracts/MbxCardlessPaymentContract.json',
+            contractFile: 'assets/contracts/MbxCardlessPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {

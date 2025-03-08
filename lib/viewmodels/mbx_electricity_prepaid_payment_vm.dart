@@ -14,7 +14,7 @@ class MbxElectricityPrepaidPaymentVM {
             params: {},
             headers: {},
             contractFile:
-                'lib/contracts/MbxElectricityPrepaidPaymentContract.json',
+                'assets/contracts/MbxElectricityPrepaidPaymentContract.json',
             contract: true)
         .then((resp) {
       if (resp.status == 200) {
