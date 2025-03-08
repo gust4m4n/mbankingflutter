@@ -1,5 +1,5 @@
 import 'package:intl/intl.dart';
-import 'package:mbankingflutter/login/mbx_profile_vm.dart';
+import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
 import 'package:mbankingflutter/viewmodels/mbx_qris_payment_vm.dart';
 import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';

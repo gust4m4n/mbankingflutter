@@ -1,5 +1,5 @@
 import 'package:intl/intl.dart';
-import 'package:mbankingflutter/login/mbx_profile_vm.dart';
+import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/models/mbx_account_model.dart';
 import 'package:mbankingflutter/models/mbx_inquiry_model.dart';
 import 'package:mbankingflutter/viewmodels/mbx_cardless_payment_vm.dart';

@@ -1,7 +1,8 @@
 import 'dart:async';
 
-import '../utils/all_utils.dart';
-import '../viewmodels/mbx_apis.dart';
+import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
+
+import '../../utils/all_utils.dart';
 
 class MbxLoginOtpVM {
   static Future<ApiXResponse> request(

@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/login/mbx_profile_vm.dart';
+import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 import '../mbx_home_page/mbx_launcher_widget.dart';

@@ -1,4 +1,5 @@
-import 'package:mbankingflutter/login/mbx_profile_vm.dart';
+import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbankingflutter/login/views/mbx_login_screen.dart';
 import 'package:mbankingflutter/views/mbx_cardless_payment_screen/mbx_cardless_payment_screen.dart';
 import 'package:mbankingflutter/views/mbx_cardless_screen/mbx_cardless_screen.dart';
 import 'package:mbankingflutter/views/mbx_electricity_prepaid_screen/mbx_electricity_prepaid_screen.dart';
@@ -13,7 +14,6 @@ import 'viewmodels/mbx_theme_vm.dart';
 import 'views/mbx_bottom_navbar_screen/mbx_bottom_navbar_screen.dart';
 import 'views/mbx_electricity_nontaglis_screen/mbx_electricity_nontaglis_screen.dart';
 import 'views/mbx_electricity_postpaid_screen/mbx_electricity_postpaid_screen.dart';
-import 'login/mbx_login_screen.dart';
 import 'views/mbx_news_screen/mbx_news_screen.dart';
 import 'views/mbx_pbb_screen/mbx_pbb_screen.dart';
 import 'views/mbx_pdam_screen/mbx_pdam_screen.dart';

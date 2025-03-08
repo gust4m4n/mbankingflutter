@@ -1,7 +1,7 @@
-import 'mbx_onboarding_model.dart';
-import '../widgets/all_widgets.dart';
-
 // ignore: must_be_immutable
+import 'package:mbankingflutter/login/models/mbx_onboarding_model.dart';
+import 'package:mbankingflutter/widgets/all_widgets.dart';
+
 class MbxOnboardingWidget extends StatelessWidget {
   final MbxOnboardingModel onboarding;
   MbxOnboardingWidget(this.onboarding);
