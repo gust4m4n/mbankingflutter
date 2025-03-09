@@ -1,6 +1,6 @@
-import 'package:mbankingflutter/feedback/mbx_feedback_controller.dart';
-import 'package:mbankingflutter/feedback/mbx_feedback_widget.dart';
 import 'package:mbankingflutter/feedback/viewmodels/appx_feedback_vm.dart';
+import 'package:mbankingflutter/feedback/views/mbx_feedback_controller.dart';
+import 'package:mbankingflutter/feedback/views/mbx_feedback_widget.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
 
 import '../../widgets/all_widgets.dart';

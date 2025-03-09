@@ -1,9 +1,8 @@
 import 'dart:async';
 
+import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
 import 'package:mbankingflutter/viewmodels/mbx_preferences_vm+users.dart';
-
-import '../utils/all_utils.dart';
-import 'mbx_apis.dart';
 
 class MbxReloginVM {
   static Future<ApiXResponse> request(
