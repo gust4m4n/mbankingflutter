@@ -1,18 +1,18 @@
+import 'package:mbankingflutter/feedback/mbx_feedback_controller.dart';
+import 'package:mbankingflutter/feedback/mbx_feedback_widget.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/views/appx_feedback_sheet/appx_feedback_widget.dart';
 
 import '../../viewmodels/appx_feedback_vm.dart';
 import '../../widgets/all_widgets.dart';
-import 'appx_feedback_controller.dart';
 
 // ignore: must_be_immutable
-class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
+class MbxFeedbackSheet extends GetWidget<MbxFeedbackController> {
   static void show({required String feature}) async {
     final resp = await AppxFeedbackVM.get(feature: feature);
     if (resp.score == AppxFeedbackScore.notYet) {
       FocusManager.instance.primaryFocus?.unfocus();
       final score = await SheetX.showCustom(
-        widget: AppxFeedbackSheet(),
+        widget: MbxFeedbackSheet(),
         title: 'Feedback',
       );
       if (score != null) {
@@ -26,8 +26,8 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppxFeedbackController>(
-        init: AppxFeedbackController(),
+    return GetBuilder<MbxFeedbackController>(
+        init: MbxFeedbackController(),
         builder: (controller) => Container(
             padding: EdgeInsets.all(24.0),
             child: Column(
@@ -45,7 +45,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                        child: AppxFeedbackWidget(
+                        child: MbxFeedbackWidget(
                             title: 'Sangat Puas',
                             faIcon: FontAwesomeIcons.faceGrinBeam,
                             faColor: ColorX.green.darken(0.1),
@@ -54,7 +54,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                                   AppxFeedbackScore.verySatisfied);
                             })),
                     Expanded(
-                      child: AppxFeedbackWidget(
+                      child: MbxFeedbackWidget(
                           title: 'Puas',
                           faIcon: FontAwesomeIcons.faceSmile,
                           faColor: ColorX.green.lighten(0.1),
@@ -64,7 +64,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           }),
                     ),
                     Expanded(
-                      child: AppxFeedbackWidget(
+                      child: MbxFeedbackWidget(
                           title: 'Biasa Saja',
                           faIcon: FontAwesomeIcons.faceMeh,
                           faColor: ColorX.yellow,
@@ -74,7 +74,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           }),
                     ),
                     Expanded(
-                      child: AppxFeedbackWidget(
+                      child: MbxFeedbackWidget(
                           title: 'Buruk',
                           faIcon: FontAwesomeIcons.faceFrown,
                           faColor: ColorX.red,
@@ -83,7 +83,7 @@ class AppxFeedbackSheet extends GetWidget<AppxFeedbackController> {
                           }),
                     ),
                     Expanded(
-                      child: AppxFeedbackWidget(
+                      child: MbxFeedbackWidget(
                           title: 'Buruk Sekali',
                           faIcon: FontAwesomeIcons.faceTired,
                           faColor: ColorX.red,

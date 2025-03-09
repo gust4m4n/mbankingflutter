@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class AppxFeedbackController extends GetxController {
+class MbxFeedbackController extends GetxController {
   btnRatingClicked(int value) {
     Get.back(result: value);
   }

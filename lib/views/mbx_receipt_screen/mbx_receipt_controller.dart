@@ -1,9 +1,9 @@
 import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:mbankingflutter/feedback/mbx_feedback_sheet.dart';
 
 import '../../models/mbx_receipt_model.dart';
 import '../../viewmodels/mbx_receipt_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../appx_feedback_sheet/appx_feedback_sheet.dart';
 
 export 'dart:io';
 
@@ -36,7 +36,7 @@ class MbxReceiptController extends GetxController {
 
     if (askFeedback) {
       Future.delayed(const Duration(milliseconds: 1500), () {
-        AppxFeedbackSheet.show(feature: 'feature-id');
+        MbxFeedbackSheet.show(feature: 'feature-id');
       });
     }
   }

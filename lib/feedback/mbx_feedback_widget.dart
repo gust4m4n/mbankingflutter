@@ -1,12 +1,12 @@
 import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
-class AppxFeedbackWidget extends StatelessWidget {
+class MbxFeedbackWidget extends StatelessWidget {
   final String title;
   final IconData faIcon;
   final Color faColor;
   final GestureTapCallback clicked;
-  AppxFeedbackWidget(
+  MbxFeedbackWidget(
       {required this.title,
       required this.faIcon,
       required this.faColor,

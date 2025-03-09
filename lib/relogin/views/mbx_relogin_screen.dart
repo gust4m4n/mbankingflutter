@@ -1,8 +1,8 @@
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbankingflutter/views/mbx_home_page/mbx_launcher_widget.dart';
+import 'package:mbankingflutter/views/mbx_home_page/mbx_theme_button.dart';
 
 import '../../widgets/all_widgets.dart';
-import '../mbx_home_page/mbx_launcher_widget.dart';
-import '../mbx_home_page/mbx_theme_button.dart';
 import 'mbx_relogin_controller.dart';
 
 class MbxReloginScreen extends StatelessWidget {
