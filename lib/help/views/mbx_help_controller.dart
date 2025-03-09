@@ -3,10 +3,10 @@ import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 
-class MbxHelpSheetController extends GetxController {
+class MbxHelpController extends GetxController {
   List<MbxAccountModel> accounts = [];
 
-  MbxHelpSheetController() {
+  MbxHelpController() {
     for (var item in MbxProfileVM.profile.accounts) {
       if (item.sof) {
         item.visible = false;

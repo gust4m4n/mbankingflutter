@@ -1,10 +1,10 @@
 import 'package:mbankingflutter/help/views/mbx_help_widget.dart';
 
 import '../../widgets/all_widgets.dart';
-import 'mbx_help_sheet_controller.dart';
+import 'mbx_help_controller.dart';
 
 // ignore: must_be_immutable
-class MbxHelpSheet extends GetWidget<MbxHelpSheetController> {
+class MbxHelpSheet extends GetWidget<MbxHelpController> {
   MbxHelpSheet();
 
   static Future<T?> show<T>() {
@@ -18,8 +18,8 @@ class MbxHelpSheet extends GetWidget<MbxHelpSheetController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxHelpSheetController>(
-        init: MbxHelpSheetController(),
+    return GetBuilder<MbxHelpController>(
+        init: MbxHelpController(),
         builder: (controller) => Column(
               mainAxisSize: MainAxisSize.min,
               children: [

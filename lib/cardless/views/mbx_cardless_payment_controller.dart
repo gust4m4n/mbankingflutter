@@ -1,4 +1,4 @@
-import '../../cardless/models/mbx_cardless_step_model.dart';
+import '../models/mbx_cardless_step_model.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxCardlessPaymentController extends GetxController {

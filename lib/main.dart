@@ -1,5 +1,5 @@
 import 'package:mbankingflutter/biller-pulsa/dataplan/views/mbx_pulsa_dataplan_screen.dart';
-import 'package:mbankingflutter/cardless-payment/views/mbx_cardless_payment_screen.dart';
+import 'package:mbankingflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbankingflutter/cardless/views/mbx_cardless_screen.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/login/views/mbx_login_screen.dart';
