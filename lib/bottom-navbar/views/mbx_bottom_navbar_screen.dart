@@ -1,8 +1,8 @@
 import '../../widgets/all_widgets.dart';
-import '../../history-page/views/mbx_history_page.dart';
-import '../../home-page/views/mbx_home_page.dart';
+import '../../history-tab/views/mbx_history_page.dart';
+import '../../home-tab/views/mbx_home_page.dart';
 import '../../notification-page/views/mbx_notification_page.dart';
-import '../../profile-page/views/mbx_profile_page.dart';
+import '../../profile-tab/views/mbx_profile_page.dart';
 import 'mbx_bottom_navbar_button.dart';
 import 'mbx_bottom_navbar_controller.dart';
 

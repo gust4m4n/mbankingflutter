@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/home-page/models/mbx_foreign_exchange_model.dart';
+import 'package:mbankingflutter/home-tab/models/mbx_foreign_exchange_model.dart';
 import 'package:mbankingflutter/utils/mbx_apis.dart';
 
 import '../../utils/all_utils.dart';
