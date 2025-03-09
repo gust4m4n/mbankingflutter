@@ -1,5 +1,5 @@
+import 'package:mbankingflutter/qris/mbx_qris_amount_screen.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/views/mbx_qris_amount_screen/mbx_qris_amount_screen.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 import '../../viewmodels/mbx_qris_inquiry_vm.dart';
