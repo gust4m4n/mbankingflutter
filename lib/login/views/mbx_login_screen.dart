@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:mbankingflutter/login/views/mbx_onboarding_widget.dart';
-import 'package:mbankingflutter/views/mbx_home_page/mbx_theme_button.dart';
+import '../../home-page/mbx_theme_button.dart';
 import 'package:mbankingflutter/widgets/all_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
