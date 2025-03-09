@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
 
-import '../utils/api_x.dart';
+import '../../utils/all_utils.dart';
 
 class AppxFeedbackScore {
   static final int notGiven = -1;
