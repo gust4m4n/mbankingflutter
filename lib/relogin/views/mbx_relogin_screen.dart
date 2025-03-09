@@ -1,6 +1,6 @@
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import '../../home-page/mbx_launcher_widget.dart';
-import '../../home-page/mbx_theme_button.dart';
+import '../../home-page/views/mbx_launcher_widget.dart';
+import '../../home-page/views/mbx_theme_button.dart';
 
 import '../../widgets/all_widgets.dart';
 import 'mbx_relogin_controller.dart';
