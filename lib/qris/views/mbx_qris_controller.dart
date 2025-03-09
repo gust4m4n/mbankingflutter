@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/qris/mbx_qris_amount_screen.dart';
+import 'package:mbankingflutter/qris/views/mbx_qris_amount_screen.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
