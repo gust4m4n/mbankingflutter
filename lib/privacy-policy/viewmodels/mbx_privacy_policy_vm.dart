@@ -1,7 +1,7 @@
-import 'package:mbankingflutter/privacy-policy/models/mbx_privacy_policy_model.dart';
+import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
 
-import '../utils/all_utils.dart';
-import 'mbx_apis.dart';
+import '../models/mbx_privacy_policy_model.dart';
 
 class MbxPrivacyPolicyVM {
   var loading = false;

@@ -1,8 +1,9 @@
-import '../../viewmodels/mbx_privacy_policy_vm.dart';
+import 'package:mbankingflutter/tnc/viewmodels/mbx_tnc_vm.dart';
+
 import '../../widgets/all_widgets.dart';
 
-class MbxPrivacyPolicyController extends GetxController {
-  final privacyPolicyVM = MbxPrivacyPolicyVM();
+class MbxTncController extends GetxController {
+  final tncVM = MbxTncVM();
   WebViewController? webController;
   var html = '';
 
@@ -10,12 +11,12 @@ class MbxPrivacyPolicyController extends GetxController {
   void onReady() {
     super.onReady();
     update();
-    privacyPolicyVM.request().then((resp) {
+    tncVM.request().then((resp) {
       update();
       buildHtmlAndFonts('''
-          <span style="font-family: 'Roboto'; font-weight: bold; font-size: 24pt; color: #343a40">${privacyPolicyVM.privacy_policy.title}</span>
+          <span style="font-family: 'Roboto'; font-weight: bold; font-size: 24pt; color: #343a40">${tncVM.tnc.title}</span>
           <br><br>
-          <span style="font-family: 'Roboto'; font-weight: normal; font-size: 15pt; color: #343a40">${privacyPolicyVM.privacy_policy.content}</span>
+          <span style="font-family: 'Roboto'; font-weight: normal; font-size: 15pt; color: #343a40">${tncVM.tnc.content}</span>
         ''').then((value) {
         html = value;
         if (!kIsWeb) {

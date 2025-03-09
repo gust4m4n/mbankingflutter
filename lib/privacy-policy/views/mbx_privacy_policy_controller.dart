@@ -1,8 +1,8 @@
-import '../../viewmodels/mbx_tnc_vm.dart';
-import '../../widgets/all_widgets.dart';
+import '../../../viewmodels/mbx_privacy_policy_vm.dart';
+import '../../../widgets/all_widgets.dart';
 
-class MbxTncController extends GetxController {
-  final tncVM = MbxTncVM();
+class MbxPrivacyPolicyController extends GetxController {
+  final privacyPolicyVM = MbxPrivacyPolicyVM();
   WebViewController? webController;
   var html = '';
 
@@ -10,12 +10,12 @@ class MbxTncController extends GetxController {
   void onReady() {
     super.onReady();
     update();
-    tncVM.request().then((resp) {
+    privacyPolicyVM.request().then((resp) {
       update();
       buildHtmlAndFonts('''
-          <span style="font-family: 'Roboto'; font-weight: bold; font-size: 24pt; color: #343a40">${tncVM.tnc.title}</span>
+          <span style="font-family: 'Roboto'; font-weight: bold; font-size: 24pt; color: #343a40">${privacyPolicyVM.privacy_policy.title}</span>
           <br><br>
-          <span style="font-family: 'Roboto'; font-weight: normal; font-size: 15pt; color: #343a40">${tncVM.tnc.content}</span>
+          <span style="font-family: 'Roboto'; font-weight: normal; font-size: 15pt; color: #343a40">${privacyPolicyVM.privacy_policy.content}</span>
         ''').then((value) {
         html = value;
         if (!kIsWeb) {

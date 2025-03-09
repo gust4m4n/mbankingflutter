@@ -1,6 +1,6 @@
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../../widgets/all_widgets.dart';
 import 'mbx_privacy_policy_controller.dart';
 
 class MbxPrivacyPolicyScreen extends StatelessWidget {

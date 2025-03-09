@@ -1,6 +1,7 @@
+import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
+
 import '../models/mbx_tnc_model.dart';
-import '../utils/all_utils.dart';
-import 'mbx_apis.dart';
 
 class MbxTncVM {
   var loading = false;
