@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/notification-page/viewmodels/mbx_notification_list_vm.dart';
+import 'package:mbankingflutter/notification-tab/viewmodels/mbx_notification_list_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 

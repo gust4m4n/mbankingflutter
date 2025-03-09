@@ -1,6 +1,6 @@
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
 import 'package:mbankingflutter/utils/mbx_device_vm.dart';
-import 'package:mbankingflutter/utils/mbx_preferences_vm+users.dart';
 
 import '../utils/api_x.dart';
 import 'mbx_baseurl_vm.dart';
