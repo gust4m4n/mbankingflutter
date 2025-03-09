@@ -1,8 +1,8 @@
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:mbankingflutter/feedback/views/mbx_feedback_sheet.dart';
+import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
 import 'package:mbankingflutter/receipt/viewmodels/mbx_receipt_vm.dart';
 
-import '../../models/mbx_receipt_model.dart';
 import '../../widgets/all_widgets.dart';
 
 export 'dart:io';

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:mbankingflutter/utils/api_x.dart';
-import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
+import 'package:mbankingflutter/utils/mbx_apis.dart';
 
 class MbxLoginPhoneVM {
   static Future<ApiXResponse> request({required String phone}) {

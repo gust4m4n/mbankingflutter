@@ -1,4 +1,5 @@
-import '../../models/demo_movie_model.dart';
+import 'package:mbankingflutter/login/models/demo_movie_model.dart';
+
 import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable

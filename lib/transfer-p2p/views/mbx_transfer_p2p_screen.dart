@@ -1,6 +1,6 @@
 import 'package:mbankingflutter/sof/views/mbx_sof_widget.dart';
+import 'package:mbankingflutter/utils/mbx_format_vm.dart';
 
-import '../../viewmodels/mbx_format_vm.dart';
 import '../../widgets/all_widgets.dart';
 import 'mbx_transfer_p2p_controller.dart';
 

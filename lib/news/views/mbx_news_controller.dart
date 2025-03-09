@@ -1,6 +1,6 @@
-import 'package:mbankingflutter/models/mbx_news_model.dart';
+import 'package:mbankingflutter/news/models/mbx_news_model.dart';
+import 'package:mbankingflutter/news/viewmodels/mbx_news_detail_vm.dart';
 
-import '../../viewmodels/mbx_news_detail_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxNewsController extends GetxController {

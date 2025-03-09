@@ -1,7 +1,7 @@
-import 'package:mbankingflutter/models/mbx_transfer_p2bank_service_model.dart';
+import 'package:mbankingflutter/transfer-p2bank/models/mbx_transfer_p2bank_service_model.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbankingflutter/utils/mbx_format_vm.dart';
 
-import '../../viewmodels/mbx_format_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable

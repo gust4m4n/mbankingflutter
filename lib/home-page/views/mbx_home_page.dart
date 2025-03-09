@@ -1,15 +1,15 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbankingflutter/news/viewmodels/mbx_news_list_vm.dart';
 import 'package:mbankingflutter/sof/views/mbx_sof_widget.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/viewmodels/mbx_news_list_vm.dart';
-import 'mbx_foreign_exchange_widget.dart';
-import 'mbx_news_widget.dart';
-import 'mbx_theme_button.dart';
 
 import '../../widgets/all_widgets.dart';
+import 'mbx_foreign_exchange_widget.dart';
 import 'mbx_home_controller.dart';
 import 'mbx_launcher_widget.dart';
+import 'mbx_news_widget.dart';
+import 'mbx_theme_button.dart';
 
 class MbxHomePage extends StatelessWidget {
   MbxHomePage({Key? key}) : super(key: key);

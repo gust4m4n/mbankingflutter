@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/viewmodels/mbx_format_vm.dart';
+import 'package:mbankingflutter/utils/mbx_format_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 

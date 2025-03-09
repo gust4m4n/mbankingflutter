@@ -1,4 +1,5 @@
-import '../../models/mbx_receipt_model.dart';
+import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
+
 import '../../widgets/all_widgets.dart';
 import 'mbx_history_controller.dart';
 import 'mbx_history_widget.dart';

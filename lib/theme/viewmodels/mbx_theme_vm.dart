@@ -1,5 +1,5 @@
 import 'package:mbankingflutter/theme/views/mbx_theme_sheet.dart';
-import 'package:mbankingflutter/viewmodels/mbx_preferences_vm+users.dart';
+import 'package:mbankingflutter/utils/mbx_preferences_vm+users.dart';
 import 'package:mbankingflutter/widgets/all_widgets.dart';
 
 class MbxThemeVM {

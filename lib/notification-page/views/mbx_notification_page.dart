@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/models/mbx_receipt_model.dart';
+import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
 
 import '../../widgets/all_widgets.dart';
 import 'mbx_notification_controller.dart';

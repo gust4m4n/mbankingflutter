@@ -1,4 +1,5 @@
-import '../../models/mbx_transfer_p2bank_service_model.dart';
+import 'package:mbankingflutter/transfer-p2bank/models/mbx_transfer_p2bank_service_model.dart';
+
 import '../../widgets/all_widgets.dart';
 import 'mbx_transfer_p2bank_service_picker_controller.dart';
 import 'mbx_transfer_p2bank_service_widget.dart';

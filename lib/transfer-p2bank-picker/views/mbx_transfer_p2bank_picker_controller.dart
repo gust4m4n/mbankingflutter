@@ -1,5 +1,6 @@
-import '../../models/mbx_transfer_p2bank_dest_model.dart';
-import '../../viewmodels/mbx_transfer_p2bank_dest_list_vm.dart';
+import 'package:mbankingflutter/transfer-p2bank/models/mbx_transfer_p2bank_dest_model.dart';
+import 'package:mbankingflutter/transfer-p2bank/viewmodels/mbx_transfer_p2bank_dest_list_vm.dart';
+
 import '../../widgets/all_widgets.dart';
 
 class MbxTransferP2BankPickerController extends GetxController {
@@ -43,6 +44,5 @@ class MbxTransferP2BankPickerController extends GetxController {
         });
   }
 
-  onAddClicked() {
-  }
+  onAddClicked() {}
 }

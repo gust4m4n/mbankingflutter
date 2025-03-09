@@ -1,8 +1,8 @@
+import 'package:mbankingflutter/qris/viewmodels/mbx_qris_inquiry_vm.dart';
 import 'package:mbankingflutter/qris/views/mbx_qris_amount_screen.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-import '../../viewmodels/mbx_qris_inquiry_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxQRISController extends GetxController {

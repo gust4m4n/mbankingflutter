@@ -1,13 +1,13 @@
+import 'package:mbankingflutter/avatar/views/mbx_avatar_sheet.dart';
 import 'package:mbankingflutter/help/views/mbx_help_sheet.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/avatar/views/mbx_avatar_sheet.dart';
+import 'package:mbankingflutter/utils/mbx_change_pin_vm.dart';
+import 'package:mbankingflutter/utils/mbx_logout_vm.dart';
+import 'package:mbankingflutter/utils/mbx_preferences_vm+users.dart';
+import 'package:mbankingflutter/utils/mbx_set_biometric_vm.dart';
 
 import '../../utils/all_utils.dart';
-import '../../viewmodels/mbx_change_pin_vm.dart';
-import '../../viewmodels/mbx_logout_vm.dart';
-import '../../viewmodels/mbx_preferences_vm+users.dart';
-import '../../viewmodels/mbx_set_biometric_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxProfileController extends GetxController {

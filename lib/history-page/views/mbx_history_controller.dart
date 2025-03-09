@@ -1,4 +1,5 @@
-import '../../viewmodels/mbx_history_list_vm.dart';
+import 'package:mbankingflutter/history-page/viewmodels/mbx_history_list_vm.dart';
+
 import '../../widgets/all_widgets.dart';
 
 class MbxHistoryController extends GetxController {

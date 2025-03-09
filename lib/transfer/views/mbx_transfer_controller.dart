@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mbankingflutter/models/mbx_transfer_history_model.dart';
-import 'package:mbankingflutter/viewmodels/mbx_transfer_history_list_vm.dart';
-
-import '../../models/mbx_receipt_model.dart';
+import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
+import 'package:mbankingflutter/transfer/viewmodels/mbx_transfer_history_list_vm.dart';
+import 'package:mbankingflutter/transfer/viewmodels/mbx_transfer_history_model.dart';
 
 class MbxTransferController extends GetxController {
   final scrollController = ScrollController();

@@ -1,13 +1,13 @@
+import 'package:mbankingflutter/inquiry/models/mbx_inquiry_model.dart';
+import 'package:mbankingflutter/login/models/mbx_account_model.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbankingflutter/pln-postpaid/viewmodels/mbx_electricity_postpaid_inquiry_vm.dart';
+import 'package:mbankingflutter/pln-postpaid/viewmodels/mbx_electricity_postpaid_payment_vm.dart';
 import 'package:mbankingflutter/sof/views/mbx_sof_sheet.dart';
 
-import '../../models/mbx_account_model.dart';
-import '../../models/mbx_inquiry_model.dart';
-import '../../viewmodels/mbx_electricity_postpaid_inquiry_vm.dart';
-import '../../viewmodels/mbx_electricity_postpaid_payment_vm.dart';
-import '../../widgets/all_widgets.dart';
 import '../../inquiry/views/mbx_inquiry_sheet.dart';
+import '../../widgets/all_widgets.dart';
 
 class MbxElectricityPostpaidController extends GetxController {
   var sof = MbxAccountModel();

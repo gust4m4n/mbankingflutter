@@ -1,6 +1,6 @@
+import 'package:mbankingflutter/qris/models/mbx_qris_inquiry_model.dart';
 import 'package:mbankingflutter/sof/views/mbx_sof_widget.dart';
 
-import '../../../models/mbx_qris_inquiry_model.dart';
 import '../../../widgets/all_widgets.dart';
 import 'mbx_qris_amount_controller.dart';
 

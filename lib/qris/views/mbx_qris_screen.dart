@@ -1,6 +1,6 @@
+import 'package:mbankingflutter/utils/mbx_device_info_vm.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-import '../../viewmodels/mbx_device_info_vm.dart';
 import '../../widgets/all_widgets.dart';
 import '../../widgets/media_x.dart';
 import 'mbx_qris_controller.dart';

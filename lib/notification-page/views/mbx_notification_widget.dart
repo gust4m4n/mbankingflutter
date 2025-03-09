@@ -1,5 +1,6 @@
-import '../../models/mbx_notification_model.dart';
-import '../../viewmodels/mbx_format_vm.dart';
+import 'package:mbankingflutter/notification-page/models/mbx_notification_model.dart';
+import 'package:mbankingflutter/utils/mbx_format_vm.dart';
+
 import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable

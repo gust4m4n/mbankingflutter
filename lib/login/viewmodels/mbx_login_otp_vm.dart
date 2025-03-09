@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:mbankingflutter/viewmodels/mbx_apis.dart';
+import 'package:mbankingflutter/utils/mbx_apis.dart';
 
 import '../../utils/all_utils.dart';
 

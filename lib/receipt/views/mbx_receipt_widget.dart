@@ -1,4 +1,5 @@
-import '../../models/mbx_label_value_model.dart';
+import 'package:mbankingflutter/receipt/models/mbx_label_value_model.dart';
+
 import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable

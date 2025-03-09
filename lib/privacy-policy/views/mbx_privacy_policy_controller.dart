@@ -1,4 +1,5 @@
-import '../../../viewmodels/mbx_privacy_policy_vm.dart';
+import 'package:mbankingflutter/privacy-policy/viewmodels/mbx_privacy_policy_vm.dart';
+
 import '../../../widgets/all_widgets.dart';
 
 class MbxPrivacyPolicyController extends GetxController {

@@ -1,6 +1,6 @@
-import 'package:mbankingflutter/viewmodels/mbx_format_vm.dart';
+import 'package:mbankingflutter/transfer-p2p/models/mbx_transfer_p2p_dest_model.dart';
+import 'package:mbankingflutter/utils/mbx_format_vm.dart';
 
-import '../../models/mbx_transfer_p2p_dest_model.dart';
 import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable

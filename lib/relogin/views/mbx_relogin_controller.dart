@@ -3,9 +3,9 @@ import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
 import 'package:mbankingflutter/relogin/viewmodels/mbx_relogin_vm.dart';
 import 'package:mbankingflutter/theme/viewmodels/mbx_theme_vm.dart';
+import 'package:mbankingflutter/utils/mbx_logout_vm.dart';
 
 import '../../utils/all_utils.dart';
-import '../../viewmodels/mbx_logout_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class MbxReloginController extends GetxController {

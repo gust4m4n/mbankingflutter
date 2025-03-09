@@ -1,5 +1,6 @@
-import '../../viewmodels/mbx_biometric_vm.dart';
-import '../../viewmodels/mbx_preferences_vm+users.dart';
+import 'package:mbankingflutter/utils/mbx_biometric_vm.dart';
+import 'package:mbankingflutter/utils/mbx_preferences_vm+users.dart';
+
 import '../../widgets/all_widgets.dart';
 import 'mbx_otp_sheet.dart';
 

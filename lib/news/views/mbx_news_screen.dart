@@ -1,7 +1,7 @@
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:mbankingflutter/news/models/mbx_news_model.dart';
 import 'package:mbankingflutter/widgets/media_x.dart';
 
-import '../../models/mbx_news_model.dart';
 import '../../widgets/all_widgets.dart';
 import 'mbx_news_controller.dart';
 

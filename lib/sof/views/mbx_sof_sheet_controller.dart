@@ -1,6 +1,6 @@
+import 'package:mbankingflutter/login/models/mbx_account_model.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 
-import '../../../models/mbx_account_model.dart';
 import '../../../widgets/all_widgets.dart';
 
 class MbxSofSheetController extends GetxController {
