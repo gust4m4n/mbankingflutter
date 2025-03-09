@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/views/mbx_help_sheet/mbx_help_widget.dart';
+import 'package:mbankingflutter/help/views/mbx_help_widget.dart';
 
 import '../../widgets/all_widgets.dart';
 import 'mbx_help_sheet_controller.dart';

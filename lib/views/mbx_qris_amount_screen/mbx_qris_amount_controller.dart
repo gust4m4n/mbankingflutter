@@ -1,12 +1,12 @@
 import 'package:intl/intl.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbankingflutter/sof/views/mbx_sof_sheet.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
 import 'package:mbankingflutter/viewmodels/mbx_qris_payment_vm.dart';
-import 'package:mbankingflutter/views/mbx_sof_sheet/mbx_sof_sheet.dart';
 
 import '../../models/mbx_account_model.dart';
 import '../../models/mbx_qris_inquiry_model.dart';
-import '../../pin-sheet/views/mbx_pin_sheet.dart';
 import '../../viewmodels/mbx_receipt_vm.dart';
 import '../../widgets/all_widgets.dart';
 

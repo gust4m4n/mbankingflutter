@@ -1,7 +1,7 @@
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/login/views/mbx_login_screen.dart';
 import 'package:mbankingflutter/privacy-policy/views/mbx_privacy_policy_screen.dart';
-import 'package:mbankingflutter/theme-sheet/viewmodels/mbx_theme_vm.dart';
+import 'package:mbankingflutter/theme/viewmodels/mbx_theme_vm.dart';
 import 'package:mbankingflutter/views/mbx_cardless_payment_screen/mbx_cardless_payment_screen.dart';
 import 'package:mbankingflutter/views/mbx_cardless_screen/mbx_cardless_screen.dart';
 import 'package:mbankingflutter/views/mbx_electricity_prepaid_screen/mbx_electricity_prepaid_screen.dart';

@@ -1,5 +1,5 @@
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/theme-sheet/viewmodels/mbx_theme_vm.dart';
+import 'package:mbankingflutter/theme/viewmodels/mbx_theme_vm.dart';
 import 'package:mbankingflutter/views/mbx_electricity_picker/mbx_electricity_picker.dart';
 import 'package:mbankingflutter/views/mbx_pulsa_picker/mbx_pulsa_picker.dart';
 

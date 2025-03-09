@@ -1,5 +1,6 @@
+import 'package:mbankingflutter/sof/views/mbx_sof_widget.dart';
+
 import '../../widgets/all_widgets.dart';
-import '../mbx_sof_sheet/mbx_sof_widget.dart';
 import 'mbx_electricity_postpaid_controller.dart';
 
 class MbxElectricityPostpaidScreen extends StatelessWidget {
