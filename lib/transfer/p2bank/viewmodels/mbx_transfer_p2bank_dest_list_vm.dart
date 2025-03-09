@@ -1,7 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/transfer/p2bank/models/mbx_transfer_p2bank_dest_model.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
-
-import '../../../utils/all_utils.dart';
 
 class MbxTransferP2BankDestListVM {
   var loading = false;

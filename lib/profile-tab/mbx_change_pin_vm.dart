@@ -1,7 +1,6 @@
 import 'dart:async';
 
-import '../utils/all_utils.dart';
-import 'mbx_apis.dart';
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 
 class MbxChangePinVM {
   static Future<ApiXResponse> request(

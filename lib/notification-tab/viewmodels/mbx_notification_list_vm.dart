@@ -1,7 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/notification-tab/models/mbx_notification_model.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
-
-import '../../utils/all_utils.dart';
 
 class MbxNotificationVM {
   var loading = false;

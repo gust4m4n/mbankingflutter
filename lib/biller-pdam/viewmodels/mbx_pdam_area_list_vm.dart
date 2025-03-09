@@ -1,7 +1,6 @@
-import 'package:mbankingflutter/utils/mbx_apis.dart';
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 
 import '../models/mbx_pdam_area_model.dart';
-import '../../utils/all_utils.dart';
 
 class MbxPDAMAreaListVM {
   List<MbxPDAMAreaModel> list = [];

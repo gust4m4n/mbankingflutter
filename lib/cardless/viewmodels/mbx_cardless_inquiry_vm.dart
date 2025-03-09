@@ -1,6 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/inquiry/models/mbx_inquiry_model.dart';
-import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
 
 class MbxCardlessInquiryVM {
   var loading = false;

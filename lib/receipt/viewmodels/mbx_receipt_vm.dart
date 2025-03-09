@@ -1,6 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
-import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
 
 class MbxReceiptVM {
   var loading = false;

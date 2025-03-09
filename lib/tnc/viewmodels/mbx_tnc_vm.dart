@@ -1,5 +1,4 @@
-import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 
 import '../models/mbx_tnc_model.dart';
 

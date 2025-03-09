@@ -5,6 +5,8 @@ import 'package:http/http.dart' as http;
 import '../utils/all_utils.dart';
 import '../widgets/all_widgets.dart';
 
+export 'api_x.dart';
+
 class ApiXResponse {
   http.Response? response;
   Map headers = {};

@@ -1,7 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/qris/models/mbx_qris_inquiry_model.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
-
-import '../../utils/all_utils.dart';
 
 class MbxQRISInquiryVM {
   var loading = false;

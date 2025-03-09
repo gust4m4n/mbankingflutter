@@ -1,5 +1,5 @@
 import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
-import 'package:mbankingflutter/utils/mbx_biometric_vm.dart';
+import 'package:mbankingflutter/profile-tab/mbx_biometric_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 import 'mbx_pin_sheet.dart';

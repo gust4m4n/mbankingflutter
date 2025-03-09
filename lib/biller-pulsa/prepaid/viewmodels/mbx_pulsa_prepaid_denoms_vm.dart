@@ -1,7 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/biller-pulsa/prepaid/models/mbx_pulsa_prepaid_denom_model.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
-
-import '../../../utils/all_utils.dart';
 
 class MbxPulsaPrepaidDenomsVM {
   List<MbxPulsaPrepaidDenomModel> list = [];

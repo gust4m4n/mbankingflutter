@@ -1,6 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/cardless/models/mbx_cardless_step_model.dart';
-import 'package:mbankingflutter/utils/all_utils.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
 
 class MbxCardlessPaymentVM {
   List<MbxCardlessStepModel> steps = [];

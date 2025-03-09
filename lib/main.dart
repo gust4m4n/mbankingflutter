@@ -1,3 +1,4 @@
+import 'package:mbankingflutter/apis/mbx_device_info_vm.dart';
 import 'package:mbankingflutter/biller-pln/prepaid/views/mbx_electricity_prepaid_screen.dart';
 import 'package:mbankingflutter/biller-pulsa/dataplan/views/mbx_pulsa_dataplan_screen.dart';
 import 'package:mbankingflutter/cardless/views/mbx_cardless_payment_screen.dart';
@@ -12,7 +13,6 @@ import 'package:mbankingflutter/receipt/views/mbx_receipt_screen.dart';
 import 'package:mbankingflutter/relogin/views/mbx_relogin_screen.dart';
 import 'package:mbankingflutter/security/mbx_anti_jailbreak_vm.dart';
 import 'package:mbankingflutter/theme/viewmodels/mbx_theme_vm.dart';
-import 'package:mbankingflutter/utils/mbx_device_info_vm.dart';
 import 'package:mbankingflutter/utils/mbx_reachability_vm.dart';
 
 import 'biller-pbb/views/mbx_pbb_screen.dart';

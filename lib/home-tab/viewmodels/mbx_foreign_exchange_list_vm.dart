@@ -1,7 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/home-tab/models/mbx_foreign_exchange_model.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
-
-import '../../utils/all_utils.dart';
 
 class MbxForeignExchangeListVM {
   var loading = false;

@@ -1,9 +1,11 @@
+import 'package:mbankingflutter/apis/api_x.dart';
+import 'package:mbankingflutter/apis/mbx_device_vm.dart';
 import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
-import 'package:mbankingflutter/utils/mbx_device_vm.dart';
 
-import '../utils/api_x.dart';
 import 'mbx_baseurl_vm.dart';
+
+export 'package:mbankingflutter/apis/api_x.dart';
 
 class MbxApi {
   static addRequiredHeader(Map<String, Object?> header) async {

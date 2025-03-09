@@ -1,7 +1,6 @@
-import 'package:mbankingflutter/utils/mbx_apis.dart';
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 
 import '../models/mbx_history_model.dart';
-import '../../utils/all_utils.dart';
 
 class MbxHistoryListVM {
   var loading = false;

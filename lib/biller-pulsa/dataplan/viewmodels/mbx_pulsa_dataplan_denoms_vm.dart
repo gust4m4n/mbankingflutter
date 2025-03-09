@@ -1,7 +1,5 @@
+import 'package:mbankingflutter/apis/mbx_apis.dart';
 import 'package:mbankingflutter/biller-pulsa/dataplan/models/mbx_pulsa_dataplan_denom_model.dart';
-import 'package:mbankingflutter/utils/mbx_apis.dart';
-
-import '../../../utils/all_utils.dart';
 
 class MbxPulsaDataPlanDenomsVM {
   List<MbxPulsaDataPlanDenomModel> list = [];

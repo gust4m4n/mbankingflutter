@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/utils/mbx_device_info_vm.dart';
+import 'package:mbankingflutter/apis/mbx_device_info_vm.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 import '../../widgets/all_widgets.dart';
