@@ -24,9 +24,9 @@ import 'biller-pln/postpaid/views/mbx_electricity_postpaid_screen.dart';
 import 'biller-pulsa/postpaid/views/mbx_pulsa_postpaid_screen.dart';
 import 'biller-pulsa/prepaid/views/mbx_pulsa_prepaid_screen.dart';
 import 'tnc/views/mbx_tnc_screen.dart';
-import 'transfer-p2bank/views/mbx_transfer_p2bank_screen.dart';
-import 'transfer-p2p/views/mbx_transfer_p2p_screen.dart';
-import 'transfer/views/mbx_transfer_screen.dart';
+import 'transfer/p2bank/views/mbx_transfer_p2bank_screen.dart';
+import 'transfer/p2p/views/mbx_transfer_p2p_screen.dart';
+import 'transfer/main/views/mbx_transfer_screen.dart';
 import 'widgets/all_widgets.dart';
 import 'widgets/media_x.dart';
 
