@@ -1,8 +1,8 @@
+import 'package:mbankingflutter/biller-pulsa/sheet/views/mbx_pulsa_controller.dart';
 import 'package:mbankingflutter/utils/all_utils.dart';
 
-import '../../../widgets/all_widgets.dart';
 import '../../../home-tab/views/mbx_launcher_widget.dart';
-import 'mbx_pulsa_controller.dart';
+import '../../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
