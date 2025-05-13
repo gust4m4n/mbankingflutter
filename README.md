@@ -2,13 +2,14 @@
 
 Demo mobile banking/e-money/digital application menggunakan flutter, lengkap dengan UI, mock api dan contracts.
 Untuk APK yang ready to install bisa didownload di sini:
-https://github.com/gust4m4n/mbankingflutter/raw/main/distrib/mbankingflutter-1.0.8.apk
+<https://github.com/gust4m4n/mbankingflutter/raw/main/distrib/mbankingflutter-1.0.9.apk>
 
 Authors:<br>
-gust4m4n@gmail.com<br>
-https://www.instagram.com/gustaman8361/<br>
+<gust4m4n@gmail.com><br>
+<https://www.instagram.com/gustaman8361/><br>
 
 Fitur yang tersedia:
+
 + Login / Logout
 + PIN dan Biometric Login
 + Ganti theme/warna
@@ -23,9 +24,9 @@ Fitur yang tersedia:
 + Receipt: download dan share
 
 Platform yang didukung:
+
 + Android
 + iOS
-
 
 <p>
 

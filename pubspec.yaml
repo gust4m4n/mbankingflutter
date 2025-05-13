@@ -6,49 +6,49 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^2.1.1
+  barcode_widget: ^2.0.4
   cached_network_image: ^3.2.3
-  flutter_svg:
-  intl: ^0.19.0
-  http: ^1.2.0
-  webview_flutter: ^4.4.4
-  qr_flutter: ^4.0.0
-  share_plus: ^9.0.0
-  image_picker: ^1.0.7
-  flutter_secure_storage: ^9.0.0
+  carousel_slider: ^5.0.0
+  client_information: ^2.1.4
+  collection: ^1.16.0
+  connectivity_plus: ^6.0.3
+  crclib: ^3.0.0
   crypto: ^3.0.2
   encrypt: ^5.0.1
-  xor_cipher: ^1.0.0+1
-  crclib: ^3.0.0
-  connectivity_plus: ^6.0.3
-  get: ^4.6.5
-  flash: ^3.0.5+1
-  image: ^4.0.17
-  font_awesome_flutter: ^10.2.1
-  json_sorter: ^1.0.0
-  path_provider: ^2.0.11
-  path: ^1.8.1
-  hex: ^0.2.0
-  collection: ^1.16.0
-  smooth_page_indicator: ^1.0.0+2
   file: ^7.0.0
-  fluttertoast: ^8.2.4
-  flutter_jailbreak_detection: ^1.10.0
-  sqflite: ^2.3.0
   fl_chart: ^0.68.0
-  local_auth: ^2.1.8
-  barcode_widget: ^2.0.4
-  pdfx: ^2.6.0
-  package_info_plus: ^8.0.0
-  client_information: ^2.1.4
-  uuid: ^4.4.0
-  permission_handler: ^11.3.1
+  flash: ^3.0.5+1
+  flutter_jailbreak_detection: ^1.10.0
+  flutter_secure_storage: ^9.0.0
+  flutter_svg:
+  flutter_widget_from_html: ^0.15.2
+  fluttertoast: ^8.2.4
+  font_awesome_flutter: ^10.2.1
+  get: ^4.6.5
+  hex: ^0.2.0
+  http: ^1.2.0
+  image: ^4.0.17
   image_gallery_saver: ^2.0.3
+  image_picker: ^1.0.7
+  intl: ^0.19.0
+  json_sorter: ^1.0.0
+  local_auth: ^2.1.8
   mobile_scanner: ^5.1.0
+  package_info_plus: ^8.0.0
+  path: ^1.8.1
+  path_provider: ^2.0.11
+  pdfx: ^2.6.0
+  permission_handler: ^11.3.1
+  qr_flutter: ^4.0.0
   remove: ^1.0.10
   screenshot: ^3.0.0
-  carousel_slider: ^5.0.0
-  flutter_widget_from_html: ^0.15.2
+  share_plus: ^9.0.0
+  shared_preferences: ^2.1.1
+  smooth_page_indicator: ^1.0.0+2
+  sqflite: ^2.3.0
+  uuid: ^4.4.0
+  webview_flutter: ^4.4.4
+  xor_cipher: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:
