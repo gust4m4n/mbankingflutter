@@ -1,17 +1,17 @@
 import 'package:intl/intl.dart';
-import 'package:mbankingflutter/inquiry/models/mbx_inquiry_model.dart';
-import 'package:mbankingflutter/inquiry/views/mbx_inquiry_sheet.dart';
-import 'package:mbankingflutter/login/models/mbx_account_model.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/sof/views/mbx_sof_sheet.dart';
-import 'package:mbankingflutter/transfer/p2bank/views/mbx_transfer_p2bank_picker.dart';
-import 'package:mbankingflutter/transfer/p2bank/views/mbx_transfer_p2bank_service_picker.dart';
-import 'package:mbankingflutter/transfer/p2bank/models/mbx_transfer_p2bank_dest_model.dart';
-import 'package:mbankingflutter/transfer/p2bank/models/mbx_transfer_p2bank_service_model.dart';
-import 'package:mbankingflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_inquiry_vm.dart';
-import 'package:mbankingflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_payment_vm.dart';
-import 'package:mbankingflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_service_list_vm.dart';
+import 'package:mbxflutter/inquiry/models/mbx_inquiry_model.dart';
+import 'package:mbxflutter/inquiry/views/mbx_inquiry_sheet.dart';
+import 'package:mbxflutter/login/models/mbx_account_model.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
+import 'package:mbxflutter/transfer/p2bank/models/mbx_transfer_p2bank_dest_model.dart';
+import 'package:mbxflutter/transfer/p2bank/models/mbx_transfer_p2bank_service_model.dart';
+import 'package:mbxflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_inquiry_vm.dart';
+import 'package:mbxflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_payment_vm.dart';
+import 'package:mbxflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_service_list_vm.dart';
+import 'package:mbxflutter/transfer/p2bank/views/mbx_transfer_p2bank_picker.dart';
+import 'package:mbxflutter/transfer/p2bank/views/mbx_transfer_p2bank_service_picker.dart';
 
 import '../../../widgets/all_widgets.dart';
 
@@ -78,8 +78,9 @@ class MbxTransfeP2BankController extends GetxController {
       final formatter = NumberFormat('#,###');
       String formatted = formatter.format(intValue).replaceAll(',', '.');
       amountController.text = formatted;
-      amountController.selection =
-          TextSelection.fromPosition(TextPosition(offset: formatted.length));
+      amountController.selection = TextSelection.fromPosition(
+        TextPosition(offset: formatted.length),
+      );
     } else {
       amount = 0;
       amountController.text = '';
@@ -88,8 +89,9 @@ class MbxTransfeP2BankController extends GetxController {
   }
 
   btnTransferServiceClicked() {
-    MbxTransferP2BankServicePicker.show(transferServiceListVM.list)
-        .then((service) {
+    MbxTransferP2BankServicePicker.show(transferServiceListVM.list).then((
+      service,
+    ) {
       if (service != null) {
         this.service = service;
         update();
@@ -171,9 +173,10 @@ class MbxTransfeP2BankController extends GetxController {
       Get.back();
       if (resp.status == 200) {
         final sheet = MbxInquirySheet(
-            title: 'Konfirmasi',
-            confirmBtnTitle: 'Transfer',
-            inquiry: inquiryVM.inquiry);
+          title: 'Konfirmasi',
+          confirmBtnTitle: 'Transfer',
+          inquiry: inquiryVM.inquiry,
+        );
         sheet.show().then((value) {
           if (value == true) {
             authenticate(inquiry: inquiryVM.inquiry);
@@ -203,25 +206,29 @@ class MbxTransfeP2BankController extends GetxController {
     );
   }
 
-  payment(
-      {required String transaction_id,
-      required String pin,
-      required bool biometric}) {
+  payment({
+    required String transaction_id,
+    required String pin,
+    required bool biometric,
+  }) {
     Get.loading();
     final paymentVM = MbxTransferP2BankPaymentVM();
     paymentVM
         .request(transaction_id: transaction_id, pin: pin, biometric: biometric)
         .then((resp) {
-      if (resp.status == 200) {
-        Get.back();
-        Get.offNamed('/receipt', arguments: {
-          'receipt': paymentVM.receipt,
-          'backToHome': true,
-          'askFeedback': true
+          if (resp.status == 200) {
+            Get.back();
+            Get.offNamed(
+              '/receipt',
+              arguments: {
+                'receipt': paymentVM.receipt,
+                'backToHome': true,
+                'askFeedback': true,
+              },
+            );
+          } else {
+            // payment request failed
+          }
         });
-      } else {
-        // payment request failed
-      }
-    });
   }
 }

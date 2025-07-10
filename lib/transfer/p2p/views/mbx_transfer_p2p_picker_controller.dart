@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/transfer/p2p/models/mbx_transfer_p2p_dest_model.dart';
-import 'package:mbankingflutter/transfer/p2p/viewmodels/mbx_transfer_p2p_dest_list_vm.dart';
+import 'package:mbxflutter/transfer/p2p/models/mbx_transfer_p2p_dest_model.dart';
+import 'package:mbxflutter/transfer/p2p/viewmodels/mbx_transfer_p2p_dest_list_vm.dart';
 
 import '../../../widgets/all_widgets.dart';
 
@@ -31,17 +31,18 @@ class MbxTransferP2PPickerController extends GetxController {
 
   onDeleteClicked(MbxTransferP2PDestModel dest) {
     SheetX.showMessage(
-        title: 'Hapus',
-        message:
-            'Apakah anda yakin ingin menghapus ${dest.name} dengan nomor rekening ${dest.account} ?',
-        leftBtnTitle: 'Ya',
-        onLeftBtnClicked: () {
-          Get.back();
-        },
-        rightBtnTitle: 'Tidak',
-        onRightBtnClicked: () {
-          Get.back();
-        });
+      title: 'Hapus',
+      message:
+          'Apakah anda yakin ingin menghapus ${dest.name} dengan nomor rekening ${dest.account} ?',
+      leftBtnTitle: 'Ya',
+      onLeftBtnClicked: () {
+        Get.back();
+      },
+      rightBtnTitle: 'Tidak',
+      onRightBtnClicked: () {
+        Get.back();
+      },
+    );
   }
 
   onAddClicked() {}

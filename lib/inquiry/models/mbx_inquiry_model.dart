@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/receipt/models/mbx_label_value_model.dart';
+import 'package:mbxflutter/receipt/models/mbx_label_value_model.dart';
 
 import '../../utils/all_utils.dart';
 

@@ -1,12 +1,13 @@
 import 'package:intl/intl.dart';
-import 'package:mbankingflutter/login/models/mbx_account_model.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/qris/models/mbx_qris_inquiry_model.dart';
-import 'package:mbankingflutter/qris/viewmodels/mbx_qris_payment_vm.dart';
-import 'package:mbankingflutter/receipt/viewmodels/mbx_receipt_vm.dart';
-import 'package:mbankingflutter/sof/views/mbx_sof_sheet.dart';
-import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbxflutter/login/models/mbx_account_model.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/qris/models/mbx_qris_inquiry_model.dart';
+import 'package:mbxflutter/qris/viewmodels/mbx_qris_payment_vm.dart';
+import 'package:mbxflutter/receipt/viewmodels/mbx_receipt_vm.dart';
+import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
+import 'package:mbxflutter/utils/all_utils.dart';
+
 import '../../../widgets/all_widgets.dart';
 
 class MbxQRISAmountController extends GetxController {
@@ -58,8 +59,9 @@ class MbxQRISAmountController extends GetxController {
       final formatter = NumberFormat('#,###');
       String formatted = formatter.format(intValue).replaceAll(',', '.');
       amountController.text = formatted;
-      amountController.selection =
-          TextSelection.fromPosition(TextPosition(offset: formatted.length));
+      amountController.selection = TextSelection.fromPosition(
+        TextPosition(offset: formatted.length),
+      );
     } else {
       amount = 0;
       amountController.text = '';
@@ -93,16 +95,19 @@ class MbxQRISAmountController extends GetxController {
           LoggerX.log('[PIN] entered: $code biometric; $biometric');
           Get.loading();
           final qrisPaymentVM = MbxQRISPaymentVM();
-          qrisPaymentVM
-              .request(transaction_i: inquiry.transaction_id)
-              .then((resp) {
+          qrisPaymentVM.request(transaction_i: inquiry.transaction_id).then((
+            resp,
+          ) {
             Get.back();
             if (resp.status == 200) {
-              Get.toNamed('/receipt', arguments: {
-                'receipt': qrisPaymentVM.receipt,
-                'backToHome': true,
-                'askFeedback': true
-              });
+              Get.toNamed(
+                '/receipt',
+                arguments: {
+                  'receipt': qrisPaymentVM.receipt,
+                  'backToHome': true,
+                  'askFeedback': true,
+                },
+              );
             }
           });
         },
@@ -110,7 +115,8 @@ class MbxQRISAmountController extends GetxController {
         optionClicked: () {
           pinSheet.clear('');
           ToastX.showSuccess(
-              msg: 'PIN akan direset, silahkan hubungi CS kami.');
+            msg: 'PIN akan direset, silahkan hubungi CS kami.',
+          );
         },
       );
     }

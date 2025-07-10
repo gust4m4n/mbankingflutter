@@ -1,18 +1,17 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/biller-pulsa/dataplan/models/mbx_pulsa_dataplan_denom_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/biller-pulsa/dataplan/models/mbx_pulsa_dataplan_denom_model.dart';
 
 class MbxPulsaDataPlanDenomsVM {
   List<MbxPulsaDataPlanDenomModel> list = [];
 
   Future<ApiXResponse> request({required String phone}) {
     return MbxApi.get(
-            endpoint: '/pulsa/dataplan/denoms',
-            params: {},
-            headers: {},
-            contractFile:
-                'assets/contracts/MbxPulsaDataPlanDenomsContract.json',
-            contract: true)
-        .then((resp) {
+      endpoint: '/pulsa/dataplan/denoms',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxPulsaDataPlanDenomsContract.json',
+      contract: true,
+    ).then((resp) {
       if (resp.status == 200) {
         clear();
         for (var item in resp.jason['data'].jasonListValue) {

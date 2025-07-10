@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/receipt/models/mbx_label_value_model.dart';
+import 'package:mbxflutter/receipt/models/mbx_label_value_model.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -11,13 +11,25 @@ class MbxReceiptWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return row.label == '-'
         ? Padding(
-            padding:
-                EdgeInsets.only(left: 0.0, top: 4.0, right: 0.0, bottom: 4.0),
+            padding: EdgeInsets.only(
+              left: 0.0,
+              top: 4.0,
+              right: 0.0,
+              bottom: 4.0,
+            ),
             child: DashedDividerX(
-                dashColor: ColorX.gray, dashWidth: 6.0, dashHeight: 1.0))
+              dashColor: ColorX.gray,
+              dashWidth: 6.0,
+              dashHeight: 1.0,
+            ),
+          )
         : Padding(
-            padding:
-                EdgeInsets.only(left: 0.0, top: 4.0, right: 0.0, bottom: 4.0),
+            padding: EdgeInsets.only(
+              left: 0.0,
+              top: 4.0,
+              right: 0.0,
+              bottom: 4.0,
+            ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -37,9 +49,9 @@ class MbxReceiptWidget extends StatelessWidget {
                       ),
                       ContainerX(width: 16.0),
                       Expanded(
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
                             TextX(
                               row.value,
                               color: ColorX.black,
@@ -66,17 +78,22 @@ class MbxReceiptWidget extends StatelessWidget {
                                 borderColor: ColorX.gray,
                                 clicked: () {
                                   Clipboard.setData(
-                                      ClipboardData(text: row.value));
+                                    ClipboardData(text: row.value),
+                                  );
                                   ToastX.showSuccess(
-                                      msg: 'Token berhasil disalin.');
+                                    msg: 'Token berhasil disalin.',
+                                  );
                                 },
                               ),
                             ),
-                          ])),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ],
-            ));
+            ),
+          );
   }
 }

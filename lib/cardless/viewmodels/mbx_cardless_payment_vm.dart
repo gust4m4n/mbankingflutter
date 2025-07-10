@@ -1,20 +1,21 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/cardless/models/mbx_cardless_step_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/cardless/models/mbx_cardless_step_model.dart';
 
 class MbxCardlessPaymentVM {
   List<MbxCardlessStepModel> steps = [];
 
-  Future<ApiXResponse> request(
-      {required String transaction_id,
-      required String pin,
-      required bool biometric}) {
+  Future<ApiXResponse> request({
+    required String transaction_id,
+    required String pin,
+    required bool biometric,
+  }) {
     return MbxApi.post(
-            endpoint: '/cardless/payment',
-            params: {},
-            headers: {},
-            contractFile: 'assets/contracts/MbxCardlessPaymentContract.json',
-            contract: true)
-        .then((resp) {
+      endpoint: '/cardless/payment',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxCardlessPaymentContract.json',
+      contract: true,
+    ).then((resp) {
       if (resp.status == 200) {
         steps = [];
         for (var item in resp.jason['data']['steps'].jasonListValue) {

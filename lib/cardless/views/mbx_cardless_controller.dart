@@ -1,13 +1,13 @@
 import 'package:intl/intl.dart';
-import 'package:mbankingflutter/cardless/viewmodels/mbx_cardless_denoms_vm.dart';
-import 'package:mbankingflutter/cardless/viewmodels/mbx_cardless_inquiry_vm.dart';
-import 'package:mbankingflutter/cardless/viewmodels/mbx_cardless_payment_vm.dart';
-import 'package:mbankingflutter/inquiry/models/mbx_inquiry_model.dart';
-import 'package:mbankingflutter/inquiry/views/mbx_inquiry_sheet.dart';
-import 'package:mbankingflutter/login/models/mbx_account_model.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/sof/views/mbx_sof_sheet.dart';
+import 'package:mbxflutter/cardless/viewmodels/mbx_cardless_denoms_vm.dart';
+import 'package:mbxflutter/cardless/viewmodels/mbx_cardless_inquiry_vm.dart';
+import 'package:mbxflutter/cardless/viewmodels/mbx_cardless_payment_vm.dart';
+import 'package:mbxflutter/inquiry/models/mbx_inquiry_model.dart';
+import 'package:mbxflutter/inquiry/views/mbx_inquiry_sheet.dart';
+import 'package:mbxflutter/login/models/mbx_account_model.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -48,8 +48,9 @@ class MbxCardlessController extends GetxController {
       final formatter = NumberFormat('#,###');
       String formatted = formatter.format(intValue).replaceAll(',', '.');
       amountController.text = formatted;
-      amountController.selection =
-          TextSelection.fromPosition(TextPosition(offset: formatted.length));
+      amountController.selection = TextSelection.fromPosition(
+        TextPosition(offset: formatted.length),
+      );
     } else {
       amount = 0;
       amountController.text = '';
@@ -112,9 +113,10 @@ class MbxCardlessController extends GetxController {
       Get.back();
       if (resp.status == 200) {
         final sheet = MbxInquirySheet(
-            title: 'Konfirmasi',
-            confirmBtnTitle: 'Tarik',
-            inquiry: inquiryVM.inquiry);
+          title: 'Konfirmasi',
+          confirmBtnTitle: 'Tarik',
+          inquiry: inquiryVM.inquiry,
+        );
         sheet.show().then((value) {
           if (value == true) {
             authenticate(inquiry: inquiryVM.inquiry);
@@ -144,21 +146,22 @@ class MbxCardlessController extends GetxController {
     );
   }
 
-  payment(
-      {required String transaction_id,
-      required String pin,
-      required bool biometric}) {
+  payment({
+    required String transaction_id,
+    required String pin,
+    required bool biometric,
+  }) {
     Get.loading();
     final paymentVM = MbxCardlessPaymentVM();
     paymentVM
         .request(transaction_id: transaction_id, pin: pin, biometric: biometric)
         .then((resp) {
-      if (resp.status == 200) {
-        Get.back();
-        Get.offNamed('/cardless/payment', arguments: paymentVM.steps);
-      } else {
-        // payment request failed
-      }
-    });
+          if (resp.status == 200) {
+            Get.back();
+            Get.offNamed('/cardless/payment', arguments: paymentVM.steps);
+          } else {
+            // payment request failed
+          }
+        });
   }
 }

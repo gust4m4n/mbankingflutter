@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/login/models/demo_movie_model.dart';
+import 'package:mbxflutter/login/models/demo_movie_model.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -10,12 +10,13 @@ class MbxPromoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(left: 12.0),
-        child: InkWellX(
-          cornerRadius: 12.0,
-          clicked: () {},
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      padding: EdgeInsets.only(left: 12.0),
+      child: InkWellX(
+        cornerRadius: 12.0,
+        clicked: () {},
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             ImageX(
               url: movie.poster,
               width: double.infinity,
@@ -32,8 +33,10 @@ class MbxPromoWidget extends StatelessWidget {
               textAlign: TextAlign.start,
               maxLines: 3,
             ),
-            Spacer()
-          ]),
-        ));
+            Spacer(),
+          ],
+        ),
+      ),
+    );
   }
 }

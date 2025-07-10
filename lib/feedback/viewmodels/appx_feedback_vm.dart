@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:mbankingflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
 
 class AppxFeedbackScore {
   static final int notGiven = -1;
@@ -15,29 +15,28 @@ class AppxFeedbackScore {
 class AppxFeedbackVM {
   static Future<AppxFeedbackGetResponse> get({required String feature}) {
     return MbxApi.get(
-            endpoint: '/feedback?feature_name=$feature',
-            params: {},
-            headers: {},
-            contractFile: '',
-            contract: false)
-        .then((resp) async {
+      endpoint: '/feedback?feature_name=$feature',
+      params: {},
+      headers: {},
+      contractFile: '',
+      contract: false,
+    ).then((resp) async {
       return AppxFeedbackGetResponse.fromResponse(resp);
     });
   }
 
-  static Future<ApiXResponse> update(
-      {required String feature, required int score}) {
-    final params = {
-      'feature_name': feature,
-      'score': score.toString(),
-    };
+  static Future<ApiXResponse> update({
+    required String feature,
+    required int score,
+  }) {
+    final params = {'feature_name': feature, 'score': score.toString()};
     return MbxApi.post(
-            endpoint: '/feedback',
-            params: params,
-            headers: {},
-            contractFile: '',
-            contract: false)
-        .then((resp) async {
+      endpoint: '/feedback',
+      params: params,
+      headers: {},
+      contractFile: '',
+      contract: false,
+    ).then((resp) async {
       return resp;
     });
   }

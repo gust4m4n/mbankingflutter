@@ -1,25 +1,25 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/login/models/mbx_profile_model.dart';
-import 'package:mbankingflutter/login/views/mbx_login_screen.dart';
-import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
-import 'package:mbankingflutter/utils/jason_x.dart';
-import 'package:mbankingflutter/utils/logger_x.dart';
-import 'package:mbankingflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/login/models/mbx_profile_model.dart';
+import 'package:mbxflutter/login/views/mbx_login_screen.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/utils/jason_x.dart';
+import 'package:mbxflutter/utils/logger_x.dart';
+import 'package:mbxflutter/widgets/all_widgets.dart';
 
 class MbxProfileVM {
   static var profile = MbxProfileModel();
 
   static Future<ApiXResponse> request() {
     return MbxApi.post(
-            endpoint: '/profile',
-            params: {},
-            headers: {},
-            contractFile: 'assets/contracts/MbxProfileContract.json',
-            contract: true)
-        .then((resp) async {
+      endpoint: '/profile',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxProfileContract.json',
+      contract: true,
+    ).then((resp) async {
       if (resp.status == 200) {
         profile.decode(resp.jason['data']);
         await save();

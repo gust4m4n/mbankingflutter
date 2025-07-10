@@ -1,11 +1,11 @@
-import 'package:mbankingflutter/avatar/views/mbx_avatar_sheet.dart';
-import 'package:mbankingflutter/help/views/mbx_help_sheet.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
-import 'package:mbankingflutter/profile-tab/mbx_change_pin_vm.dart';
-import 'package:mbankingflutter/profile-tab/mbx_logout_vm.dart';
-import 'package:mbankingflutter/profile-tab/mbx_set_biometric_vm.dart';
+import 'package:mbxflutter/avatar/views/mbx_avatar_sheet.dart';
+import 'package:mbxflutter/help/views/mbx_help_sheet.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/profile-tab/mbx_change_pin_vm.dart';
+import 'package:mbxflutter/profile-tab/mbx_logout_vm.dart';
+import 'package:mbxflutter/profile-tab/mbx_set_biometric_vm.dart';
 
 import '../../utils/all_utils.dart';
 import '../../widgets/all_widgets.dart';
@@ -29,31 +29,34 @@ class MbxProfileController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet
         .show(
-      title: 'PIN',
-      message: 'Masukkan nomor pin m-banking atau ATM anda.',
-      secure: true,
-      biometric: false,
-      onSubmit: (code, biometric) async {
-        Get.loading();
-        MbxSetBiometricVM.request(pin: code, biometric: biometric)
-            .then((resp) async {
-          Get.back();
-          await MbxUserPreferencesVM.setBiometricEnabled(value);
-          MbxProfileVM.profile.biometric = value;
-          update();
-          Get.back();
-        });
-      },
-      optionTitle: 'Lupa PIN',
-      optionClicked: () {
-        pinSheet.clear('');
-        ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
-      },
-    )
+          title: 'PIN',
+          message: 'Masukkan nomor pin m-banking atau ATM anda.',
+          secure: true,
+          biometric: false,
+          onSubmit: (code, biometric) async {
+            Get.loading();
+            MbxSetBiometricVM.request(pin: code, biometric: biometric).then((
+              resp,
+            ) async {
+              Get.back();
+              await MbxUserPreferencesVM.setBiometricEnabled(value);
+              MbxProfileVM.profile.biometric = value;
+              update();
+              Get.back();
+            });
+          },
+          optionTitle: 'Lupa PIN',
+          optionClicked: () {
+            pinSheet.clear('');
+            ToastX.showSuccess(
+              msg: 'PIN akan direset, silahkan hubungi CS kami.',
+            );
+          },
+        )
         .then((value) async {
-      biometricEnabled = await MbxUserPreferencesVM.getBiometricEnabled();
-      update();
-    });
+          biometricEnabled = await MbxUserPreferencesVM.getBiometricEnabled();
+          update();
+        });
   }
 
   btnChangePinClicked() {
@@ -158,20 +161,21 @@ class MbxProfileController extends GetxController {
 
   btnLogoutClicked() {
     SheetX.showMessage(
-        title: 'Keluar',
-        message: 'Apakah anda yakin ?',
-        leftBtnTitle: 'Ya',
-        onLeftBtnClicked: () {
-          Get.loading();
-          MbxLogoutVM.request().then((resp) {
-            Get.back();
-            MbxProfileVM.logout();
-          });
-        },
-        rightBtnTitle: 'Tidak',
-        onRightBtnClicked: () {
+      title: 'Keluar',
+      message: 'Apakah anda yakin ?',
+      leftBtnTitle: 'Ya',
+      onLeftBtnClicked: () {
+        Get.loading();
+        MbxLogoutVM.request().then((resp) {
           Get.back();
+          MbxProfileVM.logout();
         });
+      },
+      rightBtnTitle: 'Tidak',
+      onRightBtnClicked: () {
+        Get.back();
+      },
+    );
   }
 
   btnChangeAvatarClicked() async {

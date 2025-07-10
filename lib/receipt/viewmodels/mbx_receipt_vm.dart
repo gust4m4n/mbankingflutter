@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/receipt/models/mbx_receipt_model.dart';
 
 class MbxReceiptVM {
   var loading = false;
@@ -9,12 +9,12 @@ class MbxReceiptVM {
     loading = true;
     final params = {'transaction_i': transaction_i};
     return MbxApi.post(
-            endpoint: '/receipt',
-            params: params,
-            headers: {},
-            contractFile: 'assets/contracts/MbxReceiptContract.json',
-            contract: true)
-        .then((resp) async {
+      endpoint: '/receipt',
+      params: params,
+      headers: {},
+      contractFile: 'assets/contracts/MbxReceiptContract.json',
+      contract: true,
+    ).then((resp) async {
       loading = false;
       if (resp.status == 200) {
         receipt = MbxReceiptModel.fromJason(resp.jason['data']);

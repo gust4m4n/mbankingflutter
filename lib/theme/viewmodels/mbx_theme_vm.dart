@@ -1,6 +1,6 @@
-import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
-import 'package:mbankingflutter/theme/views/mbx_theme_sheet.dart';
-import 'package:mbankingflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/theme/views/mbx_theme_sheet.dart';
+import 'package:mbxflutter/widgets/all_widgets.dart';
 
 class MbxThemeVM {
   static List<Color> colors = [

@@ -1,16 +1,16 @@
-import 'package:mbankingflutter/inquiry/models/mbx_inquiry_model.dart';
-import 'package:mbankingflutter/login/models/mbx_account_model.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/biller-pdam/models/mbx_pdam_area_model.dart';
-import 'package:mbankingflutter/biller-pdam/viewmodels/mbx_pdam_area_list_vm.dart';
-import 'package:mbankingflutter/biller-pdam/viewmodels/mbx_pdam_inquiry_vm.dart';
-import 'package:mbankingflutter/biller-pdam/viewmodels/mbx_pdam_payment_vm.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/sof/views/mbx_sof_sheet.dart';
+import 'package:mbxflutter/biller-pdam/models/mbx_pdam_area_model.dart';
+import 'package:mbxflutter/biller-pdam/viewmodels/mbx_pdam_area_list_vm.dart';
+import 'package:mbxflutter/biller-pdam/viewmodels/mbx_pdam_inquiry_vm.dart';
+import 'package:mbxflutter/biller-pdam/viewmodels/mbx_pdam_payment_vm.dart';
+import 'package:mbxflutter/inquiry/models/mbx_inquiry_model.dart';
+import 'package:mbxflutter/login/models/mbx_account_model.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
 
-import '../../widgets/all_widgets.dart';
 import '../../inquiry/views/mbx_inquiry_sheet.dart';
 import '../../string-picker/views/mbx_string_picker.dart';
+import '../../widgets/all_widgets.dart';
 
 class MbxPDAMController extends GetxController {
   var sof = MbxAccountModel();
@@ -115,9 +115,10 @@ class MbxPDAMController extends GetxController {
       Get.back();
       if (resp.status == 200) {
         final sheet = MbxInquirySheet(
-            title: 'Konfirmasi',
-            confirmBtnTitle: 'Bayar',
-            inquiry: inquiryVM.inquiry);
+          title: 'Konfirmasi',
+          confirmBtnTitle: 'Bayar',
+          inquiry: inquiryVM.inquiry,
+        );
         sheet.show().then((value) {
           if (value == true) {
             authenticate(inquiry: inquiryVM.inquiry);
@@ -147,25 +148,29 @@ class MbxPDAMController extends GetxController {
     );
   }
 
-  payment(
-      {required String transaction_id,
-      required String pin,
-      required bool biometric}) {
+  payment({
+    required String transaction_id,
+    required String pin,
+    required bool biometric,
+  }) {
     Get.loading();
     final paymentVM = MbxPDAMPaymentVM();
     paymentVM
         .request(transaction_id: transaction_id, pin: pin, biometric: biometric)
         .then((resp) {
-      if (resp.status == 200) {
-        Get.back();
-        Get.offNamed('/receipt', arguments: {
-          'receipt': paymentVM.receipt,
-          'backToHome': true,
-          'askFeedback': true
+          if (resp.status == 200) {
+            Get.back();
+            Get.offNamed(
+              '/receipt',
+              arguments: {
+                'receipt': paymentVM.receipt,
+                'backToHome': true,
+                'askFeedback': true,
+              },
+            );
+          } else {
+            // payment request failed
+          }
         });
-      } else {
-        // payment request failed
-      }
-    });
   }
 }

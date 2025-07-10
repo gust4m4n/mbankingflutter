@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:mbankingflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/widgets/all_widgets.dart';
 
 class MbxDeviceInfoVM {
   static var simulator = false;

@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/home-tab/models/mbx_foreign_exchange_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/home-tab/models/mbx_foreign_exchange_model.dart';
 
 class MbxForeignExchangeListVM {
   var loading = false;
@@ -8,13 +8,12 @@ class MbxForeignExchangeListVM {
   Future<ApiXResponse> request() {
     loading = true;
     return MbxApi.post(
-            endpoint: '/foreign-exchange/list',
-            params: {},
-            headers: {},
-            contractFile:
-                'assets/contracts/MbxForeignExchangeListContract.json',
-            contract: true)
-        .then((resp) {
+      endpoint: '/foreign-exchange/list',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxForeignExchangeListContract.json',
+      contract: true,
+    ).then((resp) {
       loading = false;
       if (resp.status == 200) {
         for (var item in resp.jason['data'].jasonListValue) {

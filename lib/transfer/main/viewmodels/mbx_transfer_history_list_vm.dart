@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/transfer/main/viewmodels/mbx_transfer_history_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/transfer/main/viewmodels/mbx_transfer_history_model.dart';
 
 class MbxTransferHistoryListVM {
   var loading = false;
@@ -8,13 +8,12 @@ class MbxTransferHistoryListVM {
   Future<ApiXResponse> nextPage() {
     loading = true;
     return MbxApi.post(
-            endpoint: '/transfer/history',
-            params: {},
-            headers: {},
-            contractFile:
-                'assets/contracts/MbxTransferHistoryListContract.json',
-            contract: true)
-        .then((resp) {
+      endpoint: '/transfer/history',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxTransferHistoryListContract.json',
+      contract: true,
+    ).then((resp) {
       loading = false;
       if (resp.status == 200) {
         for (var item in resp.jason['data'].jasonListValue) {

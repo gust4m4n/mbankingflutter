@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/notification-tab/models/mbx_notification_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/notification-tab/models/mbx_notification_model.dart';
 
 class MbxNotificationVM {
   var loading = false;
@@ -12,12 +12,12 @@ class MbxNotificationVM {
   Future<ApiXResponse> nextPage() {
     loading = true;
     return MbxApi.post(
-            endpoint: '/notification',
-            params: {},
-            headers: {},
-            contractFile: 'assets/contracts/MbxNotificationListContract.json',
-            contract: true)
-        .then((resp) async {
+      endpoint: '/notification',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxNotificationListContract.json',
+      contract: true,
+    ).then((resp) async {
       loading = false;
       if (resp.status == 200) {
         for (var item in resp.jason['data'].jasonListValue) {

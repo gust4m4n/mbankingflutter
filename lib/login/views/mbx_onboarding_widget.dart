@@ -1,6 +1,6 @@
 // ignore: must_be_immutable
-import 'package:mbankingflutter/login/models/mbx_onboarding_model.dart';
-import 'package:mbankingflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/login/models/mbx_onboarding_model.dart';
+import 'package:mbxflutter/widgets/all_widgets.dart';
 
 class MbxOnboardingWidget extends StatelessWidget {
   final MbxOnboardingModel onboarding;
@@ -9,9 +9,9 @@ class MbxOnboardingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerX(
-        padding: EdgeInsets.all(24.0),
-        child: Center(
-            child: Wrap(
+      padding: EdgeInsets.all(24.0),
+      child: Center(
+        child: Wrap(
           alignment: WrapAlignment.center,
           children: [
             ImageX(
@@ -39,6 +39,8 @@ class MbxOnboardingWidget extends StatelessWidget {
               maxLines: 8,
             ),
           ],
-        )));
+        ),
+      ),
+    );
   }
 }

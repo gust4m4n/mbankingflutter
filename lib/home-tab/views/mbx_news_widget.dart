@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/news/models/mbx_news_model.dart';
+import 'package:mbxflutter/news/models/mbx_news_model.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -10,15 +10,16 @@ class MbxNewsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(left: 16.0),
-        child: InkWellX(
-          highlightColor: ColorX.theme.withOpacity(0.1),
-          cornerRadius: 12.0,
-          clicked: () {
-            Get.toNamed('/news', arguments: news);
-          },
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      padding: EdgeInsets.only(left: 16.0),
+      child: InkWellX(
+        highlightColor: ColorX.theme.withOpacity(0.1),
+        cornerRadius: 12.0,
+        clicked: () {
+          Get.toNamed('/news', arguments: news);
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             ImageX(
               url: news.image,
               width: double.infinity,
@@ -35,8 +36,10 @@ class MbxNewsWidget extends StatelessWidget {
               textAlign: TextAlign.start,
               maxLines: 3,
             ),
-            Spacer()
-          ]),
-        ));
+            Spacer(),
+          ],
+        ),
+      ),
+    );
   }
 }

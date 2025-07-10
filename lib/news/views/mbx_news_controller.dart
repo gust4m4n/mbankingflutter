@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/news/models/mbx_news_model.dart';
-import 'package:mbankingflutter/news/viewmodels/mbx_news_detail_vm.dart';
+import 'package:mbxflutter/news/models/mbx_news_model.dart';
+import 'package:mbxflutter/news/viewmodels/mbx_news_detail_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -44,7 +44,8 @@ class MbxNewsController extends GetxController {
       if (kIsWeb) {
         return html;
       } else {
-        String htmlPage = '''<html>
+        String htmlPage =
+            '''<html>
               <head><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'>
               <style>
               ${await addFont(fontFamily: 'Roboto', fontPath: 'assets/fonts/Roboto-Regular.ttf', fontMime: 'font/ttf')}
@@ -60,13 +61,15 @@ class MbxNewsController extends GetxController {
     }
   }
 
-  static Future<String> addFont(
-      {required String fontFamily,
-      required String fontPath,
-      required String fontMime}) async {
+  static Future<String> addFont({
+    required String fontFamily,
+    required String fontPath,
+    required String fontMime,
+  }) async {
     final fontData = await rootBundle.load(fontPath);
     final fontUri = getFontUri(fontData, fontMime).toString();
-    final fontCss = '''
+    final fontCss =
+        '''
     @font-face {
       font-family: $fontFamily; 
       src: url($fontUri); 
@@ -78,8 +81,8 @@ class MbxNewsController extends GetxController {
   static String getFontUri(ByteData data, String mime) {
     final buffer = data.buffer;
     return Uri.dataFromBytes(
-            buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
-            mimeType: mime)
-        .toString();
+      buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
+      mimeType: mime,
+    ).toString();
   }
 }

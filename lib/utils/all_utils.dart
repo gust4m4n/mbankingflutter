@@ -1,4 +1,3 @@
-export 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
 export 'package:package_info_plus/package_info_plus.dart';
 
 export 'aes_utils.dart';

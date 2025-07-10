@@ -1,13 +1,13 @@
-import 'package:mbankingflutter/login/viewmodels/mbx_login_otp_vm.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_login_phone_vm.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_login_pin_vm.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_onboarding_list_vm.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/otp/views/mbx_otp_sheet.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/theme/viewmodels/mbx_theme_vm.dart';
-import 'package:mbankingflutter/utils/logger_x.dart';
-import 'package:mbankingflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_login_otp_vm.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_login_phone_vm.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_login_pin_vm.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_onboarding_list_vm.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/otp/views/mbx_otp_sheet.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
+import 'package:mbxflutter/utils/logger_x.dart';
+import 'package:mbxflutter/widgets/all_widgets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import 'mbx_login_screen.dart';
@@ -93,37 +93,37 @@ class MbLoginController extends GetxController {
     final pinSheet = MbxOtpSheet();
     pinSheet
         .show(
-      title: 'OTP',
-      message: 'Masukkan kode OTP yang anda terima melalui SMS.',
-      secure: false,
-      biometric: false,
-      onSubmit: (code, biometric) async {
-        LoggerX.log('[OTP] entered: $code');
-        Get.loading();
-        final resp = await MbxLoginOtpVM.request(phone: phone, otp: code);
-        Get.back();
-        if (resp.status == 200) {
-          LoggerX.log('[OTP] verfied: $code');
-          Get.back();
-          Get.loading();
-          Future.delayed(const Duration(milliseconds: 500), () {
+          title: 'OTP',
+          message: 'Masukkan kode OTP yang anda terima melalui SMS.',
+          secure: false,
+          biometric: false,
+          onSubmit: (code, biometric) async {
+            LoggerX.log('[OTP] entered: $code');
+            Get.loading();
+            final resp = await MbxLoginOtpVM.request(phone: phone, otp: code);
             Get.back();
-            askPin(phone, code);
-          });
-        } else {}
-      },
-      optionTitle: 'Kirim Ulang',
-      optionClicked: () {
-        pinSheet.clear('');
-        ToastX.showSuccess(msg: 'OTP telah dikirim ulang ke ponsel anda.');
-      },
-    )
+            if (resp.status == 200) {
+              LoggerX.log('[OTP] verfied: $code');
+              Get.back();
+              Get.loading();
+              Future.delayed(const Duration(milliseconds: 500), () {
+                Get.back();
+                askPin(phone, code);
+              });
+            } else {}
+          },
+          optionTitle: 'Kirim Ulang',
+          optionClicked: () {
+            pinSheet.clear('');
+            ToastX.showSuccess(msg: 'OTP telah dikirim ulang ke ponsel anda.');
+          },
+        )
         .then((code) {
-      if (code != null && (code as String).isNotEmpty) {
-        LoggerX.log('[OTP] verfied: $code');
-        askPin(phone, code);
-      }
-    });
+          if (code != null && (code as String).isNotEmpty) {
+            LoggerX.log('[OTP] verfied: $code');
+            askPin(phone, code);
+          }
+        });
   }
 
   askPin(String phone, String otp) {

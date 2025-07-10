@@ -1,7 +1,7 @@
-import 'package:mbankingflutter/feedback/viewmodels/appx_feedback_vm.dart';
-import 'package:mbankingflutter/feedback/views/mbx_feedback_controller.dart';
-import 'package:mbankingflutter/feedback/views/mbx_feedback_widget.dart';
-import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbxflutter/feedback/viewmodels/appx_feedback_vm.dart';
+import 'package:mbxflutter/feedback/views/mbx_feedback_controller.dart';
+import 'package:mbxflutter/feedback/views/mbx_feedback_widget.dart';
+import 'package:mbxflutter/utils/all_utils.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -19,7 +19,9 @@ class MbxFeedbackSheet extends GetWidget<MbxFeedbackController> {
         await AppxFeedbackVM.update(feature: feature, score: score);
       } else {
         await AppxFeedbackVM.update(
-            feature: feature, score: AppxFeedbackScore.notGiven);
+          feature: feature,
+          score: AppxFeedbackScore.notGiven,
+        );
       }
     }
   }
@@ -27,76 +29,82 @@ class MbxFeedbackSheet extends GetWidget<MbxFeedbackController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MbxFeedbackController>(
-        init: MbxFeedbackController(),
-        builder: (controller) => Container(
-            padding: EdgeInsets.all(24.0),
-            child: Column(
+      init: MbxFeedbackController(),
+      builder: (controller) => Container(
+        padding: EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            TextX(
+              'Seberapa puas Anda dengan fitur ini ?',
+              color: Colors.black,
+              fontSize: 16.0,
+              fontFamily: 'Inter',
+              fontWeight: FontWeight.w400,
+              textAlign: TextAlign.start,
+              maxLines: 2048,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextX(
-                  'Seberapa puas Anda dengan fitur ini ?',
-                  color: Colors.black,
-                  fontSize: 16.0,
-                  fontFamily: 'Inter',
-                  fontWeight: FontWeight.w400,
-                  textAlign: TextAlign.start,
-                  maxLines: 2048,
+                Expanded(
+                  child: MbxFeedbackWidget(
+                    title: 'Sangat Puas',
+                    faIcon: FontAwesomeIcons.faceGrinBeam,
+                    faColor: ColorX.green.darken(0.1),
+                    clicked: () {
+                      controller.btnRatingClicked(
+                        AppxFeedbackScore.verySatisfied,
+                      );
+                    },
+                  ),
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                        child: MbxFeedbackWidget(
-                            title: 'Sangat Puas',
-                            faIcon: FontAwesomeIcons.faceGrinBeam,
-                            faColor: ColorX.green.darken(0.1),
-                            clicked: () {
-                              controller.btnRatingClicked(
-                                  AppxFeedbackScore.verySatisfied);
-                            })),
-                    Expanded(
-                      child: MbxFeedbackWidget(
-                          title: 'Puas',
-                          faIcon: FontAwesomeIcons.faceSmile,
-                          faColor: ColorX.green.lighten(0.1),
-                          clicked: () {
-                            controller
-                                .btnRatingClicked(AppxFeedbackScore.satisfied);
-                          }),
-                    ),
-                    Expanded(
-                      child: MbxFeedbackWidget(
-                          title: 'Biasa Saja',
-                          faIcon: FontAwesomeIcons.faceMeh,
-                          faColor: ColorX.yellow,
-                          clicked: () {
-                            controller
-                                .btnRatingClicked(AppxFeedbackScore.normal);
-                          }),
-                    ),
-                    Expanded(
-                      child: MbxFeedbackWidget(
-                          title: 'Buruk',
-                          faIcon: FontAwesomeIcons.faceFrown,
-                          faColor: ColorX.red,
-                          clicked: () {
-                            controller.btnRatingClicked(AppxFeedbackScore.bad);
-                          }),
-                    ),
-                    Expanded(
-                      child: MbxFeedbackWidget(
-                          title: 'Buruk Sekali',
-                          faIcon: FontAwesomeIcons.faceTired,
-                          faColor: ColorX.red,
-                          clicked: () {
-                            controller
-                                .btnRatingClicked(AppxFeedbackScore.veryBad);
-                          }),
-                    )
-                  ],
+                Expanded(
+                  child: MbxFeedbackWidget(
+                    title: 'Puas',
+                    faIcon: FontAwesomeIcons.faceSmile,
+                    faColor: ColorX.green.lighten(0.1),
+                    clicked: () {
+                      controller.btnRatingClicked(AppxFeedbackScore.satisfied);
+                    },
+                  ),
                 ),
-                SizedBox(height: 16.0),
-                ContainerX(height: MediaQuery.of(Get.context!).padding.bottom)
+                Expanded(
+                  child: MbxFeedbackWidget(
+                    title: 'Biasa Saja',
+                    faIcon: FontAwesomeIcons.faceMeh,
+                    faColor: ColorX.yellow,
+                    clicked: () {
+                      controller.btnRatingClicked(AppxFeedbackScore.normal);
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: MbxFeedbackWidget(
+                    title: 'Buruk',
+                    faIcon: FontAwesomeIcons.faceFrown,
+                    faColor: ColorX.red,
+                    clicked: () {
+                      controller.btnRatingClicked(AppxFeedbackScore.bad);
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: MbxFeedbackWidget(
+                    title: 'Buruk Sekali',
+                    faIcon: FontAwesomeIcons.faceTired,
+                    faColor: ColorX.red,
+                    clicked: () {
+                      controller.btnRatingClicked(AppxFeedbackScore.veryBad);
+                    },
+                  ),
+                ),
               ],
-            )));
+            ),
+            SizedBox(height: 16.0),
+            ContainerX(height: MediaQuery.of(Get.context!).padding.bottom),
+          ],
+        ),
+      ),
+    );
   }
 }

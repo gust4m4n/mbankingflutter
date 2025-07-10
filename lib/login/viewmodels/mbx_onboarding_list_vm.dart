@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/login/models/mbx_onboarding_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/login/models/mbx_onboarding_model.dart';
 
 class MbxOnboardingListVM {
   var loading = false;
@@ -15,12 +15,12 @@ class MbxOnboardingListVM {
   Future<ApiXResponse> nextPage() {
     loading = true;
     return MbxApi.post(
-            endpoint: '/movies',
-            params: {},
-            headers: {},
-            contractFile: 'assets/contracts/MbxOnboardingListContract.json',
-            contract: true)
-        .then((resp) async {
+      endpoint: '/movies',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxOnboardingListContract.json',
+      contract: true,
+    ).then((resp) async {
       loading = false;
       if (resp.status == 200) {
         for (var item in resp.jason['data'].jasonListValue) {

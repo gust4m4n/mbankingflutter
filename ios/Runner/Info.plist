@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>MBankingFlutter</string>
+	<string>Mbxflutter</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,84 +13,16 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>MBankingFlutter</string>
+	<string>mbxflutter</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>Google</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.394002587857-ksu71l3ok66p57t9q4bb5dm747ej8oh5</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3390169054528225~4504409141</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>App integration with Apple Music</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>App try to stay connected to your bluetooh device all the time</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>App uses your bluetooth device to bring advertisement</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>App uses phone calendar to save event and reminders</string>
-	<key>NSCameraUsageDescription</key>
-	<string>App uses camera to upload profile photo or scan QR codes</string>
-	<key>NSContactsUsageDescription</key>
-	<string>App access your address book to find your friends</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>App uses Face ID for security.</string>
-	<key>NSHomeKitUsageDescription</key>
-	<string>App uses HomeKit to bring you smart home features</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>App uses location to track your position all the time</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>App uses location to track your position all the time</string>
-	<key>NSLocationUsageDescription</key>
-	<string>App uses location to track your position</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App uses location to track your position</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>App uses microphont to upload your voices</string>
-	<key>NSMotionUsageDescription</key>
-	<string>App uses this to track your movements</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>App uses this to save your photos</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App access your photo library to upload photos</string>
-	<key>NSRemindersUsageDescription</key>
-	<string>App uses this to add and edit reminders in your phone calendar</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>App uses speech recognition to detect nearby sounds</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Roboto-Black.ttf</string>
-		<string>Roboto-BlackItalic.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>Roboto-BoldItalic.ttf</string>
-		<string>Roboto-Italic.ttf</string>
-		<string>Roboto-Light.ttf</string>
-		<string>Roboto-LightItalic.ttf</string>
-		<string>Roboto-Medium.ttf</string>
-		<string>Roboto-MediumItalic.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Thin.ttf</string>
-		<string>Roboto-ThinItalic.ttf</string>
-	</array>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -101,10 +31,19 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>io.flutter.embedded_views_preview</key>
-	<string>YES</string>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 </dict>
 </plist>

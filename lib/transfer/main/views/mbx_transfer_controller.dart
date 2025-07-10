@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
-import 'package:mbankingflutter/transfer/main/viewmodels/mbx_transfer_history_list_vm.dart';
-import 'package:mbankingflutter/transfer/main/viewmodels/mbx_transfer_history_model.dart';
+import 'package:mbxflutter/receipt/models/mbx_receipt_model.dart';
+import 'package:mbxflutter/transfer/main/viewmodels/mbx_transfer_history_list_vm.dart';
+import 'package:mbxflutter/transfer/main/viewmodels/mbx_transfer_history_model.dart';
 
 class MbxTransferController extends GetxController {
   final scrollController = ScrollController();
@@ -42,8 +42,10 @@ class MbxTransferController extends GetxController {
   }
 
   openHistory(MbxTransferHistoryModel dest) {
-    Get.toNamed('/receipt',
-        arguments: {'receipt': MbxReceiptModel(), 'backToHome': false});
+    Get.toNamed(
+      '/receipt',
+      arguments: {'receipt': MbxReceiptModel(), 'backToHome': false},
+    );
   }
 
   onTransferClicked(MbxTransferHistoryModel history) {

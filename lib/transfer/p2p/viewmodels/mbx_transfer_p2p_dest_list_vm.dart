@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/transfer/p2p/models/mbx_transfer_p2p_dest_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/transfer/p2p/models/mbx_transfer_p2p_dest_model.dart';
 
 class MbxTransferP2PDestListVM {
   var loading = false;
@@ -13,13 +13,12 @@ class MbxTransferP2PDestListVM {
   Future<ApiXResponse> nextPage() {
     loading = true;
     return MbxApi.post(
-            endpoint: '/transfer/p2p/dest',
-            params: {},
-            headers: {},
-            contractFile:
-                'assets/contracts/MbxTransferP2PDestListContract.json',
-            contract: true)
-        .then((resp) {
+      endpoint: '/transfer/p2p/dest',
+      params: {},
+      headers: {},
+      contractFile: 'assets/contracts/MbxTransferP2PDestListContract.json',
+      contract: true,
+    ).then((resp) {
       loading = false;
       if (resp.status == 200) {
         for (var item in resp.jason['data'].jasonListValue) {

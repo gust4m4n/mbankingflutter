@@ -1,9 +1,9 @@
-import 'package:mbankingflutter/help/views/mbx_help_sheet.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbankingflutter/profile-tab/mbx_logout_vm.dart';
-import 'package:mbankingflutter/relogin/viewmodels/mbx_relogin_vm.dart';
-import 'package:mbankingflutter/theme/viewmodels/mbx_theme_vm.dart';
+import 'package:mbxflutter/help/views/mbx_help_sheet.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/profile-tab/mbx_logout_vm.dart';
+import 'package:mbxflutter/relogin/viewmodels/mbx_relogin_vm.dart';
+import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 
 import '../../utils/all_utils.dart';
 import '../../widgets/all_widgets.dart';
@@ -45,8 +45,10 @@ class MbxReloginController extends GetxController {
       onSubmit: (code, biometric) async {
         LoggerX.log('[PIN] entered: $code biometric; $biometric');
         Get.loading();
-        final resp =
-            await MbxReloginVM.request(pin: code, biometric: biometric);
+        final resp = await MbxReloginVM.request(
+          pin: code,
+          biometric: biometric,
+        );
         if (resp.status == 200) {
           LoggerX.log('[PIN] verfied: $code');
           MbxProfileVM.request().then((resp) {
@@ -75,8 +77,10 @@ class MbxReloginController extends GetxController {
       onSubmit: (code, biometric) async {
         LoggerX.log('[PIN] entered: $code biometric; $biometric');
         Get.loading();
-        final resp =
-            await MbxReloginVM.request(pin: code, biometric: biometric);
+        final resp = await MbxReloginVM.request(
+          pin: code,
+          biometric: biometric,
+        );
         Get.back();
         if (resp.status == 200) {
           Get.back();
@@ -106,8 +110,10 @@ class MbxReloginController extends GetxController {
       onSubmit: (code, biometric) async {
         LoggerX.log('[PIN] entered: $code biometric; $biometric');
         Get.loading();
-        final resp =
-            await MbxReloginVM.request(pin: code, biometric: biometric);
+        final resp = await MbxReloginVM.request(
+          pin: code,
+          biometric: biometric,
+        );
         if (resp.status == 200) {
           LoggerX.log('[PIN] verfied: $code');
           MbxProfileVM.request().then((resp) {
@@ -134,19 +140,20 @@ class MbxReloginController extends GetxController {
 
   btnSwitchAccountClicked() {
     SheetX.showMessage(
-        title: 'Keluar',
-        message: 'Apakah anda yakin ?',
-        leftBtnTitle: 'Ya',
-        onLeftBtnClicked: () {
-          Get.loading();
-          MbxLogoutVM.request().then((resp) {
-            Get.back();
-            MbxProfileVM.logout();
-          });
-        },
-        rightBtnTitle: 'Tidak',
-        onRightBtnClicked: () {
+      title: 'Keluar',
+      message: 'Apakah anda yakin ?',
+      leftBtnTitle: 'Ya',
+      onLeftBtnClicked: () {
+        Get.loading();
+        MbxLogoutVM.request().then((resp) {
           Get.back();
+          MbxProfileVM.logout();
         });
+      },
+      rightBtnTitle: 'Tidak',
+      onRightBtnClicked: () {
+        Get.back();
+      },
+    );
   }
 }

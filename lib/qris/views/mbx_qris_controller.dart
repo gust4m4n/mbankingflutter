@@ -1,6 +1,6 @@
-import 'package:mbankingflutter/qris/viewmodels/mbx_qris_inquiry_vm.dart';
-import 'package:mbankingflutter/qris/views/mbx_qris_amount_screen.dart';
-import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbxflutter/qris/viewmodels/mbx_qris_inquiry_vm.dart';
+import 'package:mbxflutter/qris/views/mbx_qris_amount_screen.dart';
+import 'package:mbxflutter/utils/all_utils.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 import '../../widgets/all_widgets.dart';
@@ -14,7 +14,9 @@ class MbxQRISController extends GetxController {
   Future<void> onReady() async {
     super.onReady();
     scannerController = MobileScannerController(
-        autoStart: false, detectionSpeed: DetectionSpeed.noDuplicates);
+      autoStart: false,
+      detectionSpeed: DetectionSpeed.noDuplicates,
+    );
     await scannerController?.start();
   }
 
@@ -27,11 +29,12 @@ class MbxQRISController extends GetxController {
   btnImageClicked() async {
     final imagePicker = ImagePicker();
     final pickedFile = await imagePicker.pickImage(
-        source: ImageSource.gallery,
-        imageQuality: 80,
-        maxWidth: 1024.0,
-        maxHeight: 1024.0,
-        preferredCameraDevice: CameraDevice.front);
+      source: ImageSource.gallery,
+      imageQuality: 80,
+      maxWidth: 1024.0,
+      maxHeight: 1024.0,
+      preferredCameraDevice: CameraDevice.front,
+    );
     if (pickedFile != null) {
       LoggerX.log("QR file: ${pickedFile.path}");
       final cap = await scannerController?.analyzeImage(pickedFile.path);
@@ -60,8 +63,9 @@ class MbxQRISController extends GetxController {
     inquiryVM.request(qr_code: code).then((resp) async {
       Get.back();
       if (resp.status == 200) {
-        Get.to(MbxQRISAmountScreen(inquiry: inquiryVM.inqury))
-            ?.then((value) async {
+        Get.to(MbxQRISAmountScreen(inquiry: inquiryVM.inqury))?.then((
+          value,
+        ) async {
           await scannerController?.start();
         });
       } else {

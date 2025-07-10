@@ -1,5 +1,5 @@
-import 'package:mbankingflutter/apis/mbx_apis.dart';
-import 'package:mbankingflutter/inquiry/models/mbx_inquiry_model.dart';
+import 'package:mbxflutter/apis/mbx_apis.dart';
+import 'package:mbxflutter/inquiry/models/mbx_inquiry_model.dart';
 
 class MbxElectricityPrepaidInquiryVM {
   var loading = false;
@@ -8,13 +8,13 @@ class MbxElectricityPrepaidInquiryVM {
   Future<ApiXResponse> request() {
     loading = true;
     return MbxApi.post(
-            endpoint: '/electricity/prepaid/inquiry',
-            params: {},
-            headers: {},
-            contractFile:
-                'assets/contracts/MbxElectricityPrepaidInquiryContract.json',
-            contract: true)
-        .then((resp) {
+      endpoint: '/electricity/prepaid/inquiry',
+      params: {},
+      headers: {},
+      contractFile:
+          'assets/contracts/MbxElectricityPrepaidInquiryContract.json',
+      contract: true,
+    ).then((resp) {
       loading = false;
       if (resp.status == 200) {
         inquiry = MbxInquiryModel.fromJason(resp.jason['data']);

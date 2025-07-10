@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbxflutter/utils/all_utils.dart';
 
 class MbxPrivacyPolicyModel {
   String title = '';

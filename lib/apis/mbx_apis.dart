@@ -1,11 +1,11 @@
-import 'package:mbankingflutter/apis/api_x.dart';
-import 'package:mbankingflutter/apis/mbx_device_vm.dart';
-import 'package:mbankingflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbankingflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/apis/api_x.dart';
+import 'package:mbxflutter/apis/mbx_device_vm.dart';
+import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
 
 import 'mbx_baseurl_vm.dart';
 
-export 'package:mbankingflutter/apis/api_x.dart';
+export 'package:mbxflutter/apis/api_x.dart';
 
 class MbxApi {
   static addRequiredHeader(Map<String, Object?> header) async {
@@ -21,145 +21,141 @@ class MbxApi {
     }
   }
 
-  static Future<ApiXResponse> get(
-      {required String endpoint,
-      Map<String, Object?>? params,
-      Map<String, Object?>? headers,
-      String contractFile = '',
-      bool contract = false}) async {
+  static Future<ApiXResponse> get({
+    required String endpoint,
+    Map<String, Object?>? params,
+    Map<String, Object?>? headers,
+    String contractFile = '',
+    bool contract = false,
+  }) async {
     Map<String, Object?> newHeaders = {};
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
     await addRequiredHeader(newHeaders);
     return ApiX.get(
-            url: contract == false
-                ? MbxBaseUrlVM.apiUrl(endpoint)
-                : contractFile,
-            params: params,
-            headers: newHeaders)
-        .then((resp) {
+      url: contract == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
+      params: params,
+      headers: newHeaders,
+    ).then((resp) {
       handleResponse(resp);
       return resp;
     });
   }
 
-  static Future<ApiXResponse> post(
-      {required String endpoint,
-      Map<String, Object>? params,
-      Map<String, Object>? headers,
-      bool json = false,
-      String contractFile = '',
-      bool contract = false}) async {
+  static Future<ApiXResponse> post({
+    required String endpoint,
+    Map<String, Object>? params,
+    Map<String, Object>? headers,
+    bool json = false,
+    String contractFile = '',
+    bool contract = false,
+  }) async {
     Map<String, Object?> newHeaders = {};
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
     await addRequiredHeader(newHeaders);
     return ApiX.post(
-            url: contract == false
-                ? MbxBaseUrlVM.apiUrl(endpoint)
-                : contractFile,
-            params: params,
-            headers: newHeaders,
-            json: json)
-        .then((resp) {
+      url: contract == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
+      params: params,
+      headers: newHeaders,
+      json: json,
+    ).then((resp) {
       handleResponse(resp);
       return resp;
     });
   }
 
-  static Future<ApiXResponse> delete(
-      {required String endpoint,
-      Map<String, Object>? params,
-      Map<String, Object>? headers,
-      String contractFile = '',
-      bool contract = false}) async {
+  static Future<ApiXResponse> delete({
+    required String endpoint,
+    Map<String, Object>? params,
+    Map<String, Object>? headers,
+    String contractFile = '',
+    bool contract = false,
+  }) async {
     Map<String, Object?> newHeaders = {};
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
     await addRequiredHeader(newHeaders);
     return ApiX.delete(
-            url: contract == false
-                ? MbxBaseUrlVM.apiUrl(endpoint)
-                : contractFile,
-            params: params,
-            headers: newHeaders)
-        .then((resp) {
+      url: contract == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
+      params: params,
+      headers: newHeaders,
+    ).then((resp) {
       handleResponse(resp);
       return resp;
     });
   }
 
-  static Future<ApiXResponse> put(
-      {required String endpoint,
-      Map<String, Object>? params,
-      Map<String, Object>? headers,
-      bool json = false,
-      String contractFile = '',
-      bool mock = false}) async {
+  static Future<ApiXResponse> put({
+    required String endpoint,
+    Map<String, Object>? params,
+    Map<String, Object>? headers,
+    bool json = false,
+    String contractFile = '',
+    bool mock = false,
+  }) async {
     Map<String, Object?> newHeaders = {};
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
     await addRequiredHeader(newHeaders);
     return ApiX.put(
-            url: mock == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
-            params: params,
-            headers: newHeaders,
-            json: json)
-        .then((resp) {
+      url: mock == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
+      params: params,
+      headers: newHeaders,
+      json: json,
+    ).then((resp) {
       handleResponse(resp);
       return resp;
     });
   }
 
-  static Future<ApiXResponse> postMultipart(
-      {required String endpoint,
-      Map<String, String?>? files,
-      Map<String, Object?>? params,
-      Map<String, Object?>? headers,
-      String contractFile = '',
-      bool contract = false}) async {
+  static Future<ApiXResponse> postMultipart({
+    required String endpoint,
+    Map<String, String?>? files,
+    Map<String, Object?>? params,
+    Map<String, Object?>? headers,
+    String contractFile = '',
+    bool contract = false,
+  }) async {
     Map<String, Object?> newHeaders = {};
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
     await addRequiredHeader(newHeaders);
     return ApiX.postMultipart(
-            url: contract == false
-                ? MbxBaseUrlVM.apiUrl(endpoint)
-                : contractFile,
-            files: files,
-            params: params,
-            headers: newHeaders)
-        .then((resp) {
+      url: contract == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
+      files: files,
+      params: params,
+      headers: newHeaders,
+    ).then((resp) {
       handleResponse(resp);
       return resp;
     });
   }
 
-  static Future<ApiXResponse> putMultipart(
-      {required String endpoint,
-      Map<String, String?>? files,
-      Map<String, Object?>? params,
-      Map<String, Object?>? headers,
-      String contractFile = '',
-      bool contract = false}) async {
+  static Future<ApiXResponse> putMultipart({
+    required String endpoint,
+    Map<String, String?>? files,
+    Map<String, Object?>? params,
+    Map<String, Object?>? headers,
+    String contractFile = '',
+    bool contract = false,
+  }) async {
     Map<String, Object?> newHeaders = {};
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
     await addRequiredHeader(newHeaders);
     return ApiX.putMultipart(
-            url: contract == false
-                ? MbxBaseUrlVM.apiUrl(endpoint)
-                : contractFile,
-            files: files,
-            params: params,
-            headers: newHeaders)
-        .then((resp) {
+      url: contract == false ? MbxBaseUrlVM.apiUrl(endpoint) : contractFile,
+      files: files,
+      params: params,
+      headers: newHeaders,
+    ).then((resp) {
       handleResponse(resp);
       return resp;
     });

@@ -1,4 +1,4 @@
-import 'package:mbankingflutter/utils/all_utils.dart';
+import 'package:mbxflutter/utils/all_utils.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -18,8 +18,10 @@ class MbxStringPickerController extends GetxController {
   txtSearchChanged(String value) {
     LoggerX.log('txtSearchChanged: $value');
     filtered = list
-        .where((element) =>
-            element.toLowerCase().contains(value.toLowerCase().trim()))
+        .where(
+          (element) =>
+              element.toLowerCase().contains(value.toLowerCase().trim()),
+        )
         .toList();
     update();
   }

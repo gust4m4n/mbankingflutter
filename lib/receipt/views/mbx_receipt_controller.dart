@@ -1,7 +1,6 @@
-import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:mbankingflutter/feedback/views/mbx_feedback_sheet.dart';
-import 'package:mbankingflutter/receipt/models/mbx_receipt_model.dart';
-import 'package:mbankingflutter/receipt/viewmodels/mbx_receipt_vm.dart';
+import 'package:mbxflutter/feedback/views/mbx_feedback_sheet.dart';
+import 'package:mbxflutter/receipt/models/mbx_receipt_model.dart';
+import 'package:mbxflutter/receipt/viewmodels/mbx_receipt_vm.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -54,16 +53,23 @@ class MbxReceiptController extends GetxController {
     screenshotController
         .capture(delay: Duration(milliseconds: 0))
         .then((capturedImage) async {
-      if (kIsWeb) {
-        XFile.fromData(capturedImage!, mimeType: 'image/jpeg', name: filename)
-            .saveTo(filename)
-            .then((value) {});
-      } else {
-        Share.shareXFiles([
-          XFile.fromData(capturedImage!, mimeType: 'image/jpeg', name: filename)
-        ]);
-      }
-    }).catchError((onError) {});
+          if (kIsWeb) {
+            XFile.fromData(
+              capturedImage!,
+              mimeType: 'image/jpeg',
+              name: filename,
+            ).saveTo(filename).then((value) {});
+          } else {
+            Share.shareXFiles([
+              XFile.fromData(
+                capturedImage!,
+                mimeType: 'image/jpeg',
+                name: filename,
+              ),
+            ]);
+          }
+        })
+        .catchError((onError) {});
   }
 
   btnDownloadClicked() async {
@@ -71,14 +77,16 @@ class MbxReceiptController extends GetxController {
     screenshotController
         .capture(delay: Duration(milliseconds: 0))
         .then((capturedImage) async {
-      if (kIsWeb) {
-        XFile.fromData(capturedImage!, mimeType: 'image/jpeg', name: filename)
-            .saveTo(filename)
-            .then((value) {});
-      } else {
-        await ImageGallerySaver.saveImage(capturedImage!);
-        ToastX.showSuccess(msg: 'Resi telah disimpan ke gallery.');
-      }
-    }).catchError((onError) {});
+          if (kIsWeb) {
+            XFile.fromData(
+              capturedImage!,
+              mimeType: 'image/jpeg',
+              name: filename,
+            ).saveTo(filename).then((value) {});
+          } else {
+            ToastX.showSuccess(msg: 'Resi telah disimpan ke gallery.');
+          }
+        })
+        .catchError((onError) {});
   }
 }

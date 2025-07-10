@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:mbankingflutter/utils/mbx_security_vm.dart';
+import 'package:mbxflutter/utils/mbx_security_vm.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/all_utils.dart';
@@ -10,7 +10,9 @@ import '../utils/all_utils.dart';
 class MbxPreferencesVM {
   static String encodeKey(String key) {
     final xorKey = XorUtils.encrypt(
-        Utf8Utils.encode(key), MbxSecurityVM.generateEncryptionKey());
+      Utf8Utils.encode(key),
+      MbxSecurityVM.generateEncryptionKey(),
+    );
     return Base64Utils.encode(xorKey);
   }
 
@@ -23,7 +25,9 @@ class MbxPreferencesVM {
     } else {
       const storage = FlutterSecureStorage();
       return await storage.write(
-          key: prefKey, value: Base64Utils.encode(encrypted));
+        key: prefKey,
+        value: Base64Utils.encode(encrypted),
+      );
     }
   }
 
@@ -34,7 +38,8 @@ class MbxPreferencesVM {
       String? value = storage.getString(prefKey);
       if (value != null) {
         return Utf8Utils.decode(
-            MbxSecurityVM.doubleDecrypt(Base64Utils.decode(value)));
+          MbxSecurityVM.doubleDecrypt(Base64Utils.decode(value)),
+        );
       } else {
         return '';
       }
@@ -43,7 +48,8 @@ class MbxPreferencesVM {
       String? value = await storage.read(key: prefKey);
       if (value != null) {
         return Utf8Utils.decode(
-            MbxSecurityVM.doubleDecrypt(Base64Utils.decode(value)));
+          MbxSecurityVM.doubleDecrypt(Base64Utils.decode(value)),
+        );
       } else {
         return '';
       }
@@ -103,7 +109,8 @@ class MbxPreferencesVM {
     String? value = storage.getString(prefKey);
     if (value != null && value.isNotEmpty) {
       return Utf8Utils.decode(
-          MbxSecurityVM.doubleDecrypt(Base64Utils.decode(value)));
+        MbxSecurityVM.doubleDecrypt(Base64Utils.decode(value)),
+      );
     } else {
       return '';
     }
@@ -127,13 +134,15 @@ class MbxPreferencesVM {
       flag = false;
     }
     await setBoolUnsecure(
-        '4dfd926498303ddc6dccd25c4289012e25102e2eb2ce7565cd3eec53e2c71315',
-        flag);
+      '4dfd926498303ddc6dccd25c4289012e25102e2eb2ce7565cd3eec53e2c71315',
+      flag,
+    );
   }
 
   static Future<bool> getFreshInstall() async {
     var value = await getBoolUnsecure(
-        '4dfd926498303ddc6dccd25c4289012e25102e2eb2ce7565cd3eec53e2c71315');
+      '4dfd926498303ddc6dccd25c4289012e25102e2eb2ce7565cd3eec53e2c71315',
+    );
     if (value == false) {
       return true;
     } else {
@@ -150,9 +159,11 @@ class MbxPreferencesVM {
     if (kDebugMode) {
       LoggerX.log('[PREF] security key: ${MbxSecurityVM.securityKey}');
       LoggerX.log(
-          '[PREF] encryption key: ${HexUtils.encode(MbxSecurityVM.generateEncryptionKey())}');
+        '[PREF] encryption key: ${HexUtils.encode(MbxSecurityVM.generateEncryptionKey())}',
+      );
       LoggerX.log(
-          '[PREF] encryption IV: ${HexUtils.encode(MbxSecurityVM.generateEncryptionIV())}');
+        '[PREF] encryption IV: ${HexUtils.encode(MbxSecurityVM.generateEncryptionIV())}',
+      );
       const key =
           "97283b39a7866ed6ed9d5520b746cc5079a7abed640122ec0763aa759a03dd83";
       LoggerX.log('[PREF] key plain: $key');
@@ -161,16 +172,19 @@ class MbxPreferencesVM {
       var value = LoremIpsumX.tiny();
       LoggerX.log('[PREF] value plain: $value');
       var encrypted = Base64Utils.encode(
-          MbxSecurityVM.doubleEncrypt(Utf8Utils.encode(value)));
+        MbxSecurityVM.doubleEncrypt(Utf8Utils.encode(value)),
+      );
       LoggerX.log('[PREF] value encrypted: $encrypted');
-      var decrypted =
-          MbxSecurityVM.doubleDecrypt(Base64Utils.decode(encrypted));
+      var decrypted = MbxSecurityVM.doubleDecrypt(
+        Base64Utils.decode(encrypted),
+      );
       LoggerX.log('[PREF] value decrypted: ${Utf8Utils.decode(decrypted)}');
 
       value = LoremIpsumX.medium();
       LoggerX.log('[PREF] value plain: $value');
       encrypted = Base64Utils.encode(
-          MbxSecurityVM.doubleEncrypt(Utf8Utils.encode(value)));
+        MbxSecurityVM.doubleEncrypt(Utf8Utils.encode(value)),
+      );
       LoggerX.log('[PREF] value encrypted: $encrypted');
       decrypted = MbxSecurityVM.doubleDecrypt(Base64Utils.decode(encrypted));
       LoggerX.log('[PREF] value decrypted: ${Utf8Utils.decode(decrypted)}');
