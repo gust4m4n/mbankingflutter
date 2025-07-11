@@ -105,7 +105,6 @@ dependencies:
   pdfx: ^2.9.2
   flutter_local_notifications: ^19.3.0
 
-  # image_gallery_saver: ^2.0.3
   # flutter_jailbreak_detection: ^1.10.0
 
 dev_dependencies:
