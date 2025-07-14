@@ -8,7 +8,7 @@ import 'package:mbxflutter/receipt/viewmodels/mbx_receipt_vm.dart';
 import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
 import 'package:mbxflutter/utils/all_utils.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxQRISAmountController extends GetxController {
   final MbxQRISInquiryModel inquiry;

@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_otp_button.dart';
 import 'mbx_otp_controller.dart';
 import 'mbx_otp_dot.dart';

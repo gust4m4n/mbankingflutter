@@ -1,6 +1,6 @@
 import 'package:mbxflutter/tnc/viewmodels/mbx_tnc_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxTncController extends GetxController {
   final tncVM = MbxTncVM();

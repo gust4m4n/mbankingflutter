@@ -1,6 +1,6 @@
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_pbb_controller.dart';
 
 class MbxPBBScreen extends StatelessWidget {

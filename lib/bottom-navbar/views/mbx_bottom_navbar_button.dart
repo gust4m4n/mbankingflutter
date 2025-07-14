@@ -1,5 +1,5 @@
-import '../../widgets/all_widgets.dart';
-import '../../widgets/media_x.dart';
+import '../../widget-x/all_widgets.dart';
+import '../../widget-x/media_x.dart';
 
 // ignore: must_be_immutable
 class MbxButtonNavBarButton extends StatelessWidget {

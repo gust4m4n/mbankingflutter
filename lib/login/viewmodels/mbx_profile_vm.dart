@@ -7,7 +7,7 @@ import 'package:mbxflutter/login/views/mbx_login_screen.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
 import 'package:mbxflutter/utils/jason_x.dart';
 import 'package:mbxflutter/utils/logger_x.dart';
-import 'package:mbxflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/widget-x/all_widgets.dart';
 
 class MbxProfileVM {
   static var profile = MbxProfileModel();

@@ -1,7 +1,7 @@
 import 'package:mbxflutter/qris/models/mbx_qris_inquiry_model.dart';
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_qris_amount_controller.dart';
 
 class MbxQRISAmountScreen extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:mbxflutter/news/models/mbx_news_model.dart';
-import 'package:mbxflutter/widgets/media_x.dart';
+import 'package:mbxflutter/widget-x/media_x.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_news_controller.dart';
 
 class MbxNewsScreen extends StatelessWidget {

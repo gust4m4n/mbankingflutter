@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_cardless_payment_controller.dart';
 
 class MbxCardlessPaymentScreen extends StatelessWidget {

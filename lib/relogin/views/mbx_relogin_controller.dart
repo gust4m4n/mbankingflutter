@@ -6,7 +6,7 @@ import 'package:mbxflutter/relogin/viewmodels/mbx_relogin_vm.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 
 import '../../utils/all_utils.dart';
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxReloginController extends GetxController {
   var version = '';

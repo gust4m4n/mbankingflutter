@@ -1,4 +1,4 @@
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 class MbxElectricityController extends GetxController {
   btnCloseClicked() {

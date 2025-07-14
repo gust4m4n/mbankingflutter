@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import 'all_widgets.dart';
 
 class DashedDividerX extends StatelessWidget {
   final double dashWidth;

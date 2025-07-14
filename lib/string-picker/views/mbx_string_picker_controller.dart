@@ -1,6 +1,6 @@
 import 'package:mbxflutter/utils/all_utils.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxStringPickerController extends GetxController {
   final List<String> list;

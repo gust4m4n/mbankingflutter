@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../widgets/all_widgets.dart';
+import '../widget-x/all_widgets.dart';
 
 class MbxAntiJailbreakVM {
   static var jailbroken = false;

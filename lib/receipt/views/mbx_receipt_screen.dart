@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_receipt_controller.dart';
 import 'mbx_receipt_widget.dart';
 

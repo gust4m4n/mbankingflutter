@@ -1,6 +1,6 @@
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_p2bank_controller.dart';
 
 class MbxTransferP2BankScreen extends StatelessWidget {

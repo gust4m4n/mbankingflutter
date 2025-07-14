@@ -1,6 +1,6 @@
 import 'package:mbxflutter/privacy-policy/viewmodels/mbx_privacy_policy_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxPrivacyPolicyController extends GetxController {
   final privacyPolicyVM = MbxPrivacyPolicyVM();

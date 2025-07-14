@@ -1,6 +1,6 @@
 // ignore: must_be_immutable
 import 'package:mbxflutter/login/models/mbx_onboarding_model.dart';
-import 'package:mbxflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/widget-x/all_widgets.dart';
 
 class MbxOnboardingWidget extends StatelessWidget {
   final MbxOnboardingModel onboarding;

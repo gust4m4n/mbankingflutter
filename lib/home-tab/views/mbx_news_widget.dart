@@ -1,6 +1,6 @@
 import 'package:mbxflutter/news/models/mbx_news_model.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxNewsWidget extends StatelessWidget {

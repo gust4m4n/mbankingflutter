@@ -3,7 +3,7 @@ import 'package:mbxflutter/feedback/views/mbx_feedback_controller.dart';
 import 'package:mbxflutter/feedback/views/mbx_feedback_widget.dart';
 import 'package:mbxflutter/utils/all_utils.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxFeedbackSheet extends GetWidget<MbxFeedbackController> {

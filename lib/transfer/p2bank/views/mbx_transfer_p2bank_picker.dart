@@ -1,4 +1,4 @@
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_p2bank_picker_controller.dart';
 import 'mbx_transfer_p2bank_picker_widget.dart';
 

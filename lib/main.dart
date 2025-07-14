@@ -27,8 +27,8 @@ import 'tnc/views/mbx_tnc_screen.dart';
 import 'transfer/main/views/mbx_transfer_screen.dart';
 import 'transfer/p2bank/views/mbx_transfer_p2bank_screen.dart';
 import 'transfer/p2p/views/mbx_transfer_p2p_screen.dart';
-import 'widgets/all_widgets.dart';
-import 'widgets/media_x.dart';
+import 'widget-x/all_widgets.dart';
+import 'widget-x/media_x.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

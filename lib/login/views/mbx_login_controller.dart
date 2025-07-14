@@ -7,7 +7,7 @@ import 'package:mbxflutter/otp/views/mbx_otp_sheet.dart';
 import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 import 'package:mbxflutter/utils/logger_x.dart';
-import 'package:mbxflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/widget-x/all_widgets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import 'mbx_login_screen.dart';

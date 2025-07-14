@@ -1,7 +1,7 @@
 import 'package:mbxflutter/login/models/mbx_account_model.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxSofSheetController extends GetxController {
   List<MbxAccountModel> accounts = [];

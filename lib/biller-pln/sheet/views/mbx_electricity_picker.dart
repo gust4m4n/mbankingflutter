@@ -1,7 +1,7 @@
 import 'package:mbxflutter/utils/all_utils.dart';
 
 import '../../../home-tab/views/mbx_launcher_widget.dart';
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_electricity_controller.dart';
 
 // ignore: must_be_immutable

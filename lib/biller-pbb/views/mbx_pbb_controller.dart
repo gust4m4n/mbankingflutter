@@ -8,7 +8,7 @@ import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
 
 import '../../inquiry/views/mbx_inquiry_sheet.dart';
 import '../../string-picker/views/mbx_string_picker.dart';
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxPBBController extends GetxController {
   var sof = MbxAccountModel();

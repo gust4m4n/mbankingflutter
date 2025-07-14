@@ -2,7 +2,7 @@ import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 
 import '../../home-tab/views/mbx_launcher_widget.dart';
 import '../../home-tab/views/mbx_theme_button.dart';
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_relogin_controller.dart';
 
 class MbxReloginScreen extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:mbxflutter/inquiry/models/mbx_inquiry_model.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_inquiry_controller.dart';
 import 'mbx_inquiry_widget.dart';
 

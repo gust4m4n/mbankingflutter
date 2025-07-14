@@ -2,7 +2,7 @@ import 'package:mbxflutter/feedback/views/mbx_feedback_sheet.dart';
 import 'package:mbxflutter/receipt/models/mbx_receipt_model.dart';
 import 'package:mbxflutter/receipt/viewmodels/mbx_receipt_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 export 'dart:io';
 

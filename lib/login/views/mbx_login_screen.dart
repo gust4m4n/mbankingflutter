@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:mbxflutter/login/views/mbx_onboarding_widget.dart';
-import 'package:mbxflutter/widgets/all_widgets.dart';
+import 'package:mbxflutter/widget-x/all_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../home-tab/views/mbx_theme_button.dart';

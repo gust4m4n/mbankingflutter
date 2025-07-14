@@ -1,6 +1,6 @@
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_tnc_controller.dart';
 
 class MbxTncScreen extends StatelessWidget {

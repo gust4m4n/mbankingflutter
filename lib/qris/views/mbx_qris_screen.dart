@@ -1,8 +1,8 @@
 import 'package:mbxflutter/apis/mbx_device_info_vm.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-import '../../widgets/all_widgets.dart';
-import '../../widgets/media_x.dart';
+import '../../widget-x/all_widgets.dart';
+import '../../widget-x/media_x.dart';
 import 'mbx_qris_controller.dart';
 
 class MbxQRISScreen extends StatelessWidget {

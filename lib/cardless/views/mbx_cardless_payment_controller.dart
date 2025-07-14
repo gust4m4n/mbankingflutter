@@ -1,5 +1,5 @@
 import '../models/mbx_cardless_step_model.dart';
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxCardlessPaymentController extends GetxController {
   List<MbxCardlessStepModel> steps = [];

@@ -1,7 +1,7 @@
 import 'package:mbxflutter/transfer/p2p/models/mbx_transfer_p2p_dest_model.dart';
 import 'package:mbxflutter/utils/mbx_format_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxTransferP2PPickerWidget extends StatelessWidget {

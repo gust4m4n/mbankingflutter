@@ -1,7 +1,7 @@
 import 'package:mbxflutter/transfer/main/viewmodels/mbx_transfer_history_model.dart';
 import 'package:mbxflutter/utils/mbx_format_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxTransferHistoryWidget extends StatelessWidget {

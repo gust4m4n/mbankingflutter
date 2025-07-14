@@ -1,7 +1,7 @@
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
 import 'package:mbxflutter/utils/mbx_format_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_p2p_controller.dart';
 
 class MbxTransferP2PScreen extends StatelessWidget {

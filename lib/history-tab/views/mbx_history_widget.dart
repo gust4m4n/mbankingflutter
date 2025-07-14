@@ -1,7 +1,7 @@
 import 'package:mbxflutter/utils/all_utils.dart';
 import 'package:mbxflutter/utils/mbx_format_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import '../models/mbx_history_model.dart';
 
 // ignore: must_be_immutable

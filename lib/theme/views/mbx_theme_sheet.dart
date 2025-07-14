@@ -1,6 +1,6 @@
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_theme_controller.dart';
 import 'mbx_theme_widget.dart';
 

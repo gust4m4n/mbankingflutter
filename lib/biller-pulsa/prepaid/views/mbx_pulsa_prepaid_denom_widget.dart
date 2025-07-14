@@ -1,7 +1,7 @@
 import 'package:mbxflutter/biller-pulsa/prepaid/models/mbx_pulsa_prepaid_denom_model.dart';
 import 'package:mbxflutter/utils/mbx_format_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxPulsaPrepaidDenomWidget extends StatelessWidget {

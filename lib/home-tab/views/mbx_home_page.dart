@@ -4,7 +4,7 @@ import 'package:mbxflutter/news/viewmodels/mbx_news_list_vm.dart';
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
 import 'package:mbxflutter/utils/all_utils.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_foreign_exchange_widget.dart';
 import 'mbx_home_controller.dart';
 import 'mbx_launcher_widget.dart';

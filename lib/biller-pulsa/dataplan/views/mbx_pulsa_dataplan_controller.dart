@@ -9,7 +9,7 @@ import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
 import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 class MbxPulsaDataPlanController extends GetxController {
   var sof = MbxAccountModel();

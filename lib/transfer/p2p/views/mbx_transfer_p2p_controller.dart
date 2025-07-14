@@ -9,7 +9,7 @@ import 'package:mbxflutter/transfer/p2p/viewmodels/mbx_transfer_p2p_inquiry_vm.d
 import 'package:mbxflutter/transfer/p2p/viewmodels/mbx_transfer_p2p_payment_vm.dart';
 
 import '../../../inquiry/views/mbx_inquiry_sheet.dart';
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_p2p_picker.dart';
 
 class MbxTransfeP2PController extends GetxController {

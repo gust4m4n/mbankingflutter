@@ -5,7 +5,7 @@ import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/news/viewmodels/mbx_news_list_vm.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxHomeController extends GetxController {
   final scrollController = ScrollController();

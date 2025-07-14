@@ -1,6 +1,6 @@
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_pulsa_prepaid_controller.dart';
 import 'mbx_pulsa_prepaid_denom_widget.dart';
 

@@ -3,7 +3,7 @@ import 'package:mbxflutter/qris/views/mbx_qris_amount_screen.dart';
 import 'package:mbxflutter/utils/all_utils.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxQRISController extends GetxController {
   MobileScannerController? scannerController;

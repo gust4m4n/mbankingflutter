@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbaxProfileMenuButton extends StatelessWidget {
   final String title;

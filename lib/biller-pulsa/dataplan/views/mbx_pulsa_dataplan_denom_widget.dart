@@ -1,7 +1,7 @@
 import 'package:mbxflutter/biller-pulsa/dataplan/models/mbx_pulsa_dataplan_denom_model.dart';
 import 'package:mbxflutter/utils/mbx_format_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxPulsaDataPlanDenomWidget extends StatelessWidget {

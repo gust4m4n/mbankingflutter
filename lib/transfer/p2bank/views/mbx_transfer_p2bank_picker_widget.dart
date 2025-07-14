@@ -1,6 +1,6 @@
 import 'package:mbxflutter/transfer/p2bank/models/mbx_transfer_p2bank_dest_model.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxTransferP2BankPickerWidget extends StatelessWidget {

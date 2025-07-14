@@ -7,7 +7,7 @@ import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
 import 'package:mbxflutter/sof/views/mbx_sof_sheet.dart';
 
 import '../../../inquiry/views/mbx_inquiry_sheet.dart';
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 class MbxPulsaPostpaidController extends GetxController {
   var sof = MbxAccountModel();

@@ -1,6 +1,6 @@
 import 'package:mbxflutter/receipt/models/mbx_receipt_model.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_history_controller.dart';
 import 'mbx_history_widget.dart';
 

@@ -1,5 +1,5 @@
 import 'dart:async';
-import '../widgets/all_widgets.dart';
+import '../widget-x/all_widgets.dart';
 
 class MbxBiometricVM {
   static Future<bool> available() async {

@@ -1,6 +1,6 @@
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_avatar_controller.dart';
 
 // ignore: must_be_immutable

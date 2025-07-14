@@ -1,7 +1,7 @@
 import 'package:mbxflutter/news/models/mbx_news_model.dart';
 import 'package:mbxflutter/news/viewmodels/mbx_news_detail_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxNewsController extends GetxController {
   var news = MbxNewsModel();

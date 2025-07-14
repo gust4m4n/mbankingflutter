@@ -1,4 +1,4 @@
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import '../../history-tab/views/mbx_history_page.dart';
 import '../../home-tab/views/mbx_home_page.dart';
 import '../../notification-tab/views/mbx_notification_page.dart';

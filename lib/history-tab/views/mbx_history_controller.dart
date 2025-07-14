@@ -1,6 +1,6 @@
 import 'package:mbxflutter/history-tab/viewmodels/mbx_history_list_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxHistoryController extends GetxController {
   final scrollController = ScrollController();

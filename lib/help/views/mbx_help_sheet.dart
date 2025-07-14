@@ -1,6 +1,6 @@
 import 'package:mbxflutter/help/views/mbx_help_widget.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_help_controller.dart';
 
 // ignore: must_be_immutable

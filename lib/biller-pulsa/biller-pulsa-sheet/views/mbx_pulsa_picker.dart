@@ -2,7 +2,7 @@ import 'package:mbxflutter/biller-pulsa/sheet/views/mbx_pulsa_controller.dart';
 import 'package:mbxflutter/utils/all_utils.dart';
 
 import '../../../home-tab/views/mbx_launcher_widget.dart';
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxPulsaPicker extends GetWidget<MbxPulsaController> {

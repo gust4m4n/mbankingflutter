@@ -13,7 +13,7 @@ import 'package:mbxflutter/transfer/p2bank/viewmodels/mbx_transfer_p2bank_servic
 import 'package:mbxflutter/transfer/p2bank/views/mbx_transfer_p2bank_picker.dart';
 import 'package:mbxflutter/transfer/p2bank/views/mbx_transfer_p2bank_service_picker.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 class MbxTransfeP2BankController extends GetxController {
   var dest = MbxTransferP2BankDestModel();

@@ -1,4 +1,4 @@
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_controller.dart';
 import 'mbx_transfer_history_widget.dart';
 

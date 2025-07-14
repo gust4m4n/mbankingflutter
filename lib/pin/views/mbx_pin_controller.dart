@@ -1,7 +1,7 @@
 import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
 import 'package:mbxflutter/profile-tab/mbx_biometric_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_pin_sheet.dart';
 
 class MbxPinController extends GetxController {

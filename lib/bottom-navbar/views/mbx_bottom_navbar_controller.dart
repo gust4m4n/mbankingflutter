@@ -1,7 +1,7 @@
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 
 import '../../../utils/all_utils.dart';
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxBottomNavBarController extends SuperController {
   int tabBarIndex = 0;

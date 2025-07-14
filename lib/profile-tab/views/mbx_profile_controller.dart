@@ -8,7 +8,7 @@ import 'package:mbxflutter/profile-tab/mbx_logout_vm.dart';
 import 'package:mbxflutter/profile-tab/mbx_set_biometric_vm.dart';
 
 import '../../utils/all_utils.dart';
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxProfileController extends GetxController {
   var biometricEnabled = false;

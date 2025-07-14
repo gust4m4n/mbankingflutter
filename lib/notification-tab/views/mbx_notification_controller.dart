@@ -1,6 +1,6 @@
 import 'package:mbxflutter/notification-tab/viewmodels/mbx_notification_list_vm.dart';
 
-import '../../widgets/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
 
 class MbxNotificationController extends GetxController {
   final scrollController = ScrollController();

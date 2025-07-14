@@ -1,7 +1,7 @@
 import 'package:mbxflutter/transfer/p2p/models/mbx_transfer_p2p_dest_model.dart';
 import 'package:mbxflutter/transfer/p2p/viewmodels/mbx_transfer_p2p_dest_list_vm.dart';
 
-import '../../../widgets/all_widgets.dart';
+import '../../../widget-x/all_widgets.dart';
 
 class MbxTransferP2PPickerController extends GetxController {
   TextEditingController txtSearch = TextEditingController();
