@@ -1,6 +1,6 @@
 {
-    "name": "mbxflutter",
-    "short_name": "mbxflutter",
+    "name": "MBankingApp",
+    "short_name": "MBankingApp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

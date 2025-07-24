@@ -67,7 +67,7 @@ Future<void> main() async {
         gradientColorEnd: ColorX.gray,
         child: Center(
           child: ClipRRect(
-            child: Container(
+            child: SizedBox(
               width: kIsWeb ? MediaX.width : double.infinity,
               child: MyApp(initialRoute),
             ),
@@ -92,7 +92,7 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   final String initialRoute;
-  MyApp(this.initialRoute);
+  const MyApp(this.initialRoute, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class MyApp extends StatelessWidget {
       locale: Get.deviceLocale,
       fallbackLocale: Locale('en', 'US'),
       scrollBehavior: AppScrollBehavior(),
-      title: 'MBankingFlutter',
+      title: 'MBankingApp',
       theme: ThemeData(
         bottomSheetTheme: BottomSheetThemeData(surfaceTintColor: Colors.white),
         textSelectionTheme: TextSelectionThemeData(

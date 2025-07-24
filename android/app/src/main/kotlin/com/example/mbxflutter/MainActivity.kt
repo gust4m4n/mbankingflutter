@@ -1,4 +1,4 @@
-package com.example.mbxflutter
+package com.example.mbankingapp
 
 import io.flutter.embedding.android.FlutterActivity
 
