@@ -6,8 +6,9 @@ class NavigationBarX extends StatelessWidget {
   final GestureTapCallback? leftAction;
   final Widget? rightBtn;
   final GestureTapCallback? rightAction;
-  NavigationBarX(
-      {this.title,
+  const NavigationBarX(
+      {super.key,
+      this.title,
       this.leftBtn,
       this.leftAction,
       this.rightBtn,

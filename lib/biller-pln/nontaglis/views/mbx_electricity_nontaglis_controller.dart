@@ -16,11 +16,6 @@ class MbxElectricityNonTagLisController extends GetxController {
   var customerIdError = '';
 
   @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
   void onReady() {
     super.onReady();
     sof = MbxProfileVM.profile.accounts[0];

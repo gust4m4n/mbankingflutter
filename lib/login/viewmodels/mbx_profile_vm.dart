@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:mbxflutter/apis/mbx_apis.dart';
 import 'package:mbxflutter/login/models/mbx_profile_model.dart';
 import 'package:mbxflutter/login/views/mbx_login_screen.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/utils/jason_x.dart';
 import 'package:mbxflutter/utils/logger_x.dart';
 import 'package:mbxflutter/widget-x/all_widgets.dart';

@@ -6,6 +6,7 @@ import 'mbx_pulsa_controller.dart';
 
 // ignore: must_be_immutable
 class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
+  const MbxPulsaPicker({super.key});
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showCustom(widget: this, title: 'Pulsa');

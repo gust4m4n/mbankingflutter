@@ -109,7 +109,7 @@ class TextFieldX extends StatelessWidget {
               child: TextField(
             inputFormatters: inputFormatters,
             textAlignVertical: TextAlignVertical.center,
-            enabled: !this.readOnly,
+            enabled: !readOnly,
             controller: controller,
             onChanged: onChanged,
             focusNode: focusNode,

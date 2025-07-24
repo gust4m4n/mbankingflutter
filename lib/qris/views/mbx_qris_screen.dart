@@ -6,7 +6,7 @@ import '../../widget-x/media_x.dart';
 import 'mbx_qris_controller.dart';
 
 class MbxQRISScreen extends StatelessWidget {
-  MbxQRISScreen({Key? key}) : super(key: key);
+  const MbxQRISScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

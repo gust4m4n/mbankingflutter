@@ -4,7 +4,7 @@ import '../../widget-x/all_widgets.dart';
 class MbxThemeWidget extends StatelessWidget {
   final Color color;
 
-  MbxThemeWidget({required this.color});
+  const MbxThemeWidget({super.key, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +14,14 @@ class MbxThemeWidget extends StatelessWidget {
                 cornerRadius: 29.0,
                 highlightColor: ColorX.highlight,
                 clicked: () {
-                  final hex = '#${color.value.toRadixString(16)}';
+                  final hex = '#${color.toARGB32().toRadixString(16).padLeft(8, '0')}';
                   Get.back(result: hex);
                 },
                 child: ContainerX(
                   padding: EdgeInsets.all(4.0),
                   cornerRadius: 29.0,
                   borderWidth: 2.0,
-                  borderColor: color.value == ColorX.theme.value
+                  borderColor: color.toARGB32() == ColorX.theme.toARGB32()
                       ? ColorX.theme
                       : ColorX.transparent,
                   child: ContainerX(

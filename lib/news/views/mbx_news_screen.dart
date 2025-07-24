@@ -27,7 +27,7 @@ class MbxNewsScreen extends StatelessWidget {
                 top: MediaQuery.of(Get.context!).padding.top + 12.0,
                 child: ButtonX(
                   title: '',
-                  backgroundColor: ColorX.black.withOpacity(0.4),
+                  backgroundColor: ColorX.black.withValues(alpha: 0.4),
                   width: 40.0,
                   height: 40.0,
                   cornerRadius: 20.0,

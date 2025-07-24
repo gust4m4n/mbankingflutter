@@ -20,11 +20,6 @@ class MbxElectricityPrepaidController extends GetxController {
   final denomsVM = MbxElectricityPrepaidDenomsVM();
 
   @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
   void onReady() {
     super.onReady();
     sof = MbxProfileVM.profile.accounts[0];

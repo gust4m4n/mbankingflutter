@@ -6,12 +6,12 @@ class MbxOtpButton extends StatelessWidget {
 
   final GestureTapCallback? clicked;
 
-  MbxOtpButton({
-    Key? key,
+  const MbxOtpButton({
+    super.key,
     this.title = '',
-    this.faIcon = null,
+    this.faIcon,
     this.clicked,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,8 @@ class MbxOtpButton extends StatelessWidget {
             ? ButtonX(
                 height: 48.0,
                 cornerRadius: 8.0,
-                backgroundColor: ColorX.theme.withOpacity(0.1),
-                highlightColor: ColorX.theme.withOpacity(0.2),
+                backgroundColor: ColorX.theme.withValues(alpha: 0.1),
+                highlightColor: ColorX.theme.withValues(alpha: 0.2),
                 titleColor: ColorX.black,
                 title: title,
                 faIcon: faIcon,

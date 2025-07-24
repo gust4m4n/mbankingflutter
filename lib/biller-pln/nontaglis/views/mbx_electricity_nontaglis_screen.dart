@@ -4,7 +4,7 @@ import '../../../widget-x/all_widgets.dart';
 import 'mbx_electricity_nontaglis_controller.dart';
 
 class MbxElectricityNonTagLisScreen extends StatelessWidget {
-  MbxElectricityNonTagLisScreen({Key? key}) : super(key: key);
+  const MbxElectricityNonTagLisScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ class MbxElectricityNonTagLisScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               title: 'Lanjut',
               enabled: controller.readyToSubmit(),
               clicked: () {

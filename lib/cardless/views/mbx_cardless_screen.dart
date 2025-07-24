@@ -5,7 +5,7 @@ import 'mbx_cardless_controller.dart';
 import 'mbx_cardless_denom_widget.dart';
 
 class MbxCardlessScreen extends StatelessWidget {
-  MbxCardlessScreen({Key? key}) : super(key: key);
+  const MbxCardlessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +123,7 @@ class MbxCardlessScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               title: 'Lanjut',
               enabled: controller.readyToSubmit(),
               clicked: () {

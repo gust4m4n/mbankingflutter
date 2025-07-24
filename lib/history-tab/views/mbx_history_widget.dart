@@ -7,7 +7,7 @@ import '../models/mbx_history_model.dart';
 // ignore: must_be_immutable
 class MbxHistoryWidget extends StatelessWidget {
   final MbxHistoryModel history;
-  MbxHistoryWidget(this.history);
+  const MbxHistoryWidget(this.history, {super.key});
 
   @override
   Widget build(BuildContext context) {

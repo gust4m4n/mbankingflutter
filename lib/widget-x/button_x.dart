@@ -24,7 +24,7 @@ class ButtonX extends StatelessWidget {
   final GestureTapCallback? clicked;
 
   const ButtonX({
-    Key? key,
+    super.key,
     this.faIcon,
     this.iconUrl = '',
     this.iconWidth = 24.0,
@@ -46,7 +46,7 @@ class ButtonX extends StatelessWidget {
     this.fontWeight = FontWeight.w700,
     this.enabled = true,
     this.clicked,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

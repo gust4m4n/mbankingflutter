@@ -5,7 +5,8 @@ class DashedDividerX extends StatelessWidget {
   final double dashHeight;
   final Color dashColor;
 
-  DashedDividerX({
+  const DashedDividerX({
+    super.key,
     this.dashWidth = 10.0,
     this.dashHeight = 1.0,
     this.dashColor = Colors.black,

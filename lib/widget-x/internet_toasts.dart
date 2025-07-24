@@ -1,6 +1,7 @@
 import 'all_widgets.dart';
 
 class InternetOfflineToast extends StatelessWidget {
+  const InternetOfflineToast({super.key});
   @override
   Widget build(BuildContext context) {
     return ContainerX(
@@ -40,6 +41,7 @@ class InternetOfflineToast extends StatelessWidget {
 }
 
 class InternetOnlineToast extends StatelessWidget {
+  const InternetOnlineToast({super.key});
   @override
   Widget build(BuildContext context) {
     return ContainerX(

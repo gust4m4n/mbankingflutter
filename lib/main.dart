@@ -5,7 +5,7 @@ import 'package:mbxflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_screen.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/login/views/mbx_login_screen.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm.dart';
 import 'package:mbxflutter/privacy-policy/views/mbx_privacy_policy_screen.dart';
 import 'package:mbxflutter/qris/views/mbx_qris_screen.dart';
@@ -47,7 +47,7 @@ Future<void> main() async {
     ColorX.theme = hexToColor(await MbxUserPreferencesVM.getTheme());
   } else {
     ColorX.theme = MbxThemeVM.colors[0];
-    final hex = '#${ColorX.theme.value.toRadixString(16)}';
+    final hex = '#${ColorX.theme.toARGB32().toRadixString(16).padLeft(8, '0')}';
     MbxUserPreferencesVM.setTheme(hex);
   }
   await MbxProfileVM.load();
@@ -125,56 +125,56 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/login',
-          page: () => MbxLoginScreen(),
+          page: () => const MbxLoginScreen(),
           transition: Transition.noTransition,
         ),
         GetPage(
           name: '/relogin',
-          page: () => MbxReloginScreen(),
+          page: () => const MbxReloginScreen(),
           transition: Transition.noTransition,
         ),
         GetPage(
           name: '/home',
-          page: () => MbxBottomNavBarScreen(),
+          page: () => const MbxBottomNavBarScreen(),
           transition: Transition.noTransition,
         ),
         GetPage(name: '/tnc', page: () => MbxTncScreen()),
         GetPage(name: '/privacy', page: () => MbxPrivacyPolicyScreen()),
         GetPage(name: '/news', page: () => MbxNewsScreen()),
         GetPage(name: '/receipt', page: () => MbxReceiptScreen()),
-        GetPage(name: '/transfer', page: () => MbxTransferScreen()),
-        GetPage(name: '/transfer/p2p', page: () => MbxTransferP2PScreen()),
+        GetPage(name: '/transfer', page: () => const MbxTransferScreen()),
+        GetPage(name: '/transfer/p2p', page: () => const MbxTransferP2PScreen()),
         GetPage(
           name: '/transfer/p2bank',
-          page: () => MbxTransferP2BankScreen(),
+          page: () => const MbxTransferP2BankScreen(),
         ),
         GetPage(
           name: '/qris',
-          page: () => MbxQRISScreen(),
+          page: () => const MbxQRISScreen(),
           transition: Transition.noTransition,
         ),
-        GetPage(name: '/cardless', page: () => MbxCardlessScreen()),
+        GetPage(name: '/cardless', page: () => const MbxCardlessScreen()),
         GetPage(
           name: '/cardless/payment',
           page: () => MbxCardlessPaymentScreen(),
         ),
         GetPage(
           name: '/electricity/prepaid',
-          page: () => MbxElectricityPrepaidScreen(),
+          page: () => const MbxElectricityPrepaidScreen(),
         ),
         GetPage(
           name: '/electricity/postpaid',
-          page: () => MbxElectricityPostpaidScreen(),
+          page: () => const MbxElectricityPostpaidScreen(),
         ),
         GetPage(
           name: '/electricity/nontaglis',
-          page: () => MbxElectricityNonTagLisScreen(),
+          page: () => const MbxElectricityNonTagLisScreen(),
         ),
-        GetPage(name: '/pulsa/prepaid', page: () => MbxPulsaPrepaidScreen()),
-        GetPage(name: '/pulsa/postpaid', page: () => MbxPulsaPostpaidScreen()),
-        GetPage(name: '/pulsa/dataplan', page: () => MbxPulsaDataPlanScreen()),
-        GetPage(name: '/pbb', page: () => MbxPBBScreen()),
-        GetPage(name: '/pdam', page: () => MbxPDAMScreen()),
+        GetPage(name: '/pulsa/prepaid', page: () => const MbxPulsaPrepaidScreen()),
+        GetPage(name: '/pulsa/postpaid', page: () => const MbxPulsaPostpaidScreen()),
+        GetPage(name: '/pulsa/dataplan', page: () => const MbxPulsaDataPlanScreen()),
+        GetPage(name: '/pbb', page: () => const MbxPBBScreen()),
+        GetPage(name: '/pdam', page: () => const MbxPDAMScreen()),
       ],
     );
   }

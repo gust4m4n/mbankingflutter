@@ -11,9 +11,10 @@ class MbxSofWidget extends StatelessWidget {
   final GestureTapCallback? onEyeClicked;
   final GestureTapCallback? clicked;
 
-  MbxSofWidget({
+  const MbxSofWidget({
+    super.key,
     required this.account,
-    required bool this.borders,
+    required this.borders,
     required this.onEyeClicked,
     this.clicked,
   });
@@ -22,7 +23,7 @@ class MbxSofWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWellX(
       highlightColor: clicked != null
-          ? ColorX.theme.withOpacity(0.1)
+          ? ColorX.theme.withValues(alpha: 0.1)
           : ColorX.transparent,
       cornerRadius: clicked != null ? 12.0 : 0.0,
       clicked: clicked,

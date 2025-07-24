@@ -6,6 +6,8 @@ import '../../widget-x/all_widgets.dart';
 import 'mbx_relogin_controller.dart';
 
 class MbxReloginScreen extends StatelessWidget {
+  const MbxReloginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MbxReloginController>(
@@ -111,8 +113,8 @@ class MbxReloginScreen extends StatelessWidget {
                                       faIcon: FontAwesomeIcons.qrcode,
                                       title: 'QRIS',
                                       titleColor: ColorX.black,
-                                      highlightColor: ColorX.theme.withOpacity(
-                                        0.2,
+                                      highlightColor: ColorX.theme.withValues(
+                                        alpha: 0.2,
                                       ),
                                       clicked: () {
                                         controller.btnQRISClicked();
@@ -123,8 +125,8 @@ class MbxReloginScreen extends StatelessWidget {
                                       faIcon: FontAwesomeIcons.sackDollar,
                                       title: 'Tarik Tunai',
                                       titleColor: ColorX.black,
-                                      highlightColor: ColorX.theme.withOpacity(
-                                        0.2,
+                                      highlightColor: ColorX.theme.withValues(
+                                        alpha: 0.2,
                                       ),
                                       clicked: () {
                                         controller.btnCardlessClicked();
@@ -135,8 +137,8 @@ class MbxReloginScreen extends StatelessWidget {
                                       faIcon: FontAwesomeIcons.question,
                                       title: 'Bantuan',
                                       titleColor: ColorX.black,
-                                      highlightColor: ColorX.theme.withOpacity(
-                                        0.2,
+                                      highlightColor: ColorX.theme.withValues(
+                                        alpha: 0.2,
                                       ),
                                       clicked: () {
                                         controller.btnHelpClicked();
@@ -152,7 +154,7 @@ class MbxReloginScreen extends StatelessWidget {
                         ButtonX(
                           width: 150.0,
                           backgroundColor: ColorX.transparent,
-                          highlightColor: ColorX.theme.withOpacity(0.1),
+                          highlightColor: ColorX.theme.withValues(alpha: 0.1),
                           title: 'Ganti Akun',
                           titleColor: ColorX.black,
                           clicked: () {

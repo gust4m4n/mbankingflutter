@@ -61,6 +61,10 @@ dependencies:
   json_sorter: ^1.0.0
   connectivity_plus: ^6.1.4
   flutter_native_splash: ^2.4.6
+  intl: ^0.20.1
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  crypto: ^3.0.6
 
 dev_dependencies:
   flutter_test:

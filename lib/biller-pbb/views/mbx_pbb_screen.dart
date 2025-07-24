@@ -4,7 +4,7 @@ import '../../widget-x/all_widgets.dart';
 import 'mbx_pbb_controller.dart';
 
 class MbxPBBScreen extends StatelessWidget {
-  MbxPBBScreen({Key? key}) : super(key: key);
+  const MbxPBBScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +70,7 @@ class MbxPBBScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.nopError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -94,10 +95,10 @@ class MbxPBBScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.nopError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.yearError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -158,13 +159,12 @@ class MbxPBBScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.yearError,
             ),
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
               title: 'Lanjut',
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

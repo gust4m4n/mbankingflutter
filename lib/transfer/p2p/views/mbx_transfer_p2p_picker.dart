@@ -60,7 +60,7 @@ class MbxTransferP2PPicker extends GetWidget<MbxTransferP2PPickerController> {
                         itemCount: controller.destListVM.filtered.length,
                         itemBuilder: (BuildContext context, int index) {
                           return InkWellX(
-                              highlightColor: ColorX.theme.withOpacity(0.1),
+                              highlightColor: ColorX.theme.withValues(alpha: 0.1),
                               clicked: () {
                                 Get.back(
                                     result:

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:client_information/client_information.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:uuid/uuid.dart';
 
 class MbxDeviceVM {

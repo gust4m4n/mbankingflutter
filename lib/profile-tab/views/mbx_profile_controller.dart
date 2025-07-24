@@ -2,7 +2,7 @@ import 'package:mbxflutter/avatar/views/mbx_avatar_sheet.dart';
 import 'package:mbxflutter/help/views/mbx_help_sheet.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/profile-tab/mbx_change_pin_vm.dart';
 import 'package:mbxflutter/profile-tab/mbx_logout_vm.dart';
 import 'package:mbxflutter/profile-tab/mbx_set_biometric_vm.dart';

@@ -1,4 +1,4 @@
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/profile-tab/mbx_biometric_vm.dart';
 
 import '../../widget-x/all_widgets.dart';

@@ -60,7 +60,7 @@ class MbxReceiptController extends GetxController {
               name: filename,
             ).saveTo(filename).then((value) {});
           } else {
-            Share.shareXFiles([
+            await Share.shareXFiles([
               XFile.fromData(
                 capturedImage!,
                 mimeType: 'image/jpeg',

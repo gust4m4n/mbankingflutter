@@ -2,6 +2,7 @@ import '../../widget-x/all_widgets.dart';
 import 'mbx_cardless_payment_controller.dart';
 
 class MbxCardlessPaymentScreen extends StatelessWidget {
+  const MbxCardlessPaymentScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MbxCardlessPaymentController>(

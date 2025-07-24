@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:mbxflutter/apis/mbx_apis.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 
 class MbxLoginPinVM {
   static Future<ApiXResponse> request({

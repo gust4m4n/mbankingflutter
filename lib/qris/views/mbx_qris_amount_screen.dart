@@ -6,7 +6,7 @@ import 'mbx_qris_amount_controller.dart';
 
 class MbxQRISAmountScreen extends StatelessWidget {
   final MbxQRISInquiryModel inquiry;
-  MbxQRISAmountScreen({required this.inquiry});
+  const MbxQRISAmountScreen({super.key, required this.inquiry});
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +54,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.amountError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -78,7 +79,6 @@ class MbxQRISAmountScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.amountError,
             ),
             ContainerX(height: 12.0),
             Column(
@@ -138,7 +138,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
             ButtonX(
               title: 'Lanjut',
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.2),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.2),
               enabled: controller.amount > 0,
               clicked: () {
                 controller.btnNextClicked();

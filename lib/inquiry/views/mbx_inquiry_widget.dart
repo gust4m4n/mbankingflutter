@@ -6,7 +6,7 @@ import '../../widget-x/all_widgets.dart';
 class MbxInquiryWidget extends StatelessWidget {
   final MbxLabelValueModel row;
 
-  MbxInquiryWidget({required this.row});
+  const MbxInquiryWidget({super.key, required this.row});
 
   @override
   Widget build(BuildContext context) {

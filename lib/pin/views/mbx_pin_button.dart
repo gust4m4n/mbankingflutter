@@ -6,12 +6,12 @@ class MbxPinButton extends StatelessWidget {
 
   final GestureTapCallback? clicked;
 
-  MbxPinButton({
-    Key? key,
+  const MbxPinButton({
+    super.key,
     this.title = '',
-    this.faIcon = null,
+    this.faIcon,
     this.clicked,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,8 @@ class MbxPinButton extends StatelessWidget {
             ? ButtonX(
                 height: 48.0,
                 cornerRadius: 8.0,
-                backgroundColor: ColorX.theme.withOpacity(1.0),
-                highlightColor: ColorX.theme.withOpacity(0.2),
+                backgroundColor: ColorX.theme.withValues(alpha: 1.0),
+                highlightColor: ColorX.theme.withValues(alpha: 0.2),
                 titleColor: ColorX.white,
                 title: title,
                 faIcon: faIcon,

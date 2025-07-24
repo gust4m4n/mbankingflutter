@@ -68,8 +68,9 @@ class BasicToast extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final String msg;
-  BasicToast(
-      {required this.backgroundColor,
+  const BasicToast(
+      {super.key,
+      required this.backgroundColor,
       required this.textColor,
       required this.msg});
 
@@ -102,7 +103,7 @@ class BasicToast extends StatelessWidget {
 
 class BasicSnackBar extends StatelessWidget {
   final String msg;
-  BasicSnackBar({required this.msg});
+  const BasicSnackBar({super.key, required this.msg});
 
   @override
   Widget build(BuildContext context) {

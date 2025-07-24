@@ -5,7 +5,7 @@ import 'mbx_pulsa_prepaid_controller.dart';
 import 'mbx_pulsa_prepaid_denom_widget.dart';
 
 class MbxPulsaPrepaidScreen extends StatelessWidget {
-  MbxPulsaPrepaidScreen({Key? key}) : super(key: key);
+  const MbxPulsaPrepaidScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +134,7 @@ class MbxPulsaPrepaidScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               title: 'Lanjut',
               enabled: controller.readyToSubmit(),
               clicked: () {

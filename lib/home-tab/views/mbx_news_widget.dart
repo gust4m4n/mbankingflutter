@@ -12,7 +12,7 @@ class MbxNewsWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 16.0),
       child: InkWellX(
-        highlightColor: ColorX.theme.withOpacity(0.1),
+        highlightColor: ColorX.theme.withValues(alpha: 0.1),
         cornerRadius: 12.0,
         clicked: () {
           Get.toNamed('/news', arguments: news);

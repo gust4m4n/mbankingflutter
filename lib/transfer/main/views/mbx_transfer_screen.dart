@@ -3,7 +3,7 @@ import 'mbx_transfer_controller.dart';
 import 'mbx_transfer_history_widget.dart';
 
 class MbxTransferScreen extends StatelessWidget {
-  MbxTransferScreen({Key? key}) : super(key: key);
+  const MbxTransferScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -178,7 +178,7 @@ class MbxTransferScreen extends StatelessWidget {
                                                     .historyListVM.list[index];
                                                 return InkWellX(
                                                     highlightColor: ColorX.theme
-                                                        .withOpacity(0.1),
+                                                        .withValues(alpha: 0.1),
                                                     clicked: () {
                                                       controller
                                                           .openHistory(history);

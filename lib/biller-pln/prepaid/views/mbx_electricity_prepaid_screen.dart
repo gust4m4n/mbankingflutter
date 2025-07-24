@@ -5,7 +5,7 @@ import 'mbx_electricity_prepaid_controller.dart';
 import 'mbx_electricity_prepaid_denom_widget.dart';
 
 class MbxElectricityPrepaidScreen extends StatelessWidget {
-  MbxElectricityPrepaidScreen({Key? key}) : super(key: key);
+  const MbxElectricityPrepaidScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +126,7 @@ class MbxElectricityPrepaidScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               title: 'Lanjut',
               enabled: controller.readyToSubmit(),
               clicked: () {

@@ -4,7 +4,7 @@ import '../../widget-x/all_widgets.dart';
 import 'mbx_pdam_controller.dart';
 
 class MbxPDAMScreen extends StatelessWidget {
-  MbxPDAMScreen({Key? key}) : super(key: key);
+  const MbxPDAMScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -164,7 +164,7 @@ class MbxPDAMScreen extends StatelessWidget {
             ButtonX(
               backgroundColor: ColorX.theme,
               title: 'Lanjut',
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

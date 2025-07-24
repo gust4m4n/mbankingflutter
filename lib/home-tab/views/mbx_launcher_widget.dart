@@ -9,13 +9,14 @@ class MbxLauncherWidget extends StatelessWidget {
   final Color highlightColor;
   final GestureTapCallback? clicked;
 
-  MbxLauncherWidget(
-      {required this.color,
+  const MbxLauncherWidget(
+      {super.key,
+      required this.color,
       required this.faIcon,
       required this.title,
       required this.titleColor,
       required this.highlightColor,
-      this.clicked = null});
+      this.clicked});
 
   @override
   Widget build(BuildContext context) {

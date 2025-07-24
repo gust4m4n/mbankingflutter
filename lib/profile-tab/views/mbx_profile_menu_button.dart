@@ -23,7 +23,7 @@ class MbaxProfileMenuButton extends StatelessWidget {
     return ContainerX(
       padding: EdgeInsets.only(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0),
       child: InkWellX(
-          highlightColor: ColorX.theme.withOpacity(0.1),
+          highlightColor: ColorX.theme.withValues(alpha: 0.1),
           clicked: () {
             clicked!();
           },
@@ -36,7 +36,7 @@ class MbaxProfileMenuButton extends StatelessWidget {
                     width: 40.0,
                     height: 40.0,
                     cornerRadius: 20.0,
-                    backgroundColor: ColorX.theme.withOpacity(0.1),
+                    backgroundColor: ColorX.theme.withValues(alpha: 0.1),
                     child: Center(
                       child: ImageX(
                         faIcon: faIcon,

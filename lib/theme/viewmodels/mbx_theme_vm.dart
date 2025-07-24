@@ -1,4 +1,4 @@
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/theme/views/mbx_theme_sheet.dart';
 import 'package:mbxflutter/widget-x/all_widgets.dart';
 

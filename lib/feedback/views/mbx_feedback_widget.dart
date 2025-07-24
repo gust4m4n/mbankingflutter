@@ -6,8 +6,9 @@ class MbxFeedbackWidget extends StatelessWidget {
   final IconData faIcon;
   final Color faColor;
   final GestureTapCallback clicked;
-  MbxFeedbackWidget(
-      {required this.title,
+  const MbxFeedbackWidget(
+      {super.key,
+      required this.title,
       required this.faIcon,
       required this.faColor,
       required this.clicked});

@@ -7,16 +7,16 @@ class MbxCardlessDenomWidget extends StatelessWidget {
   final int nominal;
   final GestureTapCallback? clicked;
 
-  MbxCardlessDenomWidget({required this.nominal, this.clicked = null});
+  const MbxCardlessDenomWidget({super.key, required this.nominal, this.clicked});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
-      highlightColor: ColorX.theme.withOpacity(0.1),
+      highlightColor: ColorX.theme.withValues(alpha: 0.1),
       cornerRadius: 8.0,
       clicked: clicked,
       child: ContainerX(
-        backgroundColor: ColorX.theme.withOpacity(0.1),
+        backgroundColor: ColorX.theme.withValues(alpha: 0.1),
         cornerRadius: 8.0,
         child: Center(
           child: TextX(

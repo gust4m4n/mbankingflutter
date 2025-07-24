@@ -21,6 +21,9 @@ class MbxDeviceInfoVM {
           simulator = !iosInfo.isPhysicalDevice;
         }
       }
-    } catch (e) {}
+    } catch (e) {
+      // Log error or handle appropriately
+      print('Error getting device info: $e');
+    }
   }
 }

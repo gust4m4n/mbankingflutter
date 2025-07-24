@@ -19,7 +19,7 @@ export 'container_error.dart';
 export 'container_x.dart';
 export 'dashed_divider_x.dart';
 export 'dialog_x.dart';
-export 'get+loading.dart';
+export 'get_loading.dart';
 export 'image_x.dart';
 export 'inkwell_x.dart';
 export 'internet_toasts.dart';

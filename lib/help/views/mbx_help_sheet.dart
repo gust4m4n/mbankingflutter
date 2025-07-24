@@ -5,7 +5,7 @@ import 'mbx_help_controller.dart';
 
 // ignore: must_be_immutable
 class MbxHelpSheet extends GetWidget<MbxHelpController> {
-  MbxHelpSheet();
+  const MbxHelpSheet({super.key});
 
   static Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();

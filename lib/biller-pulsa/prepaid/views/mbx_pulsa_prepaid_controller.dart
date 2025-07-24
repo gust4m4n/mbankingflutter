@@ -1,6 +1,6 @@
 import 'package:mbxflutter/biller-pulsa/prepaid/models/mbx_pulsa_prepaid_denom_model.dart';
 import 'package:mbxflutter/biller-pulsa/prepaid/viewmodels/mbx_pulsa_prepaid_denoms_vm.dart';
-import 'package:mbxflutter/biller-pulsa/prepaid/viewmodels/mbx_pulsa_prepaid_inquiry_vm%20.dart';
+import 'package:mbxflutter/biller-pulsa/prepaid/viewmodels/mbx_pulsa_prepaid_inquiry_vm.dart';
 import 'package:mbxflutter/biller-pulsa/prepaid/viewmodels/mbx_pulsa_prepaid_payment_vm.dart';
 import 'package:mbxflutter/inquiry/models/mbx_inquiry_model.dart';
 import 'package:mbxflutter/inquiry/views/mbx_inquiry_sheet.dart';
@@ -18,11 +18,6 @@ class MbxPulsaPrepaidController extends GetxController {
   var customerIdError = '';
   final denomsVM = MbxPulsaPrepaidDenomsVM();
   var selectedDenom = MbxPulsaPrepaidDenomModel();
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   @override
   void onReady() {

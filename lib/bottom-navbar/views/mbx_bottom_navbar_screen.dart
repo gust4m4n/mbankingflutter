@@ -9,7 +9,7 @@ import 'mbx_bottom_navbar_controller.dart';
 // ignore: must_be_immutable
 class MbxBottomNavBarScreen extends StatelessWidget {
   final int tabBarIndex;
-  MbxBottomNavBarScreen({this.tabBarIndex = 0});
+  const MbxBottomNavBarScreen({super.key, this.tabBarIndex = 0});
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MbxBottomNavBarController>(
@@ -36,7 +36,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                     width: MbxButtonNavBarButton.buttonWidth,
                     height: MbxButtonNavBarButton.buttonWidth,
                     cornerRadius: MbxButtonNavBarButton.buttonWidth / 2.0,
-                    backgroundColor: ColorX.theme.withOpacity(0.1),
+                    backgroundColor: ColorX.theme.withValues(alpha: 0.1),
                     child: Center(
                         child: ButtonX(
                       backgroundColor: ColorX.theme,
@@ -60,7 +60,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                       backgroundColor: ColorX.white),
                   ContainerX(
                       height: 60.0 + MediaQuery.of(Get.context!).padding.bottom,
-                      backgroundColor: ColorX.theme.withOpacity(0.1)),
+                      backgroundColor: ColorX.theme.withValues(alpha: 0.1)),
                   BottomAppBar(
                     padding: const EdgeInsets.symmetric(horizontal: 0.0),
                     height: 60.0,

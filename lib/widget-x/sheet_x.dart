@@ -6,7 +6,7 @@ class SheetX {
       double percentHeight = 0.0,
       String title = '',
       bool autoClose = true,
-      final GestureTapCallback? onAddClicked = null}) {
+      GestureTapCallback? onAddClicked}) {
     FocusManager.instance.primaryFocus?.unfocus();
     return Get.bottomSheet(
       isDismissible: autoClose,
@@ -51,7 +51,7 @@ class SheetX {
                                           child: Center(
                                               child: ImageX(
                                             backgroundColor:
-                                                ColorX.theme.withOpacity(0.2),
+                                                ColorX.theme.withValues(alpha: 0.2),
                                             faIcon: FontAwesomeIcons.xmark,
                                             width: 32.0,
                                             height: 32.0,
@@ -83,7 +83,7 @@ class SheetX {
                                                 child: Center(
                                                     child: ImageX(
                                                   backgroundColor: ColorX.black
-                                                      .withOpacity(0.2),
+                                                      .withValues(alpha: 0.2),
                                                   faIcon: FontAwesomeIcons.plus,
                                                   width: 32.0,
                                                   height: 32.0,
@@ -185,8 +185,8 @@ class SheetX {
                     child: ButtonX(
                       title: rightBtnTitle,
                       titleColor: ColorX.black,
-                      backgroundColor: ColorX.theme.withOpacity(0.2),
-                      highlightColor: ColorX.theme.withOpacity(0.3),
+                      backgroundColor: ColorX.theme.withValues(alpha: 0.2),
+                      highlightColor: ColorX.theme.withValues(alpha: 0.3),
                       clicked: onRightBtnClicked ?? () => {},
                     ),
                   ),

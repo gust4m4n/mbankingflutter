@@ -7,7 +7,7 @@ import '../../home-tab/views/mbx_theme_button.dart';
 import 'mbx_login_controller.dart';
 
 class MbxLoginScreen extends StatelessWidget {
-  MbxLoginScreen({Key? key}) : super(key: key);
+  const MbxLoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class MbxLoginScreen extends StatelessWidget {
                         effect: SlideEffect(
                           dotHeight: 8,
                           dotWidth: 8,
-                          dotColor: ColorX.theme.withOpacity(0.2),
+                          dotColor: ColorX.theme.withValues(alpha: 0.2),
                           activeDotColor: ColorX.theme,
                         ),
                       ),

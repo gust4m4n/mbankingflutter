@@ -6,7 +6,7 @@ import 'mbx_string_picker_widget.dart';
 class MbxStringPicker extends GetWidget<MbxStringPickerController> {
   final String title;
   final List<String> list;
-  MbxStringPicker({required this.title, required this.list});
+  const MbxStringPicker({super.key, required this.title, required this.list});
 
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();

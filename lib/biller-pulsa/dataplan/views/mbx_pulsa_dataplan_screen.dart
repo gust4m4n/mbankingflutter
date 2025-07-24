@@ -5,7 +5,7 @@ import 'mbx_pulsa_dataplan_controller.dart';
 import 'mbx_pulsa_dataplan_denom_widget.dart';
 
 class MbxPulsaDataPlanScreen extends StatelessWidget {
-  MbxPulsaDataPlanScreen({Key? key}) : super(key: key);
+  const MbxPulsaDataPlanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +134,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               title: 'Lanjut',
               enabled: controller.readyToSubmit(),
               clicked: () {

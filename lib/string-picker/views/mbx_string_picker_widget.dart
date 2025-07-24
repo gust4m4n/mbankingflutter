@@ -4,7 +4,7 @@ import '../../widget-x/all_widgets.dart';
 class MbxStringPickerWidget extends StatelessWidget {
   final String title;
 
-  MbxStringPickerWidget({required this.title});
+  const MbxStringPickerWidget({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

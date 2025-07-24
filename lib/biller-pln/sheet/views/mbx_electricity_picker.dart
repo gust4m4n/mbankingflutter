@@ -6,6 +6,7 @@ import 'mbx_electricity_controller.dart';
 
 // ignore: must_be_immutable
 class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
+  const MbxElectricityPicker({super.key});
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showCustom(widget: this, title: 'Listrik PLN');

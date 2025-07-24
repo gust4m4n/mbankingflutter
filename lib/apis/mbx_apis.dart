@@ -1,7 +1,7 @@
 import 'package:mbxflutter/apis/api_x.dart';
 import 'package:mbxflutter/apis/mbx_device_vm.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm+users.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 
 import 'mbx_baseurl_vm.dart';
 

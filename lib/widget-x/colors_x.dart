@@ -16,5 +16,5 @@ class ColorX {
 }
 
 Color hexToColor(String code) {
-  return new Color(int.parse(code.substring(3, 9), radix: 16) + 0xFF000000);
+  return Color(int.parse(code.substring(3, 9), radix: 16) + 0xFF000000);
 }

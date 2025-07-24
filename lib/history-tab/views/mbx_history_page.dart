@@ -5,7 +5,7 @@ import 'mbx_history_controller.dart';
 import 'mbx_history_widget.dart';
 
 class MbxHistoryPage extends StatelessWidget {
-  MbxHistoryPage({Key? key}) : super(key: key);
+  const MbxHistoryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class MbxHistoryPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 final history = controller.historyListVM.list[index];
                 return InkWellX(
-                  highlightColor: ColorX.theme.withOpacity(0.1),
+                  highlightColor: ColorX.theme.withValues(alpha: 0.1),
                   clicked: () {
                     Get.toNamed(
                       '/receipt',

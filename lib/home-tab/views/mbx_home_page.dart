@@ -12,7 +12,7 @@ import 'mbx_news_widget.dart';
 import 'mbx_theme_button.dart';
 
 class MbxHomePage extends StatelessWidget {
-  MbxHomePage({Key? key}) : super(key: key);
+  const MbxHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -271,7 +271,7 @@ class MbxHomePage extends StatelessWidget {
                         SizedBox(height: 8.0),
                         Visibility(
                           visible:
-                              !controller.foreignExchangeListVM.list.isEmpty,
+                              controller.foreignExchangeListVM.list.isNotEmpty,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -369,7 +369,7 @@ class MbxHomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 8.0),
                         Visibility(
-                          visible: MbxNewsListVM.list.length > 0,
+                          visible: MbxNewsListVM.list.isNotEmpty,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

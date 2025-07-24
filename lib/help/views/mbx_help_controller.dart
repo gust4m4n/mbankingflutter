@@ -15,11 +15,6 @@ class MbxHelpController extends GetxController {
     }
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
   btnCloseClicked() {
     Get.back();
   }

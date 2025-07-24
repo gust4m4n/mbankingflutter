@@ -3,7 +3,7 @@ import '../../widget-x/all_widgets.dart';
 // ignore: must_be_immutable
 class MbxThemeButton extends StatelessWidget {
   final GestureTapCallback? clicked;
-  MbxThemeButton({required this.clicked});
+  const MbxThemeButton({super.key, required this.clicked});
 
   @override
   Widget build(BuildContext context) {

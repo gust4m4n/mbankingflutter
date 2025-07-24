@@ -5,6 +5,8 @@ import 'mbx_avatar_controller.dart';
 
 // ignore: must_be_immutable
 class MbxAvatarSheet extends GetWidget<MbxAvatarController> {
+  const MbxAvatarSheet({super.key});
+  
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showCustom(widget: this, title: 'Ganti Foto');

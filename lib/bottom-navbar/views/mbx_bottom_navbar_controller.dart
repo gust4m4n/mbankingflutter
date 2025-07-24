@@ -37,11 +37,6 @@ class MbxBottomNavBarController extends SuperController {
     //await MbxAntiJailbreakVM.check();
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
   onChange(int index) {
     LoggerX.log('MbxBottomNavBarController.onChange: $index');
     tabBarIndex = index;

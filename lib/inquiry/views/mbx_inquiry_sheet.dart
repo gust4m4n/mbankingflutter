@@ -10,7 +10,8 @@ class MbxInquirySheet extends GetWidget<MbxInquiryController> {
   final String confirmBtnTitle;
   final MbxInquiryModel inquiry;
 
-  MbxInquirySheet({
+  const MbxInquirySheet({
+    super.key,
     required this.title,
     required this.confirmBtnTitle,
     required this.inquiry,
@@ -61,8 +62,8 @@ class MbxInquirySheet extends GetWidget<MbxInquiryController> {
                   ContainerX(width: 8.0),
                   Expanded(
                     child: ButtonX(
-                      backgroundColor: ColorX.theme.withOpacity(0.2),
-                      highlightColor: ColorX.theme.withOpacity(0.3),
+                      backgroundColor: ColorX.theme.withValues(alpha: 0.2),
+                      highlightColor: ColorX.theme.withValues(alpha: 0.3),
                       title: 'Batal',
                       titleColor: ColorX.black,
                       clicked: () {

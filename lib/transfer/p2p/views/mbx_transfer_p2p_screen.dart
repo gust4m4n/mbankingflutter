@@ -5,7 +5,7 @@ import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_p2p_controller.dart';
 
 class MbxTransferP2PScreen extends StatelessWidget {
-  MbxTransferP2PScreen({Key? key}) : super(key: key);
+  const MbxTransferP2PScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +232,7 @@ class MbxTransferP2PScreen extends StatelessWidget {
             ButtonX(
               backgroundColor: ColorX.theme,
               title: 'Lanjut',
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

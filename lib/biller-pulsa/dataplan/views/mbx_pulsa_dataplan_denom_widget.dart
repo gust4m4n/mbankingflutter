@@ -9,22 +9,23 @@ class MbxPulsaDataPlanDenomWidget extends StatelessWidget {
   final bool selected;
   final GestureTapCallback? clicked;
 
-  MbxPulsaDataPlanDenomWidget({
+  const MbxPulsaDataPlanDenomWidget({
+    super.key,
     required this.denom,
     required this.selected,
-    this.clicked = null,
+    this.clicked,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
-      highlightColor: ColorX.theme.withOpacity(0.1),
+      highlightColor: ColorX.theme.withValues(alpha: 0.1),
       cornerRadius: 8.0,
       clicked: clicked,
       child: ContainerX(
         backgroundColor: selected
-            ? ColorX.theme.withOpacity(0.2)
-            : ColorX.theme.withOpacity(0.1),
+            ? ColorX.theme.withValues(alpha: 0.2)
+            : ColorX.theme.withValues(alpha: 0.1),
         cornerRadius: 8.0,
         borderWidth: selected ? 1.0 : 0.0,
         borderColor: selected ? ColorX.theme : ColorX.transparent,

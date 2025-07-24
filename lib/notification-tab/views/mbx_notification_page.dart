@@ -5,7 +5,7 @@ import 'mbx_notification_controller.dart';
 import 'mbx_notification_widget.dart';
 
 class MbxNotificationPage extends StatelessWidget {
-  MbxNotificationPage({Key? key}) : super(key: key);
+  const MbxNotificationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class MbxNotificationPage extends StatelessWidget {
                   ),
                   child: InkWellX(
                     backgroundColor: ColorX.white,
-                    highlightColor: ColorX.theme.withOpacity(0.1),
+                    highlightColor: ColorX.theme.withValues(alpha: 0.1),
                     cornerRadius: 16.0,
                     clicked: () {
                       Get.toNamed(

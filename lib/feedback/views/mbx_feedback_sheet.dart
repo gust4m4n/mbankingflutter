@@ -7,6 +7,7 @@ import '../../widget-x/all_widgets.dart';
 
 // ignore: must_be_immutable
 class MbxFeedbackSheet extends GetWidget<MbxFeedbackController> {
+  const MbxFeedbackSheet({super.key});
   static void show({required String feature}) async {
     final resp = await AppxFeedbackVM.get(feature: feature);
     if (resp.score == AppxFeedbackScore.notYet) {

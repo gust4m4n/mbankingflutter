@@ -6,13 +6,13 @@ class MbxHelpWidget extends StatelessWidget {
   final String title;
   final GestureTapCallback? clicked;
 
-  MbxHelpWidget({required this.faIcon, required this.title, this.clicked});
+  const MbxHelpWidget({super.key, required this.faIcon, required this.title, this.clicked});
 
   @override
   Widget build(BuildContext context) {
     return InkWellX(
         highlightColor: clicked != null
-            ? ColorX.theme.withOpacity(0.1)
+            ? ColorX.theme.withValues(alpha: 0.1)
             : ColorX.transparent,
         cornerRadius: clicked != null ? 12.0 : 0.0,
         clicked: clicked,

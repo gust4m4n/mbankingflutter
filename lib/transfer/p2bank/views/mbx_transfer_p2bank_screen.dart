@@ -4,7 +4,7 @@ import '../../../widget-x/all_widgets.dart';
 import 'mbx_transfer_p2bank_controller.dart';
 
 class MbxTransferP2BankScreen extends StatelessWidget {
-  MbxTransferP2BankScreen({Key? key}) : super(key: key);
+  const MbxTransferP2BankScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -304,7 +304,7 @@ class MbxTransferP2BankScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              disabledBackgroundColor: ColorX.theme.withOpacity(0.1),
+              disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               title: 'Lanjut',
               enabled: controller.readyToSubmit(),
               clicked: () {

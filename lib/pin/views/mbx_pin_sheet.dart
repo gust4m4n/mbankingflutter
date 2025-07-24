@@ -244,7 +244,7 @@ class MbxPinSheet extends GetWidget<MbxPinController> {
                               fontSize: 15.0,
                               fontWeight: FontWeight.w700,
                               backgroundColor: ColorX.transparent,
-                              highlightColor: ColorX.theme.withOpacity(0.1),
+                              highlightColor: ColorX.theme.withValues(alpha: 0.1),
                               width: 120.0,
                               height: 32.0,
                               cornerRadius: 8.0,
