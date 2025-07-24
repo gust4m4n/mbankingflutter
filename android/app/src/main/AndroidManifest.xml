@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" tools:node="remove" />
     
     <application
-        android:label="MbankingApp"
+        android:label="MBankingApp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
