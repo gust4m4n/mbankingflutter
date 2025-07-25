@@ -7,6 +7,9 @@ class SheetX {
     String title = '',
     bool autoClose = true,
     GestureTapCallback? onAddClicked,
+    Color backgroundColor = ColorX.white,
+    Color titleColor = ColorX.black,
+    Color? closeButtonColor,
   }) {
     FocusManager.instance.primaryFocus?.unfocus();
     return Get.bottomSheet(
@@ -31,7 +34,7 @@ class SheetX {
               bottom: 16.0 + MediaQuery.of(Get.context!).padding.bottom,
             ),
             child: ContainerX(
-              backgroundColor: ColorX.white,
+              backgroundColor: backgroundColor,
               cornerRadius: 16.0,
               child: Wrap(
                 children: [
@@ -53,10 +56,11 @@ class SheetX {
                                   height: double.infinity,
                                   child: Center(
                                     child: ImageX(
-                                      backgroundColor: ColorX.theme.withValues(
-                                        alpha: 0.2,
-                                      ),
+                                      backgroundColor:
+                                          (closeButtonColor ?? ColorX.white)
+                                              .withValues(alpha: 0.2),
                                       faIcon: FontAwesomeIcons.xmark,
+                                      color: closeButtonColor ?? ColorX.theme,
                                       width: 32.0,
                                       height: 32.0,
                                       cornerRadius: 20.0,
@@ -69,7 +73,7 @@ class SheetX {
                               Expanded(
                                 child: TextX(
                                   title,
-                                  color: ColorX.black,
+                                  color: titleColor,
                                   fontSize: 17.0,
                                   fontWeight: FontWeight.w600,
                                   textAlign: TextAlign.center,

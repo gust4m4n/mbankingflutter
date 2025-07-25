@@ -33,7 +33,14 @@ class MbxPinSheet extends GetWidget<MbxPinController> {
     this.onSubmit = onSubmit;
     this.optionTitle = optionTitle;
     this.optionClicked = optionClicked;
-    return SheetX.showCustom(widget: this, title: title, autoClose: false);
+    return SheetX.showCustom(
+      widget: this,
+      title: title,
+      autoClose: false,
+      backgroundColor: ColorX.theme,
+      titleColor: ColorX.white,
+      closeButtonColor: ColorX.white,
+    );
   }
 
   clear(String error) {
@@ -46,7 +53,7 @@ class MbxPinSheet extends GetWidget<MbxPinController> {
     return GetBuilder<MbxPinController>(
       init: MbxPinController(widget: this),
       builder: (controller) => ContainerX(
-        backgroundColor: ColorX.white,
+        backgroundColor: ColorX.theme,
         child: Wrap(
           alignment: WrapAlignment.center,
           children: [
@@ -56,7 +63,7 @@ class MbxPinSheet extends GetWidget<MbxPinController> {
                 padding: EdgeInsets.only(left: 48.0, right: 48.0),
                 child: TextX(
                   message,
-                  color: ColorX.black,
+                  color: ColorX.white,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w400,
                   textAlign: TextAlign.center,
@@ -243,11 +250,11 @@ class MbxPinSheet extends GetWidget<MbxPinController> {
                       children: [
                         ButtonX(
                           title: optionTitle,
-                          titleColor: ColorX.black,
+                          titleColor: ColorX.white,
                           fontSize: 15.0,
                           fontWeight: FontWeight.w700,
                           backgroundColor: ColorX.transparent,
-                          highlightColor: ColorX.theme.withValues(alpha: 0.1),
+                          highlightColor: ColorX.white.withValues(alpha: 0.1),
                           width: 120.0,
                           height: 32.0,
                           cornerRadius: 8.0,

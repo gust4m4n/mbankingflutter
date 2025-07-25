@@ -16,12 +16,12 @@ class MbxPinDot extends StatelessWidget {
   Widget build(BuildContext context) {
     return secure
         ? ContainerX(
-            backgroundColor: on ? ColorX.gray : ColorX.transparent,
+            backgroundColor: on ? ColorX.white : ColorX.transparent,
             width: 12.0,
             height: 12,
             cornerRadius: 6.0,
             borderWidth: 1.0,
-            borderColor: ColorX.gray,
+            borderColor: ColorX.white,
           )
         : ContainerX(
             backgroundColor: ColorX.transparent,
@@ -29,9 +29,14 @@ class MbxPinDot extends StatelessWidget {
             height: 32.0,
             cornerRadius: 8.0,
             borderWidth: 1.0,
-            borderColor: ColorX.gray,
+            borderColor: ColorX.white,
             child: Center(
-              child: TextX(number, fontSize: 17.0, fontWeight: FontWeight.w700),
+              child: TextX(
+                number,
+                fontSize: 17.0,
+                fontWeight: FontWeight.w700,
+                color: ColorX.white,
+              ),
             ),
           );
   }
