@@ -55,6 +55,7 @@ class MbxFaqItem extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   color: ColorX.gray,
                   textAlign: TextAlign.justify,
+                  maxLines: null,
                 ),
               ],
             ],

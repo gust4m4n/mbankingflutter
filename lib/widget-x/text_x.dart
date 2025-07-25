@@ -8,7 +8,7 @@ class TextX extends StatelessWidget {
   final FontWeight fontWeight;
   final TextAlign? textAlign;
   final bool underline;
-  final int maxLines;
+  final int? maxLines;
 
   const TextX(
     this.text, {
@@ -26,7 +26,7 @@ class TextX extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      overflow: TextOverflow.ellipsis,
+      overflow: maxLines == null ? TextOverflow.visible : TextOverflow.ellipsis,
       maxLines: maxLines,
       textAlign: textAlign,
       style: TextStyle(
