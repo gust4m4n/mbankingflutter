@@ -3,13 +3,13 @@ import 'package:mbxflutter/biller-pln/prepaid/views/mbx_electricity_prepaid_scre
 import 'package:mbxflutter/biller-pulsa/dataplan/views/mbx_pulsa_dataplan_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_screen.dart';
+import 'package:mbxflutter/language/models/translation_service.dart';
+import 'package:mbxflutter/language/views/mbx_language_controller.dart';
+import 'package:mbxflutter/language/views/mbx_language_selection_screen.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/login/views/mbx_login_screen.dart';
-import 'package:mbxflutter/preferences/mbx_language_controller.dart';
-import 'package:mbxflutter/preferences/mbx_language_selection_screen.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
-import 'package:mbxflutter/preferences/translation_service.dart';
 import 'package:mbxflutter/privacy-policy/views/mbx_privacy_policy_screen.dart';
 import 'package:mbxflutter/qris/views/mbx_qris_screen.dart';
 import 'package:mbxflutter/receipt/views/mbx_receipt_screen.dart';

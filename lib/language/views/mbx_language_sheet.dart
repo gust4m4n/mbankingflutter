@@ -1,6 +1,6 @@
-import '../preferences/language_preferences.dart';
-import '../preferences/mbx_language_controller.dart';
-import '../widget-x/all_widgets.dart';
+import '../../widget-x/all_widgets.dart';
+import '../models/language_preferences.dart';
+import '../views/mbx_language_controller.dart';
 import 'mbx_language_widget.dart';
 
 // ignore: must_be_immutable
