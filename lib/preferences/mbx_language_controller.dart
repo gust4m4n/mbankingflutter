@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../preferences/language_preferences.dart';
+import 'language_preferences.dart';
 
-class LanguageController extends GetxController {
+class MbxLanguageController extends GetxController {
   final _currentLanguage = 'id'.obs;
   final _currentLocale = const Locale('id').obs;
 

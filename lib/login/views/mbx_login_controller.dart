@@ -5,8 +5,8 @@ import 'package:mbxflutter/login/viewmodels/mbx_onboarding_list_vm.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/otp/views/mbx_otp_sheet.dart';
 import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
-import 'package:mbxflutter/preferences/language_controller.dart';
 import 'package:mbxflutter/preferences/language_preferences.dart';
+import 'package:mbxflutter/preferences/mbx_language_controller.dart';
 import 'package:mbxflutter/preferences/mbx_language_sheet.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 import 'package:mbxflutter/utils/logger_x.dart';
@@ -15,7 +15,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 import 'mbx_login_screen.dart';
 
-class MbLoginController extends GetxController {
+class MbxLoginController extends GetxController {
   final PageController pageController = PageController();
   var onboardingVM = MbxOnboardingListVM();
   final txtPhoneController = TextEditingController();
@@ -25,7 +25,8 @@ class MbLoginController extends GetxController {
   var version = '';
   var onboardingIndex = 0;
 
-  LanguageController get languageController => Get.find<LanguageController>();
+  MbxLanguageController get languageController =>
+      Get.find<MbxLanguageController>();
   @override
   void onReady() {
     super.onReady();

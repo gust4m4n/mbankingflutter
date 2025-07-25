@@ -5,8 +5,8 @@ import 'package:mbxflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_screen.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/login/views/mbx_login_screen.dart';
-import 'package:mbxflutter/preferences/language_controller.dart';
-import 'package:mbxflutter/preferences/language_selection_screen.dart';
+import 'package:mbxflutter/preferences/mbx_language_controller.dart';
+import 'package:mbxflutter/preferences/mbx_language_selection_screen.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/preferences/translation_service.dart';
@@ -40,7 +40,10 @@ Future<void> main() async {
   MbxReachabilityVM.startListening();
 
   // Initialize language controller with lazy loading
-  Get.lazyPut<LanguageController>(() => LanguageController(), fenix: true);
+  Get.lazyPut<MbxLanguageController>(
+    () => MbxLanguageController(),
+    fenix: true,
+  );
 
   final freshInstall = await MbxPreferencesVM.getFreshInstall();
   if (freshInstall == true) {
@@ -102,7 +105,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final languageController = Get.find<LanguageController>();
+    final languageController = Get.find<MbxLanguageController>();
 
     return GetMaterialApp(
       popGesture: true,
@@ -196,7 +199,10 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(name: '/pbb', page: () => const MbxPBBScreen()),
         GetPage(name: '/pdam', page: () => const MbxPDAMScreen()),
-        GetPage(name: '/language', page: () => const LanguageSelectionScreen()),
+        GetPage(
+          name: '/language',
+          page: () => const MbxLanguageSelectionScreen(),
+        ),
       ],
     );
   }

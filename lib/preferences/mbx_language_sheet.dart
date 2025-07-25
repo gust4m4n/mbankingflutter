@@ -1,10 +1,10 @@
-import '../preferences/language_controller.dart';
 import '../preferences/language_preferences.dart';
+import '../preferences/mbx_language_controller.dart';
 import '../widget-x/all_widgets.dart';
 import 'mbx_language_widget.dart';
 
 // ignore: must_be_immutable
-class MbxLanguageSheet extends GetWidget<LanguageController> {
+class MbxLanguageSheet extends GetWidget<MbxLanguageController> {
   const MbxLanguageSheet({super.key});
 
   static Future<T?> show<T>() {
@@ -15,8 +15,8 @@ class MbxLanguageSheet extends GetWidget<LanguageController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LanguageController>(
-      init: LanguageController(),
+    return GetBuilder<MbxLanguageController>(
+      init: MbxLanguageController(),
       builder: (controller) => Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -50,8 +50,11 @@ class MbxLanguageSheet extends GetWidget<LanguageController> {
           ContainerX(
             padding: EdgeInsets.only(left: 16.0, right: 16.0),
             child: ButtonX(
-              title: 'close'.tr,
-              backgroundColor: ColorX.theme,
+              title: 'back'.tr,
+              titleColor: ColorX.black,
+              backgroundColor: ColorX.transparent,
+              borderWidth: 1.0,
+              borderColor: ColorX.gray,
               clicked: () {
                 Get.back();
               },

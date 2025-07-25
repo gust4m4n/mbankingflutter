@@ -11,8 +11,8 @@ class MbxLoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbLoginController>(
-      init: MbLoginController(),
+    return GetBuilder<MbxLoginController>(
+      init: MbxLoginController(),
       builder: (controller) => MbxScreen(
         navigationBarHidden: true,
         body: Column(

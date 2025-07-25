@@ -1,13 +1,13 @@
-import '../preferences/language_controller.dart';
 import '../preferences/language_preferences.dart';
+import '../preferences/mbx_language_controller.dart';
 import '../widget-x/all_widgets.dart';
 
-class LanguageSelectionScreen extends StatelessWidget {
-  const LanguageSelectionScreen({super.key});
+class MbxLanguageSelectionScreen extends StatelessWidget {
+  const MbxLanguageSelectionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<LanguageController>();
+    final controller = Get.find<MbxLanguageController>();
 
     return MbxScreen(
       navigationBarHidden: false,
