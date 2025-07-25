@@ -40,6 +40,12 @@ class MbxTransferP2PPicker extends GetWidget<MbxTransferP2PPickerController> {
                 keyboardType: TextInputType.text,
                 readOnly: false,
                 controller: controller.txtSearch,
+                leftIcon: ImageX(
+                  faIcon: FontAwesomeIcons.magnifyingGlass,
+                  color: ColorX.gray,
+                  width: 20,
+                  height: 20,
+                ),
                 onChanged: (value) {
                   controller.txtSearchChanged(value);
                 },

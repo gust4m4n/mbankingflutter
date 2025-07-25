@@ -18,23 +18,25 @@ class MbxFaqScreen extends StatelessWidget {
             child: Column(
               children: [
                 // Search field
-                Container(
-                  decoration: BoxDecoration(
-                    color: ColorX.gray.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(12),
+                TextFieldX(
+                  hint: 'search_faq'.tr,
+                  obscureText: false,
+                  keyboardType: TextInputType.text,
+                  readOnly: false,
+                  controller: controller.searchController,
+                  cornerRadius: 12,
+                  borderWidth: 1.0,
+                  borderColor: ColorX.lightGray,
+                  backgroundColor: ColorX.white,
+                  leftIcon: ImageX(
+                    faIcon: FontAwesomeIcons.magnifyingGlass,
+                    color: ColorX.gray,
+                    width: 20,
+                    height: 20,
                   ),
-                  child: TextField(
-                    controller: controller.searchController,
-                    decoration: InputDecoration(
-                      hintText: 'search_faq'.tr,
-                      prefixIcon: const Icon(Icons.search),
-                      border: InputBorder.none,
-                      contentPadding: const EdgeInsets.all(16),
-                    ),
-                    onChanged: (value) {
-                      controller.searchFaq(value);
-                    },
-                  ),
+                  onChanged: (value) {
+                    controller.searchFaq(value);
+                  },
                 ),
                 const SizedBox(height: 16),
                 // FAQ List

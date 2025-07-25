@@ -14,6 +14,9 @@ class TextFieldX extends StatelessWidget {
   final TextInputType keyboardType;
   final bool multiline;
   final bool readOnly;
+  final ImageX? leftIcon;
+  final Color? leftIconColor;
+  final GestureTapCallback? leftAction;
   final ImageX? rightIcon;
   final Color? rightIconColor;
   final GestureTapCallback? rightAction;
@@ -37,6 +40,9 @@ class TextFieldX extends StatelessWidget {
     required this.keyboardType,
     this.multiline = false,
     required this.readOnly,
+    this.leftIcon,
+    this.leftIconColor,
+    this.leftAction,
     this.rightIcon,
     this.rightIconColor,
     this.rightAction,
@@ -60,6 +66,30 @@ class TextFieldX extends StatelessWidget {
         fontWeight: FontWeight.w500,
         textAlign: TextAlign.left,
         maxLines: 1,
+      ),
+    );
+  }
+
+  Widget leftContainerButton(BuildContext context) {
+    return ContainerX(
+      width: height - (borderWidth * 1),
+      height: height - (borderWidth * 2),
+      child: Material(
+        color: ColorX.transparent,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(cornerRadius - (borderWidth * 2)),
+            bottomLeft: Radius.circular(cornerRadius - (borderWidth * 2)),
+          ),
+        ),
+        child: Theme(
+          data: Theme.of(context).copyWith(splashColor: ColorX.transparent),
+          child: InkWellX(
+            clicked: () => leftAction != null ? leftAction!() : null,
+            child: leftIcon,
+          ),
+        ),
       ),
     );
   }
@@ -91,14 +121,14 @@ class TextFieldX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerX(
-      backgroundColor: (rightIcon != null)
+      backgroundColor: (rightIcon != null || leftIcon != null)
           ? ColorX.white
           : readOnly == true
           ? ColorX.gray
           : backgroundColor,
       height: height,
       padding: EdgeInsets.only(
-        left: borderWidth > 0.0 ? 12.0 : 0.0,
+        left: borderWidth > 0.0 ? ((leftIcon != null) ? 0.0 : 12.0) : 0.0,
         top: 0.0,
         right: borderWidth > 0.0 ? ((rightIcon != null) ? 0.0 : 12.0) : 0.0,
         bottom: 0.0,
@@ -108,6 +138,14 @@ class TextFieldX extends StatelessWidget {
       cornerRadius: cornerRadius,
       child: Row(
         children: [
+          Visibility(
+            visible: (leftIcon != null) ? true : false,
+            child: leftContainerButton(context),
+          ),
+          Visibility(
+            visible: (leftIcon != null) ? true : false,
+            child: const SizedBox(width: 4.0),
+          ),
           Expanded(
             child: TextField(
               inputFormatters: inputFormatters,

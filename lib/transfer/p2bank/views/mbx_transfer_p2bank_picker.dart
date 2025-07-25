@@ -41,6 +41,12 @@ class MbxTransferP2BankPicker
                 keyboardType: TextInputType.text,
                 readOnly: false,
                 controller: controller.txtSearch,
+                leftIcon: ImageX(
+                  faIcon: FontAwesomeIcons.magnifyingGlass,
+                  color: ColorX.gray,
+                  width: 20,
+                  height: 20,
+                ),
                 onChanged: (value) {
                   controller.txtSearchChanged(value);
                 },
