@@ -25,6 +25,7 @@ import 'biller-pln/postpaid/views/mbx_electricity_postpaid_screen.dart';
 import 'biller-pulsa/postpaid/views/mbx_pulsa_postpaid_screen.dart';
 import 'biller-pulsa/prepaid/views/mbx_pulsa_prepaid_screen.dart';
 import 'bottom-navbar/views/mbx_bottom_navbar_screen.dart';
+import 'faq/views/mbx_faq_screen.dart';
 import 'news/views/mbx_news_screen.dart';
 import 'tnc/views/mbx_tnc_screen.dart';
 import 'transfer/main/views/mbx_transfer_screen.dart';
@@ -152,6 +153,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(name: '/tnc', page: () => MbxTncScreen()),
         GetPage(name: '/privacy', page: () => MbxPrivacyPolicyScreen()),
+        GetPage(name: '/faq', page: () => const MbxFaqScreen()),
         GetPage(name: '/news', page: () => MbxNewsScreen()),
         GetPage(name: '/receipt', page: () => MbxReceiptScreen()),
         GetPage(name: '/transfer', page: () => const MbxTransferScreen()),

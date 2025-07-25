@@ -152,6 +152,10 @@ class MbxProfileController extends GetxController {
     Get.toNamed('/privacy');
   }
 
+  btnFaqClicked() {
+    Get.toNamed('/faq');
+  }
+
   btnHelpClicked() {
     MbxHelpSheet.show();
   }

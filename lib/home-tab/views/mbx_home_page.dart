@@ -390,6 +390,7 @@ class MbxHomePage extends StatelessWidget {
                               ),
                               CarouselSlider.builder(
                                 options: CarouselOptions(
+                                  scrollPhysics: ClampingScrollPhysics(),
                                   padEnds: false,
                                   autoPlay: true,
                                   viewportFraction: 0.70,

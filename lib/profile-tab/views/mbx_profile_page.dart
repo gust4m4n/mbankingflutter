@@ -129,6 +129,13 @@ class MbxProfilePage extends StatelessWidget {
                         },
                       ),
                       MbaxProfileMenuButton(
+                        title: 'faq'.tr,
+                        faIcon: FontAwesomeIcons.circleQuestion,
+                        clicked: () {
+                          controller.btnFaqClicked();
+                        },
+                      ),
+                      MbaxProfileMenuButton(
                         title: 'language'.tr,
                         faIcon: FontAwesomeIcons.globe,
                         clicked: () {
@@ -137,7 +144,7 @@ class MbxProfilePage extends StatelessWidget {
                       ),
                       MbaxProfileMenuButton(
                         title: 'help'.tr,
-                        faIcon: FontAwesomeIcons.circleQuestion,
+                        faIcon: FontAwesomeIcons.headset,
                         clicked: () {
                           controller.btnHelpClicked();
                         },
