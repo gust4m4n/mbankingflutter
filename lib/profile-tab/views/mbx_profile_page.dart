@@ -141,6 +141,30 @@ class MbxProfilePage extends StatelessWidget {
                         clicked: () {
                           controller.btnLanguageClicked();
                         },
+                        rightWidget: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            TextX(
+                              controller.currentLanguageFlag,
+                              fontSize: 16.0,
+                            ),
+                            ContainerX(width: 8.0),
+                            TextX(
+                              controller.currentLanguageName,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w500,
+                              color: ColorX.gray,
+                            ),
+                            ContainerX(width: 8.0),
+                            ImageX(
+                              faIcon: FontAwesomeIcons.chevronRight,
+                              width: 13.0,
+                              height: 13.0,
+                              color: ColorX.black,
+                              fit: BoxFit.contain,
+                            ),
+                          ],
+                        ),
                       ),
                       MbaxProfileMenuButton(
                         title: 'help'.tr,

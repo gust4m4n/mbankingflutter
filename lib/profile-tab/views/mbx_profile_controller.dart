@@ -14,6 +14,9 @@ import '../../widget-x/all_widgets.dart';
 class MbxProfileController extends GetxController {
   var biometricEnabled = false;
   var version = '';
+  var currentLanguageCode = 'id';
+  var currentLanguageName = 'Indonesia';
+  var currentLanguageFlag = '🇮🇩';
 
   @override
   Future<void> onReady() async {
@@ -22,7 +25,18 @@ class MbxProfileController extends GetxController {
     version = 'Version ${info.version}';
     await MbxProfileVM.request();
     biometricEnabled = await MbxUserPreferencesVM.getBiometricEnabled();
+    await loadCurrentLanguage();
     update();
+  }
+
+  Future<void> loadCurrentLanguage() async {
+    currentLanguageCode = await MbxUserPreferencesVM.getLanguage();
+    currentLanguageName = MbxUserPreferencesVM.getLanguageName(
+      currentLanguageCode,
+    );
+    currentLanguageFlag = MbxUserPreferencesVM.getLanguageFlag(
+      currentLanguageCode,
+    );
   }
 
   toggleBiometric(bool value) async {
@@ -161,7 +175,12 @@ class MbxProfileController extends GetxController {
   }
 
   btnLanguageClicked() {
-    MbxLanguageSheet.show();
+    MbxLanguageSheet.show().then((_) {
+      // Refresh language data after sheet closes
+      loadCurrentLanguage().then((_) {
+        update();
+      });
+    });
   }
 
   btnLogoutClicked() {

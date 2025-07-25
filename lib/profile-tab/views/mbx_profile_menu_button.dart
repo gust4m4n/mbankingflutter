@@ -7,6 +7,7 @@ class MbaxProfileMenuButton extends StatelessWidget {
   final bool toggle;
   final void Function(bool)? onToggleChanged;
   final bool toggleValue;
+  final Widget? rightWidget;
 
   const MbaxProfileMenuButton({
     super.key,
@@ -16,6 +17,7 @@ class MbaxProfileMenuButton extends StatelessWidget {
     this.toggle = false,
     this.onToggleChanged,
     this.toggleValue = false,
+    this.rightWidget,
   });
 
   @override
@@ -59,28 +61,31 @@ class MbaxProfileMenuButton extends StatelessWidget {
                 color: ColorX.black,
               ),
               Spacer(),
-              toggle
-                  ? Switch(
-                      value: toggleValue,
-                      onChanged: onToggleChanged,
-                      activeTrackColor: ColorX.lightGray,
-                      activeColor: ColorX.theme,
-                      inactiveTrackColor: ColorX.lightGray,
-                      inactiveThumbColor: ColorX.gray,
-                      trackOutlineColor:
-                          WidgetStateProperty.resolveWith<Color?>(
-                            (_) => ColorX.transparent,
-                          ),
-                      trackOutlineWidth:
-                          WidgetStateProperty.resolveWith<double?>((_) => 0.0),
-                    )
-                  : ImageX(
-                      faIcon: FontAwesomeIcons.chevronRight,
-                      width: 13.0,
-                      height: 13.0,
-                      color: ColorX.black,
-                      fit: BoxFit.contain,
-                    ),
+              rightWidget ??
+                  (toggle
+                      ? Switch(
+                          value: toggleValue,
+                          onChanged: onToggleChanged,
+                          activeTrackColor: ColorX.lightGray,
+                          activeColor: ColorX.theme,
+                          inactiveTrackColor: ColorX.lightGray,
+                          inactiveThumbColor: ColorX.gray,
+                          trackOutlineColor:
+                              WidgetStateProperty.resolveWith<Color?>(
+                                (_) => ColorX.transparent,
+                              ),
+                          trackOutlineWidth:
+                              WidgetStateProperty.resolveWith<double?>(
+                                (_) => 0.0,
+                              ),
+                        )
+                      : ImageX(
+                          faIcon: FontAwesomeIcons.chevronRight,
+                          width: 13.0,
+                          height: 13.0,
+                          color: ColorX.black,
+                          fit: BoxFit.contain,
+                        )),
             ],
           ),
         ),
