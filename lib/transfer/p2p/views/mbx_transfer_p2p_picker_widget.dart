@@ -8,7 +8,8 @@ class MbxTransferP2PPickerWidget extends StatelessWidget {
   final MbxTransferP2PDestModel dest;
   final GestureTapCallback? onDeleteClicked;
 
-  MbxTransferP2PPickerWidget({
+  const MbxTransferP2PPickerWidget({
+    super.key,
     required this.dest,
     required this.onDeleteClicked,
   });

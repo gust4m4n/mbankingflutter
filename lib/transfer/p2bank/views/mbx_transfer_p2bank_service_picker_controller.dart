@@ -5,12 +5,7 @@ import '../../../widget-x/all_widgets.dart';
 class MbxTransferP2BankServicePickerController extends GetxController {
   final List<MbxTransferP2BankServiceModel> list;
 
-  MbxTransferP2BankServicePickerController(this.list) {}
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  MbxTransferP2BankServicePickerController(this.list);
 
   btnCloseClicked() {
     Get.back();

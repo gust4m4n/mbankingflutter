@@ -6,6 +6,8 @@ import '../../widget-x/all_widgets.dart';
 import 'mbx_news_controller.dart';
 
 class MbxNewsScreen extends StatelessWidget {
+  const MbxNewsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MbxNewsController>(

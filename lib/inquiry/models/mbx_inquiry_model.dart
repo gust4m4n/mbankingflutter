@@ -4,7 +4,7 @@ import '../../utils/all_utils.dart';
 
 class MbxInquiryModel {
   List<MbxLabelValueModel> details = [];
-  String transaction_id = '';
+  String transactionId = '';
 
   MbxInquiryModel();
 
@@ -13,6 +13,6 @@ class MbxInquiryModel {
       final detail = MbxLabelValueModel(item);
       details.add(detail);
     }
-    transaction_id = jason['transaction_id'].stringValue;
+    transactionId = jason['transaction_id'].stringValue;
   }
 }

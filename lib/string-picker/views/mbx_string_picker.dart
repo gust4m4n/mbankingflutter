@@ -18,11 +18,16 @@ class MbxStringPicker extends GetWidget<MbxStringPickerController> {
     return GetBuilder<MbxStringPickerController>(
       init: MbxStringPickerController(list: list),
       builder: (controller) => ContainerX(
-          backgroundColor: ColorX.white,
-          child: Column(children: [
+        backgroundColor: ColorX.white,
+        child: Column(
+          children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: 16.0, top: 0.0, right: 16.0, bottom: 12.0),
+                left: 16.0,
+                top: 0.0,
+                right: 16.0,
+                bottom: 12.0,
+              ),
               child: TextFieldX(
                 hint: 'Pencarian...',
                 obscureText: false,
@@ -35,33 +40,38 @@ class MbxStringPicker extends GetWidget<MbxStringPickerController> {
               ),
             ),
             Expanded(
-                child: Scrollbar(
-                    child: ListView.separated(
-              padding: EdgeInsets.zero,
-              physics: ClampingScrollPhysics(),
-              separatorBuilder: (context, index) {
-                return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    child: ContainerX(
-                      height: 0.5,
-                      width: double.infinity,
-                      backgroundColor: ColorX.lightGray,
-                    ));
-              },
-              itemCount: controller.filtered.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Material(
-                    color: ColorX.transparent,
-                    child: InkWell(
+              child: Scrollbar(
+                child: ListView.separated(
+                  padding: EdgeInsets.zero,
+                  physics: ClampingScrollPhysics(),
+                  separatorBuilder: (context, index) {
+                    return Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child: ContainerX(
+                        height: 0.5,
+                        width: double.infinity,
+                        backgroundColor: ColorX.lightGray,
+                      ),
+                    );
+                  },
+                  itemCount: controller.filtered.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Material(
+                      color: ColorX.transparent,
+                      child: InkWell(
                         highlightColor: ColorX.highlight,
                         onTap: () {
                           Get.back(result: index);
                         },
                         child: MbxStringPickerWidget(
                           title: controller.filtered[index],
-                        )));
-              },
-            ))),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
             Padding(
               padding: EdgeInsets.all(16.0),
               child: ButtonX(
@@ -72,7 +82,9 @@ class MbxStringPicker extends GetWidget<MbxStringPickerController> {
                 },
               ),
             ),
-          ])),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -15,14 +15,15 @@ class MbxThemeButton extends StatelessWidget {
         height: 42.0,
         cornerRadius: 12.0,
         child: Center(
-            child: ContainerX(
-          backgroundColor: ColorX.theme,
-          width: 32.0,
-          height: 32.0,
-          cornerRadius: 16.0,
-          borderWidth: 4.0,
-          borderColor: ColorX.white,
-        )),
+          child: ContainerX(
+            backgroundColor: ColorX.theme,
+            width: 32.0,
+            height: 32.0,
+            cornerRadius: 16.0,
+            borderWidth: 4.0,
+            borderColor: ColorX.white,
+          ),
+        ),
       ),
     );
   }

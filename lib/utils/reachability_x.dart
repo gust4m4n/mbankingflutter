@@ -10,8 +10,8 @@ class ReachabilityX {
 
   static Future<bool> checkInternetConnectivity() async {
     final result = await Connectivity().checkConnectivity();
-    if (result == ConnectivityResult.mobile ||
-        result == ConnectivityResult.wifi) {
+    if (result.contains(ConnectivityResult.mobile) ||
+        result.contains(ConnectivityResult.wifi)) {
       internetConnected = true;
     } else {
       internetConnected = false;
@@ -20,16 +20,17 @@ class ReachabilityX {
     return internetConnected;
   }
 
-  static Future<void> startListening(
-      {required Function(bool connected)? handler}) async {
+  static Future<void> startListening({
+    required Function(bool connected)? handler,
+  }) async {
     await checkInternetConnectivity();
 
-    subscription = Connectivity()
-        .onConnectivityChanged
-        .listen((List<ConnectivityResult> result) {
+    subscription = Connectivity().onConnectivityChanged.listen((
+      List<ConnectivityResult> result,
+    ) {
       var connected = true;
-      if (result == ConnectivityResult.mobile ||
-          result == ConnectivityResult.wifi) {
+      if (result.contains(ConnectivityResult.mobile) ||
+          result.contains(ConnectivityResult.wifi)) {
         connected = true;
       } else {
         connected = false;

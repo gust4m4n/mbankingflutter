@@ -39,7 +39,7 @@ class MbxLoginScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Expanded(
-                    child: controller.onboardingVM.list.length > 0
+                    child: controller.onboardingVM.list.isNotEmpty
                         ? CarouselSlider.builder(
                             options: CarouselOptions(
                               scrollPhysics: ClampingScrollPhysics(),
@@ -73,7 +73,7 @@ class MbxLoginScreen extends StatelessWidget {
                       bottom: 16.0,
                     ),
                     child: Visibility(
-                      visible: controller.onboardingVM.list.length > 0,
+                      visible: controller.onboardingVM.list.isNotEmpty,
                       child: AnimatedSmoothIndicator(
                         activeIndex: controller.onboardingIndex,
                         count: controller.onboardingVM.list.length,
@@ -99,6 +99,7 @@ class MbxLoginScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ContainerError(
+                      error: controller.phoneError,
                       child: TextFieldX(
                         hint: 'No. HP (08xxxxxxxxx)',
                         obscureText: false,
@@ -123,7 +124,6 @@ class MbxLoginScreen extends StatelessWidget {
                           controller.btnLoginClicked();
                         },
                       ),
-                      error: controller.phoneError,
                     ),
                     ContainerX(height: 24.0),
                     TextX(

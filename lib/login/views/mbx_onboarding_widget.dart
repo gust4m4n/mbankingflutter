@@ -4,7 +4,7 @@ import 'package:mbxflutter/widget-x/all_widgets.dart';
 
 class MbxOnboardingWidget extends StatelessWidget {
   final MbxOnboardingModel onboarding;
-  MbxOnboardingWidget(this.onboarding);
+  const MbxOnboardingWidget(this.onboarding, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -15,11 +15,6 @@ class MbxSofSheetController extends GetxController {
     }
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
   btnCloseClicked() {
     Get.back();
   }

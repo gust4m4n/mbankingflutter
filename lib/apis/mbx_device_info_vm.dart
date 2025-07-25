@@ -23,7 +23,7 @@ class MbxDeviceInfoVM {
       }
     } catch (e) {
       // Log error or handle appropriately
-      print('Error getting device info: $e');
+      debugPrint('Error getting device info: $e');
     }
   }
 }

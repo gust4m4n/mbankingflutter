@@ -8,7 +8,7 @@ import 'mbx_transfer_p2bank_service_widget.dart';
 class MbxTransferP2BankServicePicker
     extends GetWidget<MbxTransferP2BankServicePickerController> {
   final List<MbxTransferP2BankServiceModel> list;
-  MbxTransferP2BankServicePicker(this.list);
+  const MbxTransferP2BankServicePicker(this.list, {super.key});
 
   static Future<T?> show<T>(List<MbxTransferP2BankServiceModel> list) {
     FocusManager.instance.primaryFocus?.unfocus();

@@ -5,7 +5,7 @@ import '../../widget-x/all_widgets.dart';
 // ignore: must_be_immutable
 class MbxPromoWidget extends StatelessWidget {
   final DemoMovieModel movie;
-  MbxPromoWidget(this.movie);
+  const MbxPromoWidget(this.movie, {super.key});
 
   @override
   Widget build(BuildContext context) {

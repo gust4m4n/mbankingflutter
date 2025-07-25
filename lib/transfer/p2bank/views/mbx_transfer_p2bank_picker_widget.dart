@@ -7,7 +7,8 @@ class MbxTransferP2BankPickerWidget extends StatelessWidget {
   final MbxTransferP2BankDestModel dest;
   final GestureTapCallback? onDeleteClicked;
 
-  MbxTransferP2BankPickerWidget({
+  const MbxTransferP2BankPickerWidget({
+    super.key,
     required this.dest,
     required this.onDeleteClicked,
   });
@@ -19,7 +20,7 @@ class MbxTransferP2BankPickerWidget extends StatelessWidget {
       child: Row(
         children: [
           ImageX(
-            url: dest.bank_icon,
+            url: dest.bankIcon,
             backgroundColor: ColorX.transparent,
             width: 50.0,
             height: 50.0,

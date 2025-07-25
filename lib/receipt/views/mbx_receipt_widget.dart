@@ -5,7 +5,7 @@ import '../../widget-x/all_widgets.dart';
 // ignore: must_be_immutable
 class MbxReceiptWidget extends StatelessWidget {
   final MbxLabelValueModel row;
-  MbxReceiptWidget(this.row);
+  const MbxReceiptWidget(this.row, {super.key});
 
   @override
   Widget build(BuildContext context) {

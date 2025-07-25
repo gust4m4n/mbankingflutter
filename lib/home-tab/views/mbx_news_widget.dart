@@ -5,7 +5,7 @@ import '../../widget-x/all_widgets.dart';
 // ignore: must_be_immutable
 class MbxNewsWidget extends StatelessWidget {
   final MbxNewsModel news;
-  MbxNewsWidget(this.news);
+  const MbxNewsWidget(this.news, {super.key});
 
   @override
   Widget build(BuildContext context) {

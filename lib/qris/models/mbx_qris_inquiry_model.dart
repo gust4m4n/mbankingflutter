@@ -1,13 +1,13 @@
 import '../../utils/all_utils.dart';
 
 class MbxQRISInquiryModel {
-  String merchant_name = '';
-  String transaction_id = '';
+  String merchantName = '';
+  String transactionId = '';
 
   MbxQRISInquiryModel();
 
   MbxQRISInquiryModel.fromJason(Jason jason) {
-    merchant_name = jason['merchant_name'].stringValue;
-    transaction_id = jason['transaction_id'].stringValue;
+    merchantName = jason['merchant_name'].stringValue;
+    transactionId = jason['transaction_id'].stringValue;
   }
 }

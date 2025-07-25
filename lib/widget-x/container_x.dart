@@ -21,10 +21,10 @@ class ContainerX extends StatelessWidget {
   final Widget? child;
 
   const ContainerX({
-    Key? key,
+    super.key,
     this.backgroundColor = ColorX.transparent,
-    this.gradientColorBegin = null,
-    this.gradientColorEnd = null,
+    this.gradientColorBegin,
+    this.gradientColorEnd,
     this.width,
     this.height,
     this.borderWidth = 0.0,
@@ -40,7 +40,7 @@ class ContainerX extends StatelessWidget {
     this.shadowBlurRadius = 0.0,
     this.shadowOffset = const Offset(0.0, 0.0),
     this.child,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -58,22 +58,20 @@ class ContainerX extends StatelessWidget {
             ? LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                stops: [
-                    0.1,
-                    1.0
-                  ],
-                colors: [
-                    gradientColorBegin!,
-                    gradientColorEnd!,
-                  ])
+                stops: [0.1, 1.0],
+                colors: [gradientColorBegin!, gradientColorEnd!],
+              )
             : null,
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(
-                topLeftRadius > 0.0 ? topLeftRadius : cornerRadius),
-            topRight: Radius.circular(
-                topRightRadius > 0.0 ? topLeftRadius : cornerRadius),
-            bottomLeft: Radius.circular(cornerRadius),
-            bottomRight: Radius.circular(cornerRadius)),
+          topLeft: Radius.circular(
+            topLeftRadius > 0.0 ? topLeftRadius : cornerRadius,
+          ),
+          topRight: Radius.circular(
+            topRightRadius > 0.0 ? topLeftRadius : cornerRadius,
+          ),
+          bottomLeft: Radius.circular(cornerRadius),
+          bottomRight: Radius.circular(cornerRadius),
+        ),
         border: Border.all(
           width: borderWidth,
           color: borderWidth == 0.0

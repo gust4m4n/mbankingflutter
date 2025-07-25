@@ -71,6 +71,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.customerIdError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -104,7 +105,6 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.customerIdError,
             ),
             ContainerX(height: 12.0),
             GridView.builder(

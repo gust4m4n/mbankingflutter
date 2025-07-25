@@ -1,8 +1,12 @@
 import 'package:intl/intl.dart';
 
 class MbxFormatVM {
-  static String currencyRP(int value,
-      {required bool prefix, required bool mutation, required bool masked}) {
+  static String currencyRP(
+    int value, {
+    required bool prefix,
+    required bool mutation,
+    required bool masked,
+  }) {
     final currencyFormatter = NumberFormat('#,##0', 'ID');
     var result = '';
     if (masked) {
@@ -23,7 +27,7 @@ class MbxFormatVM {
       } else if (value > 0) {
         result = '+ $result';
       } else {
-        result = '$result';
+        result = result;
       }
     }
     return result;
@@ -34,17 +38,20 @@ class MbxFormatVM {
     if (prefix == true) {
       return 'USD ${currencyFormatter.format(value)}';
     } else {
-      return '${currencyFormatter.format(value)}';
+      return currencyFormatter.format(value);
     }
   }
 
   static String foreignExchange({required double value}) {
     final currencyFormatter = NumberFormat('#,##0.00', 'EN');
-    return '${currencyFormatter.format(value)}';
+    return currencyFormatter.format(value);
   }
 
-  static String accountMasking(String account,
-      {required String prefix, required int visibleDigits}) {
+  static String accountMasking(
+    String account, {
+    required String prefix,
+    required int visibleDigits,
+  }) {
     if (account.length < visibleDigits) return account;
     return '$prefix${account.substring(account.length - visibleDigits)}';
   }

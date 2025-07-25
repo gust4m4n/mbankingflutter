@@ -34,7 +34,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TextX(
-                    inquiry.merchant_name,
+                    inquiry.merchantName,
                     fontSize: 24.0,
                     fontWeight: FontWeight.w500,
                     textAlign: TextAlign.center,
@@ -42,7 +42,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
                     maxLines: 8,
                   ),
                   TextX(
-                    'No. Transaksi: ${inquiry.transaction_id}',
+                    'No. Transaksi: ${inquiry.transactionId}',
                     fontSize: 13.0,
                     fontWeight: FontWeight.w400,
                     textAlign: TextAlign.center,

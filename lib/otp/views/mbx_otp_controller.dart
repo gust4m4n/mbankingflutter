@@ -53,7 +53,7 @@ class MbxOtpController extends GetxController {
   }
 
   btnBackspaceClicked() {
-    if (code.length > 0) {
+    if (code.isNotEmpty) {
       code = code.substring(0, code.length - 1);
       update();
     }

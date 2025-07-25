@@ -34,11 +34,6 @@ class MbxTransfeP2BankController extends GetxController {
   final transferServiceListVM = MbxTransferP2BankServiceListVM();
 
   @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
   void onReady() {
     super.onReady();
     sof = MbxProfileVM.profile.accounts[0];
@@ -196,7 +191,7 @@ class MbxTransfeP2BankController extends GetxController {
       secure: true,
       biometric: true,
       onSubmit: (code, biometric) async {
-        payment(transaction_id: code, pin: code, biometric: biometric);
+        payment(transactionId: code, pin: code, biometric: biometric);
       },
       optionTitle: 'Lupa PIN',
       optionClicked: () {
@@ -207,14 +202,14 @@ class MbxTransfeP2BankController extends GetxController {
   }
 
   payment({
-    required String transaction_id,
+    required String transactionId,
     required String pin,
     required bool biometric,
   }) {
     Get.loading();
     final paymentVM = MbxTransferP2BankPaymentVM();
     paymentVM
-        .request(transaction_id: transaction_id, pin: pin, biometric: biometric)
+        .request(transactionId: transactionId, pin: pin, biometric: biometric)
         .then((resp) {
           if (resp.status == 200) {
             Get.back();

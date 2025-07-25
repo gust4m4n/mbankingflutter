@@ -131,7 +131,7 @@ class MbxCardlessController extends GetxController {
       secure: true,
       biometric: true,
       onSubmit: (code, biometric) async {
-        payment(transaction_id: code, pin: code, biometric: biometric);
+        payment(transactionId: code, pin: code, biometric: biometric);
       },
       optionTitle: 'Lupa PIN',
       optionClicked: () {
@@ -142,14 +142,14 @@ class MbxCardlessController extends GetxController {
   }
 
   payment({
-    required String transaction_id,
+    required String transactionId,
     required String pin,
     required bool biometric,
   }) {
     Get.loading();
     final paymentVM = MbxCardlessPaymentVM();
     paymentVM
-        .request(transaction_id: transaction_id, pin: pin, biometric: biometric)
+        .request(transactionId: transactionId, pin: pin, biometric: biometric)
         .then((resp) {
           if (resp.status == 200) {
             Get.back();

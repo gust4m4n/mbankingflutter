@@ -5,7 +5,7 @@ class MbxTransferP2PPaymentVM {
   var receipt = MbxReceiptModel();
 
   Future<ApiXResponse> request({
-    required String transaction_id,
+    required String transactionId,
     required String pin,
     required bool biometric,
   }) {

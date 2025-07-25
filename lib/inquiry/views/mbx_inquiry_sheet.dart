@@ -19,7 +19,7 @@ class MbxInquirySheet extends GetWidget<MbxInquiryController> {
 
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
-    return SheetX.showCustom(title: this.title, widget: this, autoClose: false);
+    return SheetX.showCustom(title: title, widget: this, autoClose: false);
   }
 
   @override

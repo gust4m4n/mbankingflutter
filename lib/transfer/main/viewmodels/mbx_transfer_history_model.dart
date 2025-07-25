@@ -1,7 +1,7 @@
 import '../../../utils/all_utils.dart';
 
 class MbxTransferHistoryModel {
-  String transaction_id = '';
+  String transactionId = '';
   String name = '';
   String bank = '';
   String account = '';
@@ -12,7 +12,7 @@ class MbxTransferHistoryModel {
   MbxTransferHistoryModel();
 
   MbxTransferHistoryModel.fromJason(Jason jason) {
-    transaction_id = jason['transaction_id'].stringValue;
+    transactionId = jason['transaction_id'].stringValue;
     name = jason['name'].stringValue;
     bank = jason['bank'].stringValue;
     account = jason['account'].stringValue;

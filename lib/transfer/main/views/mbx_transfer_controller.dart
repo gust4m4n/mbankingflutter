@@ -10,11 +10,6 @@ class MbxTransferController extends GetxController {
   var loading = true;
 
   @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
   void onReady() {
     super.onReady();
     update();

@@ -44,7 +44,7 @@ class MbxTncController extends GetxController {
               </style>              
               </head>
               <body style='margin:16pt;padding:0pt;'>
-              ${html}
+              $html
               </body></html>''';
         return htmlPage;
       }

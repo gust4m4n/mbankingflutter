@@ -25,13 +25,13 @@ class MbxButtonNavBarButton extends StatelessWidget {
           ? ColorX.theme.withValues(alpha: 0.2)
           : ColorX.transparent, // ColorX.theme.withOpacity(0.1),
       child: InkWellX(
-          highlightColor: ColorX.theme.withValues(alpha: 0.2),
-          clicked: () {
-            clicked!();
-          },
-          child: ContainerX(
-              //width: double.infinity,
-              child: Center(
+        highlightColor: ColorX.theme.withValues(alpha: 0.2),
+        clicked: () {
+          clicked!();
+        },
+        child: ContainerX(
+          //width: double.infinity,
+          child: Center(
             child: Wrap(
               direction: Axis.vertical,
               crossAxisAlignment: WrapCrossAlignment.center,
@@ -52,7 +52,9 @@ class MbxButtonNavBarButton extends StatelessWidget {
                 ),
               ],
             ),
-          ))),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -95,7 +95,7 @@ class MbxQRISAmountController extends GetxController {
           LoggerX.log('[PIN] entered: $code biometric; $biometric');
           Get.loading();
           final qrisPaymentVM = MbxQRISPaymentVM();
-          qrisPaymentVM.request(transaction_i: inquiry.transaction_id).then((
+          qrisPaymentVM.request(transactionId: inquiry.transactionId).then((
             resp,
           ) {
             Get.back();

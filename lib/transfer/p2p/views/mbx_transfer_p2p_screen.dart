@@ -17,6 +17,7 @@ class MbxTransferP2PScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ContainerError(
+              error: controller.destError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -99,10 +100,10 @@ class MbxTransferP2PScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.destError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.amountError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -127,10 +128,10 @@ class MbxTransferP2PScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.amountError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.messageError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -155,7 +156,6 @@ class MbxTransferP2PScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.messageError,
             ),
             ContainerX(height: 12.0),
             Column(

@@ -70,6 +70,7 @@ class MbxElectricityNonTagLisScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.customerIdError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -94,7 +95,6 @@ class MbxElectricityNonTagLisScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.customerIdError,
             ),
             ContainerX(height: 16.0),
             ButtonX(

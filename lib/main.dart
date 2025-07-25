@@ -5,8 +5,8 @@ import 'package:mbxflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_screen.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/login/views/mbx_login_screen.dart';
-import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm.dart';
+import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/privacy-policy/views/mbx_privacy_policy_screen.dart';
 import 'package:mbxflutter/qris/views/mbx_qris_screen.dart';
 import 'package:mbxflutter/receipt/views/mbx_receipt_screen.dart';
@@ -143,7 +143,10 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/news', page: () => MbxNewsScreen()),
         GetPage(name: '/receipt', page: () => MbxReceiptScreen()),
         GetPage(name: '/transfer', page: () => const MbxTransferScreen()),
-        GetPage(name: '/transfer/p2p', page: () => const MbxTransferP2PScreen()),
+        GetPage(
+          name: '/transfer/p2p',
+          page: () => const MbxTransferP2PScreen(),
+        ),
         GetPage(
           name: '/transfer/p2bank',
           page: () => const MbxTransferP2BankScreen(),
@@ -170,9 +173,18 @@ class MyApp extends StatelessWidget {
           name: '/electricity/nontaglis',
           page: () => const MbxElectricityNonTagLisScreen(),
         ),
-        GetPage(name: '/pulsa/prepaid', page: () => const MbxPulsaPrepaidScreen()),
-        GetPage(name: '/pulsa/postpaid', page: () => const MbxPulsaPostpaidScreen()),
-        GetPage(name: '/pulsa/dataplan', page: () => const MbxPulsaDataPlanScreen()),
+        GetPage(
+          name: '/pulsa/prepaid',
+          page: () => const MbxPulsaPrepaidScreen(),
+        ),
+        GetPage(
+          name: '/pulsa/postpaid',
+          page: () => const MbxPulsaPostpaidScreen(),
+        ),
+        GetPage(
+          name: '/pulsa/dataplan',
+          page: () => const MbxPulsaDataPlanScreen(),
+        ),
         GetPage(name: '/pbb', page: () => const MbxPBBScreen()),
         GetPage(name: '/pdam', page: () => const MbxPDAMScreen()),
       ],

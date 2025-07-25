@@ -5,9 +5,9 @@ class MbxReceiptVM {
   var loading = false;
   var receipt = MbxReceiptModel();
 
-  Future<ApiXResponse> request({required String transaction_i}) {
+  Future<ApiXResponse> request({required String transactionId}) {
     loading = true;
-    final params = {'transaction_i': transaction_i};
+    final params = {'transaction_i': transactionId};
     return MbxApi.post(
       endpoint: '/receipt',
       params: params,

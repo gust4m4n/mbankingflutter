@@ -46,7 +46,7 @@ class MbLoginController extends GetxController {
   }
 
   txtPhoneOnChanged(String value) {
-    loginEnabled = !value.isEmpty;
+    loginEnabled = value.isNotEmpty;
     update();
   }
 

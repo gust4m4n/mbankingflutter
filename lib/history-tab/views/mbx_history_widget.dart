@@ -76,7 +76,7 @@ class MbxHistoryWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 2.0),
                 TextX(
-                  MbxFormatVM.longDateTime(history.created_at),
+                  MbxFormatVM.longDateTime(history.createdAt),
                   color: ColorX.black,
                   fontSize: 13.0,
                   fontWeight: FontWeight.w400,

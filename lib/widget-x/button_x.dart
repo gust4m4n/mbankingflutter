@@ -51,56 +51,56 @@ class ButtonX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        clipBehavior: Clip.antiAlias,
-        borderRadius: BorderRadius.all(
-          Radius.circular(cornerRadius),
-        ),
-        color: enabled == true ? backgroundColor : disabledBackgroundColor,
-        child: InkWellX(
-            highlightColor:
-                enabled == true ? highlightColor : ColorX.transparent,
-            clicked: enabled == true ? clicked : null,
-            child: Container(
-              width: width,
-              height: height,
-              decoration: BoxDecoration(
-                border: Border.all(
-                    width: borderWidth,
-                    color: enabled == true ? borderColor : ColorX.transparent),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(cornerRadius),
-                ),
-              ),
-              child: Center(
+      clipBehavior: Clip.antiAlias,
+      borderRadius: BorderRadius.all(Radius.circular(cornerRadius)),
+      color: enabled == true ? backgroundColor : disabledBackgroundColor,
+      child: InkWellX(
+        highlightColor: enabled == true ? highlightColor : ColorX.transparent,
+        clicked: enabled == true ? clicked : null,
+        child: Container(
+          width: width,
+          height: height,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: borderWidth,
+              color: enabled == true ? borderColor : ColorX.transparent,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(cornerRadius)),
+          ),
+          child: Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Visibility(
+                  visible: (faIcon != null || iconUrl.isNotEmpty),
                   child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Visibility(
-                      visible: (faIcon != null || iconUrl.isNotEmpty),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          ImageX(
-                            url: iconUrl,
-                            faIcon: faIcon,
-                            color: faColor,
-                            width: iconWidth,
-                            height: iconHeight,
-                            fit: BoxFit.contain,
-                          ),
-                          ContainerX(width: title.isNotEmpty ? 4.0 : 0.0),
-                        ],
-                      )),
-                  TextX(
-                    title,
-                    color: enabled == true ? titleColor : disabledTitleColor,
-                    fontSize: fontSize,
-                    fontWeight: fontWeight,
-                    textAlign: TextAlign.start,
-                    maxLines: 2048,
-                  )
-                ],
-              )),
-            )));
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ImageX(
+                        url: iconUrl,
+                        faIcon: faIcon,
+                        color: faColor,
+                        width: iconWidth,
+                        height: iconHeight,
+                        fit: BoxFit.contain,
+                      ),
+                      ContainerX(width: title.isNotEmpty ? 4.0 : 0.0),
+                    ],
+                  ),
+                ),
+                TextX(
+                  title,
+                  color: enabled == true ? titleColor : disabledTitleColor,
+                  fontSize: fontSize,
+                  fontWeight: fontWeight,
+                  textAlign: TextAlign.start,
+                  maxLines: 2048,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

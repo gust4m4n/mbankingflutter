@@ -22,32 +22,35 @@ class TextFieldX extends StatelessWidget {
   final Function(String value)? onChanged;
   final List<TextInputFormatter>? inputFormatters;
 
-  const TextFieldX(
-      {Key? key,
-      required this.hint,
-      required this.obscureText,
-      this.fontSize = 17.0,
-      this.fontFamily = 'Roboto',
-      this.fontWeight = FontWeight.w400,
-      this.backgroundColor = ColorX.white,
-      this.cornerRadius = 8.0,
-      this.borderWidth = 1.0,
-      this.borderColor = ColorX.lightGray,
-      this.height = 48.0,
-      required this.keyboardType,
-      this.multiline = false,
-      required this.readOnly,
-      this.rightIcon,
-      this.rightIconColor,
-      this.rightAction,
-      this.controller,
-      this.focusNode,
-      this.onChanged,
-      this.inputFormatters})
-      : super(key: key);
+  const TextFieldX({
+    super.key,
+    required this.hint,
+    required this.obscureText,
+    this.fontSize = 17.0,
+    this.fontFamily = 'Roboto',
+    this.fontWeight = FontWeight.w400,
+    this.backgroundColor = ColorX.white,
+    this.cornerRadius = 8.0,
+    this.borderWidth = 1.0,
+    this.borderColor = ColorX.lightGray,
+    this.height = 48.0,
+    required this.keyboardType,
+    this.multiline = false,
+    required this.readOnly,
+    this.rightIcon,
+    this.rightIconColor,
+    this.rightAction,
+    this.controller,
+    this.focusNode,
+    this.onChanged,
+    this.inputFormatters,
+  });
 
-  PopupMenuItem popupItemView(
-      {required String title, required Color color, required String value}) {
+  PopupMenuItem popupItemView({
+    required String title,
+    required Color color,
+    required String value,
+  }) {
     return PopupMenuItem(
       value: value,
       child: TextX(
@@ -70,13 +73,12 @@ class TextFieldX extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(cornerRadius - (borderWidth * 2)),
-              bottomRight: Radius.circular(cornerRadius - (borderWidth * 2))),
+            topRight: Radius.circular(cornerRadius - (borderWidth * 2)),
+            bottomRight: Radius.circular(cornerRadius - (borderWidth * 2)),
+          ),
         ),
         child: Theme(
-          data: Theme.of(context).copyWith(
-            splashColor: ColorX.transparent,
-          ),
+          data: Theme.of(context).copyWith(splashColor: ColorX.transparent),
           child: InkWellX(
             clicked: () => rightAction != null ? rightAction!() : null,
             child: rightIcon,
@@ -89,59 +91,64 @@ class TextFieldX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerX(
-        backgroundColor: (rightIcon != null)
-            ? ColorX.white
-            : readOnly == true
-                ? ColorX.gray
-                : backgroundColor,
-        height: height,
-        padding: EdgeInsets.only(
-          left: borderWidth > 0.0 ? 12.0 : 0.0,
-          top: 0.0,
-          right: borderWidth > 0.0 ? ((rightIcon != null) ? 0.0 : 12.0) : 0.0,
-          bottom: 0.0,
-        ),
-        borderWidth: borderWidth,
-        borderColor: borderColor,
-        cornerRadius: cornerRadius,
-        child: Row(children: [
+      backgroundColor: (rightIcon != null)
+          ? ColorX.white
+          : readOnly == true
+          ? ColorX.gray
+          : backgroundColor,
+      height: height,
+      padding: EdgeInsets.only(
+        left: borderWidth > 0.0 ? 12.0 : 0.0,
+        top: 0.0,
+        right: borderWidth > 0.0 ? ((rightIcon != null) ? 0.0 : 12.0) : 0.0,
+        bottom: 0.0,
+      ),
+      borderWidth: borderWidth,
+      borderColor: borderColor,
+      cornerRadius: cornerRadius,
+      child: Row(
+        children: [
           Expanded(
-              child: TextField(
-            inputFormatters: inputFormatters,
-            textAlignVertical: TextAlignVertical.center,
-            enabled: !readOnly,
-            controller: controller,
-            onChanged: onChanged,
-            focusNode: focusNode,
-            obscureText: obscureText,
-            style: TextStyle(
+            child: TextField(
+              inputFormatters: inputFormatters,
+              textAlignVertical: TextAlignVertical.center,
+              enabled: !readOnly,
+              controller: controller,
+              onChanged: onChanged,
+              focusNode: focusNode,
+              obscureText: obscureText,
+              style: TextStyle(
                 height: 1.2,
                 color: ColorX.black,
                 fontSize: fontSize,
                 fontWeight: fontWeight,
                 fontFamily: fontFamily,
-                decoration: TextDecoration.none),
-            keyboardType: multiline ? TextInputType.multiline : keyboardType,
-            textInputAction:
-                multiline ? TextInputAction.newline : TextInputAction.done,
-            maxLines: obscureText
-                ? 1
-                : multiline
-                    ? 8
-                    : 1,
-            readOnly: readOnly,
-            decoration: InputDecoration(
-              isDense: true,
-              border: InputBorder.none,
-              hintText: hint,
-              hintStyle: TextStyle(
+                decoration: TextDecoration.none,
+              ),
+              keyboardType: multiline ? TextInputType.multiline : keyboardType,
+              textInputAction: multiline
+                  ? TextInputAction.newline
+                  : TextInputAction.done,
+              maxLines: obscureText
+                  ? 1
+                  : multiline
+                  ? 8
+                  : 1,
+              readOnly: readOnly,
+              decoration: InputDecoration(
+                isDense: true,
+                border: InputBorder.none,
+                hintText: hint,
+                hintStyle: TextStyle(
                   color: ColorX.lightGray,
                   fontSize: fontSize,
                   fontWeight: fontWeight,
                   fontFamily: fontFamily,
-                  decoration: TextDecoration.none),
+                  decoration: TextDecoration.none,
+                ),
+              ),
             ),
-          )),
+          ),
           Visibility(
             visible: (rightIcon != null) ? true : false,
             child: const SizedBox(width: 4.0),
@@ -150,6 +157,8 @@ class TextFieldX extends StatelessWidget {
             visible: (rightIcon != null) ? true : false,
             child: rightContainerButton(context),
           ),
-        ]));
+        ],
+      ),
+    );
   }
 }

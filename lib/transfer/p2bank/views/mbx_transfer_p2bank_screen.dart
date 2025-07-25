@@ -16,6 +16,7 @@ class MbxTransferP2BankScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ContainerError(
+              error: controller.destError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -40,7 +41,7 @@ class MbxTransferP2BankScreen extends StatelessWidget {
                     cornerRadius: 8.0,
                     child: Row(
                       children: [
-                        controller.dest.bank_icon.isEmpty
+                        controller.dest.bankIcon.isEmpty
                             ? ImageX(
                                 faIcon: FontAwesomeIcons.solidUser,
                                 backgroundColor: ColorX.transparent,
@@ -52,7 +53,7 @@ class MbxTransferP2BankScreen extends StatelessWidget {
                                 padding: EdgeInsets.all(16.0),
                               )
                             : ImageX(
-                                url: controller.dest.bank_icon,
+                                url: controller.dest.bankIcon,
                                 backgroundColor: ColorX.transparent,
                                 width: 50.0,
                                 height: 50.0,
@@ -116,10 +117,10 @@ class MbxTransferP2BankScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.destError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.amountError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -144,10 +145,10 @@ class MbxTransferP2BankScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.amountError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.serviceError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -203,10 +204,10 @@ class MbxTransferP2BankScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.serviceError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.messageError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -228,7 +229,6 @@ class MbxTransferP2BankScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.messageError,
             ),
             ContainerX(height: 12.0),
             Column(

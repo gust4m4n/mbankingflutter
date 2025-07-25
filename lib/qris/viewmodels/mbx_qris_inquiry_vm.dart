@@ -5,9 +5,9 @@ class MbxQRISInquiryVM {
   var loading = false;
   var inqury = MbxQRISInquiryModel();
 
-  Future<ApiXResponse> request({required String qr_code}) {
+  Future<ApiXResponse> request({required String qrCode}) {
     loading = true;
-    final params = {'qr_code': qr_code};
+    final params = {'qr_code': qrCode};
     return MbxApi.post(
       endpoint: '/qris/inquiry',
       params: params,

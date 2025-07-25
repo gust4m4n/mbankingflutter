@@ -71,6 +71,7 @@ class MbxCardlessScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.amountError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -95,7 +96,6 @@ class MbxCardlessScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.amountError,
             ),
             ContainerX(height: 12.0),
             GridView.builder(

@@ -3,7 +3,7 @@ import 'package:mbxflutter/privacy-policy/models/mbx_privacy_policy_model.dart';
 
 class MbxPrivacyPolicyVM {
   var loading = false;
-  var privacy_policy = MbxPrivacyPolicyModel();
+  var privacyPolicy = MbxPrivacyPolicyModel();
 
   Future<ApiXResponse> request() {
     loading = true;
@@ -16,7 +16,7 @@ class MbxPrivacyPolicyVM {
     ).then((resp) async {
       loading = false;
       if (resp.status == 200) {
-        privacy_policy = MbxPrivacyPolicyModel.fromJason(resp.jason['data']);
+        privacyPolicy = MbxPrivacyPolicyModel.fromJason(resp.jason['data']);
       }
       return resp;
     });

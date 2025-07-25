@@ -70,6 +70,7 @@ class MbxPDAMScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.areaError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -130,10 +131,10 @@ class MbxPDAMScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.areaError,
             ),
             ContainerX(height: 12.0),
             ContainerError(
+              error: controller.customerIdError,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -158,7 +159,6 @@ class MbxPDAMScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              error: controller.customerIdError,
             ),
             ContainerX(height: 16.0),
             ButtonX(

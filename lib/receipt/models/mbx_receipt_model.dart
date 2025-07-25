@@ -5,7 +5,7 @@ class MbxReceiptModel {
   String amount = '';
   List<MbxLabelValueModel> details = [];
   String title = '';
-  String transaction_id = '';
+  String transactionId = '';
 
   MbxReceiptModel();
 
@@ -16,6 +16,6 @@ class MbxReceiptModel {
       details.add(detail);
     }
     title = jason['title'].stringValue;
-    transaction_id = jason['transaction_id'].stringValue;
+    transactionId = jason['transaction_id'].stringValue;
   }
 }

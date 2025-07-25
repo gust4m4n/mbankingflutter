@@ -7,7 +7,11 @@ class MbxCardlessDenomWidget extends StatelessWidget {
   final int nominal;
   final GestureTapCallback? clicked;
 
-  const MbxCardlessDenomWidget({super.key, required this.nominal, this.clicked});
+  const MbxCardlessDenomWidget({
+    super.key,
+    required this.nominal,
+    this.clicked,
+  });
 
   @override
   Widget build(BuildContext context) {

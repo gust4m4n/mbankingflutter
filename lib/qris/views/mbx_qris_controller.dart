@@ -44,7 +44,7 @@ class MbxQRISController extends GetxController {
       }
       final List<Barcode> barcodes = cap.barcodes;
       for (final barcode in barcodes) {
-        QRDetected(barcode.rawValue!);
+        qrDetected(barcode.rawValue!);
         break;
       }
     }
@@ -56,11 +56,11 @@ class MbxQRISController extends GetxController {
     update();
   }
 
-  QRDetected(String code) async {
+  qrDetected(String code) async {
     LoggerX.log('QR Code: $code');
     await scannerController?.stop();
     Get.loading();
-    inquiryVM.request(qr_code: code).then((resp) async {
+    inquiryVM.request(qrCode: code).then((resp) async {
       Get.back();
       if (resp.status == 200) {
         Get.to(MbxQRISAmountScreen(inquiry: inquiryVM.inqury))?.then((

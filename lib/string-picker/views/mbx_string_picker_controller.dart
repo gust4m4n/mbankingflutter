@@ -8,7 +8,7 @@ class MbxStringPickerController extends GetxController {
   TextEditingController txtSearch = TextEditingController();
 
   MbxStringPickerController({required this.list}) {
-    this.filtered = list;
+    filtered = list;
   }
 
   btnCloseClicked() {

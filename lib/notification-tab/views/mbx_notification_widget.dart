@@ -6,7 +6,7 @@ import '../../widget-x/all_widgets.dart';
 // ignore: must_be_immutable
 class MbxNotificationWidget extends StatelessWidget {
   final MbxNotificationModel notification;
-  MbxNotificationWidget(this.notification);
+  const MbxNotificationWidget(this.notification, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class MbxNotificationWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 2.0),
                 TextX(
-                  MbxFormatVM.longDateTime(notification.created_at),
+                  MbxFormatVM.longDateTime(notification.createdAt),
                   color: ColorX.black,
                   fontSize: 13.0,
                   fontWeight: FontWeight.w400,

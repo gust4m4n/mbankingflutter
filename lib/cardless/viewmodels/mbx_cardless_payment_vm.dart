@@ -5,7 +5,7 @@ class MbxCardlessPaymentVM {
   List<MbxCardlessStepModel> steps = [];
 
   Future<ApiXResponse> request({
-    required String transaction_id,
+    required String transactionId,
     required String pin,
     required bool biometric,
   }) {

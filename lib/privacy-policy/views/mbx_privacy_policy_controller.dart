@@ -14,9 +14,9 @@ class MbxPrivacyPolicyController extends GetxController {
     privacyPolicyVM.request().then((resp) {
       update();
       buildHtmlAndFonts('''
-          <span style="font-family: 'Roboto'; font-weight: bold; font-size: 24pt; color: #343a40">${privacyPolicyVM.privacy_policy.title}</span>
+          <span style="font-family: 'Roboto'; font-weight: bold; font-size: 24pt; color: #343a40">${privacyPolicyVM.privacyPolicy.title}</span>
           <br><br>
-          <span style="font-family: 'Roboto'; font-weight: normal; font-size: 15pt; color: #343a40">${privacyPolicyVM.privacy_policy.content}</span>
+          <span style="font-family: 'Roboto'; font-weight: normal; font-size: 15pt; color: #343a40">${privacyPolicyVM.privacyPolicy.content}</span>
         ''').then((value) {
         html = value;
         if (!kIsWeb) {
@@ -44,7 +44,7 @@ class MbxPrivacyPolicyController extends GetxController {
               </style>              
               </head>
               <body style='margin:16pt;padding:0pt;'>
-              ${html}
+              $html
               </body></html>''';
         return htmlPage;
       }

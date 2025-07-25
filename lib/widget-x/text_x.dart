@@ -12,7 +12,7 @@ class TextX extends StatelessWidget {
 
   const TextX(
     this.text, {
-    Key? key,
+    super.key,
     this.color = ColorX.black,
     this.fontSize = 17.0,
     this.fontFamily = 'Roboto',
@@ -20,7 +20,7 @@ class TextX extends StatelessWidget {
     this.textAlign = TextAlign.start,
     this.underline = false,
     this.maxLines = 1,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +30,12 @@ class TextX extends StatelessWidget {
       maxLines: maxLines,
       textAlign: textAlign,
       style: TextStyle(
-          color: color,
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          fontFamily: fontFamily,
-          decoration:
-              underline ? TextDecoration.underline : TextDecoration.none),
+        color: color,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontFamily: fontFamily,
+        decoration: underline ? TextDecoration.underline : TextDecoration.none,
+      ),
     );
   }
 }

@@ -6,6 +6,8 @@ import 'mbx_theme_widget.dart';
 
 // ignore: must_be_immutable
 class MbxThemeSheet extends GetWidget<MbxThemeController> {
+  const MbxThemeSheet({super.key});
+
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showCustom(widget: this, title: 'Pilih Theme');

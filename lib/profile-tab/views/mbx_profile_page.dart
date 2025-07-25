@@ -5,6 +5,8 @@ import 'mbx_profile_controller.dart';
 import 'mbx_profile_menu_button.dart';
 
 class MbxProfilePage extends StatelessWidget {
+  const MbxProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MbxProfileController>(

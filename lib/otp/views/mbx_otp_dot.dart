@@ -5,8 +5,12 @@ class MbxOtpDot extends StatelessWidget {
   final String number;
   final bool secure;
 
-  MbxOtpDot({Key? key, this.on = false, this.number = '', this.secure = true})
-      : super(key: key);
+  const MbxOtpDot({
+    super.key,
+    this.on = false,
+    this.number = '',
+    this.secure = true,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +31,8 @@ class MbxOtpDot extends StatelessWidget {
             borderWidth: 1.0,
             borderColor: ColorX.gray,
             child: Center(
-                child: TextX(
-              number,
-              fontSize: 17.0,
-              fontWeight: FontWeight.w700,
-            )),
+              child: TextX(number, fontSize: 17.0, fontWeight: FontWeight.w700),
+            ),
           );
   }
 }

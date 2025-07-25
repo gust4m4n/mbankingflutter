@@ -23,7 +23,7 @@ class MbxQRISScreen extends StatelessWidget {
                 onDetect: (cap) {
                   final List<Barcode> barcodes = cap.barcodes;
                   for (final barcode in barcodes) {
-                    controller.QRDetected(barcode.rawValue!);
+                    controller.qrDetected(barcode.rawValue!);
                     break;
                   }
                 },

@@ -8,7 +8,8 @@ class MbxTransferHistoryWidget extends StatelessWidget {
   final MbxTransferHistoryModel history;
   final GestureTapCallback? onTransferClicked;
 
-  MbxTransferHistoryWidget({
+  const MbxTransferHistoryWidget({
+    super.key,
     required this.history,
     required this.onTransferClicked,
   });

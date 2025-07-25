@@ -22,11 +22,11 @@ class MbxReceiptController extends GetxController {
     backToHome = Get.arguments['backToHome'] as bool;
     askFeedback = (Get.arguments['askFeedback'] ?? false) as bool;
     update();
-    if (receipt.transaction_id.isEmpty) {
+    if (receipt.transactionId.isEmpty) {
       loading = true;
       update();
       final receiptVM = MbxReceiptVM();
-      receiptVM.request(transaction_i: receipt.transaction_id).then((resp) {
+      receiptVM.request(transactionId: receipt.transactionId).then((resp) {
         receipt = receiptVM.receipt;
         loading = false;
         update();
@@ -49,7 +49,7 @@ class MbxReceiptController extends GetxController {
   }
 
   btnShareClicked() {
-    final filename = 'RECEIPT-${receipt.transaction_id}.JPG';
+    final filename = 'RECEIPT-${receipt.transactionId}.JPG';
     screenshotController
         .capture(delay: Duration(milliseconds: 0))
         .then((capturedImage) async {
@@ -60,20 +60,16 @@ class MbxReceiptController extends GetxController {
               name: filename,
             ).saveTo(filename).then((value) {});
           } else {
-            await Share.shareXFiles([
-              XFile.fromData(
-                capturedImage!,
-                mimeType: 'image/jpeg',
-                name: filename,
-              ),
-            ]);
+            await SharePlus.instance.share(
+              ShareParams(files: [XFile(filename)]),
+            );
           }
         })
         .catchError((onError) {});
   }
 
   btnDownloadClicked() async {
-    final filename = 'RECEIPT-${receipt.transaction_id}.JPG';
+    final filename = 'RECEIPT-${receipt.transactionId}.JPG';
     screenshotController
         .capture(delay: Duration(milliseconds: 0))
         .then((capturedImage) async {
