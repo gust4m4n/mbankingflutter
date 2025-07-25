@@ -5,8 +5,11 @@ import 'package:mbxflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_screen.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/login/views/mbx_login_screen.dart';
+import 'package:mbxflutter/preferences/language_controller.dart';
+import 'package:mbxflutter/preferences/language_selection_screen.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
+import 'package:mbxflutter/preferences/translation_service.dart';
 import 'package:mbxflutter/privacy-policy/views/mbx_privacy_policy_screen.dart';
 import 'package:mbxflutter/qris/views/mbx_qris_screen.dart';
 import 'package:mbxflutter/receipt/views/mbx_receipt_screen.dart';
@@ -35,6 +38,9 @@ Future<void> main() async {
   await MbxAntiJailbreakVM.check();
   await MbxDeviceInfoVM.request();
   MbxReachabilityVM.startListening();
+
+  // Initialize language controller with lazy loading
+  Get.lazyPut<LanguageController>(() => LanguageController(), fenix: true);
 
   final freshInstall = await MbxPreferencesVM.getFreshInstall();
   if (freshInstall == true) {
@@ -96,12 +102,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final languageController = Get.find<LanguageController>();
+
     return GetMaterialApp(
       popGesture: true,
       defaultTransition: Transition.cupertino,
       debugShowCheckedModeBanner: false,
-      locale: Get.deviceLocale,
-      fallbackLocale: Locale('en', 'US'),
+      locale: languageController.currentLocale,
+      translations: TranslationService(),
+      fallbackLocale: const Locale('id', ''),
       scrollBehavior: AppScrollBehavior(),
       title: 'MBankingApp',
       theme: ThemeData(
@@ -187,6 +196,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(name: '/pbb', page: () => const MbxPBBScreen()),
         GetPage(name: '/pdam', page: () => const MbxPDAMScreen()),
+        GetPage(name: '/language', page: () => const LanguageSelectionScreen()),
       ],
     );
   }

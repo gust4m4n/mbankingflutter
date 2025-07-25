@@ -12,7 +12,7 @@ class MbxCardlessScreen extends StatelessWidget {
     return GetBuilder<MbxCardlessController>(
       init: MbxCardlessController(),
       builder: (controller) => MbxScreen(
-        title: 'Tarik Tunai',
+        title: 'cardless'.tr,
         scrollingBody: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

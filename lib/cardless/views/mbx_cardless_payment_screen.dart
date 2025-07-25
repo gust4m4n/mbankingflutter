@@ -8,7 +8,7 @@ class MbxCardlessPaymentScreen extends StatelessWidget {
     return GetBuilder<MbxCardlessPaymentController>(
       init: MbxCardlessPaymentController(),
       builder: (controller) => MbxScreen(
-        title: 'Tarik Tunai',
+        title: 'cardless'.tr,
         backAction: () {
           controller.btnBackClicked();
         },

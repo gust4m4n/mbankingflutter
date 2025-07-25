@@ -136,7 +136,7 @@ class MbxHomePage extends StatelessWidget {
                             bottom: 4.0,
                           ),
                           child: TextX(
-                            'REKENING',
+                            'account'.tr,
                             fontSize: 13.0,
                             fontWeight: FontWeight.w700,
                             color: ColorX.black,
@@ -190,7 +190,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.green,
                                   faIcon: FontAwesomeIcons.arrowRightArrowLeft,
-                                  title: 'Transfer',
+                                  title: 'transfer'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -200,7 +200,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.blue,
                                   faIcon: FontAwesomeIcons.sackDollar,
-                                  title: 'Tarik Tunai',
+                                  title: 'withdrawCash'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -210,7 +210,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.red,
                                   faIcon: FontAwesomeIcons.qrcode,
-                                  title: 'QRIS',
+                                  title: 'qris'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -220,7 +220,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.yellow,
                                   faIcon: FontAwesomeIcons.solidLightbulb,
-                                  title: 'Listrik PLN',
+                                  title: 'electricity'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -230,7 +230,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.teal,
                                   faIcon: FontAwesomeIcons.mobile,
-                                  title: 'Pulsa',
+                                  title: 'pulsa'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -240,7 +240,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.red,
                                   faIcon: FontAwesomeIcons.landmark,
-                                  title: 'PBB',
+                                  title: 'pbb'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -250,7 +250,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.yellow,
                                   faIcon: FontAwesomeIcons.water,
-                                  title: 'PDAM',
+                                  title: 'pdam'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
@@ -260,7 +260,7 @@ class MbxHomePage extends StatelessWidget {
                                 MbxLauncherWidget(
                                   color: ColorX.gray,
                                   faIcon: FontAwesomeIcons.ellipsis,
-                                  title: 'Lainnya',
+                                  title: 'others'.tr,
                                   titleColor: ColorX.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                 ),
@@ -283,7 +283,7 @@ class MbxHomePage extends StatelessWidget {
                                   bottom: 4.0,
                                 ),
                                 child: TextX(
-                                  'KURS MATA UANG',
+                                  'exchangeRate'.tr,
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w700,
                                   color: ColorX.black,
@@ -312,7 +312,7 @@ class MbxHomePage extends StatelessWidget {
                                           children: [
                                             Expanded(
                                               child: TextX(
-                                                'Mata Uang',
+                                                'currency'.tr,
                                                 fontSize: 15.0,
                                                 fontWeight: FontWeight.w700,
                                                 color: ColorX.black,
@@ -321,7 +321,7 @@ class MbxHomePage extends StatelessWidget {
                                             ContainerX(width: 8.0),
                                             Expanded(
                                               child: TextX(
-                                                'Beli',
+                                                'buy'.tr,
                                                 fontSize: 15.0,
                                                 fontWeight: FontWeight.w700,
                                                 color: ColorX.black,
@@ -330,7 +330,7 @@ class MbxHomePage extends StatelessWidget {
                                             ContainerX(width: 8.0),
                                             Expanded(
                                               child: TextX(
-                                                'Jual',
+                                                'sell'.tr,
                                                 fontSize: 15.0,
                                                 fontWeight: FontWeight.w700,
                                                 color: ColorX.black,
@@ -381,7 +381,7 @@ class MbxHomePage extends StatelessWidget {
                                   bottom: 4.0,
                                 ),
                                 child: TextX(
-                                  'BERITA',
+                                  'newsTitle'.tr,
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w700,
                                   color: ColorX.black,

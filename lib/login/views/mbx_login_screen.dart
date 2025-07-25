@@ -26,6 +26,45 @@ class MbxLoginScreen extends StatelessWidget {
               ),
               child: Row(
                 children: [
+                  InkWellX(
+                    cornerRadius: 25.0,
+                    clicked: () {
+                      controller.btnLanguageClicked();
+                    },
+                    child: ContainerX(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 12.0,
+                        vertical: 8.0,
+                      ),
+                      borderWidth: 1.0,
+                      borderColor: ColorX.white,
+                      cornerRadius: 25.0,
+                      backgroundColor: ColorX.transparent,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ImageX(
+                            faIcon: FontAwesomeIcons.globe,
+                            color: ColorX.white,
+                            width: 14.0,
+                            height: 14.0,
+                          ),
+                          SizedBox(width: 6.0),
+                          TextX(
+                            controller.getCurrentLanguageFlag(),
+                            fontSize: 16.0,
+                          ),
+                          SizedBox(width: 6.0),
+                          TextX(
+                            controller.getCurrentLanguageName(),
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w500,
+                            color: ColorX.white,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                   Spacer(),
                   MbxThemeButton(
                     clicked: () {
@@ -101,7 +140,7 @@ class MbxLoginScreen extends StatelessWidget {
                     ContainerError(
                       error: controller.phoneError,
                       child: TextFieldX(
-                        hint: 'No. HP (08xxxxxxxxx)',
+                        hint: 'phone_hint'.tr,
                         obscureText: false,
                         keyboardType: TextInputType.phone,
                         inputFormatters: <TextInputFormatter>[

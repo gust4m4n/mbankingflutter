@@ -2,6 +2,7 @@ import 'package:mbxflutter/avatar/views/mbx_avatar_sheet.dart';
 import 'package:mbxflutter/help/views/mbx_help_sheet.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/preferences/mbx_language_sheet.dart';
 import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/profile-tab/mbx_change_pin_vm.dart';
 import 'package:mbxflutter/profile-tab/mbx_logout_vm.dart';
@@ -30,7 +31,7 @@ class MbxProfileController extends GetxController {
     pinSheet
         .show(
           title: 'PIN',
-          message: 'Masukkan nomor pin m-banking atau ATM anda.',
+          message: 'enter_pin_message'.tr,
           secure: true,
           biometric: false,
           onSubmit: (code, biometric) async {
@@ -45,11 +46,11 @@ class MbxProfileController extends GetxController {
               Get.back();
             });
           },
-          optionTitle: 'Lupa PIN',
+          optionTitle: 'forgot_pin'.tr,
           optionClicked: () {
             pinSheet.clear('');
             ToastX.showSuccess(
-              msg: 'PIN akan direset, silahkan hubungi CS kami.',
+              msg: 'pin_reset_message'.tr,
             );
           },
         )
@@ -64,7 +65,7 @@ class MbxProfileController extends GetxController {
     pinSheet
         .show(
           title: 'PIN',
-          message: 'Masukkan nomor pin m-banking atau ATM anda.',
+          message: 'enter_pin_message'.tr,
           secure: true,
           biometric: false,
           onSubmit: (code, biometric) async {
@@ -75,7 +76,7 @@ class MbxProfileController extends GetxController {
               changePinNew();
             });
           },
-          optionTitle: 'Lupa PIN',
+          optionTitle: 'forgot_pin'.tr,
           optionClicked: () {},
         )
         .then((value) async {});
@@ -86,7 +87,7 @@ class MbxProfileController extends GetxController {
     pinSheet
         .show(
           title: 'PIN Baru',
-          message: 'Masukkan nomor pin m-banking atau ATM anda yang baru.',
+          message: 'enter_new_pin_message'.tr,
           secure: true,
           biometric: false,
           onSubmit: (code, biometric) async {
@@ -157,6 +158,10 @@ class MbxProfileController extends GetxController {
 
   btnHelpClicked() {
     MbxHelpSheet.show();
+  }
+
+  btnLanguageClicked() {
+    MbxLanguageSheet.show();
   }
 
   btnLogoutClicked() {

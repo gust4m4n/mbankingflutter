@@ -1,8 +1,8 @@
-import '../../widget-x/all_widgets.dart';
 import '../../history-tab/views/mbx_history_page.dart';
 import '../../home-tab/views/mbx_home_page.dart';
 import '../../notification-tab/views/mbx_notification_page.dart';
 import '../../profile-tab/views/mbx_profile_page.dart';
+import '../../widget-x/all_widgets.dart';
 import 'mbx_bottom_navbar_button.dart';
 import 'mbx_bottom_navbar_controller.dart';
 
@@ -76,7 +76,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: MbxButtonNavBarButton(
-                      title: 'Beranda',
+                      title: 'home'.tr,
                       faIcon: FontAwesomeIcons.house,
                       selected: controller.tabBarIndex == 0,
                       clicked: () {
@@ -86,7 +86,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: MbxButtonNavBarButton(
-                      title: 'Riwayat',
+                      title: 'history'.tr,
                       faIcon: FontAwesomeIcons.clockRotateLeft,
                       selected: controller.tabBarIndex == 1,
                       clicked: () {
@@ -99,7 +99,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: MbxButtonNavBarButton(
-                      title: 'Notifikasi',
+                      title: 'notification'.tr,
                       faIcon: FontAwesomeIcons.bell,
                       selected: controller.tabBarIndex == 3,
                       clicked: () {
@@ -109,7 +109,7 @@ class MbxBottomNavBarScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: MbxButtonNavBarButton(
-                      title: 'Akun',
+                      title: 'account'.tr,
                       faIcon: FontAwesomeIcons.user,
                       selected: controller.tabBarIndex == 4,
                       clicked: () {

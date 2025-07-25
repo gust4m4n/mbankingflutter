@@ -10,7 +10,7 @@ class MbxPinSheet extends GetWidget<MbxPinController> {
   bool secure = true;
   bool biometric = false;
   void Function(String code, bool biometric)? onSubmit;
-  String optionTitle = 'Lupa PIN';
+  String optionTitle = 'forgot_pin'.tr;
   void Function()? optionClicked;
 
   MbxPinSheet({super.key});

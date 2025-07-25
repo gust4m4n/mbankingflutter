@@ -39,7 +39,7 @@ class MbxReloginController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
       title: 'PIN',
-      message: 'Masukkan nomor pin m-banking atau ATM anda.',
+      message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,
       onSubmit: (code, biometric) async {
@@ -59,10 +59,10 @@ class MbxReloginController extends GetxController {
           pinSheet.clear(resp.message);
         }
       },
-      optionTitle: 'Lupa PIN',
+      optionTitle: 'forgot_pin'.tr,
       optionClicked: () {
         pinSheet.clear('');
-        ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
+        ToastX.showSuccess(msg: 'pin_reset_message'.tr);
       },
     );
   }
@@ -71,7 +71,7 @@ class MbxReloginController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
       title: 'PIN',
-      message: 'Masukkan nomor pin m-banking atau ATM anda.',
+      message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,
       onSubmit: (code, biometric) async {
@@ -92,10 +92,10 @@ class MbxReloginController extends GetxController {
           pinSheet.clear(resp.message);
         }
       },
-      optionTitle: 'Lupa PIN',
+      optionTitle: 'forgot_pin'.tr,
       optionClicked: () {
         pinSheet.clear('');
-        ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
+        ToastX.showSuccess(msg: 'pin_reset_message'.tr);
       },
     );
   }
@@ -104,7 +104,7 @@ class MbxReloginController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
       title: 'PIN',
-      message: 'Masukkan nomor pin m-banking atau ATM anda.',
+      message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,
       onSubmit: (code, biometric) async {
@@ -124,10 +124,10 @@ class MbxReloginController extends GetxController {
           pinSheet.clear(resp.message);
         }
       },
-      optionTitle: 'Lupa PIN',
+      optionTitle: 'forgot_pin'.tr,
       optionClicked: () {
         pinSheet.clear('');
-        ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
+        ToastX.showSuccess(msg: 'pin_reset_message'.tr);
       },
     );
   }

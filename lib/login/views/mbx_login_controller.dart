@@ -5,6 +5,9 @@ import 'package:mbxflutter/login/viewmodels/mbx_onboarding_list_vm.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/otp/views/mbx_otp_sheet.dart';
 import 'package:mbxflutter/pin/views/mbx_pin_sheet.dart';
+import 'package:mbxflutter/preferences/language_controller.dart';
+import 'package:mbxflutter/preferences/language_preferences.dart';
+import 'package:mbxflutter/preferences/mbx_language_sheet.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 import 'package:mbxflutter/utils/logger_x.dart';
 import 'package:mbxflutter/widget-x/all_widgets.dart';
@@ -22,6 +25,7 @@ class MbLoginController extends GetxController {
   var version = '';
   var onboardingIndex = 0;
 
+  LanguageController get languageController => Get.find<LanguageController>();
   @override
   void onReady() {
     super.onReady();
@@ -43,6 +47,22 @@ class MbLoginController extends GetxController {
         Get.offAllNamed('/login');
       }
     });
+  }
+
+  btnLanguageClicked() {
+    MbxLanguageSheet.show();
+  }
+
+  String getCurrentLanguageFlag() {
+    return LanguagePreferences.getLanguageFlag(
+      languageController.currentLanguage,
+    );
+  }
+
+  String getCurrentLanguageName() {
+    return LanguagePreferences.getLanguageName(
+      languageController.currentLanguage,
+    );
   }
 
   txtPhoneOnChanged(String value) {
@@ -130,7 +150,7 @@ class MbLoginController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
       title: 'PIN',
-      message: 'Masukkan nomor pin m-banking atau ATM anda.',
+      message: 'enter_pin_message'.tr,
       secure: true,
       biometric: false,
       onSubmit: (code, biometric) async {
@@ -146,10 +166,10 @@ class MbLoginController extends GetxController {
           Get.back();
         }
       },
-      optionTitle: 'Lupa PIN',
+      optionTitle: 'forgot_pin'.tr,
       optionClicked: () {
         pinSheet.clear('');
-        ToastX.showSuccess(msg: 'PIN akan direset, silahkan hubungi CS kami.');
+        ToastX.showSuccess(msg: 'pin_reset_message'.tr);
       },
     );
   }

@@ -97,7 +97,7 @@ class MbxProfilePage extends StatelessWidget {
                   child: Column(
                     children: [
                       MbaxProfileMenuButton(
-                        title: 'Aktivasi Biometrik',
+                        title: 'biometricActivation'.tr,
                         faIcon: FontAwesomeIcons.fingerprint,
                         clicked: () {},
                         toggle: true,
@@ -108,35 +108,42 @@ class MbxProfilePage extends StatelessWidget {
                         },
                       ),
                       MbaxProfileMenuButton(
-                        title: 'Ganti PIN',
+                        title: 'changePin'.tr,
                         faIcon: FontAwesomeIcons.key,
                         clicked: () {
                           controller.btnChangePinClicked();
                         },
                       ),
                       MbaxProfileMenuButton(
-                        title: 'Syarat & Ketentuan',
+                        title: 'terms_and_conditions'.tr,
                         faIcon: FontAwesomeIcons.shieldHalved,
                         clicked: () {
                           controller.btnTncClicked();
                         },
                       ),
                       MbaxProfileMenuButton(
-                        title: 'Kebijakan Privasi',
-                        faIcon: FontAwesomeIcons.shieldHalved,
+                        title: 'privacy_policy'.tr,
+                        faIcon: FontAwesomeIcons.userShield,
                         clicked: () {
                           controller.btnPrivacyPolicyClicked();
                         },
                       ),
                       MbaxProfileMenuButton(
-                        title: 'Bantuan',
+                        title: 'language'.tr,
+                        faIcon: FontAwesomeIcons.globe,
+                        clicked: () {
+                          controller.btnLanguageClicked();
+                        },
+                      ),
+                      MbaxProfileMenuButton(
+                        title: 'help'.tr,
                         faIcon: FontAwesomeIcons.circleQuestion,
                         clicked: () {
                           controller.btnHelpClicked();
                         },
                       ),
                       MbaxProfileMenuButton(
-                        title: 'Keluar',
+                        title: 'logout'.tr,
                         faIcon: FontAwesomeIcons.powerOff,
                         clicked: () {
                           controller.btnLogoutClicked();

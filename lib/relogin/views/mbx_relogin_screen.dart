@@ -123,7 +123,7 @@ class MbxReloginScreen extends StatelessWidget {
                                     MbxLauncherWidget(
                                       color: ColorX.blue,
                                       faIcon: FontAwesomeIcons.sackDollar,
-                                      title: 'Tarik Tunai',
+                                      title: 'cardless'.tr,
                                       titleColor: ColorX.black,
                                       highlightColor: ColorX.theme.withValues(
                                         alpha: 0.2,
