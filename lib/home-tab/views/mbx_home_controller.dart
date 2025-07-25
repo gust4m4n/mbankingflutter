@@ -78,4 +78,8 @@ class MbxHomeController extends GetxController {
   btnPDAMClicked() async {
     Get.toNamed('/pdam');
   }
+
+  btnUpgradeClicked() {
+    Get.toNamed('/ekyc/selfie');
+  }
 }

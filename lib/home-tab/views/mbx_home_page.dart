@@ -269,6 +269,24 @@ class MbxHomePage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 8.0),
+                        Padding(
+                          padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                          child: ButtonX(
+                            title: 'Upgrade eKYC',
+                            backgroundColor: ColorX.green,
+                            titleColor: ColorX.white,
+                            faIcon: FontAwesomeIcons.arrowUp,
+                            faColor: ColorX.white,
+                            iconWidth: 16.0,
+                            iconHeight: 16.0,
+                            cornerRadius: 12.0,
+                            height: 48.0,
+                            clicked: () {
+                              controller.btnUpgradeClicked();
+                            },
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
                         Visibility(
                           visible:
                               controller.foreignExchangeListVM.list.isNotEmpty,

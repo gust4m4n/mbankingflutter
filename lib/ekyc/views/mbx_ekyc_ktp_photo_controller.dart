@@ -1,0 +1,104 @@
+import 'package:camera/camera.dart';
+
+import '../../widget-x/all_widgets.dart';
+import '../services/ekyc_data_service.dart';
+
+class MbxEkycKtpPhotoController extends GetxController {
+  CameraController? cameraController;
+  bool isCameraInitialized = false;
+  List<CameraDescription> cameras = [];
+
+  @override
+  void onInit() {
+    super.onInit();
+    initializeCamera();
+  }
+
+  @override
+  void onClose() {
+    cameraController?.dispose();
+    super.onClose();
+  }
+
+  Future<void> initializeCamera() async {
+    try {
+      cameras = await availableCameras();
+      if (cameras.isNotEmpty) {
+        // Use back camera for ID card photo
+        CameraDescription backCamera = cameras.firstWhere(
+          (camera) => camera.lensDirection == CameraLensDirection.back,
+          orElse: () => cameras.first,
+        );
+
+        cameraController = CameraController(
+          backCamera,
+          ResolutionPreset.high,
+          enableAudio: false,
+        );
+
+        await cameraController?.initialize();
+        if (cameraController?.value.isInitialized == true) {
+          isCameraInitialized = true;
+          update();
+        }
+      }
+    } catch (e) {
+      print('Camera initialization error: $e');
+      isCameraInitialized = false;
+      update();
+    }
+  }
+
+  btnBackClicked() {
+    Get.back();
+  }
+
+  Future<void> btnCaptureClicked() async {
+    print('KTP photo capture button clicked');
+    print('Camera controller null: ${cameraController == null}');
+    print('Camera initialized: $isCameraInitialized');
+    print('Camera value initialized: ${cameraController?.value.isInitialized}');
+
+    if (cameraController != null &&
+        isCameraInitialized &&
+        cameraController!.value.isInitialized) {
+      try {
+        print('Taking KTP picture...');
+        final XFile photo = await cameraController!.takePicture();
+        // Save photo path to service
+        EkycDataService.instance.saveKtpPhoto(photo.path);
+        print('KTP Photo captured: ${photo.path}');
+
+        // Show success message
+        Get.snackbar(
+          'Success',
+          'ID Card photo captured successfully!',
+          backgroundColor: Colors.green,
+          colorText: Colors.white,
+          duration: Duration(seconds: 2),
+        );
+
+        // Navigate to next screen
+        Get.toNamed('/ekyc/data-entry');
+      } catch (e) {
+        print('Error capturing photo: $e');
+        Get.snackbar(
+          'Error',
+          'Failed to capture photo. Please try again.',
+          backgroundColor: Colors.red,
+          colorText: Colors.white,
+          duration: Duration(seconds: 3),
+        );
+      }
+    } else {
+      print('Camera not ready for capture');
+      Get.snackbar(
+        'Camera Not Ready',
+        'Please wait for camera to initialize',
+        backgroundColor: Colors.orange,
+        colorText: Colors.white,
+        duration: Duration(seconds: 3),
+      );
+    }
+  }
+}

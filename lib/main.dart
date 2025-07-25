@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:mbxflutter/apis/mbx_device_info_vm.dart';
 import 'package:mbxflutter/biller-pln/prepaid/views/mbx_electricity_prepaid_screen.dart';
 import 'package:mbxflutter/biller-pulsa/dataplan/views/mbx_pulsa_dataplan_screen.dart';
@@ -25,6 +26,13 @@ import 'biller-pln/postpaid/views/mbx_electricity_postpaid_screen.dart';
 import 'biller-pulsa/postpaid/views/mbx_pulsa_postpaid_screen.dart';
 import 'biller-pulsa/prepaid/views/mbx_pulsa_prepaid_screen.dart';
 import 'bottom-navbar/views/mbx_bottom_navbar_screen.dart';
+import 'ekyc/services/ekyc_data_service.dart';
+import 'ekyc/views/mbx_ekyc_confirmation_screen.dart';
+import 'ekyc/views/mbx_ekyc_data_entry_screen.dart';
+import 'ekyc/views/mbx_ekyc_ktp_photo_screen.dart';
+import 'ekyc/views/mbx_ekyc_selfie_ktp_screen.dart';
+import 'ekyc/views/mbx_ekyc_selfie_screen.dart';
+import 'ekyc/views/mbx_ekyc_success_screen.dart';
 import 'faq/views/mbx_faq_screen.dart';
 import 'news/views/mbx_news_screen.dart';
 import 'tnc/views/mbx_tnc_screen.dart';
@@ -34,8 +42,18 @@ import 'transfer/p2p/views/mbx_transfer_p2p_screen.dart';
 import 'widget-x/all_widgets.dart';
 import 'widget-x/media_x.dart';
 
+List<CameraDescription> cameras = [];
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize cameras
+  try {
+    cameras = await availableCameras();
+  } catch (e) {
+    print('Camera initialization error: $e');
+  }
+
   await MbxAntiJailbreakVM.check();
   await MbxDeviceInfoVM.request();
   MbxReachabilityVM.startListening();
@@ -45,6 +63,11 @@ Future<void> main() async {
     () => MbxLanguageController(),
     fenix: true,
   );
+
+  // Initialize eKYC data service
+  print('Initializing EkycDataService...');
+  Get.put(EkycDataService(), permanent: true);
+  print('EkycDataService initialized successfully');
 
   final freshInstall = await MbxPreferencesVM.getFreshInstall();
   if (freshInstall == true) {
@@ -204,6 +227,27 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/language',
           page: () => const MbxLanguageSelectionScreen(),
+        ),
+        GetPage(name: '/ekyc/selfie', page: () => const MbxEkycSelfieScreen()),
+        GetPage(
+          name: '/ekyc/selfie-ktp',
+          page: () => const MbxEkycSelfieKtpScreen(),
+        ),
+        GetPage(
+          name: '/ekyc/ktp-photo',
+          page: () => const MbxEkycKtpPhotoScreen(),
+        ),
+        GetPage(
+          name: '/ekyc/data-entry',
+          page: () => const MbxEkycDataEntryScreen(),
+        ),
+        GetPage(
+          name: '/ekyc/confirmation',
+          page: () => const MbxEkycConfirmationScreen(),
+        ),
+        GetPage(
+          name: '/ekyc/success',
+          page: () => const MbxEkycSuccessScreen(),
         ),
       ],
     );
