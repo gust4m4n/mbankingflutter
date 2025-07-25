@@ -31,14 +31,14 @@ class MbxTransferP2PPickerController extends GetxController {
 
   onDeleteClicked(MbxTransferP2PDestModel dest) {
     SheetX.showMessage(
-      title: 'Hapus',
+      title: 'delete'.tr,
       message:
           'Apakah anda yakin ingin menghapus ${dest.name} dengan nomor rekening ${dest.account} ?',
-      leftBtnTitle: 'Ya',
+      leftBtnTitle: 'yes'.tr,
       onLeftBtnClicked: () {
         Get.back();
       },
-      rightBtnTitle: 'Tidak',
+      rightBtnTitle: 'no'.tr,
       onRightBtnClicked: () {
         Get.back();
       },

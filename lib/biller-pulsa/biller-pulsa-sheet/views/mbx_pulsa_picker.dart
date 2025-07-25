@@ -9,7 +9,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
   const MbxPulsaPicker({super.key});
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
-    return SheetX.showCustom(widget: this, title: 'Pulsa');
+    return SheetX.showCustom(widget: this, title: 'pulsa'.tr);
   }
 
   @override
@@ -44,7 +44,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                       MbxLauncherWidget(
                         color: ColorX.teal,
                         faIcon: FontAwesomeIcons.mobile,
-                        title: 'Prabayar',
+                        title: 'prepaid'.tr,
                         titleColor: ColorX.white,
                         highlightColor: ColorX.theme.lighten(0.1),
                         clicked: () {
@@ -54,7 +54,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                       MbxLauncherWidget(
                         color: ColorX.teal,
                         faIcon: FontAwesomeIcons.mobile,
-                        title: 'Pascabayar',
+                        title: 'postpaid'.tr,
                         titleColor: ColorX.white,
                         highlightColor: ColorX.theme.lighten(0.1),
                         clicked: () {
@@ -64,7 +64,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                       MbxLauncherWidget(
                         color: ColorX.teal,
                         faIcon: FontAwesomeIcons.mobile,
-                        title: 'Paket Data',
+                        title: 'data_package'.tr,
                         titleColor: ColorX.white,
                         highlightColor: ColorX.theme.lighten(0.1),
                         clicked: () {
@@ -76,7 +76,7 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                 ),
                 ContainerX(height: 16.0),
                 ButtonX(
-                  title: 'Kembali',
+                  title: 'back'.tr,
                   titleColor: ColorX.black,
                   backgroundColor: ColorX.transparent,
                   borderWidth: 1.0,

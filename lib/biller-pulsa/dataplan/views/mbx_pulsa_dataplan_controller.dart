@@ -99,8 +99,8 @@ class MbxPulsaDataPlanController extends GetxController {
       Get.back();
       if (resp.status == 200) {
         final sheet = MbxInquirySheet(
-          title: 'Konfirmasi',
-          confirmBtnTitle: 'Bayar',
+          title: 'confirmation'.tr,
+          confirmBtnTitle: 'pay'.tr,
           inquiry: inquiryVM.inquiry,
         );
         sheet.show().then((value) {
@@ -117,7 +117,7 @@ class MbxPulsaDataPlanController extends GetxController {
   authenticate({required MbxInquiryModel inquiry}) {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
-      title: 'PIN',
+      title: 'pin'.tr,
       message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,

@@ -12,7 +12,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
     return GetBuilder<MbxPulsaDataPlanController>(
       init: MbxPulsaDataPlanController(),
       builder: (controller) => MbxScreen(
-        title: 'Paket Data',
+        title: 'data_package'.tr,
         scrollingBody: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -135,7 +135,7 @@ class MbxPulsaDataPlanScreen extends StatelessWidget {
             ButtonX(
               backgroundColor: ColorX.theme,
               disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
-              title: 'Lanjut',
+              title: 'continue_text'.tr,
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

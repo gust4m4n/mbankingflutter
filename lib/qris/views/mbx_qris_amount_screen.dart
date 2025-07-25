@@ -136,7 +136,7 @@ class MbxQRISAmountScreen extends StatelessWidget {
             ),
             ContainerX(height: 12.0),
             ButtonX(
-              title: 'Lanjut',
+              title: 'continue_text'.tr,
               backgroundColor: ColorX.theme,
               disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.2),
               enabled: controller.amount > 0,

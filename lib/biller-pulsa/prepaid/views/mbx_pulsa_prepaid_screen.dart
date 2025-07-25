@@ -12,7 +12,7 @@ class MbxPulsaPrepaidScreen extends StatelessWidget {
     return GetBuilder<MbxPulsaPrepaidController>(
       init: MbxPulsaPrepaidController(),
       builder: (controller) => MbxScreen(
-        title: 'Pulsa Prabayar',
+        title: 'pulsa_prepaid_screen'.tr,
         scrollingBody: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -135,7 +135,7 @@ class MbxPulsaPrepaidScreen extends StatelessWidget {
             ButtonX(
               backgroundColor: ColorX.theme,
               disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
-              title: 'Lanjut',
+              title: 'continue_text'.tr,
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

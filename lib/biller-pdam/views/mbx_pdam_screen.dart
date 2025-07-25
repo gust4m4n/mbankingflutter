@@ -163,7 +163,7 @@ class MbxPDAMScreen extends StatelessWidget {
             ContainerX(height: 16.0),
             ButtonX(
               backgroundColor: ColorX.theme,
-              title: 'Lanjut',
+              title: 'continue_text'.tr,
               disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
               enabled: controller.readyToSubmit(),
               clicked: () {

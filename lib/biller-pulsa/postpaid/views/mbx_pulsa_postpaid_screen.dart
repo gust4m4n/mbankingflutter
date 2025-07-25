@@ -11,7 +11,7 @@ class MbxPulsaPostpaidScreen extends StatelessWidget {
     return GetBuilder<MbxPulsaPostpaidController>(
       init: MbxPulsaPostpaidController(),
       builder: (controller) => MbxScreen(
-        title: 'Pulsa Pascabayar',
+        title: 'pulsa_postpaid_screen'.tr,
         scrollingBody: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -109,7 +109,7 @@ class MbxPulsaPostpaidScreen extends StatelessWidget {
             ButtonX(
               backgroundColor: ColorX.theme,
               disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
-              title: 'Lanjut',
+              title: 'continue_text'.tr,
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

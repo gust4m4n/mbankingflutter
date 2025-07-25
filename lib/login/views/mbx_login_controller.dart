@@ -98,9 +98,9 @@ class MbLoginController extends GetxController {
         askOtp(txtPhoneController.text);
       } else {
         SheetX.showMessage(
-          title: 'Login',
+          title: 'login'.tr,
           message: resp.message,
-          leftBtnTitle: 'OK',
+          leftBtnTitle: 'ok'.tr,
           onLeftBtnClicked: () {
             Get.back();
           },
@@ -113,8 +113,8 @@ class MbLoginController extends GetxController {
     final pinSheet = MbxOtpSheet();
     pinSheet
         .show(
-          title: 'OTP',
-          message: 'Masukkan kode OTP yang anda terima melalui SMS.',
+          title: 'otp'.tr,
+          message: 'enter_otp_message'.tr,
           secure: false,
           biometric: false,
           onSubmit: (code, biometric) async {
@@ -132,10 +132,10 @@ class MbLoginController extends GetxController {
               });
             } else {}
           },
-          optionTitle: 'Kirim Ulang',
+          optionTitle: 'resend'.tr,
           optionClicked: () {
             pinSheet.clear('');
-            ToastX.showSuccess(msg: 'OTP telah dikirim ulang ke ponsel anda.');
+            ToastX.showSuccess(msg: 'otp_resent_success'.tr);
           },
         )
         .then((code) {
@@ -149,7 +149,7 @@ class MbLoginController extends GetxController {
   askPin(String phone, String otp) {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
-      title: 'PIN',
+      title: 'pin'.tr,
       message: 'enter_pin_message'.tr,
       secure: true,
       biometric: false,

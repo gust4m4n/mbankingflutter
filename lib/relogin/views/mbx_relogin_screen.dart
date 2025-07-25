@@ -97,7 +97,7 @@ class MbxReloginScreen extends StatelessWidget {
                               ContainerX(height: 12.0),
                               ButtonX(
                                 backgroundColor: ColorX.theme,
-                                title: 'Masuk',
+                                title: 'enter_text'.tr,
                                 clicked: () {
                                   controller.btnLoginClicked();
                                 },
@@ -111,7 +111,7 @@ class MbxReloginScreen extends StatelessWidget {
                                     MbxLauncherWidget(
                                       color: ColorX.red,
                                       faIcon: FontAwesomeIcons.qrcode,
-                                      title: 'QRIS',
+                                      title: 'qris_text'.tr,
                                       titleColor: ColorX.black,
                                       highlightColor: ColorX.theme.withValues(
                                         alpha: 0.2,
@@ -135,7 +135,7 @@ class MbxReloginScreen extends StatelessWidget {
                                     MbxLauncherWidget(
                                       color: ColorX.green,
                                       faIcon: FontAwesomeIcons.question,
-                                      title: 'Bantuan',
+                                      title: 'help_text'.tr,
                                       titleColor: ColorX.black,
                                       highlightColor: ColorX.theme.withValues(
                                         alpha: 0.2,
@@ -155,7 +155,7 @@ class MbxReloginScreen extends StatelessWidget {
                           width: 150.0,
                           backgroundColor: ColorX.transparent,
                           highlightColor: ColorX.theme.withValues(alpha: 0.1),
-                          title: 'Ganti Akun',
+                          title: 'switch_account'.tr,
                           titleColor: ColorX.black,
                           clicked: () {
                             controller.btnSwitchAccountClicked();

@@ -44,7 +44,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                       MbxLauncherWidget(
                         color: ColorX.yellow,
                         faIcon: FontAwesomeIcons.solidLightbulb,
-                        title: 'Prabayar',
+                        title: 'prepaid'.tr,
                         titleColor: ColorX.white,
                         highlightColor: ColorX.theme.lighten(0.1),
                         clicked: () {
@@ -54,7 +54,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                       MbxLauncherWidget(
                         color: ColorX.yellow,
                         faIcon: FontAwesomeIcons.solidLightbulb,
-                        title: 'Pascabayar',
+                        title: 'postpaid'.tr,
                         titleColor: ColorX.white,
                         highlightColor: ColorX.theme.lighten(0.1),
                         clicked: () {
@@ -76,7 +76,7 @@ class MbxElectricityPicker extends GetWidget<MbxElectricityController> {
                 ),
                 ContainerX(height: 16.0),
                 ButtonX(
-                  title: 'Kembali',
+                  title: 'back'.tr,
                   titleColor: ColorX.black,
                   backgroundColor: ColorX.transparent,
                   borderWidth: 1.0,

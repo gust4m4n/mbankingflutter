@@ -108,7 +108,7 @@ class MbxCardlessController extends GetxController {
       Get.back();
       if (resp.status == 200) {
         final sheet = MbxInquirySheet(
-          title: 'Konfirmasi',
+          title: 'confirmation'.tr,
           confirmBtnTitle: 'Tarik',
           inquiry: inquiryVM.inquiry,
         );
@@ -126,7 +126,7 @@ class MbxCardlessController extends GetxController {
   authenticate({required MbxInquiryModel inquiry}) {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
-      title: 'PIN',
+      title: 'pin'.tr,
       message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,

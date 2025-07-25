@@ -124,7 +124,7 @@ class MbxCardlessScreen extends StatelessWidget {
             ButtonX(
               backgroundColor: ColorX.theme,
               disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.1),
-              title: 'Lanjut',
+              title: 'continue_text'.tr,
               enabled: controller.readyToSubmit(),
               clicked: () {
                 controller.btnNextClicked();

@@ -38,7 +38,7 @@ class MbxReloginController extends GetxController {
   btnLoginClicked() {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
-      title: 'PIN',
+      title: 'pin'.tr,
       message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,
@@ -70,7 +70,7 @@ class MbxReloginController extends GetxController {
   btnQRISClicked() {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
-      title: 'PIN',
+      title: 'pin'.tr,
       message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,
@@ -103,7 +103,7 @@ class MbxReloginController extends GetxController {
   btnCardlessClicked() {
     final pinSheet = MbxPinSheet();
     pinSheet.show(
-      title: 'PIN',
+      title: 'pin'.tr,
       message: 'enter_pin_message'.tr,
       secure: true,
       biometric: true,
@@ -140,9 +140,9 @@ class MbxReloginController extends GetxController {
 
   btnSwitchAccountClicked() {
     SheetX.showMessage(
-      title: 'Keluar',
-      message: 'Apakah anda yakin ?',
-      leftBtnTitle: 'Ya',
+      title: 'exit'.tr,
+      message: 'are_you_sure'.tr,
+      leftBtnTitle: 'yes'.tr,
       onLeftBtnClicked: () {
         Get.loading();
         MbxLogoutVM.request().then((resp) {
@@ -150,7 +150,7 @@ class MbxReloginController extends GetxController {
           MbxProfileVM.logout();
         });
       },
-      rightBtnTitle: 'Tidak',
+      rightBtnTitle: 'no'.tr,
       onRightBtnClicked: () {
         Get.back();
       },

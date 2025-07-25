@@ -80,7 +80,7 @@ class MbxReceiptController extends GetxController {
               name: filename,
             ).saveTo(filename).then((value) {});
           } else {
-            ToastX.showSuccess(msg: 'Resi telah disimpan ke gallery.');
+            ToastX.showSuccess(msg: 'receipt_saved'.tr);
           }
         })
         .catchError((onError) {});

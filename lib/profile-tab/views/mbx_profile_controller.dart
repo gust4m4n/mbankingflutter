@@ -30,7 +30,7 @@ class MbxProfileController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet
         .show(
-          title: 'PIN',
+          title: 'pin'.tr,
           message: 'enter_pin_message'.tr,
           secure: true,
           biometric: false,
@@ -49,9 +49,7 @@ class MbxProfileController extends GetxController {
           optionTitle: 'forgot_pin'.tr,
           optionClicked: () {
             pinSheet.clear('');
-            ToastX.showSuccess(
-              msg: 'pin_reset_message'.tr,
-            );
+            ToastX.showSuccess(msg: 'pin_reset_message'.tr);
           },
         )
         .then((value) async {
@@ -64,7 +62,7 @@ class MbxProfileController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet
         .show(
-          title: 'PIN',
+          title: 'pin'.tr,
           message: 'enter_pin_message'.tr,
           secure: true,
           biometric: false,
@@ -86,7 +84,7 @@ class MbxProfileController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet
         .show(
-          title: 'PIN Baru',
+          title: 'new_pin'.tr,
           message: 'enter_new_pin_message'.tr,
           secure: true,
           biometric: false,
@@ -108,9 +106,8 @@ class MbxProfileController extends GetxController {
     final pinSheet = MbxPinSheet();
     pinSheet
         .show(
-          title: 'Konfirmasi PIN Baru',
-          message:
-              'Masukkan ulang nomor pin m-banking atau ATM anda yang baru.',
+          title: 'confirm_new_pin'.tr,
+          message: 'confirm_new_pin_message'.tr,
           secure: true,
           biometric: false,
           onSubmit: (code, biometric) async {
@@ -138,10 +135,9 @@ class MbxProfileController extends GetxController {
         backgroundColor: ColorX.green,
         padding: EdgeInsets.all(12.0),
       ),
-      title: 'Ganti PIN',
-      message:
-          'PIN telah berhasil diganti, silahkan gunakan PIN yang baru untuk seterusnya.',
-      leftBtnTitle: 'OK',
+      title: 'change_pin'.tr,
+      message: 'pin_change_success'.tr,
+      leftBtnTitle: 'ok'.tr,
       onLeftBtnClicked: () {
         Get.back();
       },
@@ -166,9 +162,9 @@ class MbxProfileController extends GetxController {
 
   btnLogoutClicked() {
     SheetX.showMessage(
-      title: 'Keluar',
-      message: 'Apakah anda yakin ?',
-      leftBtnTitle: 'Ya',
+      title: 'exit'.tr,
+      message: 'are_you_sure'.tr,
+      leftBtnTitle: 'yes'.tr,
       onLeftBtnClicked: () {
         Get.loading();
         MbxLogoutVM.request().then((resp) {
@@ -176,7 +172,7 @@ class MbxProfileController extends GetxController {
           MbxProfileVM.logout();
         });
       },
-      rightBtnTitle: 'Tidak',
+      rightBtnTitle: 'no'.tr,
       onRightBtnClicked: () {
         Get.back();
       },

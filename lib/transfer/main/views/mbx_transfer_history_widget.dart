@@ -71,7 +71,7 @@ class MbxTransferHistoryWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 8.0),
                 ButtonX(
-                  title: 'Transfer',
+                  title: 'transfer'.tr,
                   titleColor: ColorX.black,
                   fontSize: 13.0,
                   fontWeight: FontWeight.w700,
