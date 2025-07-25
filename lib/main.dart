@@ -3,7 +3,7 @@ import 'package:mbxflutter/biller-pln/prepaid/views/mbx_electricity_prepaid_scre
 import 'package:mbxflutter/biller-pulsa/dataplan/views/mbx_pulsa_dataplan_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_payment_screen.dart';
 import 'package:mbxflutter/cardless/views/mbx_cardless_screen.dart';
-import 'package:mbxflutter/language/models/translation_service.dart';
+import 'package:mbxflutter/language/viewmodels/mbx_translation_service.dart';
 import 'package:mbxflutter/language/views/mbx_language_controller.dart';
 import 'package:mbxflutter/language/views/mbx_language_selection_screen.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.cupertino,
       debugShowCheckedModeBanner: false,
       locale: languageController.currentLocale,
-      translations: TranslationService(),
+      translations: MbxTranslationService(),
       fallbackLocale: const Locale('id', ''),
       scrollBehavior: AppScrollBehavior(),
       title: 'MBankingApp',

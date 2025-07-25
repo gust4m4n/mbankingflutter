@@ -89,16 +89,6 @@ class MbxTransferP2BankPicker
                       ),
                     ),
             ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: ButtonX(
-                backgroundColor: ColorX.theme,
-                title: 'Batal',
-                clicked: () {
-                  controller.btnCloseClicked();
-                },
-              ),
-            ),
           ],
         ),
       ),

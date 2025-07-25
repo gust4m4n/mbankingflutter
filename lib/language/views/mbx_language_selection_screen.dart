@@ -1,5 +1,5 @@
+import '../../preferences/mbx_preferences_vm_users.dart';
 import '../../widget-x/all_widgets.dart';
-import '../models/language_preferences.dart';
 import '../views/mbx_language_controller.dart';
 
 class MbxLanguageSelectionScreen extends StatelessWidget {
@@ -46,10 +46,10 @@ class MbxLanguageSelectionScreen extends StatelessWidget {
                     Expanded(
                       child: ListView.builder(
                         itemCount:
-                            LanguagePreferences.supportedLanguages.length,
+                            MbxUserPreferencesVM.supportedLanguages.length,
                         itemBuilder: (context, index) {
                           final language =
-                              LanguagePreferences.supportedLanguages[index];
+                              MbxUserPreferencesVM.supportedLanguages[index];
                           final languageCode = language['code']!;
                           final languageName = language['name']!;
                           final languageFlag = language['flag']!;

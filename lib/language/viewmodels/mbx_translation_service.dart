@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class TranslationService extends Translations {
+class MbxTranslationService extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
     'en': {

@@ -48,30 +48,12 @@ class MbxInquirySheet extends GetWidget<MbxInquiryController> {
             ),
             Padding(
               padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ButtonX(
-                      backgroundColor: ColorX.theme,
-                      title: confirmBtnTitle,
-                      clicked: () {
-                        controller.btnNextClicked();
-                      },
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ButtonX(
-                      backgroundColor: ColorX.theme.withValues(alpha: 0.2),
-                      highlightColor: ColorX.theme.withValues(alpha: 0.3),
-                      title: 'Batal',
-                      titleColor: ColorX.black,
-                      clicked: () {
-                        controller.btnCloseClicked();
-                      },
-                    ),
-                  ),
-                ],
+              child: ButtonX(
+                backgroundColor: ColorX.theme,
+                title: confirmBtnTitle,
+                clicked: () {
+                  controller.btnNextClicked();
+                },
               ),
             ),
           ],

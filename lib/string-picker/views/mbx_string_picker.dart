@@ -72,16 +72,6 @@ class MbxStringPicker extends GetWidget<MbxStringPickerController> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: ButtonX(
-                backgroundColor: ColorX.theme,
-                title: 'back'.tr,
-                clicked: () {
-                  controller.btnCloseClicked();
-                },
-              ),
-            ),
           ],
         ),
       ),

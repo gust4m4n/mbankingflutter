@@ -74,17 +74,6 @@ class MbxPulsaPicker extends GetWidget<MbxPulsaController> {
                     ],
                   ),
                 ),
-                ContainerX(height: 16.0),
-                ButtonX(
-                  title: 'back'.tr,
-                  titleColor: ColorX.black,
-                  backgroundColor: ColorX.transparent,
-                  borderWidth: 1.0,
-                  borderColor: ColorX.gray,
-                  clicked: () {
-                    controller.btnCloseClicked();
-                  },
-                ),
               ],
             ),
           ],

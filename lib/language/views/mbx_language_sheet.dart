@@ -1,5 +1,5 @@
+import '../../preferences/mbx_preferences_vm_users.dart';
 import '../../widget-x/all_widgets.dart';
-import '../models/language_preferences.dart';
 import '../views/mbx_language_controller.dart';
 import 'mbx_language_widget.dart';
 
@@ -24,10 +24,10 @@ class MbxLanguageSheet extends GetWidget<MbxLanguageController> {
             shrinkWrap: true,
             padding: EdgeInsets.only(left: 16.0, right: 16.0),
             physics: ClampingScrollPhysics(),
-            itemCount: LanguagePreferences.supportedLanguages.length,
+            itemCount: MbxUserPreferencesVM.supportedLanguages.length,
             separatorBuilder: (context, index) => SizedBox(height: 8.0),
             itemBuilder: (context, index) {
-              final language = LanguagePreferences.supportedLanguages[index];
+              final language = MbxUserPreferencesVM.supportedLanguages[index];
               final languageCode = language['code']!;
               final languageName = language['name']!;
               final languageFlag = language['flag']!;
@@ -45,20 +45,6 @@ class MbxLanguageSheet extends GetWidget<MbxLanguageController> {
                 ),
               );
             },
-          ),
-          ContainerX(height: 16.0),
-          ContainerX(
-            padding: EdgeInsets.only(left: 16.0, right: 16.0),
-            child: ButtonX(
-              title: 'back'.tr,
-              titleColor: ColorX.black,
-              backgroundColor: ColorX.transparent,
-              borderWidth: 1.0,
-              borderColor: ColorX.gray,
-              clicked: () {
-                Get.back();
-              },
-            ),
           ),
           ContainerX(height: 16.0),
         ],

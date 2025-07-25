@@ -43,17 +43,6 @@ class MbxTransferP2BankServicePicker
             },
           ),
           ContainerX(height: 16.0),
-          ContainerX(
-            padding: EdgeInsets.only(left: 16.0, right: 16.0),
-            child: ButtonX(
-              title: 'Batal',
-              backgroundColor: ColorX.theme,
-              clicked: () {
-                Get.back();
-              },
-            ),
-          ),
-          ContainerX(height: 16.0),
         ],
       ),
     );

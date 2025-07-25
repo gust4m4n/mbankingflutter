@@ -1,4 +1,3 @@
-import 'package:mbxflutter/language/models/language_preferences.dart';
 import 'package:mbxflutter/language/views/mbx_language_controller.dart';
 import 'package:mbxflutter/language/views/mbx_language_sheet.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_login_otp_vm.dart';
@@ -55,15 +54,11 @@ class MbxLoginController extends GetxController {
   }
 
   String getCurrentLanguageFlag() {
-    return LanguagePreferences.getLanguageFlag(
-      languageController.currentLanguage,
-    );
+    return languageController.getCurrentLanguageFlag();
   }
 
   String getCurrentLanguageName() {
-    return LanguagePreferences.getLanguageName(
-      languageController.currentLanguage,
-    );
+    return languageController.getCurrentLanguageName();
   }
 
   txtPhoneOnChanged(String value) {

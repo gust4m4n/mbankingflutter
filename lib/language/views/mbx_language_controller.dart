@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../models/language_preferences.dart';
+import '../../preferences/mbx_preferences_vm_users.dart';
 
 class MbxLanguageController extends GetxController {
   final _currentLanguage = 'id'.obs;
@@ -18,7 +18,7 @@ class MbxLanguageController extends GetxController {
 
   // Load saved language from preferences
   Future<void> loadSavedLanguage() async {
-    final savedLanguage = await LanguagePreferences.getLanguage();
+    final savedLanguage = await MbxUserPreferencesVM.getLanguage();
     _currentLanguage.value = savedLanguage;
     _currentLocale.value = Locale(savedLanguage);
 
@@ -33,7 +33,7 @@ class MbxLanguageController extends GetxController {
       _currentLocale.value = Locale(languageCode);
 
       // Save to preferences
-      await LanguagePreferences.setLanguage(languageCode);
+      await MbxUserPreferencesVM.setLanguage(languageCode);
 
       // Update GetX locale
       Get.updateLocale(Locale(languageCode));
@@ -45,12 +45,12 @@ class MbxLanguageController extends GetxController {
 
   // Get current language name
   String getCurrentLanguageName() {
-    return LanguagePreferences.getLanguageName(_currentLanguage.value);
+    return MbxUserPreferencesVM.getLanguageName(_currentLanguage.value);
   }
 
   // Get current language flag
   String getCurrentLanguageFlag() {
-    return LanguagePreferences.getLanguageFlag(_currentLanguage.value);
+    return MbxUserPreferencesVM.getLanguageFlag(_currentLanguage.value);
   }
 
   // Check if language is selected
