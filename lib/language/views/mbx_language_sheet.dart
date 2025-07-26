@@ -36,7 +36,6 @@ class MbxLanguageSheet extends GetWidget<MbxLanguageController> {
                 () => MbxLanguageWidget(
                   flag: languageFlag,
                   name: languageName,
-                  subtitle: languageCode == 'id' ? 'Indonesia' : 'English',
                   isSelected: controller.isLanguageSelected(languageCode),
                   clicked: () async {
                     await controller.changeLanguage(languageCode);

@@ -82,25 +82,11 @@ class MbxLanguageSelectionScreen extends StatelessWidget {
                                       TextX(languageFlag, fontSize: 24.0),
                                       ContainerX(width: 16.0),
                                       Expanded(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            TextX(
-                                              languageName,
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.w600,
-                                              color: ColorX.black,
-                                            ),
-                                            TextX(
-                                              languageCode == 'id'
-                                                  ? 'Indonesia'
-                                                  : 'English',
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w400,
-                                              color: ColorX.gray,
-                                            ),
-                                          ],
+                                        child: TextX(
+                                          languageName,
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorX.black,
                                         ),
                                       ),
                                       if (controller.isLanguageSelected(

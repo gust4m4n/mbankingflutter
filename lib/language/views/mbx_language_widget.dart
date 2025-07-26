@@ -4,7 +4,7 @@ import '../../widget-x/all_widgets.dart';
 class MbxLanguageWidget extends StatelessWidget {
   final String flag;
   final String name;
-  final String subtitle;
+  final String? subtitle;
   final bool isSelected;
   final GestureTapCallback? clicked;
 
@@ -12,7 +12,7 @@ class MbxLanguageWidget extends StatelessWidget {
     super.key,
     required this.flag,
     required this.name,
-    required this.subtitle,
+    this.subtitle,
     required this.isSelected,
     this.clicked,
   });
@@ -43,26 +43,34 @@ class MbxLanguageWidget extends StatelessWidget {
             TextX(flag, fontSize: 24.0),
             SizedBox(width: 16.0),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextX(
-                    name,
-                    color: ColorX.black,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
-                    textAlign: TextAlign.start,
-                  ),
-                  SizedBox(height: 2.0),
-                  TextX(
-                    subtitle,
-                    color: ColorX.gray,
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.w400,
-                    textAlign: TextAlign.start,
-                  ),
-                ],
-              ),
+              child: subtitle != null
+                  ? Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        TextX(
+                          name,
+                          color: ColorX.black,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                          textAlign: TextAlign.start,
+                        ),
+                        SizedBox(height: 2.0),
+                        TextX(
+                          subtitle!,
+                          color: ColorX.gray,
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w400,
+                          textAlign: TextAlign.start,
+                        ),
+                      ],
+                    )
+                  : TextX(
+                      name,
+                      color: ColorX.black,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                      textAlign: TextAlign.start,
+                    ),
             ),
             if (isSelected)
               ImageX(
