@@ -1,13 +1,13 @@
 import '../../widget-x/all_widgets.dart';
-import 'mbx_ekyc_success_controller.dart';
+import 'mbx_upgrade_success_controller.dart';
 
-class MbxEkycSuccessScreen extends StatelessWidget {
-  const MbxEkycSuccessScreen({super.key});
+class MbxUpgradeSuccessScreen extends StatelessWidget {
+  const MbxUpgradeSuccessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxEkycSuccessController>(
-      init: MbxEkycSuccessController(),
+    return GetBuilder<MbxUpgradeSuccessController>(
+      init: MbxUpgradeSuccessController(),
       builder: (controller) => MbxScreen(
         title: 'eKYC Complete',
         navigationBarHidden: true,

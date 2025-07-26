@@ -1,7 +1,7 @@
 import '../../widget-x/all_widgets.dart';
 import '../services/ekyc_data_service.dart';
 
-class MbxEkycDataEntryController extends GetxController {
+class MbxUpgradeDataEntryController extends GetxController {
   final fullNameController = TextEditingController();
   final fullNameNode = FocusNode();
 
@@ -81,7 +81,7 @@ class MbxEkycDataEntryController extends GetxController {
 
     print('Saving personal data...');
     // Save personal data to service
-    EkycDataService.instance.savePersonalData(
+    UpgradeDataService.instance.savePersonalData(
       fullName: fullNameController.text,
       idNumber: idNumberController.text,
       dateOfBirth: dateOfBirth,

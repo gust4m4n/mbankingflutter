@@ -1,13 +1,13 @@
 import '../../widget-x/all_widgets.dart';
-import 'mbx_ekyc_data_entry_controller.dart';
+import 'mbx_upgrade_data_entry_controller.dart';
 
-class MbxEkycDataEntryScreen extends StatelessWidget {
-  const MbxEkycDataEntryScreen({super.key});
+class MbxUpgradeDataEntryScreen extends StatelessWidget {
+  const MbxUpgradeDataEntryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxEkycDataEntryController>(
-      init: MbxEkycDataEntryController(),
+    return GetBuilder<MbxUpgradeDataEntryController>(
+      init: MbxUpgradeDataEntryController(),
       builder: (controller) => MbxScreen(
         title: 'eKYC - Personal Information',
         backAction: () {

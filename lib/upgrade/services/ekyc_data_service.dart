@@ -4,13 +4,13 @@ import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
-class EkycDataService extends GetxService {
-  static EkycDataService get instance => Get.find<EkycDataService>();
+class UpgradeDataService extends GetxService {
+  static UpgradeDataService get instance => Get.find<UpgradeDataService>();
 
   @override
   void onInit() {
     super.onInit();
-    print('✅ EkycDataService initialized and ready to use');
+    print('✅ UpgradeDataService initialized and ready to use');
   }
 
   // Captured photos - support both File and Uint8List for cross-platform

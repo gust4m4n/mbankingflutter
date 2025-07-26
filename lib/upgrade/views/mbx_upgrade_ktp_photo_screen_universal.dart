@@ -1,13 +1,13 @@
 import '../../widget-x/all_widgets.dart';
-import 'mbx_ekyc_ktp_photo_controller.dart';
+import 'mbx_upgrade_ktp_photo_controller.dart';
 
-class MbxEkycKtpPhotoScreenUniversal extends StatelessWidget {
-  const MbxEkycKtpPhotoScreenUniversal({super.key});
+class MbxUpgradeKtpPhotoScreenUniversal extends StatelessWidget {
+  const MbxUpgradeKtpPhotoScreenUniversal({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxEkycKtpPhotoController>(
-      init: MbxEkycKtpPhotoController(),
+    return GetBuilder<MbxUpgradeKtpPhotoController>(
+      init: MbxUpgradeKtpPhotoController(),
       builder: (controller) => MbxScreen(
         title: 'eKYC - ID Card Photo',
         backAction: () {

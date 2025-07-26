@@ -1,13 +1,13 @@
 import '../../widget-x/all_widgets.dart';
-import 'mbx_ekyc_selfie_ktp_controller_universal.dart';
+import 'mbx_upgrade_selfie_ktp_controller.dart';
 
-class MbxEkycSelfieKtpScreenUniversal extends StatelessWidget {
-  const MbxEkycSelfieKtpScreenUniversal({super.key});
+class MbxUpgradeSelfieKtpScreenUniversal extends StatelessWidget {
+  const MbxUpgradeSelfieKtpScreenUniversal({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxEkycSelfieKtpController>(
-      init: MbxEkycSelfieKtpController(),
+    return GetBuilder<MbxUpgradeSelfieKtpController>(
+      init: MbxUpgradeSelfieKtpController(),
       builder: (controller) => MbxScreen(
         title: 'eKYC - Selfie dengan KTP',
         backAction: () {

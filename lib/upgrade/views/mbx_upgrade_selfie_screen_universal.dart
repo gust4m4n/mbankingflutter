@@ -1,13 +1,13 @@
 import '../../widget-x/all_widgets.dart';
-import 'mbx_ekyc_selfie_controller_universal.dart';
+import 'mbx_upgrade_selfie_controller.dart';
 
-class MbxEkycSelfieScreenUniversal extends StatelessWidget {
-  const MbxEkycSelfieScreenUniversal({super.key});
+class MbxUpgradeSelfieScreenUniversal extends StatelessWidget {
+  const MbxUpgradeSelfieScreenUniversal({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxEkycSelfieController>(
-      init: MbxEkycSelfieController(),
+    return GetBuilder<MbxUpgradeSelfieController>(
+      init: MbxUpgradeSelfieController(),
       builder: (controller) => MbxScreen(
         title: 'eKYC - Take Selfie',
         backAction: () {

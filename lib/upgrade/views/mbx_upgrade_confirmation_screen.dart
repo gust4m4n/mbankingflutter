@@ -1,15 +1,15 @@
 import 'dart:io';
 
 import '../../widget-x/all_widgets.dart';
-import 'mbx_ekyc_confirmation_controller.dart';
+import 'mbx_upgrade_confirmation_controller.dart';
 
-class MbxEkycConfirmationScreen extends StatelessWidget {
-  const MbxEkycConfirmationScreen({super.key});
+class MbxUpgradeConfirmationScreen extends StatelessWidget {
+  const MbxUpgradeConfirmationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxEkycConfirmationController>(
-      init: MbxEkycConfirmationController(),
+    return GetBuilder<MbxUpgradeConfirmationController>(
+      init: MbxUpgradeConfirmationController(),
       builder: (controller) => MbxScreen(
         title: 'eKYC - Confirmation',
         backAction: () {

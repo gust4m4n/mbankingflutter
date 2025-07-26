@@ -4,12 +4,12 @@ import '../../widget-x/all_widgets.dart';
 import '../services/ekyc_data_service.dart';
 import '../services/universal_camera_service.dart';
 
-class MbxEkycKtpPhotoController extends GetxController {
+class MbxUpgradeKtpPhotoController extends GetxController {
   // Removed duplicate btnNextClicked and replaced warning with showError in main method below
 
   final UniversalCameraService _cameraService =
       Get.find<UniversalCameraService>();
-  final EkycDataService _ekycDataService = Get.find<EkycDataService>();
+  final UpgradeDataService _ekycDataService = Get.find<UpgradeDataService>();
 
   bool isLoading = false;
   bool hasPhoto = false;

@@ -25,14 +25,6 @@ import 'biller-pln/postpaid/views/mbx_electricity_postpaid_screen.dart';
 import 'biller-pulsa/postpaid/views/mbx_pulsa_postpaid_screen.dart';
 import 'biller-pulsa/prepaid/views/mbx_pulsa_prepaid_screen.dart';
 import 'bottom-navbar/views/mbx_bottom_navbar_screen.dart';
-import 'upgrade/services/ekyc_data_service.dart';
-import 'upgrade/services/universal_camera_service.dart';
-import 'upgrade/views/mbx_ekyc_confirmation_screen_universal.dart';
-import 'upgrade/views/mbx_ekyc_data_entry_screen.dart';
-import 'upgrade/views/mbx_ekyc_ktp_photo_screen_universal.dart';
-import 'upgrade/views/mbx_ekyc_selfie_ktp_screen_universal.dart';
-import 'upgrade/views/mbx_ekyc_selfie_screen_universal.dart';
-import 'upgrade/views/mbx_ekyc_success_screen.dart';
 // Old camera-dependent files (commented out for web compatibility)
 // import 'ekyc/views/mbx_ekyc_confirmation_screen.dart';
 // import 'ekyc/views/mbx_ekyc_ktp_photo_screen.dart';
@@ -44,6 +36,14 @@ import 'tnc/views/mbx_tnc_screen.dart';
 import 'transfer/main/views/mbx_transfer_screen.dart';
 import 'transfer/p2bank/views/mbx_transfer_p2bank_screen.dart';
 import 'transfer/p2p/views/mbx_transfer_p2p_screen.dart';
+import 'upgrade/services/ekyc_data_service.dart';
+import 'upgrade/services/universal_camera_service.dart';
+import 'upgrade/views/mbx_upgrade_confirmation_screen.dart';
+import 'upgrade/views/mbx_upgrade_data_entry_screen.dart';
+import 'upgrade/views/mbx_upgrade_ktp_photo_screen_universal.dart';
+import 'upgrade/views/mbx_upgrade_selfie_ktp_screen_universal.dart';
+import 'upgrade/views/mbx_upgrade_selfie_screen_universal.dart';
+import 'upgrade/views/mbx_upgrade_success_screen.dart';
 import 'widget-x/all_widgets.dart';
 import 'widget-x/media_x.dart';
 
@@ -62,7 +62,7 @@ Future<void> main() async {
 
   // Initialize eKYC services
   print('Initializing eKYC services...');
-  Get.put(EkycDataService(), permanent: true);
+  Get.put(UpgradeDataService(), permanent: true);
   Get.put(UniversalCameraService(), permanent: true);
   print('eKYC services initialized successfully');
 
@@ -158,7 +158,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/ekyc-selfie-ktp-universal',
-          page: () => const MbxEkycSelfieKtpScreenUniversal(),
+          page: () => const MbxUpgradeSelfieKtpScreenUniversal(),
         ),
         GetPage(
           name: '/login',
@@ -232,32 +232,32 @@ class MyApp extends StatelessWidget {
         // eKYC Universal Routes (cross-platform compatible)
         GetPage(
           name: '/ekyc-selfie-universal',
-          page: () => const MbxEkycSelfieScreenUniversal(),
+          page: () => const MbxUpgradeSelfieScreenUniversal(),
         ),
         GetPage(
           name: '/ekyc-ktp-photo-universal',
-          page: () => const MbxEkycKtpPhotoScreenUniversal(),
+          page: () => const MbxUpgradeKtpPhotoScreenUniversal(),
         ),
         GetPage(
           name: '/ekyc-confirmation-universal',
-          page: () => const MbxEkycConfirmationScreen(),
+          page: () => const MbxUpgradeConfirmationScreen(),
         ),
 
         // Legacy eKYC routes (commented out - use universal versions instead)
-        // GetPage(name: '/ekyc/selfie', page: () => const MbxEkycSelfieScreen()),
-        // GetPage(name: '/ekyc/selfie-ktp', page: () => const MbxEkycSelfieKtpScreen()),
-        // GetPage(name: '/ekyc/ktp-photo', page: () => const MbxEkycKtpPhotoScreen()),
+        // GetPage(name: '/ekyc/selfie', page: () => const MbxUpgradeSelfieScreen()),
+        // GetPage(name: '/ekyc/selfie-ktp', page: () => const MbxUpgradeSelfieKtpScreen()),
+        // GetPage(name: '/ekyc/ktp-photo', page: () => const MbxUpgradeKtpPhotoScreen()),
         GetPage(
           name: '/ekyc/data-entry',
-          page: () => const MbxEkycDataEntryScreen(),
+          page: () => const MbxUpgradeDataEntryScreen(),
         ),
         GetPage(
           name: '/ekyc/confirmation',
-          page: () => const MbxEkycConfirmationScreen(),
+          page: () => const MbxUpgradeConfirmationScreen(),
         ),
         GetPage(
           name: '/ekyc/success',
-          page: () => const MbxEkycSuccessScreen(),
+          page: () => const MbxUpgradeSuccessScreen(),
         ),
       ],
     );

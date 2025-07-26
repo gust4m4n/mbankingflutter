@@ -4,8 +4,8 @@ import '../../widget-x/all_widgets.dart';
 import '../services/ekyc_data_service.dart';
 import '../services/universal_camera_service.dart';
 
-class MbxEkycSelfieKtpController extends GetxController {
-  final EkycDataService _ekycService = Get.find<EkycDataService>();
+class MbxUpgradeSelfieKtpController extends GetxController {
+  final UpgradeDataService _ekycService = Get.find<UpgradeDataService>();
   final UniversalCameraService _cameraService =
       Get.find<UniversalCameraService>();
 
@@ -15,7 +15,7 @@ class MbxEkycSelfieKtpController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    print('🎯 MbxEkycSelfieKtpController initialized');
+    print('🎯 MbxUpgradeSelfieKtpController initialized');
   }
 
   Future<void> btnCaptureClicked() async {
@@ -120,7 +120,7 @@ class MbxEkycSelfieKtpController extends GetxController {
 
   @override
   void onClose() {
-    print('🔄 MbxEkycSelfieKtpController disposed');
+    print('🔄 MbxUpgradeSelfieKtpController disposed');
     super.onClose();
   }
 }
