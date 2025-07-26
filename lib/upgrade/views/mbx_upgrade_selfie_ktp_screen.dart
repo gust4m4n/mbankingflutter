@@ -9,7 +9,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeSelfieKtpController>(
       init: MbxUpgradeSelfieKtpController(),
       builder: (controller) => MbxScreen(
-        title: 'eKYC - Selfie dengan KTP',
+        title: 'Upgrade - Selfie dengan KTP',
         backAction: () {
           controller.btnBackClicked();
         },

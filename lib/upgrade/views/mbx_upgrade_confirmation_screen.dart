@@ -11,7 +11,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeConfirmationController>(
       init: MbxUpgradeConfirmationController(),
       builder: (controller) => MbxScreen(
-        title: 'eKYC - Confirmation',
+        title: 'Upgrade - Confirmation',
         backAction: () {
           controller.btnBackClicked();
         },

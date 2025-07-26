@@ -9,7 +9,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeDataEntryController>(
       init: MbxUpgradeDataEntryController(),
       builder: (controller) => MbxScreen(
-        title: 'eKYC - Personal Information',
+        title: 'Upgrade - Personal Information',
         backAction: () {
           controller.btnBackClicked();
         },

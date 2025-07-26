@@ -9,7 +9,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeSelfieController>(
       init: MbxUpgradeSelfieController(),
       builder: (controller) => MbxScreen(
-        title: 'eKYC - Take Selfie',
+        title: 'Upgrade - Take Selfie',
         backAction: () {
           controller.btnBackClicked();
         },
@@ -18,7 +18,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
           children: [
             ContainerX(height: 24.0),
 
-            // Progress indicator
+            // Progress indicator (consistent with other upgrade screens)
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
@@ -34,7 +34,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                   Expanded(
                     child: ContainerX(
                       height: 4.0,
-                      backgroundColor: ColorX.lightGray,
+                      backgroundColor: ColorX.theme,
                       cornerRadius: 2.0,
                     ),
                   ),
@@ -42,7 +42,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                   Expanded(
                     child: ContainerX(
                       height: 4.0,
-                      backgroundColor: ColorX.lightGray,
+                      backgroundColor: ColorX.theme,
                       cornerRadius: 2.0,
                     ),
                   ),
@@ -50,7 +50,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                   Expanded(
                     child: ContainerX(
                       height: 4.0,
-                      backgroundColor: ColorX.lightGray,
+                      backgroundColor: ColorX.theme,
                       cornerRadius: 2.0,
                     ),
                   ),
@@ -58,7 +58,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                   Expanded(
                     child: ContainerX(
                       height: 4.0,
-                      backgroundColor: ColorX.lightGray,
+                      backgroundColor: ColorX.theme,
                       cornerRadius: 2.0,
                     ),
                   ),
@@ -66,7 +66,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                   Expanded(
                     child: ContainerX(
                       height: 4.0,
-                      backgroundColor: ColorX.lightGray,
+                      backgroundColor: ColorX.theme,
                       cornerRadius: 2.0,
                     ),
                   ),

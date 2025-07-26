@@ -9,7 +9,7 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeKtpPhotoController>(
       init: MbxUpgradeKtpPhotoController(),
       builder: (controller) => MbxScreen(
-        title: 'eKYC - ID Card Photo',
+        title: 'Upgrade - ID Card Photo',
         backAction: () {
           controller.btnBackClicked();
         },
