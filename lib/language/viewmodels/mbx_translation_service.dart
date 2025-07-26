@@ -151,6 +151,10 @@ class MbxTranslationService extends Translations {
       'upgrade_ktp_photo_title': 'Upgrade - ID Card Photo',
       'upgrade_ktp_photo_header': 'ID Card Photo',
       'upgrade_ktp_photo_desc': 'Please take a clear photo of your ID card',
+      'upgrade_no_ktp': 'No ID card photo yet',
+      'upgrade_ktp_instruction': 'Tap camera button to take ID card photo',
+      'upgrade_selfie_ktp_instruction':
+          'Tap camera to take selfie with ID card',
       'upgrade_confirmation_title': 'Upgrade - Confirmation',
       'upgrade_confirmation_header': 'Verification Confirmation',
       'upgrade_confirmation_desc':
@@ -235,6 +239,9 @@ class MbxTranslationService extends Translations {
       'upgrade_ktp_photo_title': 'Upgrade - Foto KTP',
       'upgrade_ktp_photo_header': 'Foto KTP',
       'upgrade_ktp_photo_desc': 'Silakan ambil foto KTP yang jelas',
+      'upgrade_no_ktp': 'Belum ada foto KTP',
+      'upgrade_ktp_instruction': 'Tekan tombol kamera untuk mengambil foto KTP',
+      'upgrade_selfie_ktp_instruction': 'Tekan kamera untuk selfie dengan KTP',
       'upgrade_confirmation_title': 'Upgrade - Konfirmasi',
       'upgrade_confirmation_header': 'Konfirmasi Verifikasi',
       'upgrade_confirmation_desc':

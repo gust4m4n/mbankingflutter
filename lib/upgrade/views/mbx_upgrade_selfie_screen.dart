@@ -42,50 +42,16 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
             ContainerX(height: 32.0),
 
             // Camera preview area or captured photo
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Obx(
-                () => ContainerX(
-                  width: double.infinity,
-                  height: 400.0,
-                  backgroundColor: ColorX.lightGray.withValues(alpha: 0.3),
-                  cornerRadius: 16.0,
-                  borderColor: ColorX.theme.withValues(alpha: 0.3),
-                  borderWidth: 2.0,
-                  child: controller.capturedPhoto.value != null
-                      ? ClipRRect(
-                          borderRadius: BorderRadius.circular(14.0),
-                          child: controller.buildPhotoWidget(
-                            controller.capturedPhoto.value,
-                          ),
-                        )
-                      : Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ImageX(
-                              faIcon: FontAwesomeIcons.camera,
-                              color: ColorX.gray,
-                              width: 64.0,
-                              height: 64.0,
-                            ),
-                            ContainerX(height: 16.0),
-                            TextX(
-                              'upgrade_no_photo'.tr,
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w500,
-                              color: ColorX.gray,
-                            ),
-                            ContainerX(height: 8.0),
-                            TextX(
-                              'upgrade_tap_camera'.tr,
-                              fontSize: 14.0,
-                              color: ColorX.gray,
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                            ),
-                          ],
-                        ),
-                ),
+            Obx(
+              () => UpgradeLayoutHelper.buildPhotoPreview(
+                photoWidget: controller.capturedPhoto.value != null
+                    ? controller.buildPhotoWidget(
+                        controller.capturedPhoto.value,
+                      )
+                    : null,
+                placeholderText: 'upgrade_no_photo'.tr,
+                placeholderSubtext: 'upgrade_tap_camera'.tr,
+                placeholderIcon: FontAwesomeIcons.camera,
               ),
             ),
 

@@ -45,6 +45,7 @@ class MbxLanguageSelectionScreen extends StatelessWidget {
                     ContainerX(height: 24.0),
                     Expanded(
                       child: ListView.builder(
+                        physics: const ClampingScrollPhysics(),
                         itemCount:
                             MbxUserPreferencesVM.supportedLanguages.length,
                         itemBuilder: (context, index) {

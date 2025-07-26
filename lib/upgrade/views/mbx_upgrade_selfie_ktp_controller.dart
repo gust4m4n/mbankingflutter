@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import '../../widget-x/all_widgets.dart';
-import '../services/upgrade_data_service.dart';
 import '../services/universal_camera_service.dart';
+import '../services/upgrade_data_service.dart';
 
 class MbxUpgradeSelfieKtpController extends GetxController {
   final UpgradeDataService _ekycService = Get.find<UpgradeDataService>();
@@ -116,6 +116,20 @@ class MbxUpgradeSelfieKtpController extends GetxController {
       return Image.file(File(photo), fit: BoxFit.cover);
     }
     return SizedBox.shrink();
+  }
+
+  // Helper untuk StandardPhotoPreview - returns widget atau null
+  Widget? getPhotoWidget() {
+    final photo = capturedPhoto.value ?? _ekycService.selfieKtpPhoto;
+    if (photo == null) return null;
+    if (photo is Uint8List) {
+      return Image.memory(photo, fit: BoxFit.cover);
+    } else if (photo is File) {
+      return Image.file(photo, fit: BoxFit.cover);
+    } else if (photo is String) {
+      return Image.file(File(photo), fit: BoxFit.cover);
+    }
+    return null;
   }
 
   @override

@@ -7,7 +7,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MbxUpgradeSelfieKtpController>(
+    return GetX<MbxUpgradeSelfieKtpController>(
       init: MbxUpgradeSelfieKtpController(),
       builder: (controller) => MbxScreen(
         title: 'upgrade_selfie_ktp_title'.tr,
@@ -37,10 +37,15 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
             // Description
             UpgradeLayoutHelper.buildDescription('upgrade_selfie_ktp_desc'.tr),
             ContainerX(height: 32.0),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: controller.buildPhotoWidget(),
+
+            // Photo preview
+            UpgradeLayoutHelper.buildPhotoPreview(
+              photoWidget: controller.getPhotoWidget(),
+              placeholderText: 'upgrade_no_photo'.tr,
+              placeholderSubtext: 'upgrade_selfie_ktp_instruction'.tr,
+              placeholderIcon: FontAwesomeIcons.userPlus,
             ),
+
             ContainerX(height: 32.0),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),

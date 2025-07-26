@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import '../../widget-x/all_widgets.dart';
-import '../services/upgrade_data_service.dart';
 import '../services/universal_camera_service.dart';
+import '../services/upgrade_data_service.dart';
 
 class MbxUpgradeKtpPhotoController extends GetxController {
   // Removed duplicate btnNextClicked and replaced warning with showError in main method below
@@ -128,5 +128,19 @@ class MbxUpgradeKtpPhotoController extends GetxController {
     } else {
       return Icon(Icons.error, size: 48.0, color: Colors.red);
     }
+  }
+
+  // Helper untuk StandardPhotoPreview - returns widget atau null
+  Widget? getPhotoWidget() {
+    if (!hasPhoto || currentPhoto == null) return null;
+
+    if (kIsWeb && currentPhoto is Uint8List) {
+      return Image.memory(currentPhoto, fit: BoxFit.cover);
+    } else if (currentPhoto is File) {
+      return Image.file(currentPhoto, fit: BoxFit.cover);
+    } else if (currentPhoto is String) {
+      return Image.file(File(currentPhoto), fit: BoxFit.cover);
+    }
+    return null;
   }
 }

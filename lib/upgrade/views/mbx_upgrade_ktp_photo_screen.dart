@@ -32,9 +32,12 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
             ContainerX(height: 32.0),
 
             // Photo preview
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: controller.buildPhotoWidget(),
+            UpgradeLayoutHelper.buildPhotoPreview(
+              photoWidget: controller.getPhotoWidget(),
+              placeholderText: 'upgrade_no_ktp'.tr,
+              placeholderSubtext: 'upgrade_ktp_instruction'.tr,
+              placeholderIcon: FontAwesomeIcons.idCard,
+              height: 300.0, // Slightly smaller for KTP
             ),
 
             ContainerX(height: 32.0),
