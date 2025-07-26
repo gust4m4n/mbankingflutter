@@ -1,4 +1,5 @@
 import '../../widget-x/all_widgets.dart';
+import '../widgets/upgrade_layout_helper.dart';
 import 'mbx_upgrade_success_controller.dart';
 
 class MbxUpgradeSuccessScreen extends StatelessWidget {
@@ -23,74 +24,13 @@ class MbxUpgradeSuccessScreen extends StatelessWidget {
                         ? MediaQuery.of(Get.context!).padding.top
                         : 44.0) +
                     24.0,
-              ), // Progress indicator - all completed
-              // Step indicator
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: TextX(
-                  'upgrade_step_6_of_6'.tr,
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.grey[700],
-                  textAlign: TextAlign.center,
-                ),
               ),
-              ContainerX(height: 8.0),
 
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: ContainerX(
-                        height: 4.0,
-                        backgroundColor: ColorX.theme,
-                        cornerRadius: 2.0,
-                      ),
-                    ),
-                    ContainerX(width: 8.0),
-                    Expanded(
-                      child: ContainerX(
-                        height: 4.0,
-                        backgroundColor: ColorX.theme,
-                        cornerRadius: 2.0,
-                      ),
-                    ),
-                    ContainerX(width: 8.0),
-                    Expanded(
-                      child: ContainerX(
-                        height: 4.0,
-                        backgroundColor: ColorX.theme,
-                        cornerRadius: 2.0,
-                      ),
-                    ),
-                    ContainerX(width: 8.0),
-                    Expanded(
-                      child: ContainerX(
-                        height: 4.0,
-                        backgroundColor: ColorX.theme,
-                        cornerRadius: 2.0,
-                      ),
-                    ),
-                    ContainerX(width: 8.0),
-                    Expanded(
-                      child: ContainerX(
-                        height: 4.0,
-                        backgroundColor: ColorX.theme,
-                        cornerRadius: 2.0,
-                      ),
-                    ),
-                    ContainerX(width: 8.0),
-                    Expanded(
-                      child: ContainerX(
-                        height: 4.0,
-                        backgroundColor: ColorX.theme,
-                        cornerRadius: 2.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Progress indicator - all completed
+              UpgradeLayoutHelper.buildProgressIndicator(6, 6),
+
+              // Step indicator
+              UpgradeLayoutHelper.buildStepIndicator('upgrade_step_6_of_6'.tr),
 
               Expanded(
                 child: SingleChildScrollView(

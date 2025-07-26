@@ -1,4 +1,5 @@
 import '../../widget-x/all_widgets.dart';
+import '../widgets/upgrade_layout_helper.dart';
 import 'mbx_upgrade_selfie_ktp_controller.dart';
 
 class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
@@ -14,39 +15,27 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
           controller.btnBackClicked();
         },
         scrollingBody: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ContainerX(height: 24.0),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_step_2_of_6'.tr,
-                fontSize: 14.0,
-                fontWeight: FontWeight.w500,
-                color: ColorX.gray,
-              ),
-            ),
+
+            // Progress indicator - step 2 of 6
+            UpgradeLayoutHelper.buildProgressIndicator(2, 6),
+
+            ContainerX(height: 32.0),
+
+            // Step indicator
+            UpgradeLayoutHelper.buildStepIndicator('upgrade_step_2_of_6'.tr),
+
             ContainerX(height: 8.0),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_selfie_ktp_header'.tr,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                color: ColorX.black,
-              ),
-            ),
+
+            // Title
+            UpgradeLayoutHelper.buildHeader('upgrade_selfie_ktp_header'.tr),
+
             ContainerX(height: 16.0),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_selfie_ktp_desc'.tr,
-                fontSize: 16.0,
-                color: ColorX.gray,
-                textAlign: TextAlign.center,
-                maxLines: 3,
-              ),
-            ),
+
+            // Description
+            UpgradeLayoutHelper.buildDescription('upgrade_selfie_ktp_desc'.tr),
             ContainerX(height: 32.0),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import '../../widget-x/all_widgets.dart';
+import '../widgets/upgrade_layout_helper.dart';
 import 'mbx_upgrade_confirmation_controller.dart';
 
 class MbxUpgradeConfirmationScreen extends StatelessWidget {
@@ -20,100 +21,24 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
           children: [
             ContainerX(height: 24.0),
 
-            // Progress indicator
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.lightGray,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Progress indicator - step 5 of 6
+            UpgradeLayoutHelper.buildProgressIndicator(5, 6),
 
             ContainerX(height: 32.0),
 
             // Step indicator
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_step_5_of_6'.tr,
-                fontSize: 14.0,
-                fontWeight: FontWeight.w500,
-                color: ColorX.gray,
-              ),
-            ),
+            UpgradeLayoutHelper.buildStepIndicator('upgrade_step_5_of_6'.tr),
 
             ContainerX(height: 8.0),
 
             // Title
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_confirmation_header'.tr,
-                fontSize: 24.0,
-                fontWeight: FontWeight.w700,
-                color: ColorX.black,
-              ),
-            ),
+            UpgradeLayoutHelper.buildHeader('upgrade_confirmation_header'.tr),
 
             ContainerX(height: 16.0),
 
             // Description
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_confirmation_desc'.tr,
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
-                color: ColorX.gray,
-                maxLines: 10,
-              ),
+            UpgradeLayoutHelper.buildDescription(
+              'upgrade_confirmation_desc'.tr,
             ),
 
             ContainerX(height: 32.0),

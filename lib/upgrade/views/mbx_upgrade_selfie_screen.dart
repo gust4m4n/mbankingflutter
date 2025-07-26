@@ -1,4 +1,5 @@
 import '../../widget-x/all_widgets.dart';
+import '../widgets/upgrade_layout_helper.dart';
 import 'mbx_upgrade_selfie_controller.dart';
 
 class MbxUpgradeSelfieScreen extends StatelessWidget {
@@ -18,100 +19,24 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
           children: [
             ContainerX(height: 24.0),
 
-            // Progress indicator (consistent with other upgrade screens)
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                  ContainerX(width: 8.0),
-                  Expanded(
-                    child: ContainerX(
-                      height: 4.0,
-                      backgroundColor: ColorX.theme,
-                      cornerRadius: 2.0,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Progress indicator - step 1 of 6
+            UpgradeLayoutHelper.buildProgressIndicator(1, 6),
 
             ContainerX(height: 32.0),
 
             // Step indicator
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_step_1_of_6'.tr,
-                fontSize: 14.0,
-                fontWeight: FontWeight.w500,
-                color: ColorX.gray,
-              ),
-            ),
+            UpgradeLayoutHelper.buildStepIndicator('upgrade_step_1_of_6'.tr),
 
             ContainerX(height: 8.0),
 
             // Title
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_take_selfie_header'.tr,
-                fontSize: 24.0,
-                fontWeight: FontWeight.w700,
-                color: ColorX.black,
-              ),
-            ),
+            UpgradeLayoutHelper.buildHeader('upgrade_take_selfie_header'.tr),
 
             ContainerX(height: 8.0),
 
             // Subtitle
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_take_selfie_subtitle'.tr,
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
-                color: ColorX.gray,
-                maxLines: 2,
-              ),
+            UpgradeLayoutHelper.buildDescription(
+              'upgrade_take_selfie_subtitle'.tr,
             ),
 
             ContainerX(height: 32.0),

@@ -1,4 +1,5 @@
 import '../../widget-x/all_widgets.dart';
+import '../widgets/upgrade_layout_helper.dart';
 import 'mbx_upgrade_ktp_photo_controller.dart';
 
 class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
@@ -14,48 +15,19 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
           controller.btnBackClicked();
         },
         scrollingBody: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ContainerX(height: 24.0),
+            // Progress indicator
+            UpgradeLayoutHelper.buildProgressIndicator(3, 6),
 
             // Step indicator
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_step_3_of_6'.tr,
-                fontSize: 16.0,
-                fontWeight: FontWeight.w600,
-                color: Colors.grey[700],
-                textAlign: TextAlign.center,
-              ),
-            ),
-
-            ContainerX(height: 8.0),
+            UpgradeLayoutHelper.buildStepIndicator('upgrade_step_3_of_6'.tr),
 
             // Title
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_ktp_photo_header'.tr,
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
-                textAlign: TextAlign.center,
-              ),
-            ),
-
-            ContainerX(height: 16.0),
+            UpgradeLayoutHelper.buildHeader('upgrade_ktp_photo_header'.tr),
 
             // Description
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: TextX(
-                'upgrade_ktp_photo_desc'.tr,
-                fontSize: 16.0,
-                color: Colors.grey[600],
-                textAlign: TextAlign.center,
-                maxLines: 3,
-              ),
-            ),
+            UpgradeLayoutHelper.buildDescription('upgrade_ktp_photo_desc'.tr),
 
             ContainerX(height: 32.0),
 
