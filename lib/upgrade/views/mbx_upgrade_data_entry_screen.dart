@@ -9,7 +9,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeDataEntryController>(
       init: MbxUpgradeDataEntryController(),
       builder: (controller) => MbxScreen(
-        title: 'Upgrade - Personal Information',
+        title: 'upgrade_personal_info_title'.tr,
         backAction: () {
           controller.btnBackClicked();
         },
@@ -80,7 +80,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Step 4 of 6',
+                'upgrade_step_4_of_6'.tr,
                 fontSize: 14.0,
                 fontWeight: FontWeight.w500,
                 color: ColorX.gray,
@@ -93,7 +93,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Personal Information',
+                'upgrade_personal_info_header'.tr,
                 fontSize: 24.0,
                 fontWeight: FontWeight.w700,
                 color: ColorX.black,
@@ -106,7 +106,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Please fill in your personal information as it appears on your ID card.',
+                'upgrade_personal_info_desc'.tr,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w400,
                 color: ColorX.gray,
@@ -123,14 +123,14 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextX(
-                    'Full Name *',
+                    'upgrade_full_name_label'.tr,
                     fontSize: 14.0,
                     fontWeight: FontWeight.w600,
                     color: ColorX.black,
                   ),
                   ContainerX(height: 8.0),
                   TextFieldX(
-                    hint: 'Enter your full name',
+                    hint: 'upgrade_full_name_hint'.tr,
                     obscureText: false,
                     keyboardType: TextInputType.text,
                     readOnly: false,
@@ -153,14 +153,14 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextX(
-                    'ID Card Number *',
+                    'upgrade_id_card_label'.tr,
                     fontSize: 14.0,
                     fontWeight: FontWeight.w600,
                     color: ColorX.black,
                   ),
                   ContainerX(height: 8.0),
                   TextFieldX(
-                    hint: 'Enter your ID card number',
+                    hint: 'upgrade_id_card_hint'.tr,
                     obscureText: false,
                     keyboardType: TextInputType.number,
                     readOnly: false,
@@ -183,7 +183,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextX(
-                    'Date of Birth *',
+                    'upgrade_dob_label'.tr,
                     fontSize: 14.0,
                     fontWeight: FontWeight.w600,
                     color: ColorX.black,
@@ -207,7 +207,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                           Expanded(
                             child: TextX(
                               controller.dateOfBirth.isEmpty
-                                  ? 'Select date of birth'
+                                  ? 'upgrade_dob_hint'.tr
                                   : controller.dateOfBirth,
                               fontSize: 16.0,
                               color: controller.dateOfBirth.isEmpty
@@ -238,7 +238,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextX(
-                    'Gender *',
+                    'upgrade_gender_label'.tr,
                     fontSize: 14.0,
                     fontWeight: FontWeight.w600,
                     color: ColorX.black,
@@ -263,7 +263,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                             cornerRadius: 8.0,
                             child: Center(
                               child: TextX(
-                                'Male',
+                                'upgrade_gender_male'.tr,
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.w500,
                                 color: controller.gender == 'Male'
@@ -292,7 +292,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                             cornerRadius: 8.0,
                             child: Center(
                               child: TextX(
-                                'Female',
+                                'upgrade_gender_female'.tr,
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.w500,
                                 color: controller.gender == 'Female'
@@ -318,14 +318,14 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextX(
-                    'Address *',
+                    'upgrade_address_label'.tr,
                     fontSize: 14.0,
                     fontWeight: FontWeight.w600,
                     color: ColorX.black,
                   ),
                   ContainerX(height: 8.0),
                   TextFieldX(
-                    hint: 'Enter your complete address',
+                    hint: 'upgrade_address_hint'.tr,
                     obscureText: false,
                     keyboardType: TextInputType.multiline,
                     readOnly: false,
@@ -346,7 +346,7 @@ class MbxUpgradeDataEntryScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: ButtonX(
-                title: 'Continue',
+                title: 'upgrade_continue_btn'.tr,
                 backgroundColor: ColorX.theme,
                 disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.3),
                 titleColor: ColorX.white,

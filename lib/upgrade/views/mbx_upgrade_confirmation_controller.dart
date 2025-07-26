@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import '../../widget-x/all_widgets.dart';
 import '../services/upgrade_data_service.dart';
 
@@ -18,9 +20,35 @@ class MbxUpgradeConfirmationController extends GetxController {
   bool get hasSelfieKtpPath => UpgradeDataService.instance.hasValidSelfieKtp();
   bool get hasKtpPhotoPath => UpgradeDataService.instance.hasValidKtpPhoto();
 
-  String? get selfiePath => UpgradeDataService.instance.selfiePhoto?.path;
-  String? get selfieKtpPath => UpgradeDataService.instance.selfieKtpPhoto?.path;
-  String? get ktpPhotoPath => UpgradeDataService.instance.ktpPhoto?.path;
+  String? get selfiePath {
+    final photo = UpgradeDataService.instance.selfiePhoto;
+    if (photo is File) {
+      return photo.path;
+    } else if (photo is String) {
+      return photo;
+    }
+    return null;
+  }
+
+  String? get selfieKtpPath {
+    final photo = UpgradeDataService.instance.selfieKtpPhoto;
+    if (photo is File) {
+      return photo.path;
+    } else if (photo is String) {
+      return photo;
+    }
+    return null;
+  }
+
+  String? get ktpPhotoPath {
+    final photo = UpgradeDataService.instance.ktpPhoto;
+    if (photo is File) {
+      return photo.path;
+    } else if (photo is String) {
+      return photo;
+    }
+    return null;
+  }
 
   String get fullName => UpgradeDataService.instance.fullName;
   String get idNumber => UpgradeDataService.instance.idNumber;

@@ -1,0 +1,13 @@
+{
+  "upgrade_step_1_of_6": "Step 1 of 6",
+  "upgrade_take_selfie_title": "Upgrade - Take Selfie",
+  "upgrade_take_selfie_header": "Take Your Selfie",
+  "upgrade_take_selfie_subtitle": "Please take a clear selfie photo for identity verification",
+  "upgrade_no_photo": "No photo captured yet",
+  "upgrade_tap_camera": "Tap the camera button below to take a selfie",
+  "upgrade_selfie_tips_title": "Tips for a good selfie:",
+  "upgrade_selfie_tips": "• Ensure good lighting\n• Look directly at the camera\n• Keep a neutral expression\n• Make sure your full face is visible",
+  "upgrade_camera_btn": "Camera",
+  "upgrade_gallery_btn": "Gallery",
+  "upgrade_continue_btn": "Continue"
+}

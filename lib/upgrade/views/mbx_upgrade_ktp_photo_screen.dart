@@ -9,7 +9,7 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeKtpPhotoController>(
       init: MbxUpgradeKtpPhotoController(),
       builder: (controller) => MbxScreen(
-        title: 'Upgrade - ID Card Photo',
+        title: 'upgrade_ktp_photo_title'.tr,
         backAction: () {
           controller.btnBackClicked();
         },
@@ -22,7 +22,7 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                "Step 3 dari 6",
+                'upgrade_step_3_of_6'.tr,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
                 color: Colors.grey[700],
@@ -36,7 +36,7 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                "Ambil Foto ID Card",
+                'upgrade_ktp_photo_header'.tr,
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
                 textAlign: TextAlign.center,
@@ -49,7 +49,7 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                "Pastikan foto ID card Anda terlihat jelas dan tidak ada bagian yang terpotong.",
+                'upgrade_ktp_photo_desc'.tr,
                 fontSize: 16.0,
                 color: Colors.grey[600],
                 textAlign: TextAlign.center,
@@ -75,7 +75,7 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
                   Expanded(
                     child: ButtonX(
                       faIcon: Icons.camera_alt,
-                      title: "Kamera",
+                      title: 'upgrade_camera_btn'.tr,
                       clicked: controller.isLoading
                           ? null
                           : () {

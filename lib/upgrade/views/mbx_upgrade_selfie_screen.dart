@@ -9,7 +9,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeSelfieController>(
       init: MbxUpgradeSelfieController(),
       builder: (controller) => MbxScreen(
-        title: 'Upgrade - Take Selfie',
+        title: 'upgrade_take_selfie_title'.tr,
         backAction: () {
           controller.btnBackClicked();
         },
@@ -80,7 +80,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Step 1 of 6',
+                'upgrade_step_1_of_6'.tr,
                 fontSize: 14.0,
                 fontWeight: FontWeight.w500,
                 color: ColorX.gray,
@@ -93,7 +93,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Take Your Selfie',
+                'upgrade_take_selfie_header'.tr,
                 fontSize: 24.0,
                 fontWeight: FontWeight.w700,
                 color: ColorX.black,
@@ -106,7 +106,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Please take a clear selfie photo for identity verification',
+                'upgrade_take_selfie_subtitle'.tr,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w400,
                 color: ColorX.gray,
@@ -145,14 +145,14 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                             ),
                             ContainerX(height: 16.0),
                             TextX(
-                              'No photo captured yet',
+                              'upgrade_no_photo'.tr,
                               fontSize: 16.0,
                               fontWeight: FontWeight.w500,
                               color: ColorX.gray,
                             ),
                             ContainerX(height: 8.0),
                             TextX(
-                              'Tap the camera button below to take a selfie',
+                              'upgrade_tap_camera'.tr,
                               fontSize: 14.0,
                               color: ColorX.gray,
                               textAlign: TextAlign.center,
@@ -186,7 +186,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                         ),
                         ContainerX(width: 8.0),
                         TextX(
-                          'Tips for a good selfie:',
+                          'upgrade_selfie_tips_title'.tr,
                           fontSize: 14.0,
                           fontWeight: FontWeight.w600,
                           color: ColorX.blue,
@@ -195,7 +195,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                     ),
                     ContainerX(height: 8.0),
                     TextX(
-                      '• Ensure good lighting\n• Look directly at the camera\n• Keep a neutral expression\n• Make sure your full face is visible',
+                      'upgrade_selfie_tips'.tr,
                       fontSize: 13.0,
                       color: ColorX.black,
                       maxLines: 4,
@@ -214,7 +214,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ButtonX(
-                      title: 'Camera',
+                      title: 'upgrade_camera_btn'.tr,
                       backgroundColor: ColorX.theme,
                       titleColor: ColorX.white,
                       faIcon: FontAwesomeIcons.camera,
@@ -229,7 +229,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                   ContainerX(width: 12.0),
                   Expanded(
                     child: ButtonX(
-                      title: 'Gallery',
+                      title: 'upgrade_gallery_btn'.tr,
                       backgroundColor: ColorX.lightGray,
                       titleColor: ColorX.black,
                       faIcon: FontAwesomeIcons.images,
@@ -252,7 +252,7 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
               () => Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: ButtonX(
-                  title: 'Continue',
+                  title: 'upgrade_continue_btn'.tr,
                   backgroundColor: controller.capturedPhoto.value != null
                       ? ColorX.green
                       : ColorX.lightGray,

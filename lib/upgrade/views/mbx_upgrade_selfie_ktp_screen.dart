@@ -9,7 +9,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeSelfieKtpController>(
       init: MbxUpgradeSelfieKtpController(),
       builder: (controller) => MbxScreen(
-        title: 'Upgrade - Selfie dengan KTP',
+        title: 'upgrade_selfie_ktp_title'.tr,
         backAction: () {
           controller.btnBackClicked();
         },
@@ -20,7 +20,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Step 2 of 6',
+                'upgrade_step_2_of_6'.tr,
                 fontSize: 14.0,
                 fontWeight: FontWeight.w500,
                 color: ColorX.gray,
@@ -30,7 +30,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Ambil foto selfie sambil memegang KTP Anda',
+                'upgrade_selfie_ktp_header'.tr,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
                 color: ColorX.black,
@@ -40,7 +40,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Pastikan wajah dan KTP Anda terlihat jelas dan tidak terpotong.',
+                'upgrade_selfie_ktp_desc'.tr,
                 fontSize: 16.0,
                 color: ColorX.gray,
                 textAlign: TextAlign.center,
@@ -59,7 +59,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ButtonX(
-                      title: 'Ambil Foto',
+                      title: 'upgrade_camera_btn'.tr,
                       backgroundColor: ColorX.theme,
                       titleColor: ColorX.white,
                       cornerRadius: 12.0,
@@ -72,7 +72,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
                   ContainerX(width: 12.0),
                   Expanded(
                     child: ButtonX(
-                      title: 'Dari Galeri',
+                      title: 'upgrade_gallery_btn'.tr,
                       backgroundColor: ColorX.gray,
                       titleColor: ColorX.white,
                       cornerRadius: 12.0,
@@ -89,7 +89,7 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: ButtonX(
-                title: 'Lanjut',
+                title: 'upgrade_continue_btn'.tr,
                 backgroundColor: ColorX.green,
                 titleColor: ColorX.white,
                 cornerRadius: 12.0,

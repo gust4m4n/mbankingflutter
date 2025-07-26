@@ -11,7 +11,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
     return GetBuilder<MbxUpgradeConfirmationController>(
       init: MbxUpgradeConfirmationController(),
       builder: (controller) => MbxScreen(
-        title: 'Upgrade - Confirmation',
+        title: 'upgrade_confirmation_title'.tr,
         backAction: () {
           controller.btnBackClicked();
         },
@@ -82,7 +82,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Step 5 of 6',
+                'upgrade_step_5_of_6'.tr,
                 fontSize: 14.0,
                 fontWeight: FontWeight.w500,
                 color: ColorX.gray,
@@ -95,7 +95,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Confirm Your Information',
+                'upgrade_confirmation_header'.tr,
                 fontSize: 24.0,
                 fontWeight: FontWeight.w700,
                 color: ColorX.black,
@@ -108,7 +108,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextX(
-                'Please review your information before submitting. Make sure all details are correct.',
+                'upgrade_confirmation_desc'.tr,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w400,
                 color: ColorX.gray,
@@ -132,7 +132,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextX(
-                      'Captured Photos',
+                      'upgrade_captured_photos'.tr,
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600,
                       color: ColorX.black,
@@ -151,7 +151,9 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                                 cornerRadius: 8.0,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: controller.hasSelfiePath
+                                  child:
+                                      controller.hasSelfiePath &&
+                                          controller.selfiePath != null
                                       ? Image.file(
                                           File(controller.selfiePath!),
                                           fit: BoxFit.cover,
@@ -169,7 +171,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                                               ),
                                               ContainerX(height: 8.0),
                                               TextX(
-                                                'No Photo',
+                                                'upgrade_no_photo_text'.tr,
                                                 fontSize: 12.0,
                                                 color: ColorX.gray,
                                               ),
@@ -180,7 +182,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                               ),
                               ContainerX(height: 8.0),
                               TextX(
-                                'Selfie',
+                                'upgrade_selfie_label'.tr,
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w500,
                                 color: ColorX.black,
@@ -200,7 +202,9 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                                 cornerRadius: 8.0,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: controller.hasSelfieKtpPath
+                                  child:
+                                      controller.hasSelfieKtpPath &&
+                                          controller.selfieKtpPath != null
                                       ? Image.file(
                                           File(controller.selfieKtpPath!),
                                           fit: BoxFit.cover,
@@ -218,7 +222,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                                               ),
                                               ContainerX(height: 8.0),
                                               TextX(
-                                                'No Photo',
+                                                'upgrade_no_photo_text'.tr,
                                                 fontSize: 12.0,
                                                 color: ColorX.gray,
                                               ),
@@ -229,7 +233,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                               ),
                               ContainerX(height: 8.0),
                               TextX(
-                                'Selfie + ID',
+                                'upgrade_selfie_ktp_label'.tr,
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w500,
                                 color: ColorX.black,
@@ -248,7 +252,9 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                                 cornerRadius: 8.0,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: controller.hasKtpPhotoPath
+                                  child:
+                                      controller.hasKtpPhotoPath &&
+                                          controller.ktpPhotoPath != null
                                       ? Image.file(
                                           File(controller.ktpPhotoPath!),
                                           fit: BoxFit.cover,
@@ -267,7 +273,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                                               ),
                                               ContainerX(height: 8.0),
                                               TextX(
-                                                'No Photo',
+                                                'upgrade_no_photo_text'.tr,
                                                 fontSize: 12.0,
                                                 color: ColorX.gray,
                                               ),
@@ -278,7 +284,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                               ),
                               ContainerX(height: 8.0),
                               TextX(
-                                'ID Card',
+                                'upgrade_id_card_label_confirm'.tr,
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w500,
                                 color: ColorX.black,
@@ -309,19 +315,31 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextX(
-                      'Personal Information',
+                      'upgrade_personal_info_section'.tr,
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600,
                       color: ColorX.black,
                     ),
                     ContainerX(height: 16.0),
-                    _buildInfoRow('Full Name', 'John Doe Smith'),
-                    _buildInfoRow('ID Card Number', '1234567890123456'),
-                    _buildInfoRow('Date of Birth', '15/08/1990'),
-                    _buildInfoRow('Gender', 'Male'),
                     _buildInfoRow(
-                      'Address',
-                      'Jl. Contoh Alamat No. 123, Jakarta Selatan, DKI Jakarta 12345',
+                      'upgrade_full_name_confirm'.tr,
+                      controller.fullName,
+                    ),
+                    _buildInfoRow(
+                      'upgrade_id_card_number_confirm'.tr,
+                      controller.idNumber,
+                    ),
+                    _buildInfoRow(
+                      'upgrade_dob_confirm'.tr,
+                      controller.dateOfBirth,
+                    ),
+                    _buildInfoRow(
+                      'upgrade_gender_confirm'.tr,
+                      controller.gender,
+                    ),
+                    _buildInfoRow(
+                      'upgrade_address_confirm'.tr,
+                      controller.address,
                     ),
                   ],
                 ),
@@ -351,7 +369,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                         ),
                         ContainerX(width: 8.0),
                         TextX(
-                          'Important Notice',
+                          'upgrade_important_notice'.tr,
                           fontSize: 16.0,
                           fontWeight: FontWeight.w600,
                           color: ColorX.black,
@@ -360,7 +378,7 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
                     ),
                     ContainerX(height: 8.0),
                     TextX(
-                      'By submitting this eKYC verification, you confirm that all information provided is accurate and complete. False information may result in account suspension.',
+                      'upgrade_notice_text'.tr,
                       fontSize: 14.0,
                       fontWeight: FontWeight.w400,
                       color: ColorX.black,
@@ -378,8 +396,8 @@ class MbxUpgradeConfirmationScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: ButtonX(
                 title: controller.isSubmitting
-                    ? 'Submitting...'
-                    : 'Submit eKYC',
+                    ? 'upgrade_submitting'.tr
+                    : 'upgrade_submit_ekyc'.tr,
                 backgroundColor: ColorX.theme,
                 disabledBackgroundColor: ColorX.theme.withValues(alpha: 0.3),
                 titleColor: ColorX.white,
