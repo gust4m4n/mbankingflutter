@@ -24,6 +24,19 @@ class MbxEkycSuccessScreen extends StatelessWidget {
                         : 44.0) +
                     24.0,
               ), // Progress indicator - all completed
+              // Step indicator
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: TextX(
+                  'Step 6 dari 6',
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.grey[700],
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              ContainerX(height: 8.0),
+
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(

@@ -268,22 +268,54 @@ class MbxHomePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 8.0),
+                        SizedBox(height: 12.0),
+                        // Upgrade Benefits Section
                         Padding(
-                          padding: EdgeInsets.only(left: 16.0, right: 16.0),
-                          child: ButtonX(
-                            title: 'Upgrade eKYC',
-                            backgroundColor: ColorX.green,
-                            titleColor: ColorX.white,
-                            faIcon: FontAwesomeIcons.arrowUp,
-                            faColor: ColorX.white,
-                            iconWidth: 16.0,
-                            iconHeight: 16.0,
-                            cornerRadius: 12.0,
-                            height: 48.0,
-                            clicked: () {
-                              controller.btnUpgradeClicked();
-                            },
+                          padding: EdgeInsets.symmetric(horizontal: 16.0),
+                          child: ContainerX(
+                            backgroundColor: ColorX.lightGray.withValues(
+                              alpha: 0.5,
+                            ),
+                            cornerRadius: 16.0,
+                            padding: EdgeInsets.all(20.0),
+                            child: Row(
+                              children: [
+                                // Text content
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      ContainerX(height: 4.0),
+                                      TextX(
+                                        'Ingin mendapatkan limit top-up dan saldo hingga Rp. 10 juta ?',
+                                        fontSize: 14.0,
+                                        color: ColorX.gray,
+                                        fontWeight: FontWeight.w400,
+                                        maxLines: 8,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                ContainerX(width: 12.0),
+                                // Upgrade button
+                                ContainerX(
+                                  child: ButtonX(
+                                    title: 'Upgrade',
+                                    backgroundColor: ColorX.theme,
+                                    titleColor: ColorX.white,
+                                    cornerRadius: 20.0,
+                                    height: 40.0,
+                                    width: 80.0,
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w600,
+                                    clicked: () {
+                                      controller.btnUpgradeClicked();
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(height: 8.0),

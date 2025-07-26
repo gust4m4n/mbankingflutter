@@ -75,15 +75,7 @@ class MbxEkycDataEntryController extends GetxController {
   btnContinueClicked() {
     print('Continue button clicked');
     if (!isFormValid()) {
-      print('Form is not valid, showing error');
-      Get.snackbar(
-        'Invalid Form',
-        'Please fill in all required fields',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-        snackPosition: SnackPosition.TOP,
-        duration: Duration(seconds: 3),
-      );
+      print('Form is not valid');
       return;
     }
 
@@ -97,7 +89,7 @@ class MbxEkycDataEntryController extends GetxController {
       address: addressController.text,
     );
     print('Navigating to confirmation screen...');
-    Get.toNamed('/ekyc/confirmation');
+    Get.toNamed('/ekyc-confirmation-universal');
   }
 
   @override

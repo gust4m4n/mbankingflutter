@@ -1,3 +1,6 @@
+// DEPRECATED: Use mbx_ekyc_selfie_screen_universal.dart instead
+// This file uses old camera plugin that doesn't support web
+/*
 import 'package:camera/camera.dart';
 
 import '../../widget-x/all_widgets.dart';
@@ -268,3 +271,4 @@ class MbxEkycSelfieScreen extends StatelessWidget {
     );
   }
 }
+*/

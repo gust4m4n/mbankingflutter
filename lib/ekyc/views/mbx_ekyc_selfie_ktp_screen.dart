@@ -1,3 +1,5 @@
+// DEPRECATED: This file uses old camera plugin that doesn't support web
+/*
 import 'package:camera/camera.dart';
 
 import '../../widget-x/all_widgets.dart';
@@ -258,3 +260,4 @@ class MbxEkycSelfieKtpScreen extends StatelessWidget {
     );
   }
 }
+*/

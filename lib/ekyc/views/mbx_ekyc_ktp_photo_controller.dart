@@ -1,104 +1,132 @@
-import 'package:camera/camera.dart';
+import 'dart:io';
 
 import '../../widget-x/all_widgets.dart';
 import '../services/ekyc_data_service.dart';
+import '../services/universal_camera_service.dart';
 
 class MbxEkycKtpPhotoController extends GetxController {
-  CameraController? cameraController;
-  bool isCameraInitialized = false;
-  List<CameraDescription> cameras = [];
+  // Removed duplicate btnNextClicked and replaced warning with showError in main method below
+
+  final UniversalCameraService _cameraService =
+      Get.find<UniversalCameraService>();
+  final EkycDataService _ekycDataService = Get.find<EkycDataService>();
+
+  bool isLoading = false;
+  bool hasPhoto = false;
+  dynamic currentPhoto; // File for mobile, Uint8List for web
 
   @override
   void onInit() {
     super.onInit();
-    initializeCamera();
+    _checkExistingPhoto();
   }
 
-  @override
-  void onClose() {
-    cameraController?.dispose();
-    super.onClose();
-  }
-
-  Future<void> initializeCamera() async {
-    try {
-      cameras = await availableCameras();
-      if (cameras.isNotEmpty) {
-        // Use back camera for ID card photo
-        CameraDescription backCamera = cameras.firstWhere(
-          (camera) => camera.lensDirection == CameraLensDirection.back,
-          orElse: () => cameras.first,
-        );
-
-        cameraController = CameraController(
-          backCamera,
-          ResolutionPreset.high,
-          enableAudio: false,
-        );
-
-        await cameraController?.initialize();
-        if (cameraController?.value.isInitialized == true) {
-          isCameraInitialized = true;
-          update();
-        }
-      }
-    } catch (e) {
-      print('Camera initialization error: $e');
-      isCameraInitialized = false;
+  void _checkExistingPhoto() {
+    if (_ekycDataService.hasValidKtpPhoto()) {
+      currentPhoto = _ekycDataService.ktpPhoto;
+      hasPhoto = true;
       update();
     }
   }
 
-  btnBackClicked() {
+  Future<void> btnCaptureClicked() async {
+    try {
+      isLoading = true;
+      update();
+
+      final photo = await _cameraService.captureRearPhoto();
+      if (photo != null) {
+        currentPhoto = photo;
+        hasPhoto = true;
+        _ekycDataService.saveKtpPhoto(photo);
+        // Tidak perlu tampilkan toast, langsung tampilkan foto di preview
+      }
+    } catch (e) {
+      // Tidak perlu tampilkan toast error
+    } finally {
+      isLoading = false;
+      update();
+    }
+  }
+
+  Future<void> btnGalleryClicked() async {
+    try {
+      isLoading = true;
+      update();
+
+      final photo = await _cameraService.pickFromGallery();
+      if (photo != null) {
+        currentPhoto = photo;
+        hasPhoto = true;
+        _ekycDataService.saveKtpPhoto(photo);
+        // Tidak perlu tampilkan toast, langsung tampilkan foto di preview
+      }
+    } catch (e) {
+      // Tidak perlu tampilkan toast error
+    } finally {
+      isLoading = false;
+      update();
+    }
+  }
+
+  void btnBackClicked() {
     Get.back();
   }
 
-  Future<void> btnCaptureClicked() async {
-    print('KTP photo capture button clicked');
-    print('Camera controller null: ${cameraController == null}');
-    print('Camera initialized: $isCameraInitialized');
-    print('Camera value initialized: ${cameraController?.value.isInitialized}');
+  void btnNextClicked() {
+    if (!hasPhoto) {
+      // Tidak perlu tampilkan toast error
+      return;
+    }
+    // Setelah foto KTP, klik Continue masuk ke screen input data diri
+    Get.toNamed('/ekyc/data-entry');
+    print('✅ KTP photo completed, proceeding to data entry screen...');
+  }
 
-    if (cameraController != null &&
-        isCameraInitialized &&
-        cameraController!.value.isInitialized) {
-      try {
-        print('Taking KTP picture...');
-        final XFile photo = await cameraController!.takePicture();
-        // Save photo path to service
-        EkycDataService.instance.saveKtpPhoto(photo.path);
-        print('KTP Photo captured: ${photo.path}');
-
-        // Show success message
-        Get.snackbar(
-          'Success',
-          'ID Card photo captured successfully!',
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
-          duration: Duration(seconds: 2),
-        );
-
-        // Navigate to next screen
-        Get.toNamed('/ekyc/data-entry');
-      } catch (e) {
-        print('Error capturing photo: $e');
-        Get.snackbar(
-          'Error',
-          'Failed to capture photo. Please try again.',
-          backgroundColor: Colors.red,
-          colorText: Colors.white,
-          duration: Duration(seconds: 3),
-        );
-      }
-    } else {
-      print('Camera not ready for capture');
-      Get.snackbar(
-        'Camera Not Ready',
-        'Please wait for camera to initialize',
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
-        duration: Duration(seconds: 3),
+  Widget buildPhotoWidget() {
+    if (!hasPhoto || currentPhoto == null) {
+      return Container(
+        width: double.infinity,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.circular(12.0),
+          border: Border.all(color: Colors.grey[300]!, width: 2.0),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.credit_card, size: 64.0, color: Colors.grey[400]),
+            ContainerX(height: 16.0),
+            TextX("Belum ada foto ID", color: Colors.grey[600], fontSize: 16.0),
+          ],
+        ),
       );
+    }
+
+    return Container(
+      width: double.infinity,
+      height: 200.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12.0),
+        border: Border.all(color: Colors.green, width: 2.0),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.0),
+        child: _buildPhotoWidget(currentPhoto),
+      ),
+    );
+  }
+
+  Widget _buildPhotoWidget(dynamic photo) {
+    if (kIsWeb && photo is Uint8List) {
+      return Image.memory(photo, fit: BoxFit.cover);
+    } else if (photo is File) {
+      return Image.file(photo, fit: BoxFit.cover);
+    } else if (photo is String) {
+      return Image.file(File(photo), fit: BoxFit.cover);
+    } else {
+      return Icon(Icons.error, size: 48.0, color: Colors.red);
     }
   }
 }

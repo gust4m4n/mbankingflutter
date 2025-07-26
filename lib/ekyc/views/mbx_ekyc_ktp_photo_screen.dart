@@ -1,3 +1,6 @@
+// DEPRECATED: Use mbx_ekyc_ktp_photo_screen_universal.dart instead
+// This file uses old camera plugin that doesn't support web
+/*
 import 'package:camera/camera.dart';
 
 import '../../widget-x/all_widgets.dart';
@@ -256,3 +259,4 @@ class MbxEkycKtpPhotoScreen extends StatelessWidget {
     );
   }
 }
+*/

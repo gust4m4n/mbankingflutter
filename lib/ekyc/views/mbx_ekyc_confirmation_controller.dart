@@ -5,13 +5,22 @@ class MbxEkycConfirmationController extends GetxController {
   var isSubmitting = false;
 
   // Getters to access EkycDataService data
-  String? get selfiePath => EkycDataService.instance.selfiePath;
-  String? get selfieKtpPath => EkycDataService.instance.selfieKtpPath;
-  String? get ktpPhotoPath => EkycDataService.instance.ktpPhotoPath;
+  dynamic get selfiePhoto => EkycDataService.instance.selfiePhoto;
+  dynamic get selfieKtpPhoto => EkycDataService.instance.selfieKtpPhoto;
+  dynamic get ktpPhoto => EkycDataService.instance.ktpPhoto;
 
-  bool get hasSelfiePath => selfiePath != null;
-  bool get hasSelfieKtpPath => selfieKtpPath != null;
-  bool get hasKtpPhotoPath => ktpPhotoPath != null;
+  bool get hasSelfiePhoto => EkycDataService.instance.hasValidSelfie();
+  bool get hasSelfieKtpPhoto => EkycDataService.instance.hasValidSelfieKtp();
+  bool get hasKtpPhoto => EkycDataService.instance.hasValidKtpPhoto();
+
+  // Path getters for compatibility with screen
+  bool get hasSelfiePath => EkycDataService.instance.hasValidSelfie();
+  bool get hasSelfieKtpPath => EkycDataService.instance.hasValidSelfieKtp();
+  bool get hasKtpPhotoPath => EkycDataService.instance.hasValidKtpPhoto();
+
+  String? get selfiePath => EkycDataService.instance.selfiePhoto?.path;
+  String? get selfieKtpPath => EkycDataService.instance.selfieKtpPhoto?.path;
+  String? get ktpPhotoPath => EkycDataService.instance.ktpPhoto?.path;
 
   String get fullName => EkycDataService.instance.fullName;
   String get idNumber => EkycDataService.instance.idNumber;

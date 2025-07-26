@@ -1,5 +1,7 @@
-import 'dart:io';
-
+// DEPRECATED: Use mbx_ekyc_selfie_controller_universal.dart instead
+// This file uses old camera plugin that doesn't support web
+/*
+import 'package:get/get.dart';
 import 'package:camera/camera.dart';
 
 import '../../widget-x/all_widgets.dart';
@@ -107,13 +109,7 @@ class MbxEkycSelfieController extends GetxController {
         message = 'No camera found on this device.';
       }
 
-      Get.snackbar(
-        'Camera Error',
-        message,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-        duration: Duration(seconds: 5),
-      );
+      // Tidak perlu tampilkan toast error
     }
   }
 
@@ -137,25 +133,13 @@ class MbxEkycSelfieController extends GetxController {
 
     if (cameraController == null) {
       print('ERROR: Camera controller is null');
-      Get.snackbar(
-        'Camera Error',
-        'Camera not initialized. Please restart the screen.',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-        duration: Duration(seconds: 3),
-      );
+      // Tidak perlu tampilkan toast error
       return;
     }
 
     if (!isCameraInitialized || !cameraController!.value.isInitialized) {
       print('ERROR: Camera not properly initialized');
-      Get.snackbar(
-        'Camera Not Ready',
-        'Please wait for camera to initialize completely.',
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
-        duration: Duration(seconds: 3),
-      );
+      // Tidak perlu tampilkan toast error
       return;
     }
 
@@ -199,13 +183,7 @@ class MbxEkycSelfieController extends GetxController {
       }
 
       // Show success message
-      Get.snackbar(
-        'Success',
-        'Selfie captured successfully!',
-        backgroundColor: Colors.green,
-        colorText: Colors.white,
-        duration: Duration(seconds: 2),
-      );
+      // Tidak perlu tampilkan toast sukses
 
       // Small delay before navigation
       await Future.delayed(Duration(milliseconds: 500));
@@ -232,13 +210,7 @@ class MbxEkycSelfieController extends GetxController {
         errorMessage = 'Camera disconnected. Please restart the screen.';
       }
 
-      Get.snackbar(
-        'Capture Failed',
-        errorMessage,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-        duration: Duration(seconds: 4),
-      );
+      // Tidak perlu tampilkan toast error
 
       // Try to reinitialize camera if it seems to be the issue
       if (e.toString().contains('initialization') ||
@@ -249,3 +221,4 @@ class MbxEkycSelfieController extends GetxController {
     }
   }
 }
+*/

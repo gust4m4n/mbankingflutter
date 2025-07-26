@@ -1,4 +1,3 @@
-import 'package:camera/camera.dart';
 import 'package:mbxflutter/apis/mbx_device_info_vm.dart';
 import 'package:mbxflutter/biller-pln/prepaid/views/mbx_electricity_prepaid_screen.dart';
 import 'package:mbxflutter/biller-pulsa/dataplan/views/mbx_pulsa_dataplan_screen.dart';
@@ -27,12 +26,18 @@ import 'biller-pulsa/postpaid/views/mbx_pulsa_postpaid_screen.dart';
 import 'biller-pulsa/prepaid/views/mbx_pulsa_prepaid_screen.dart';
 import 'bottom-navbar/views/mbx_bottom_navbar_screen.dart';
 import 'ekyc/services/ekyc_data_service.dart';
-import 'ekyc/views/mbx_ekyc_confirmation_screen.dart';
+import 'ekyc/services/universal_camera_service.dart';
+import 'ekyc/views/mbx_ekyc_confirmation_screen_universal.dart';
 import 'ekyc/views/mbx_ekyc_data_entry_screen.dart';
-import 'ekyc/views/mbx_ekyc_ktp_photo_screen.dart';
-import 'ekyc/views/mbx_ekyc_selfie_ktp_screen.dart';
-import 'ekyc/views/mbx_ekyc_selfie_screen.dart';
+import 'ekyc/views/mbx_ekyc_ktp_photo_screen_universal.dart';
+import 'ekyc/views/mbx_ekyc_selfie_ktp_screen_universal.dart';
+import 'ekyc/views/mbx_ekyc_selfie_screen_universal.dart';
 import 'ekyc/views/mbx_ekyc_success_screen.dart';
+// Old camera-dependent files (commented out for web compatibility)
+// import 'ekyc/views/mbx_ekyc_confirmation_screen.dart';
+// import 'ekyc/views/mbx_ekyc_ktp_photo_screen.dart';
+// import 'ekyc/views/mbx_ekyc_selfie_ktp_screen.dart';
+// import 'ekyc/views/mbx_ekyc_selfie_screen.dart';
 import 'faq/views/mbx_faq_screen.dart';
 import 'news/views/mbx_news_screen.dart';
 import 'tnc/views/mbx_tnc_screen.dart';
@@ -42,17 +47,8 @@ import 'transfer/p2p/views/mbx_transfer_p2p_screen.dart';
 import 'widget-x/all_widgets.dart';
 import 'widget-x/media_x.dart';
 
-List<CameraDescription> cameras = [];
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize cameras
-  try {
-    cameras = await availableCameras();
-  } catch (e) {
-    print('Camera initialization error: $e');
-  }
 
   await MbxAntiJailbreakVM.check();
   await MbxDeviceInfoVM.request();
@@ -64,10 +60,11 @@ Future<void> main() async {
     fenix: true,
   );
 
-  // Initialize eKYC data service
-  print('Initializing EkycDataService...');
+  // Initialize eKYC services
+  print('Initializing eKYC services...');
   Get.put(EkycDataService(), permanent: true);
-  print('EkycDataService initialized successfully');
+  Get.put(UniversalCameraService(), permanent: true);
+  print('eKYC services initialized successfully');
 
   final freshInstall = await MbxPreferencesVM.getFreshInstall();
   if (freshInstall == true) {
@@ -160,6 +157,10 @@ class MyApp extends StatelessWidget {
       initialRoute: initialRoute,
       getPages: [
         GetPage(
+          name: '/ekyc-selfie-ktp-universal',
+          page: () => const MbxEkycSelfieKtpScreenUniversal(),
+        ),
+        GetPage(
           name: '/login',
           page: () => const MbxLoginScreen(),
           transition: Transition.noTransition,
@@ -228,15 +229,24 @@ class MyApp extends StatelessWidget {
           name: '/language',
           page: () => const MbxLanguageSelectionScreen(),
         ),
-        GetPage(name: '/ekyc/selfie', page: () => const MbxEkycSelfieScreen()),
+        // eKYC Universal Routes (cross-platform compatible)
         GetPage(
-          name: '/ekyc/selfie-ktp',
-          page: () => const MbxEkycSelfieKtpScreen(),
+          name: '/ekyc-selfie-universal',
+          page: () => const MbxEkycSelfieScreenUniversal(),
         ),
         GetPage(
-          name: '/ekyc/ktp-photo',
-          page: () => const MbxEkycKtpPhotoScreen(),
+          name: '/ekyc-ktp-photo-universal',
+          page: () => const MbxEkycKtpPhotoScreenUniversal(),
         ),
+        GetPage(
+          name: '/ekyc-confirmation-universal',
+          page: () => const MbxEkycConfirmationScreen(),
+        ),
+
+        // Legacy eKYC routes (commented out - use universal versions instead)
+        // GetPage(name: '/ekyc/selfie', page: () => const MbxEkycSelfieScreen()),
+        // GetPage(name: '/ekyc/selfie-ktp', page: () => const MbxEkycSelfieKtpScreen()),
+        // GetPage(name: '/ekyc/ktp-photo', page: () => const MbxEkycKtpPhotoScreen()),
         GetPage(
           name: '/ekyc/data-entry',
           page: () => const MbxEkycDataEntryScreen(),

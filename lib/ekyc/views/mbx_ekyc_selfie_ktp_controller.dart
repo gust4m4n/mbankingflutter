@@ -1,3 +1,5 @@
+// DEPRECATED: This file uses old camera plugin that doesn't support web
+/*
 import 'package:camera/camera.dart';
 
 import '../../widget-x/all_widgets.dart';
@@ -79,7 +81,7 @@ class MbxEkycSelfieKtpController extends GetxController {
         );
 
         // Navigate to next screen
-        Get.toNamed('/ekyc/ktp-photo');
+        Get.toNamed('/ekyc-ktp-photo-universal');
       } catch (e) {
         print('Error capturing photo: $e');
         Get.snackbar(
@@ -102,3 +104,4 @@ class MbxEkycSelfieKtpController extends GetxController {
     }
   }
 }
+*/
