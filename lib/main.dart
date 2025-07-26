@@ -36,13 +36,13 @@ import 'tnc/views/mbx_tnc_screen.dart';
 import 'transfer/main/views/mbx_transfer_screen.dart';
 import 'transfer/p2bank/views/mbx_transfer_p2bank_screen.dart';
 import 'transfer/p2p/views/mbx_transfer_p2p_screen.dart';
-import 'upgrade/services/ekyc_data_service.dart';
 import 'upgrade/services/universal_camera_service.dart';
+import 'upgrade/services/upgrade_data_service.dart';
 import 'upgrade/views/mbx_upgrade_confirmation_screen.dart';
 import 'upgrade/views/mbx_upgrade_data_entry_screen.dart';
-import 'upgrade/views/mbx_upgrade_ktp_photo_screen_universal.dart';
-import 'upgrade/views/mbx_upgrade_selfie_ktp_screen_universal.dart';
-import 'upgrade/views/mbx_upgrade_selfie_screen_universal.dart';
+import 'upgrade/views/mbx_upgrade_ktp_photo_screen.dart';
+import 'upgrade/views/mbx_upgrade_selfie_ktp_screen.dart';
+import 'upgrade/views/mbx_upgrade_selfie_screen.dart';
 import 'upgrade/views/mbx_upgrade_success_screen.dart';
 import 'widget-x/all_widgets.dart';
 import 'widget-x/media_x.dart';
@@ -158,7 +158,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/ekyc-selfie-ktp-universal',
-          page: () => const MbxUpgradeSelfieKtpScreenUniversal(),
+          page: () => const MbxUpgradeSelfieKtpScreen(),
         ),
         GetPage(
           name: '/login',
@@ -232,11 +232,11 @@ class MyApp extends StatelessWidget {
         // eKYC Universal Routes (cross-platform compatible)
         GetPage(
           name: '/ekyc-selfie-universal',
-          page: () => const MbxUpgradeSelfieScreenUniversal(),
+          page: () => const MbxUpgradeSelfieScreen(),
         ),
         GetPage(
           name: '/ekyc-ktp-photo-universal',
-          page: () => const MbxUpgradeKtpPhotoScreenUniversal(),
+          page: () => const MbxUpgradeKtpPhotoScreen(),
         ),
         GetPage(
           name: '/ekyc-confirmation-universal',

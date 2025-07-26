@@ -1,8 +1,8 @@
 import '../../widget-x/all_widgets.dart';
 import 'mbx_upgrade_ktp_photo_controller.dart';
 
-class MbxUpgradeKtpPhotoScreenUniversal extends StatelessWidget {
-  const MbxUpgradeKtpPhotoScreenUniversal({super.key});
+class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
+  const MbxUpgradeKtpPhotoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

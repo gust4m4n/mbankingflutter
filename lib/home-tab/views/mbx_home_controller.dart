@@ -4,7 +4,7 @@ import 'package:mbxflutter/home-tab/viewmodels/mbx_foreign_exchange_list_vm.dart
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/news/viewmodels/mbx_news_list_vm.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
-import 'package:mbxflutter/upgrade/views/mbx_upgrade_selfie_screen_universal.dart';
+import 'package:mbxflutter/upgrade/views/mbx_upgrade_selfie_screen.dart';
 
 import '../../widget-x/all_widgets.dart';
 
@@ -82,6 +82,6 @@ class MbxHomeController extends GetxController {
 
   btnUpgradeClicked() {
     print('🚀 Starting eKYC process with Universal Camera...');
-    Get.to(() => const MbxUpgradeSelfieScreenUniversal());
+    Get.to(() => const MbxUpgradeSelfieScreen());
   }
 }

@@ -1,8 +1,8 @@
 import '../../widget-x/all_widgets.dart';
 import 'mbx_upgrade_selfie_controller.dart';
 
-class MbxUpgradeSelfieScreenUniversal extends StatelessWidget {
-  const MbxUpgradeSelfieScreenUniversal({super.key});
+class MbxUpgradeSelfieScreen extends StatelessWidget {
+  const MbxUpgradeSelfieScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

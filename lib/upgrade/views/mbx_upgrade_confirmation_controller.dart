@@ -1,5 +1,5 @@
 import '../../widget-x/all_widgets.dart';
-import '../services/ekyc_data_service.dart';
+import '../services/upgrade_data_service.dart';
 
 class MbxUpgradeConfirmationController extends GetxController {
   var isSubmitting = false;
