@@ -21,7 +21,7 @@ class MbxThemeButton extends StatelessWidget {
             height: 32.0,
             cornerRadius: 16.0,
             borderWidth: 4.0,
-            borderColor: ColorX.white,
+            borderColor: Colors.white,
           ),
         ),
       ),

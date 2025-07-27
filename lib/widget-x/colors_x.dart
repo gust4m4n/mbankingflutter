@@ -18,7 +18,9 @@ class ColorX {
   static const Color _lightHighlight = Color(0xffE3E3E3);
 
   // Dark theme colors
-  static const Color _darkBlack = Color(0xffffffff); // White text in dark mode
+  static const Color _darkBlack = Color(
+    0xffe8e8e8,
+  ); // Soft white text in dark mode
   static const Color _darkGray = Color(0xffb0b0b0); // Light gray in dark mode
   static const Color _darkLightGray = Color(
     0xff4a4a4c,

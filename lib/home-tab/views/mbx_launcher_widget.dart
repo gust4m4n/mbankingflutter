@@ -38,7 +38,7 @@ class MbxLauncherWidget extends StatelessWidget {
                 cornerRadius: 28.0,
                 padding: EdgeInsets.all(10.0),
                 backgroundColor: color,
-                color: ColorX.white,
+                color: Colors.white,
               ),
               SizedBox(height: 4.0),
               TextX(

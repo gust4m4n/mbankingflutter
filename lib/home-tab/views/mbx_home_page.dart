@@ -66,7 +66,7 @@ class MbxHomePage extends StatelessWidget {
                               : MbxProfileVM.profile.name,
                           fontSize: 17.0,
                           fontWeight: FontWeight.w700,
-                          color: ColorX.white,
+                          color: Colors.white,
                         ),
                         ContainerX(height: 2.0),
                         TextX(
@@ -75,7 +75,7 @@ class MbxHomePage extends StatelessWidget {
                               : MbxProfileVM.profile.phone,
                           fontSize: 13.0,
                           fontWeight: FontWeight.w400,
-                          color: ColorX.white,
+                          color: Colors.white,
                         ),
                       ],
                     ),
@@ -90,7 +90,7 @@ class MbxHomePage extends StatelessWidget {
                         ButtonX(
                           backgroundColor: ColorX.transparent,
                           faIcon: FontAwesomeIcons.powerOff,
-                          faColor: ColorX.white,
+                          faColor: Colors.white,
                           title: '',
                           width: 42.0,
                           height: 42.0,
@@ -191,7 +191,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.green,
                                   faIcon: FontAwesomeIcons.arrowRightArrowLeft,
                                   title: 'transfer'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnTransferClicked();
@@ -201,7 +201,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.blue,
                                   faIcon: FontAwesomeIcons.sackDollar,
                                   title: 'withdrawCash'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnCardlessClicked();
@@ -211,7 +211,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.red,
                                   faIcon: FontAwesomeIcons.qrcode,
                                   title: 'qris'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnQRISClicked();
@@ -221,7 +221,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.yellow,
                                   faIcon: FontAwesomeIcons.solidLightbulb,
                                   title: 'electricity'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnElectricityClicked();
@@ -231,7 +231,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.teal,
                                   faIcon: FontAwesomeIcons.mobile,
                                   title: 'pulsa'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnPulsaClicked();
@@ -241,7 +241,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.red,
                                   faIcon: FontAwesomeIcons.landmark,
                                   title: 'pbb'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnPBBClicked();
@@ -251,7 +251,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.yellow,
                                   faIcon: FontAwesomeIcons.water,
                                   title: 'pdam'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                   clicked: () {
                                     controller.btnPDAMClicked();
@@ -261,7 +261,7 @@ class MbxHomePage extends StatelessWidget {
                                   color: ColorX.gray,
                                   faIcon: FontAwesomeIcons.ellipsis,
                                   title: 'others'.tr,
-                                  titleColor: ColorX.white,
+                                  titleColor: Colors.white,
                                   highlightColor: ColorX.theme.lighten(0.1),
                                 ),
                               ],
@@ -303,7 +303,7 @@ class MbxHomePage extends StatelessWidget {
                                   child: ButtonX(
                                     title: 'Upgrade',
                                     backgroundColor: ColorX.theme,
-                                    titleColor: ColorX.white,
+                                    titleColor: Colors.white,
                                     cornerRadius: 20.0,
                                     height: 40.0,
                                     width: 80.0,

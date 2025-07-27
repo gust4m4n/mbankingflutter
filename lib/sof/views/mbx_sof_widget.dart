@@ -53,7 +53,7 @@ class MbxSofWidget extends StatelessWidget {
                     cornerRadius: 6.0,
                     child: TextX(
                       account.name,
-                      color: ColorX.white,
+                      color: Colors.white,
                       fontSize: 11.0,
                       fontWeight: FontWeight.w400,
                       textAlign: TextAlign.start,
