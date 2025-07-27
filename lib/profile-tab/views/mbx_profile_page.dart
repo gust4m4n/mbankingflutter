@@ -72,7 +72,7 @@ class MbxProfilePage extends StatelessWidget {
                           : MbxProfileVM.profile.name,
                       fontSize: 17.0,
                       fontWeight: FontWeight.w700,
-                      color: ColorX.white,
+                      color: Colors.white,
                     ),
                     ContainerX(height: 2.0),
                     TextX(
@@ -81,7 +81,7 @@ class MbxProfilePage extends StatelessWidget {
                           : MbxProfileVM.profile.phone,
                       fontSize: 13.0,
                       fontWeight: FontWeight.w400,
-                      color: ColorX.white,
+                      color: Colors.white,
                     ),
                   ],
                 ),
