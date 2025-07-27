@@ -21,12 +21,14 @@ class ColorX {
   static const Color _darkBlack = Color(0xffffffff); // White text in dark mode
   static const Color _darkGray = Color(0xffb0b0b0); // Light gray in dark mode
   static const Color _darkLightGray = Color(
-    0xff404040,
-  ); // Dark gray for backgrounds
-  static const Color _darkWhite = Color(0xff1a1a1a); // Dark background
+    0xff4a4a4c,
+  ); // Soft dark gray for backgrounds
+  static const Color _darkWhite = Color(
+    0xff2d2d30,
+  ); // Soft dark background (VS Code dark theme inspired)
   static const Color _darkHighlight = Color(
-    0xff2a2a2a,
-  ); // Slightly lighter dark
+    0xff3e3e42,
+  ); // Soft highlight for better UX
 
   static const Color transparent = Colors.transparent;
   static Color theme = Color(0xff672EBA);
