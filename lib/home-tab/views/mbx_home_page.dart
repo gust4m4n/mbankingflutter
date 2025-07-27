@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:mbxflutter/gold/views/mbx_gold_chart_widget.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/news/viewmodels/mbx_news_list_vm.dart';
 import 'package:mbxflutter/sof/views/mbx_sof_widget.dart';
@@ -317,6 +318,38 @@ class MbxHomePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                        ),
+                        SizedBox(height: 8.0),
+                        // Gold Price Chart Section
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left: 16.0,
+                                top: 8.0,
+                                right: 16.0,
+                                bottom: 4.0,
+                              ),
+                              child: TextX(
+                                'goldPrice'.tr,
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w700,
+                                color: ColorX.black,
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                              child: ContainerX(
+                                backgroundColor: ColorX.white,
+                                borderColor: ColorX.gray,
+                                borderWidth: 0.5,
+                                cornerRadius: 12.0,
+                                child: MbxGoldChartWidget(),
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(height: 8.0),
                         Visibility(

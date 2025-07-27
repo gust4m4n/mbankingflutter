@@ -22,7 +22,7 @@ class MbxTransferScreen extends StatelessWidget {
                     child: InkWellX(
                       child: ContainerX(
                         borderWidth: 1.0,
-                        borderColor: ColorX.white,
+                        borderColor: Colors.white,
                         padding: EdgeInsets.only(
                           left: 16.0,
                           top: 12.0,
@@ -59,7 +59,7 @@ class MbxTransferScreen extends StatelessWidget {
                     child: InkWellX(
                       child: ContainerX(
                         borderWidth: 1.0,
-                        borderColor: ColorX.white,
+                        borderColor: Colors.white,
                         padding: EdgeInsets.only(
                           left: 16.0,
                           top: 12.0,

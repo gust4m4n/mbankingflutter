@@ -34,7 +34,7 @@ class MbxQRISScreen extends StatelessWidget {
                   width: MediaX.width - 32.0,
                   height: MediaX.width - 32.0,
                   borderWidth: 1.0,
-                  borderColor: ColorX.white,
+                  borderColor: Colors.white,
                 ),
               ),
             ),

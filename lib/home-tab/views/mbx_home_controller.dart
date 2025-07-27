@@ -1,5 +1,6 @@
 import 'package:mbxflutter/biller-pln/sheet/views/mbx_electricity_picker.dart';
 import 'package:mbxflutter/biller-pulsa/sheet/views/mbx_pulsa_picker.dart';
+import 'package:mbxflutter/gold/viewmodels/mbx_gold_price_list_vm.dart';
 import 'package:mbxflutter/home-tab/viewmodels/mbx_foreign_exchange_list_vm.dart';
 import 'package:mbxflutter/login/viewmodels/mbx_profile_vm.dart';
 import 'package:mbxflutter/news/viewmodels/mbx_news_list_vm.dart';
@@ -25,6 +26,11 @@ class MbxHomeController extends GetxController {
       if (resp.status == 200) {
         update();
       }
+    });
+
+    // Load gold price data
+    MbxGoldPriceListVM.loadGoldPrices().then((_) {
+      update();
     });
   }
 

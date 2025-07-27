@@ -70,6 +70,8 @@ class MbxTranslationService extends Translations {
       'buy': 'Buy',
       'sell': 'Sell',
       'newsTitle': 'NEWS',
+      'goldPrice': 'GOLD PRICE',
+      'noDataAvailable': 'No Data Available',
       'forgot_pin': 'Forgot PIN',
       'enter_pin_message': 'Please enter your m-banking or ATM PIN.',
       'enter_new_pin_message': 'Please enter your new m-banking or ATM PIN.',
@@ -336,6 +338,8 @@ class MbxTranslationService extends Translations {
       'buy': 'Beli',
       'sell': 'Jual',
       'newsTitle': 'BERITA',
+      'goldPrice': 'HARGA EMAS',
+      'noDataAvailable': 'Tidak ada data tersedia',
       'forgot_pin': 'Lupa PIN',
       'enter_pin_message': 'Masukkan nomor pin m-banking atau ATM anda.',
       'enter_new_pin_message':

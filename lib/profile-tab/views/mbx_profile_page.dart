@@ -39,7 +39,7 @@ class MbxProfilePage extends StatelessWidget {
                               height: 100.0,
                               cornerRadius: 50.0,
                               borderWidth: 4.0,
-                              borderColor: ColorX.white,
+                              borderColor: Colors.white,
                             ),
                             Positioned(
                               right: 0.0,
@@ -50,7 +50,7 @@ class MbxProfilePage extends StatelessWidget {
                                   controller.btnChangeAvatarClicked();
                                 },
                                 backgroundColor: ColorX.white,
-                                borderColor: ColorX.white,
+                                borderColor: Colors.white,
                                 borderWidth: 2.0,
                                 faIcon: FontAwesomeIcons.plus,
                                 faColor: ColorX.theme,

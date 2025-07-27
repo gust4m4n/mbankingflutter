@@ -47,6 +47,12 @@ class MbxFormatVM {
     return currencyFormatter.format(value);
   }
 
+  static String formatCurrency(double value, {String symbol = ''}) {
+    final currencyFormatter = NumberFormat('#,##0', 'ID');
+    String result = currencyFormatter.format(value / 1000);
+    return '$result$symbol';
+  }
+
   static String accountMasking(
     String account, {
     required String prefix,
