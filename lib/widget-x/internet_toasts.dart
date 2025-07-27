@@ -17,7 +17,7 @@ class InternetOfflineToast extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Expanded(
+              Expanded(
                 child: TextX(
                   'No internet connection',
                   color: ColorX.white,
@@ -64,7 +64,7 @@ class InternetOnlineToast extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Expanded(
+              Expanded(
                 child: TextX(
                   'Back to online',
                   color: ColorX.white,

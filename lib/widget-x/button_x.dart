@@ -23,7 +23,7 @@ class ButtonX extends StatelessWidget {
   final bool enabled;
   final GestureTapCallback? clicked;
 
-  const ButtonX({
+  ButtonX({
     super.key,
     this.faIcon,
     this.iconUrl = '',
@@ -31,13 +31,13 @@ class ButtonX extends StatelessWidget {
     this.iconHeight = 24.0,
     this.faColor,
     this.title = 'Button',
-    this.backgroundColor = ColorX.blue,
-    this.disabledBackgroundColor = ColorX.lightGray,
-    this.titleColor = ColorX.white,
-    this.disabledTitleColor = ColorX.gray,
+    Color? backgroundColor,
+    Color? disabledBackgroundColor,
+    Color? titleColor,
+    Color? disabledTitleColor,
     this.cornerRadius = 8.0,
     this.borderWidth = 0.0,
-    this.borderColor = ColorX.transparent,
+    Color? borderColor,
     this.highlightColor,
     this.width = double.infinity,
     this.height = 48.0,
@@ -46,7 +46,11 @@ class ButtonX extends StatelessWidget {
     this.fontWeight = FontWeight.w700,
     this.enabled = true,
     this.clicked,
-  });
+  }) : backgroundColor = backgroundColor ?? ColorX.blue,
+       disabledBackgroundColor = disabledBackgroundColor ?? ColorX.lightGray,
+       titleColor = titleColor ?? ColorX.white,
+       disabledTitleColor = disabledTitleColor ?? ColorX.gray,
+       borderColor = borderColor ?? ColorX.transparent;
 
   @override
   Widget build(BuildContext context) {

@@ -10,17 +10,17 @@ class TextX extends StatelessWidget {
   final bool underline;
   final int? maxLines;
 
-  const TextX(
+  TextX(
     this.text, {
     super.key,
-    this.color = ColorX.black,
+    Color? color,
     this.fontSize = 17.0,
     this.fontFamily = 'Roboto',
     this.fontWeight = FontWeight.w400,
     this.textAlign = TextAlign.start,
     this.underline = false,
     this.maxLines = 1,
-  });
+  }) : color = color ?? ColorX.black;
 
   @override
   Widget build(BuildContext context) {

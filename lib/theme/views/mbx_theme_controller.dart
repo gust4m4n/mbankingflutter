@@ -1,6 +1,6 @@
 import '../../widget-x/all_widgets.dart';
 
-class MbxThemeController extends GetxController {
+class MbxThemeViewController extends GetxController {
   btnCloseClicked() {
     Get.back();
   }

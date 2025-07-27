@@ -25,17 +25,17 @@ class TextFieldX extends StatelessWidget {
   final Function(String value)? onChanged;
   final List<TextInputFormatter>? inputFormatters;
 
-  const TextFieldX({
+  TextFieldX({
     super.key,
     required this.hint,
     required this.obscureText,
     this.fontSize = 17.0,
     this.fontFamily = 'Roboto',
     this.fontWeight = FontWeight.w400,
-    this.backgroundColor = ColorX.white,
+    Color? backgroundColor,
     this.cornerRadius = 8.0,
     this.borderWidth = 1.0,
-    this.borderColor = ColorX.lightGray,
+    Color? borderColor,
     this.height = 48.0,
     required this.keyboardType,
     this.multiline = false,
@@ -50,7 +50,8 @@ class TextFieldX extends StatelessWidget {
     this.focusNode,
     this.onChanged,
     this.inputFormatters,
-  });
+  }) : backgroundColor = backgroundColor ?? ColorX.white,
+       borderColor = borderColor ?? ColorX.lightGray;
 
   PopupMenuItem popupItemView({
     required String title,

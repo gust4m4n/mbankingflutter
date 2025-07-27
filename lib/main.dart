@@ -15,6 +15,8 @@ import 'package:mbxflutter/qris/views/mbx_qris_screen.dart';
 import 'package:mbxflutter/receipt/views/mbx_receipt_screen.dart';
 import 'package:mbxflutter/relogin/views/mbx_relogin_screen.dart';
 import 'package:mbxflutter/security/mbx_anti_jailbreak_vm.dart';
+import 'package:mbxflutter/theme/app_themes.dart';
+import 'package:mbxflutter/theme/controllers/mbx_theme_controller.dart';
 import 'package:mbxflutter/theme/viewmodels/mbx_theme_vm.dart';
 import 'package:mbxflutter/utils/mbx_reachability_vm.dart';
 
@@ -59,6 +61,9 @@ Future<void> main() async {
     () => MbxLanguageController(),
     fenix: true,
   );
+
+  // Initialize theme controller
+  Get.put(MbxThemeController(), permanent: true);
 
   // Initialize eKYC services
   print('Initializing eKYC services...');
@@ -128,138 +133,129 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final languageController = Get.find<MbxLanguageController>();
 
-    return GetMaterialApp(
-      popGesture: true,
-      defaultTransition: Transition.cupertino,
-      debugShowCheckedModeBanner: false,
-      locale: languageController.currentLocale,
-      translations: MbxTranslationService(),
-      fallbackLocale: const Locale('id', ''),
-      scrollBehavior: AppScrollBehavior(),
-      title: 'MBankingApp',
-      theme: ThemeData(
-        bottomSheetTheme: BottomSheetThemeData(surfaceTintColor: Colors.white),
-        textSelectionTheme: TextSelectionThemeData(
-          selectionColor: ColorX.lightGray,
-          selectionHandleColor: ColorX.gray,
-        ),
-        splashColor: Colors.transparent,
-        visualDensity: VisualDensity.standard,
-        primarySwatch: Colors.grey,
-        fontFamily: 'Roboto',
-        pageTransitionsTheme: const PageTransitionsTheme(
-          builders: {
-            TargetPlatform.android: CupertinoPageTransitionsBuilder(),
-            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-          },
-        ),
-      ),
-      initialRoute: initialRoute,
-      getPages: [
-        GetPage(
-          name: '/ekyc-selfie-ktp-universal',
-          page: () => const MbxUpgradeSelfieKtpScreen(),
-        ),
-        GetPage(
-          name: '/login',
-          page: () => const MbxLoginScreen(),
-          transition: Transition.noTransition,
-        ),
-        GetPage(
-          name: '/relogin',
-          page: () => const MbxReloginScreen(),
-          transition: Transition.noTransition,
-        ),
-        GetPage(
-          name: '/home',
-          page: () => const MbxBottomNavBarScreen(),
-          transition: Transition.noTransition,
-        ),
-        GetPage(name: '/tnc', page: () => MbxTncScreen()),
-        GetPage(name: '/privacy', page: () => MbxPrivacyPolicyScreen()),
-        GetPage(name: '/faq', page: () => const MbxFaqScreen()),
-        GetPage(name: '/news', page: () => MbxNewsScreen()),
-        GetPage(name: '/receipt', page: () => MbxReceiptScreen()),
-        GetPage(name: '/transfer', page: () => const MbxTransferScreen()),
-        GetPage(
-          name: '/transfer/p2p',
-          page: () => const MbxTransferP2PScreen(),
-        ),
-        GetPage(
-          name: '/transfer/p2bank',
-          page: () => const MbxTransferP2BankScreen(),
-        ),
-        GetPage(
-          name: '/qris',
-          page: () => const MbxQRISScreen(),
-          transition: Transition.noTransition,
-        ),
-        GetPage(name: '/cardless', page: () => const MbxCardlessScreen()),
-        GetPage(
-          name: '/cardless/payment',
-          page: () => MbxCardlessPaymentScreen(),
-        ),
-        GetPage(
-          name: '/electricity/prepaid',
-          page: () => const MbxElectricityPrepaidScreen(),
-        ),
-        GetPage(
-          name: '/electricity/postpaid',
-          page: () => const MbxElectricityPostpaidScreen(),
-        ),
-        GetPage(
-          name: '/electricity/nontaglis',
-          page: () => const MbxElectricityNonTagLisScreen(),
-        ),
-        GetPage(
-          name: '/pulsa/prepaid',
-          page: () => const MbxPulsaPrepaidScreen(),
-        ),
-        GetPage(
-          name: '/pulsa/postpaid',
-          page: () => const MbxPulsaPostpaidScreen(),
-        ),
-        GetPage(
-          name: '/pulsa/dataplan',
-          page: () => const MbxPulsaDataPlanScreen(),
-        ),
-        GetPage(name: '/pbb', page: () => const MbxPBBScreen()),
-        GetPage(name: '/pdam', page: () => const MbxPDAMScreen()),
-        GetPage(
-          name: '/language',
-          page: () => const MbxLanguageSelectionScreen(),
-        ),
-        // eKYC Universal Routes (cross-platform compatible)
-        GetPage(
-          name: '/ekyc-selfie-universal',
-          page: () => const MbxUpgradeSelfieScreen(),
-        ),
-        GetPage(
-          name: '/ekyc-ktp-photo-universal',
-          page: () => const MbxUpgradeKtpPhotoScreen(),
-        ),
-        GetPage(
-          name: '/ekyc-confirmation-universal',
-          page: () => const MbxUpgradeConfirmationScreen(),
-        ),
+    return GetBuilder<MbxThemeController>(
+      init: Get.find<MbxThemeController>(),
+      builder: (themeController) {
+        return GetMaterialApp(
+          popGesture: true,
+          defaultTransition: Transition.cupertino,
+          debugShowCheckedModeBanner: false,
+          locale: languageController.currentLocale,
+          translations: MbxTranslationService(),
+          fallbackLocale: const Locale('id', ''),
+          scrollBehavior: AppScrollBehavior(),
+          title: 'MBankingApp',
+          theme: MbxAppThemes.lightTheme,
+          darkTheme: MbxAppThemes.darkTheme,
+          themeMode: themeController.themeMode,
+          initialRoute: initialRoute,
+          getPages: [
+            GetPage(
+              name: '/ekyc-selfie-ktp-universal',
+              page: () => const MbxUpgradeSelfieKtpScreen(),
+            ),
+            GetPage(
+              name: '/login',
+              page: () => const MbxLoginScreen(),
+              transition: Transition.noTransition,
+            ),
+            GetPage(
+              name: '/relogin',
+              page: () => const MbxReloginScreen(),
+              transition: Transition.noTransition,
+            ),
+            GetPage(
+              name: '/home',
+              page: () => const MbxBottomNavBarScreen(),
+              transition: Transition.noTransition,
+            ),
+            GetPage(name: '/tnc', page: () => MbxTncScreen()),
+            GetPage(name: '/privacy', page: () => MbxPrivacyPolicyScreen()),
+            GetPage(name: '/faq', page: () => const MbxFaqScreen()),
+            GetPage(name: '/news', page: () => MbxNewsScreen()),
+            GetPage(name: '/receipt', page: () => MbxReceiptScreen()),
+            GetPage(name: '/transfer', page: () => const MbxTransferScreen()),
+            GetPage(
+              name: '/transfer/p2p',
+              page: () => const MbxTransferP2PScreen(),
+            ),
+            GetPage(
+              name: '/transfer/p2bank',
+              page: () => const MbxTransferP2BankScreen(),
+            ),
+            GetPage(
+              name: '/qris',
+              page: () => const MbxQRISScreen(),
+              transition: Transition.noTransition,
+            ),
+            GetPage(name: '/cardless', page: () => const MbxCardlessScreen()),
+            GetPage(
+              name: '/cardless/payment',
+              page: () => MbxCardlessPaymentScreen(),
+            ),
+            GetPage(
+              name: '/electricity/prepaid',
+              page: () => const MbxElectricityPrepaidScreen(),
+            ),
+            GetPage(
+              name: '/electricity/postpaid',
+              page: () => const MbxElectricityPostpaidScreen(),
+            ),
+            GetPage(
+              name: '/electricity/nontaglis',
+              page: () => const MbxElectricityNonTagLisScreen(),
+            ),
+            GetPage(
+              name: '/pulsa/prepaid',
+              page: () => const MbxPulsaPrepaidScreen(),
+            ),
+            GetPage(
+              name: '/pulsa/postpaid',
+              page: () => const MbxPulsaPostpaidScreen(),
+            ),
+            GetPage(
+              name: '/pulsa/dataplan',
+              page: () => const MbxPulsaDataPlanScreen(),
+            ),
+            GetPage(name: '/pbb', page: () => const MbxPBBScreen()),
+            GetPage(name: '/pdam', page: () => const MbxPDAMScreen()),
+            GetPage(
+              name: '/language',
+              page: () => const MbxLanguageSelectionScreen(),
+            ),
+            // eKYC Universal Routes (cross-platform compatible)
+            GetPage(
+              name: '/ekyc-selfie-universal',
+              page: () => const MbxUpgradeSelfieScreen(),
+            ),
+            GetPage(
+              name: '/ekyc-ktp-photo-universal',
+              page: () => const MbxUpgradeKtpPhotoScreen(),
+            ),
+            GetPage(
+              name: '/ekyc-confirmation-universal',
+              page: () => const MbxUpgradeConfirmationScreen(),
+            ),
 
-        // Legacy eKYC routes (commented out - use universal versions instead)
-        // GetPage(name: '/ekyc/selfie', page: () => const MbxUpgradeSelfieScreen()),
-        // GetPage(name: '/ekyc/selfie-ktp', page: () => const MbxUpgradeSelfieKtpScreen()),
-        // GetPage(name: '/ekyc/ktp-photo', page: () => const MbxUpgradeKtpPhotoScreen()),
-        GetPage(
-          name: '/ekyc/data-entry',
-          page: () => const MbxUpgradeDataEntryScreen(),
-        ),
-        GetPage(
-          name: '/ekyc/confirmation',
-          page: () => const MbxUpgradeConfirmationScreen(),
-        ),
-        GetPage(
-          name: '/ekyc/success',
-          page: () => const MbxUpgradeSuccessScreen(),
-        ),
-      ],
+            // Legacy eKYC routes (commented out - use universal versions instead)
+            // GetPage(name: '/ekyc/selfie', page: () => const MbxUpgradeSelfieScreen()),
+            // GetPage(name: '/ekyc/selfie-ktp', page: () => const MbxUpgradeSelfieKtpScreen()),
+            // GetPage(name: '/ekyc/ktp-photo', page: () => const MbxUpgradeKtpPhotoScreen()),
+            GetPage(
+              name: '/ekyc/data-entry',
+              page: () => const MbxUpgradeDataEntryScreen(),
+            ),
+            GetPage(
+              name: '/ekyc/confirmation',
+              page: () => const MbxUpgradeConfirmationScreen(),
+            ),
+            GetPage(
+              name: '/ekyc/success',
+              page: () => const MbxUpgradeSuccessScreen(),
+            ),
+          ],
+        );
+      },
     );
   }
 }

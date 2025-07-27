@@ -1,4 +1,3 @@
-import 'package:mbxflutter/preferences/mbx_preferences_vm_users.dart';
 import 'package:mbxflutter/theme/views/mbx_theme_sheet.dart';
 import 'package:mbxflutter/widget-x/all_widgets.dart';
 
@@ -33,10 +32,8 @@ class MbxThemeVM {
 
   static Future<bool> change<T>() async {
     final sheet = MbxThemeSheet();
-    final value = await sheet.show();
-    if (value == null) return false;
-    await MbxUserPreferencesVM.setTheme(value);
-    ColorX.theme = hexToColor(value);
-    return true;
+    await sheet
+        .show(); // Just show the sheet, theme changes happen in real-time
+    return true; // Always return true since theme changes are immediate
   }
 }
