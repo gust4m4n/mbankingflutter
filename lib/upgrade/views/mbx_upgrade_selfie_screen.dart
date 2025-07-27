@@ -52,6 +52,9 @@ class MbxUpgradeSelfieScreen extends StatelessWidget {
                 placeholderText: 'upgrade_no_photo'.tr,
                 placeholderSubtext: 'upgrade_tap_camera'.tr,
                 placeholderIcon: FontAwesomeIcons.camera,
+                onTap: () {
+                  controller.showPhotoOptions();
+                },
               ),
             ),
 

@@ -48,8 +48,9 @@ class MbxUpgradeSelfieKtpController extends GetxController {
         _ekycService.saveSelfieKtpPhoto(result);
         print('✅ Selfie+KTP captured successfully');
         // Tidak perlu tampilkan toast sukses
-        await Future.delayed(Duration(milliseconds: 1500));
-        btnNextClicked();
+        // Don't automatically navigate - user needs to press Continue button
+        // await Future.delayed(Duration(milliseconds: 1500));
+        // btnNextClicked();
       } else {
         print('❌ No selfie+KTP captured');
         // Tidak perlu tampilkan toast error
@@ -98,6 +99,57 @@ class MbxUpgradeSelfieKtpController extends GetxController {
     }
     print('➡️ Navigating to KTP Photo screen...');
     Get.toNamed('/ekyc-ktp-photo-universal');
+  }
+
+  void showPhotoOptions() {
+    Get.bottomSheet(
+      ContainerX(
+        backgroundColor: ColorX.white,
+        topLeftRadius: 20.0,
+        topRightRadius: 20.0,
+        padding: EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextX(
+              'Choose Photo Source',
+              fontSize: 18.0,
+              fontWeight: FontWeight.w600,
+              color: ColorX.black,
+            ),
+            ContainerX(height: 24.0),
+            ButtonX(
+              faIcon: Icons.camera_alt,
+              title: 'Camera',
+              clicked: () {
+                Get.back();
+                btnCaptureClicked();
+              },
+            ),
+            ContainerX(height: 16.0),
+            ButtonX(
+              faIcon: Icons.photo_library,
+              title: 'Gallery',
+              backgroundColor: Colors.grey[200]!,
+              titleColor: ColorX.black,
+              clicked: () {
+                Get.back();
+                btnGalleryClicked();
+              },
+            ),
+            ContainerX(height: 16.0),
+            ButtonX(
+              title: 'Cancel',
+              backgroundColor: ColorX.lightGray,
+              titleColor: ColorX.black,
+              clicked: () {
+                Get.back();
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void btnBackClicked() {

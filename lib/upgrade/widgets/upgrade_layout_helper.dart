@@ -110,51 +110,68 @@ class UpgradeLayoutHelper {
     String? placeholderText,
     String? placeholderSubtext,
     IconData? placeholderIcon,
-    double height = 400.0,
+    double height = 280.0, // Reduced from 400.0 to 280.0 for more elegant size
+    VoidCallback? onTap, // Add callback for tap action
   }) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: ContainerX(
-        width: double.infinity,
-        height: height,
-        backgroundColor: ColorX.lightGray.withValues(alpha: 0.3),
-        cornerRadius: 16.0,
-        borderColor: photoWidget != null
-            ? ColorX.green.withValues(alpha: 0.8)
-            : ColorX.theme.withValues(alpha: 0.3),
-        borderWidth: 2.0,
-        child: photoWidget != null
-            ? ClipRRect(
-                borderRadius: BorderRadius.circular(14.0),
-                child: photoWidget,
-              )
-            : Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ImageX(
-                    faIcon: placeholderIcon ?? FontAwesomeIcons.camera,
-                    color: ColorX.gray,
-                    width: 64.0,
-                    height: 64.0,
-                  ),
-                  ContainerX(height: 16.0),
-                  TextX(
-                    placeholderText ?? 'upgrade_no_photo'.tr,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w500,
-                    color: ColorX.gray,
-                  ),
-                  if (placeholderSubtext != null) ...[
+      child: InkWellX(
+        clicked: onTap, // Make photo preview clickable
+        child: ContainerX(
+          width: double.infinity,
+          height: height,
+          backgroundColor: ColorX.lightGray.withValues(alpha: 0.3),
+          cornerRadius: 16.0,
+          borderColor: photoWidget != null
+              ? ColorX.green.withValues(alpha: 0.8)
+              : ColorX.theme.withValues(alpha: 0.3),
+          borderWidth: 2.0,
+          padding: const EdgeInsets.all(16.0), // Add inner padding
+          child: photoWidget != null
+              ? ClipRRect(
+                  borderRadius: BorderRadius.circular(14.0),
+                  child: photoWidget,
+                )
+              : Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ImageX(
+                      faIcon: placeholderIcon ?? FontAwesomeIcons.camera,
+                      color: ColorX.gray,
+                      width: 48.0, // Reduced from 64.0 for better proportion
+                      height: 48.0, // Reduced from 64.0 for better proportion
+                    ),
+                    ContainerX(
+                      height: 12.0,
+                    ), // Reduced from 16.0 for better proportion
+                    TextX(
+                      placeholderText ?? 'upgrade_no_photo'.tr,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                      color: ColorX.gray,
+                    ),
+                    if (placeholderSubtext != null) ...[
+                      ContainerX(
+                        height: 6.0,
+                      ), // Reduced from 8.0 for tighter spacing
+                      TextX(
+                        placeholderSubtext,
+                        fontSize: 14.0,
+                        color: ColorX.gray,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                     ContainerX(height: 8.0),
                     TextX(
-                      placeholderSubtext,
-                      fontSize: 14.0,
-                      color: ColorX.gray,
+                      'Tap to open camera',
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w400,
+                      color: ColorX.theme,
                       textAlign: TextAlign.center,
                     ),
                   ],
-                ],
-              ),
+                ),
+        ),
       ),
     );
   }

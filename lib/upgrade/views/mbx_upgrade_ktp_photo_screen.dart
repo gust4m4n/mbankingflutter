@@ -37,7 +37,10 @@ class MbxUpgradeKtpPhotoScreen extends StatelessWidget {
               placeholderText: 'upgrade_no_ktp'.tr,
               placeholderSubtext: 'upgrade_ktp_instruction'.tr,
               placeholderIcon: FontAwesomeIcons.idCard,
-              height: 300.0, // Slightly smaller for KTP
+              height: 240.0, // Elegant size for KTP (reduced from 300.0)
+              onTap: () {
+                controller.showPhotoOptions();
+              },
             ),
 
             ContainerX(height: 32.0),

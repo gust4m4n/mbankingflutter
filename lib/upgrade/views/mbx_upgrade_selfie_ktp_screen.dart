@@ -44,6 +44,9 @@ class MbxUpgradeSelfieKtpScreen extends StatelessWidget {
               placeholderText: 'upgrade_no_photo'.tr,
               placeholderSubtext: 'upgrade_selfie_ktp_instruction'.tr,
               placeholderIcon: FontAwesomeIcons.userPlus,
+              onTap: () {
+                controller.showPhotoOptions();
+              },
             ),
 
             ContainerX(height: 32.0),

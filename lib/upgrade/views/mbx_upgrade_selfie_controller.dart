@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import '../../widget-x/all_widgets.dart';
-import '../services/upgrade_data_service.dart';
 import '../services/universal_camera_service.dart';
+import '../services/upgrade_data_service.dart';
 
 class MbxUpgradeSelfieController extends GetxController {
   final UpgradeDataService _ekycService = Get.find<UpgradeDataService>();
@@ -57,9 +57,9 @@ class MbxUpgradeSelfieController extends GetxController {
         print('✅ Selfie captured successfully');
         // Tidak perlu tampilkan toast sukses
 
-        // Navigate to next screen after short delay
-        await Future.delayed(Duration(milliseconds: 1500));
-        btnNextClicked();
+        // Don't automatically navigate - user needs to press Continue button
+        // await Future.delayed(Duration(milliseconds: 1500));
+        // btnNextClicked();
       } else {
         print('❌ No selfie captured');
         // Tidak perlu tampilkan toast error
@@ -115,6 +115,57 @@ class MbxUpgradeSelfieController extends GetxController {
 
     print('➡️ Navigating to Selfie+KTP screen...');
     Get.toNamed('/ekyc-selfie-ktp-universal');
+  }
+
+  void showPhotoOptions() {
+    Get.bottomSheet(
+      ContainerX(
+        backgroundColor: ColorX.white,
+        topLeftRadius: 20.0,
+        topRightRadius: 20.0,
+        padding: EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextX(
+              'Choose Photo Source',
+              fontSize: 18.0,
+              fontWeight: FontWeight.w600,
+              color: ColorX.black,
+            ),
+            ContainerX(height: 24.0),
+            ButtonX(
+              faIcon: Icons.camera_alt,
+              title: 'Camera',
+              clicked: () {
+                Get.back();
+                btnCaptureClicked();
+              },
+            ),
+            ContainerX(height: 16.0),
+            ButtonX(
+              faIcon: Icons.photo_library,
+              title: 'Gallery',
+              backgroundColor: Colors.grey[200]!,
+              titleColor: ColorX.black,
+              clicked: () {
+                Get.back();
+                btnGalleryClicked();
+              },
+            ),
+            ContainerX(height: 16.0),
+            ButtonX(
+              title: 'Cancel',
+              backgroundColor: ColorX.lightGray,
+              titleColor: ColorX.black,
+              clicked: () {
+                Get.back();
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void btnBackClicked() {
